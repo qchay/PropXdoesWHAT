@@ -11,3 +11,15 @@
   height: 904px;
   object-fit: cover;
 }
+
+img.center-block {
+	width: 500px;
+}
+
+div.card-md-4	 {
+	height: 100%;
+}
+
+a {
+	object-fit: cover;	
+}
