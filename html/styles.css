@@ -5,3 +5,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.headshot{
+	border-width: 1px;
+}
