@@ -1,25 +1,142 @@
 .carousel {
-  /* any dimensions are fine, it can be responsive with max-width */
-  width: 100%;
-  height: 904px;
-  position: relative;
+	/* any dimensions are fine, it can be responsive with max-width */
+	width: 100%;
+	height: 904px;
+	position: relative;
 }
 
 .carousel-img {
-  /* make sure your .items will get correct height */
-  width: 100%;
-  height: 904px;
-  object-fit: cover;
+	/* make sure your .items will get correct height */
+	width: 100%;
+	height: 904px;
+	object-fit: cover;
 }
 
-img.center-block {
-	width: 500px;
+#politician-bio-picture {
+	width: 400px;
 }
 
-div.card-md-4	 {
+
+/* Card Attributes */
+#card-name {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#card-attr {
+	margin-top: 3px;
+	margin-left: 30px;
+}
+
+/* Card Attributes */
+
+
+/* Law Card */
+
+#law-card {
+	height: 430px;
+}
+
+#law-headshot-box {
+	height: 500px;
+	position: relative;
+}
+
+#law-headshot {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
 	height: 100%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	object-fit: cover;
 }
 
-a {
-	object-fit: cover;	
+/* Law Card */
+
+
+/* Politician Card */
+
+#politician-card {
+	height: 600px;
 }
+
+#politician-headshot-box {
+	height: 500px;
+	position: relative;
+}
+
+#politician-headshot {
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	object-fit: cover;
+}
+
+/* Politician Card */
+
+
+/* Action Group Card */
+
+#action-group-card {
+	height: 450px;
+}
+
+#action-group-headshot-box {
+	height: 500px;
+	position: relative;
+}
+
+#action-group-headshot {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	object-fit: cover;
+}
+
+/* Action Group Card */
+
+
+/* Impacted Group Card */
+
+#impacted-group-card {
+	height: 450px;
+}
+
+#impacted-group-headshot-box {
+	height: 500px;
+	position: relative;
+}
+
+#impacted-group-headshot {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	object-fit: cover;
+}
+
+/* Impacted Group Card */
