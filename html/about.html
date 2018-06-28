@@ -165,25 +165,69 @@
 	httpRequest.open("GET", api, false);
 	httpRequest.send();
 	var jsonResponse = JSON.parse(httpRequest.responseText)
-	namesArray = [
-		{"name" : "Jae Lee", "gitlabNames" : ["Jae Lee", "jaelee0409"]},
-		{"name" : "Kevin Kuney", "gitlabNames" : ["Kevin Kuney"]},
-		{"name" : "Eder Garza", "gitlabNames" : ["Eder Garza"]},
-		{"name" : "Chris Renard", "gitlabNames" : ["Chris"]},
-		{"name" : "Dustin Huang", "gitlabNames" : ["Dustin Huang"]}
-	]
+	
+	namesMapping = {
+		"Jae Lee" : "Jae Lee",
+		"jaelee0409" : "Jae Lee",
+		"Chris" : "Chris Renard",
+		"Rilne" : "Chris Renard",
+		"Eder Garza" : "Eder Garza",
+		"Dustin Huang" : "Dustin Huang",
+		"Kevin Kuney" : "Kevin Kuney"};
+	
+	contributers = [
+		"Jae Lee",
+		"Chris Renard",
+		"Eder Garza",
+		"Dustin Huang",
+		"Kevin Kuney"]; //just to force a stable order
+	
+	var commits = {};
+	var issues = {};
+	
+	for(var x = 0; x < jsonResponse.length; x++)
+	{
+		var name = namesMapping[jsonResponse[x]["name"]];
+		if(! commits.hasOwnProperty(name))
+		{ commits[name] = 0; }
+		commits[name] += jsonResponse[x].commits;
+	}
 
-	// Loops over nameArray and finds the number of commits each user has had
-	for (i = 0; i < namesArray.length; i++) {
-		var numCommits = 0;
-		for (j = 0; j < namesArray[i].gitlabNames.length; j++) {
-			for (k = 0; k < jsonResponse.length; k++) {
-				if (jsonResponse[k].name == namesArray[i].gitlabNames[j]) {
-					numCommits += jsonResponse[k].commits;
-				}
-			}
+	httpRequest = new XMLHttpRequest();
+	api = "https://gitlab.com/api/v4/projects/7226786/issues?private_token=oM2-Sn_4rwcBcuSsybbt";
+	httpRequest.open("GET", api, false);
+	httpRequest.send();
+	jsonResponse = JSON.parse(httpRequest.responseText)
+	
+	console.log(jsonResponse);
+	console.log(jsonResponse.length);
+	
+	for(var x = 0; x < jsonResponse.length; x++)
+	{
+		if(jsonResponse[x]["closed_by"] != null)
+		{
+			var closed_by = namesMapping[jsonResponse[x]["closed_by"]["name"]];
+			console.log("closed by " + closed_by)
+			if(! issues.hasOwnProperty(closed_by))
+			{ issues[closed_by] = 0; }
+			issues[closed_by] += 1;
 		}
-		document.getElementById("name" + i).innerHTML = namesArray[i].name;
-    	document.getElementById("commits" + i).innerHTML = '# Commits: ' + numCommits;
+	}
+	
+	function pluralize(num, a, b)
+	{
+		if(num == null)
+		{ num = 0; }
+		if(num == 1)
+		{ return num + " " + a; }
+		else
+		{ return num + " " + b;  }
+	}
+	
+	for (i = 0; i < contributers.length; i++) {
+		var name = contributers[i];
+		document.getElementById("name" + i).innerHTML = name;
+    	document.getElementById("commits" + i).innerHTML = pluralize(commits[name],'commit','commits');
+    	document.getElementById("issues" + i).innerHTML = pluralize(issues[name],'issue','issues');
 	}
 </script>
