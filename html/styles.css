@@ -1,14 +1,14 @@
 .carousel {
 	/* any dimensions are fine, it can be responsive with max-width */
 	width: 100%;
-	height: 904px;
-	position: relative;
+	height: 95%;
+	position: fixed;
 }
 
 .carousel-img {
 	/* make sure your .items will get correct height */
 	width: 100%;
-	height: 904px;
+	height: 100%;
 	object-fit: cover;
 }
 
@@ -131,6 +131,14 @@
 
 /* Action Group Card */
 
+/* Action Group Bio */
+
+#action-group-bio-picture {
+	width: 400px;
+}
+
+/* Action Group Bio */
+
 
 /* Impacted Group Card */
 
@@ -158,3 +166,11 @@
 }
 
 /* Impacted Group Card */
+
+/* Impacted Group Bio */
+
+#impacted-group-bio-picture {
+	width: 400px;
+}
+
+/* Impacted Group Bio */
