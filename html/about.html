@@ -55,9 +55,10 @@
 						<h5 id="name0" class="card-name"></h5>
 						<p class="card-text">
 							<li id="">Bio</li>
-							<li id="">Major Responsibilities</li>
+							<li id="">Responsibilities</li>
 							<li id="commits0"></li>
-							<li id="issues0"># issues</li>
+							<li id="issues0"></li>
+							<li id="issues-created0"></li>
 						</p>
 					</div>
 				</div>
@@ -67,9 +68,10 @@
 						<h5 id="name1" class="card-name"></h5>
 						<p class="card-text">
 							<li id="">Bio</li>
-							<li id="">Major Responsibilities</li>
+							<li id="">Responsibilities</li>
 							<li id="commits1"></li>
-							<li id="issues1"># issues</li>
+							<li id="issues1"></li>
+							<li id="issues-created1"></li>
 						</p>
 					</div>
 				</div>
@@ -79,9 +81,10 @@
 						<h5 id="name2" class="card-name"></h5>
 						<p class="card-text">
 							<li id="">Bio</li>
-							<li id="">Major Responsibilities</li>
+							<li id="">Responsibilities</li>
 							<li id="commits2"></li>
-							<li id="issues2"># issues</li>
+							<li id="issues2"></li>
+							<li id="issues-created2"></li>
 						</p>
 					</div>
 				</div>
@@ -91,9 +94,10 @@
 						<h5 id="name3" class="card-name"></h5>
 						<p class="card-text">
 							<li id="">Bio</li>
-							<li id="">Major Responsibilities</li>
+							<li id="">Responsibilities</li>
 							<li id="commits3"></li>
-							<li id="issues3"># issues</li>
+							<li id="issues3"></li>
+							<li id="issues-created3"></li>
 						</p>
 					</div>
 				</div>
@@ -103,9 +107,10 @@
 						<h5 id="name4" class="card-name"></h5>
 						<p class="card-text">
 							<li id="">Bio</li>
-							<li id="">Major Responsibilities</li>
+							<li id="">Responsibilities</li>
 							<li id="commits4"></li>
-							<li id="issues4"># issues</li>
+							<li id="issues4"></li>
+							<li id="issues-created4"></li>
 						</p>
 					</div>
 				</div>
@@ -130,8 +135,8 @@
 			<div class="tab-content" id="pills-tabContent">
 				<div class="tab-pane fade show active" id="pills-stats" role="tabpanel" aria-labelledby="pills-stats-tab">
 					<li id="total"></li>
-					<li># issues</li>
-					<li># unit tests</li>
+					<li id="issues"></li>
+					<li>0 unit tests</li>
 				</div>
 				<div class="tab-pane fade" id="pills-data" role="tabpanel" aria-labelledby="pills-data-tab">
 					<li>links to the data sources</li>
@@ -165,27 +170,83 @@
 	httpRequest.open("GET", api, false);
 	httpRequest.send();
 	var jsonResponse = JSON.parse(httpRequest.responseText)
-	namesArray = [
-		{"name" : "Jae Lee", "gitlabNames" : ["Jae Lee", "jaelee0409"]},
-		{"name" : "Kevin Kuney", "gitlabNames" : ["Kevin Kuney"]},
-		{"name" : "Eder Garza", "gitlabNames" : ["Eder Garza"]},
-		{"name" : "Chris Renard", "gitlabNames" : ["Chris"]},
-		{"name" : "Dustin Huang", "gitlabNames" : ["Dustin Huang"]}
-	]
-
-	// Loops over nameArray and finds the number of commits each user has had
+	
+	namesMapping = {
+		"Jae Lee" : "Jae Lee",
+		"jaelee0409" : "Jae Lee",
+		"Chris" : "Chris Renard",
+		"Rilne" : "Chris Renard",
+		"Eder Garza" : "Eder Garza",
+		"Dustin Huang" : "Dustin Huang",
+		"Kevin Kuney" : "Kevin Kuney"};
+	
+	contributers = [
+		"Jae Lee",
+		"Chris Renard",
+		"Eder Garza",
+		"Dustin Huang",
+		"Kevin Kuney"]; //just to force a stable order
+	
+	var commits = {};
+	var issues = {};
 	var totalCommits = 0;
-	for (i = 0; i < namesArray.length; i++) {
-		for (j = 0; j < namesArray[i].gitlabNames.length; j++) {
-			for (k = 0; k < jsonResponse.length; k++) {
-				if (jsonResponse[k].name == namesArray[i].gitlabNames[j]) {
-					var numCommits = jsonResponse[k].commits;
-					totalCommits += numCommits;
-				}
-			}
-		}
-		document.getElementById("name" + i).innerHTML = namesArray[i].name;
-    	document.getElementById("commits" + i).innerHTML = '# Commits: ' + numCommits;
+	var totalIssues = 0;
+	var totalIssuesClosed = 0;
+	var issuesOpened = {};
+	
+	for(var x = 0; x < jsonResponse.length; x++)
+	{
+		var name = namesMapping[jsonResponse[x]["name"]];
+		if(! commits.hasOwnProperty(name))
+		{ commits[name] = 0; }
+		commits[name] += jsonResponse[x].commits;
+		totalCommits += jsonResponse[x].commits;
 	}
-	document.getElementById("total").innerHTML = 'Total Number of Commits: ' + totalCommits;
+
+	httpRequest = new XMLHttpRequest();
+	api = "https://gitlab.com/api/v4/projects/7226786/issues?private_token=oM2-Sn_4rwcBcuSsybbt";
+	httpRequest.open("GET", api, false);
+	httpRequest.send();
+	jsonResponse = JSON.parse(httpRequest.responseText)
+	
+	
+	for(var x = 0; x < jsonResponse.length; x++)
+	{
+		if(jsonResponse[x]["closed_by"] != null)
+		{
+			var name = namesMapping[jsonResponse[x]["closed_by"]["name"]];
+			if(! issues.hasOwnProperty(name))
+			{ issues[name] = 0; }
+			issues[name]++;
+			totalIssuesClosed++;
+		}
+		if(jsonResponse[x]["author"] != null)
+		{
+			var name = namesMapping[jsonResponse[x]["author"]["name"]];
+			if(! issues.hasOwnProperty(name))
+			{ issuesOpened[name] = 0; }
+			issuesOpened[name]++;
+		}
+		totalIssues++;
+	}
+	
+	function pluralize(num, a, b)
+	{
+		if(num == null)
+		{ num = 0; }
+		if(num == 1)
+		{ return num + " " + a; }
+		else
+		{ return num + " " + b;  }
+	}
+	
+	for (i = 0; i < contributers.length; i++) {
+		var name = contributers[i];
+		$("#name" + i).html(name);
+    	$("#commits" + i).html(pluralize(commits[name],'commit','commits'));
+    	$("#issues" + i).html(pluralize(issues[name],'issue','issues') + " closed");
+    	$("#issues-created" + i).html(pluralize(issuesOpened[name],'issue','issues') + " created");
+	}
+	$("#total").html(totalCommits + " Total Commits");
+	$("#issues").html(totalIssuesClosed + " of " + totalIssues + " Issues Closed");
 </script>
