@@ -12,10 +12,6 @@
 	object-fit: cover;
 }
 
-#politician-bio-picture {
-	width: 400px;
-}
-
 
 /* Card Attributes */
 #card-name {
@@ -34,11 +30,15 @@
 /* Law Card */
 
 #law-card {
-	height: 430px;
+	height: 500px;
+}
+
+#law-card-body {
+	height: 400px;
 }
 
 #law-headshot-box {
-	height: 500px;
+	height: 100%;
 	position: relative;
 }
 
@@ -57,6 +57,15 @@
 }
 
 /* Law Card */
+
+
+/* Law Bio */
+
+#law-bio-picture {
+	width: 400px;
+}
+
+/* Law Bio */
 
 
 /* Politician Card */
@@ -84,6 +93,15 @@
 }
 
 /* Politician Card */
+
+
+/* Politician Bio */
+
+#politician-bio-picture {
+	width: 400px;
+}
+
+/* Politician Bio */
 
 
 /* Action Group Card */
