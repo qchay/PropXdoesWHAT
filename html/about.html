@@ -76,6 +76,18 @@
 				<div class="card">
 					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
 					<div class="card-body">
+						<h5 id="name2" class="card-name"></h5>
+						<p class="card-text">
+							<li id="">Bio</li>
+							<li id="">Major Responsibilities</li>
+							<li id="commits2"></li>
+							<li id="issues2"># issues</li>
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
+					<div class="card-body">
 						<h5 id="name3" class="card-name"></h5>
 						<p class="card-text">
 							<li id="">Bio</li>
@@ -94,18 +106,6 @@
 							<li id="">Major Responsibilities</li>
 							<li id="commits4"></li>
 							<li id="issues4"># issues</li>
-						</p>
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
-					<div class="card-body">
-						<h5 id="name5" class="card-name"></h5>
-						<p class="card-text">
-							<li id="">Bio</li>
-							<li id="">Major Responsibilities</li>
-							<li id="commits5"></li>
-							<li id="issues5"># issues</li>
 						</p>
 					</div>
 				</div>
@@ -165,23 +165,25 @@
 	httpRequest.open("GET", api, false);
 	httpRequest.send();
 	var jsonResponse = JSON.parse(httpRequest.responseText)
-	// Group Member 0
-	document.getElementById("name0").innerHTML = jsonResponse[0].name;
-	document.getElementById("commits0").innerHTML = '# Commits: ' + jsonResponse[0].commits;
+	namesArray = [
+		{"name" : "Jae Lee", "gitlabNames" : ["Jae Lee", "jaelee0409"]},
+		{"name" : "Kevin Kuney", "gitlabNames" : ["Kevin Kuney"]},
+		{"name" : "Eder Garza", "gitlabNames" : ["Eder Garza"]},
+		{"name" : "Chris Renard", "gitlabNames" : ["Chris"]},
+		{"name" : "Dustin Huang", "gitlabNames" : ["Dustin Huang"]}
+	]
 
-	// Group Member 1 and 2 are both Jae
-	document.getElementById("name1").innerHTML = jsonResponse[1].name;
-	document.getElementById("commits1").innerHTML = '# Commits: ' + jsonResponse[1].commits + jsonResponse[2].commits;
-
-	// Group Member 3
-	document.getElementById("name3").innerHTML = jsonResponse[3].name;
-	document.getElementById("commits3").innerHTML = '# Commits: ' + jsonResponse[3].commits;
-
-	// Group Member 4
-	document.getElementById("name4").innerHTML = jsonResponse[4].name;
-	document.getElementById("commits4").innerHTML = '# Commits: ' + jsonResponse[4].commits;
-
-	// Group Member 5
-	document.getElementById("name5").innerHTML = jsonResponse[5].name;
-	document.getElementById("commits5").innerHTML = '# Commits: ' + jsonResponse[5].commits;
+	// Loops over nameArray and finds the number of commits each user has had
+	for (i = 0; i < namesArray.length; i++) {
+		var numCommits = 0;
+		for (j = 0; j < namesArray[i].gitlabNames.length; j++) {
+			for (k = 0; k < jsonResponse.length; k++) {
+				if (jsonResponse[k].name == namesArray[i].gitlabNames[j]) {
+					numCommits += jsonResponse[k].commits;
+				}
+			}
+		}
+		document.getElementById("name" + i).innerHTML = namesArray[i].name;
+    	document.getElementById("commits" + i).innerHTML = '# Commits: ' + numCommits;
+	}
 </script>
