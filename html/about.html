@@ -129,8 +129,8 @@
 			</ul>
 			<div class="tab-content" id="pills-tabContent">
 				<div class="tab-pane fade show active" id="pills-stats" role="tabpanel" aria-labelledby="pills-stats-tab">
-					<li>total # commits</li>
-					<li># issues</li>
+					<li id="total"></li>
+					<li id="issues"></li>
 					<li># unit tests</li>
 				</div>
 				<div class="tab-pane fade" id="pills-data" role="tabpanel" aria-labelledby="pills-data-tab">
@@ -184,6 +184,9 @@
 	
 	var commits = {};
 	var issues = {};
+	var totalCommits = 0;
+	var totalIssues = 0;
+	var totalIssuesClosed = 0;
 	
 	for(var x = 0; x < jsonResponse.length; x++)
 	{
@@ -191,6 +194,7 @@
 		if(! commits.hasOwnProperty(name))
 		{ commits[name] = 0; }
 		commits[name] += jsonResponse[x].commits;
+		totalCommits += jsonResponse[x].commits;
 	}
 
 	httpRequest = new XMLHttpRequest();
@@ -199,8 +203,6 @@
 	httpRequest.send();
 	jsonResponse = JSON.parse(httpRequest.responseText)
 	
-	console.log(jsonResponse);
-	console.log(jsonResponse.length);
 	
 	for(var x = 0; x < jsonResponse.length; x++)
 	{
@@ -210,8 +212,10 @@
 			console.log("closed by " + closed_by)
 			if(! issues.hasOwnProperty(closed_by))
 			{ issues[closed_by] = 0; }
-			issues[closed_by] += 1;
+			issues[closed_by]++;
+			totalIssuesClosed++;
 		}
+		totalIssues++;
 	}
 	
 	function pluralize(num, a, b)
@@ -228,6 +232,8 @@
 		var name = contributers[i];
 		document.getElementById("name" + i).innerHTML = name;
     	document.getElementById("commits" + i).innerHTML = pluralize(commits[name],'commit','commits');
-    	document.getElementById("issues" + i).innerHTML = pluralize(issues[name],'issue','issues');
+    	document.getElementById("issues" + i).innerHTML = pluralize(issues[name],'issue','issues') + " closed";
 	}
+	document.getElementById("total").innerHTML = 'Total Number of Commits: ' + totalCommits;
+	document.getElementById("issues").innerHTML = totalIssuesClosed + " of " + totalIssues + " closed";
 </script>
