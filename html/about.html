@@ -129,7 +129,7 @@
 			</ul>
 			<div class="tab-content" id="pills-tabContent">
 				<div class="tab-pane fade show active" id="pills-stats" role="tabpanel" aria-labelledby="pills-stats-tab">
-					<li>total # commits</li>
+					<li id="total"></li>
 					<li># issues</li>
 					<li># unit tests</li>
 				</div>
@@ -174,16 +174,18 @@
 	]
 
 	// Loops over nameArray and finds the number of commits each user has had
+	var totalCommits = 0;
 	for (i = 0; i < namesArray.length; i++) {
-		var numCommits = 0;
 		for (j = 0; j < namesArray[i].gitlabNames.length; j++) {
 			for (k = 0; k < jsonResponse.length; k++) {
 				if (jsonResponse[k].name == namesArray[i].gitlabNames[j]) {
-					numCommits += jsonResponse[k].commits;
+					var numCommits = jsonResponse[k].commits;
+					totalCommits += numCommits;
 				}
 			}
 		}
 		document.getElementById("name" + i).innerHTML = namesArray[i].name;
     	document.getElementById("commits" + i).innerHTML = '# Commits: ' + numCommits;
 	}
+	document.getElementById("total").innerHTML = 'Total Number of Commits: ' + totalCommits;
 </script>
