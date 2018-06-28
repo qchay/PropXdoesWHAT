@@ -52,60 +52,60 @@
 				<div class="card">
 					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-name">Name</h5>
+						<h5 id="name0" class="card-name"></h5>
 						<p class="card-text">
-							<li id="card-attr">Bio</li>
-							<li id="card-attr">Major Responsibilities</li>
-							<li id="card-attr"># commits</li>
-							<li id="card-attr"># issues</li>
+							<li id="">Bio</li>
+							<li id="">Major Responsibilities</li>
+							<li id="commits0"></li>
+							<li id="issues0"># issues</li>
 						</p>
 					</div>
 				</div>
 				<div class="card">
 					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-name">Name</h5>
+						<h5 id="name1" class="card-name"></h5>
 						<p class="card-text">
-							<li id="card-attr">Bio</li>
-							<li id="card-attr">Major Responsibilities</li>
-							<li id="card-attr"># commits</li>
-							<li id="card-attr"># issues</li>
+							<li id="">Bio</li>
+							<li id="">Major Responsibilities</li>
+							<li id="commits1"></li>
+							<li id="issues1"># issues</li>
 						</p>
 					</div>
 				</div>
 				<div class="card">
 					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-name">Name</h5>
+						<h5 id="name3" class="card-name"></h5>
 						<p class="card-text">
-							<li id="card-attr">Bio</li>
-							<li id="card-attr">Major Responsibilities</li>
-							<li id="card-attr"># commits</li>
-							<li id="card-attr"># issues</li>
+							<li id="">Bio</li>
+							<li id="">Major Responsibilities</li>
+							<li id="commits3"></li>
+							<li id="issues3"># issues</li>
 						</p>
 					</div>
 				</div>
 				<div class="card">
 					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-name">Name</h5>
+						<h5 id="name4" class="card-name"></h5>
 						<p class="card-text">
-							<li id="card-attr">Bio</li>
-							<li id="card-attr">Major Responsibilities</li>
-							<li id="card-attr"># commits</li>
-							<li id="card-attr"># issues</li>
+							<li id="">Bio</li>
+							<li id="">Major Responsibilities</li>
+							<li id="commits4"></li>
+							<li id="issues4"># issues</li>
 						</p>
 					</div>
 				</div>
 				<div class="card">
 					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-name">Name</h5>
+						<h5 id="name5" class="card-name"></h5>
 						<p class="card-text">
-							<li id="card-attr">Bio</li>
-							<li id="card-attr">Major Responsibilities</li>
-							<li id="card-attr"># commits</li>
-							<li id="card-attr"># issues</li>
+							<li id="">Bio</li>
+							<li id="">Major Responsibilities</li>
+							<li id="commits5"></li>
+							<li id="issues5"># issues</li>
 						</p>
 					</div>
 				</div>
@@ -157,3 +157,31 @@
 </body>
 
 </html>
+
+
+<script type="text/javascript">
+	var httpRequest = new XMLHttpRequest();
+	var api = "https://gitlab.com/api/v4/projects/7226786/repository/contributors?private_token=oM2-Sn_4rwcBcuSsybbt";
+	httpRequest.open("GET", api, false);
+	httpRequest.send();
+	var jsonResponse = JSON.parse(httpRequest.responseText)
+	// Group Member 0
+	document.getElementById("name0").innerHTML = jsonResponse[0].name;
+	document.getElementById("commits0").innerHTML = '# Commits: ' + jsonResponse[0].commits;
+
+	// Group Member 1 and 2 are both Jae
+	document.getElementById("name1").innerHTML = jsonResponse[1].name;
+	document.getElementById("commits1").innerHTML = '# Commits: ' + jsonResponse[1].commits + jsonResponse[2].commits;
+
+	// Group Member 3
+	document.getElementById("name3").innerHTML = jsonResponse[3].name;
+	document.getElementById("commits3").innerHTML = '# Commits: ' + jsonResponse[3].commits;
+
+	// Group Member 4
+	document.getElementById("name4").innerHTML = jsonResponse[4].name;
+	document.getElementById("commits4").innerHTML = '# Commits: ' + jsonResponse[4].commits;
+
+	// Group Member 5
+	document.getElementById("name5").innerHTML = jsonResponse[5].name;
+	document.getElementById("commits5").innerHTML = '# Commits: ' + jsonResponse[5].commits;
+</script>
