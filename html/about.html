@@ -50,25 +50,25 @@
 		</div>
 			<div class="card-deck">
 				<div class="card">
-					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
+					<img id="pic0" class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
 					<div class="card-body">
 						<h5 id="name0" class="card-name"></h5>
 						<p class="card-text">
-							<li id="">Bio</li>
-							<li id="">Responsibilities</li>
+							<li id="bio0">Bio</li>
+							<li id="tasks0">Responsibilities</li>
 							<li id="commits0"></li>
 							<li id="issues0"></li>
 							<li id="issues-created0"></li>
 						</p>
 					</div>
 				</div>
-				<div class="card">
+				<div id="pic1" class="card">
 					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
 					<div class="card-body">
 						<h5 id="name1" class="card-name"></h5>
 						<p class="card-text">
-							<li id="">Bio</li>
-							<li id="">Responsibilities</li>
+							<li id="bio1">Bio</li>
+							<li id="tasks1">Responsibilities</li>
 							<li id="commits1"></li>
 							<li id="issues1"></li>
 							<li id="issues-created1"></li>
@@ -76,12 +76,12 @@
 					</div>
 				</div>
 				<div class="card">
-					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
+					<img id="pic2" class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
 					<div class="card-body">
 						<h5 id="name2" class="card-name"></h5>
 						<p class="card-text">
-							<li id="">Bio</li>
-							<li id="">Responsibilities</li>
+							<li id="bio2">Bio</li>
+							<li id="tasks2">Responsibilities</li>
 							<li id="commits2"></li>
 							<li id="issues2"></li>
 							<li id="issues-created2"></li>
@@ -89,12 +89,12 @@
 					</div>
 				</div>
 				<div class="card">
-					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
+					<img id="pic3" class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
 					<div class="card-body">
 						<h5 id="name3" class="card-name"></h5>
 						<p class="card-text">
-							<li id="">Bio</li>
-							<li id="">Responsibilities</li>
+							<li id="bio3">Bio</li>
+							<li id="tasks3">Responsibilities</li>
 							<li id="commits3"></li>
 							<li id="issues3"></li>
 							<li id="issues-created3"></li>
@@ -102,12 +102,12 @@
 					</div>
 				</div>
 				<div class="card">
-					<img class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
+					<img id="pic4" class="card-img-top" src="https://image.flaticon.com/icons/svg/24/24029.svg" alt="Card image cap">
 					<div class="card-body">
 						<h5 id="name4" class="card-name"></h5>
 						<p class="card-text">
-							<li id="">Bio</li>
-							<li id="">Responsibilities</li>
+							<li id="bio4">Bio</li>
+							<li id="tasks4">Responsibilities</li>
 							<li id="commits4"></li>
 							<li id="issues4"></li>
 							<li id="issues-created4"></li>
@@ -187,6 +187,25 @@
 		"Dustin Huang",
 		"Kevin Kuney"]; //just to force a stable order
 	
+	teamInfo = {
+		"Jae Lee" : {
+			"pic" : "https://image.flaticon.com/icons/svg/23/23716.svg",
+			"tasks" : "",
+			"bio" : ""},
+		"Chris Renard": {
+			"tasks" : "Technical Writing",
+			"bio" : ""},
+		"Eder Garza": {
+			"tasks" : "",
+			"bio" : ""},
+		"Dustin Huang": {
+			"tasks" : "",
+			"bio" : ""},
+		"Kevin Kuney": {
+			"tasks" : "",
+			"bio" : ""}
+	}
+	
 	var commits = {};
 	var issues = {};
 	var totalCommits = 0;
@@ -246,6 +265,12 @@
     	$("#commits" + i).html(pluralize(commits[name],'commit','commits'));
     	$("#issues" + i).html(pluralize(issues[name],'issue','issues') + " closed");
     	$("#issues-created" + i).html(pluralize(issuesOpened[name],'issue','issues') + " created");
+		if(teamInfo[name]["bio"] !== "")
+		{ $("#bio" + i).html(teamInfo[name]["bio"]); }
+		if(teamInfo[name]["tasks"] !== "")
+		{ $("#tasks" + i).html(teamInfo[name]["tasks"]); }
+		if(teamInfo[name].hasOwnProperty("pic"))
+		{ $("#pic" + i).attr("src", teamInfo[name]["pic"]) };
 	}
 	$("#total").html(totalCommits + " Total Commits");
 	$("#issues").html(totalIssuesClosed + " of " + totalIssues + " Issues Closed");
