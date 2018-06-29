@@ -14,7 +14,7 @@
 
 #small-card {
 	height: 500px;
-	margin-bottom: 600px;
+	margin-bottom: 400px;
 }
 
 
@@ -112,11 +112,11 @@
 /* Action Group Card */
 
 #action-group-card {
-	height: 450px;
+	height: 510px;
 }
 
 #action-group-headshot-box {
-	height: 500px;
+	height: 300px;
 	position: relative;
 }
 
@@ -148,11 +148,11 @@
 /* Impacted Group Card */
 
 #impacted-group-card {
-	height: 450px;
+	height: 400px;
 }
 
 #impacted-group-headshot-box {
-	height: 500px;
+	height: 300PX;
 	position: relative;
 }
 
