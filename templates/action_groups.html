@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 	<title>PropXdoesWHAT</title>
 </head>
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="index.html">PropXdoesWHAT</a>
+			<a class="navbar-brand" href="/">PropXdoesWHAT</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -21,19 +21,19 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="laws.html">Laws</a>
+						<a class="nav-link" href="/laws">Laws</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="politicians.html">Politicians</a>
+						<a class="nav-link" href="/politicians">Politicians</a>
 					</li>
 					<li class="nav-item active">
 						<a class="nav-link" href="">Action Groups<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="impacted_groups.html">Impacted Groups</a>
+						<a class="nav-link" href="/impacted_groups">Impacted Groups</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="about.html">About</a>
+						<a class="nav-link" href="/about">About</a>
 					</li>
 				</ul>
 			</div>
@@ -45,7 +45,7 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div class="card mb-4 box-shadow" id="action-group-card">
-							<a href="action_groups_1.html">
+							<a href="/action_groups/american_civil_liberties_union">
 								<div id="action-group-headshot-box">
 									<img class="card-img-top" id="action-group-headshot" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/65/New_ACLU_Logo_2017.svg/250px-New_ACLU_Logo_2017.svg.png" alt="Card image cap">
 								</div>
@@ -63,7 +63,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="card mb-4 box-shadow" id="action-group-card">
-							<a href="action_groups_2.html">
+							<a href="/action_groups/national_association_for_the_advancement_of_colored_people">
 								<div id="action-group-headshot-box">
 									<img class="card-img-top" id="action-group-headshot" src="http://mediad.publicbroadcasting.net/p/wkms/files/styles/medium/public/201609/naacp4.jpg" alt="Card image cap">
 								</div>

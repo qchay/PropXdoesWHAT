@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 	<title>PropXdoesWHAT</title>
 </head>
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="index.html">PropXdoesWHAT</a>
+			<a class="navbar-brand" href="/">PropXdoesWHAT</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -21,19 +21,19 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="laws.html">Laws</a>
+						<a class="nav-link" href="/laws">Laws</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="politicians.html">Politicians</a>
+						<a class="nav-link" href="/politicians">Politicians</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="action_groups.html">Action Groups</a><span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="/action_groups">Action Groups</a><span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="impacted_groups.html">Impacted Groups</a>
+						<a class="nav-link" href="/impacted_groups">Impacted Groups</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="about.html">About</a>
+						<a class="nav-link" href="/about">About</a>
 					</li>
 				</ul>
 			</div>
@@ -42,18 +42,19 @@
 	<main>
 		<div class="container">
 			<div class="text-center">
-				<img class="center-block" id="action-group-bio-picture" src="http://gemstatepatriot.com/blog/wp-content/uploads/2018/01/splc.jpg" alt="Card image cap" >
+				<img class="center-block" id="action-group-bio-picture" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/65/New_ACLU_Logo_2017.svg/250px-New_ACLU_Logo_2017.svg.png" alt="Card image cap" >
 			</div>
 			<div class="description-box">
-				<h1 class="text-center">Southern Poverty Law Center</h1>
+				<h1 class="text-center">{% set name_list = action_group_name.split('_') %}{% for word in name_list %} {{ word|title }}{% endfor %}</h1>
 				<h2><b>BIO:</b></h2>
-				<p>
-					Civil rights lawyers Morris Dees and Joseph Levin Jr. founded the SPLC in 1971 to ensure that the promise of the civil rights movement became a reality for all. Since then, we’ve won numerous landmark legal victories on behalf of the exploited, the powerless and the forgotten.
+				<p>For nearly 100 years, the ACLU has been our nation’s guardian of liberty, working in courts, legislatures, and communities to defend and preserve the individual rights and liberties that the Constitution and the laws of the United States guarantee everyone in this country.
 
-					Our lawsuits have toppled institutional racism and stamped out remnants of Jim Crow segregation; destroyed some of the nation’s most violent white supremacist groups; and protected the civil rights of children, women, the disabled, immigrants and migrant workers, the LGBT community, prisoners, and many others who faced discrimination, abuse or exploitation.
+					Whether it’s achieving full equality for LGBT people, establishing new privacy protections for our digital age of widespread government surveillance, ending mass incarceration, or preserving the right to vote or the right to have an abortion, the ACLU takes up the toughest civil liberties cases and issues to defend all people from government abuse and overreach.
+
+					With more than 2 million members, activists, and supporters, the ACLU is a nationwide organization that fights tirelessly in all 50 states, Puerto Rico, and Washington, D.C., to safeguard everyone’s rights.
 				</p>
 				<p>
-					<a href="https://www.splcenter.org/">Click here to go to their website.</a>
+					<a href="https://www.aclu.org/">Click here to go to their website.</a>
 				</p>
 			</div>
 		</div>
@@ -63,17 +64,17 @@
 				<div class="col-md-4">
 					<div class="card mb-4 box-shadow" id="law-card">
 						<div id="law-headshot-box">
-							<a href="laws_3.html">
+							<a href="laws_1.html">
 								<img class="card-img-top" id="law-headshot" src="https://cdn1.edgedatg.com/aws/v2/abc/SchoolhouseRock/episode/1697098/212f1befce5deb621a01c48a6d717dea/1000x563-Q90_212f1befce5deb621a01c48a6d717dea.jpg" alt="Card image cap">
 							</a>
 						</div>
 
 						<div class="card-body" id="law-card-body">
-							<h3 id="card-name">Dignified Burial and Other Veterans' Benefits Improvement Act of 2012</h3>
+							<h3 id="card-name">National Invasive Species Act of 1996</h3>
 							<p class="card-text" id="law-card-body-attr">
-								<li id="card-attr">Affected Groups: Working Class</li>
-								<li id="card-attr">Primary Subject: Veterans</li>
-								<li id="card-attr">Established: 2012-12-30</li>
+								<li id="card-attr">Affected Groups: Veterans</li>
+								<li id="card-attr">Primary Subject: Environmental protection</li>
+								<li id="card-attr">Established: 1996-10-26</li>
 							</p>
 						</div>
 					</div>
@@ -82,18 +83,18 @@
 				<div class="col-md-4">
 					<div class="card mb-4 box-shadow" id="politician-card">
 						<div id="politician-headshot-box">
-							<a href="politician_3.html">
-								<img class="card-img-top" id="politician-headshot" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/John_McCain_official_portrait_2009.jpg" alt="Card image cap">
+							<a href="politician_1.html">
+								<img class="card-img-top" id="politician-headshot" src="https://bloximages.chicago2.vip.townnews.com/stljewishlight.com/content/tncms/assets/v3/editorial/b/03/b037b0de-4830-11e1-a8ed-001871e3ce6c/4f216e3f0426f.image.jpg?resize=558%2C759" alt="Card image cap">
 							</a>
 						</div>
-						
+
 						<div class="card-body">
-							<h3 id="card-name">John McCain</h3>
+							<h3 id="card-name">Barack Obama</h3>
 							<p class="card-text">
-								<li id="card-attr">Party: Republican</li>
-								<li id="card-attr">Position: Senator</li>
-								<li id="card-attr">Age: 81</li>
-								<li id="card-attr">Legislator’s state: Arizona</li>
+								<li id="card-attr">Party: Democratic</li>
+								<li id="card-attr">Position: N/A</li>
+								<li id="card-attr">Age: 56</li>
+								<li id="card-attr">Legislator’s state: N/A</li>
 							</p>
 						</div>
 					</div>
