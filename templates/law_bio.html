@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<main>
+		<div class="container">
+			<div class="text-center">
+				<img class="center-block" id="law-bio-picture" src="https://cdn1.edgedatg.com/aws/v2/abc/SchoolhouseRock/episode/1697098/212f1befce5deb621a01c48a6d717dea/1000x563-Q90_212f1befce5deb621a01c48a6d717dea.jpg" alt="Card image cap" >
+			</div>
+			<div class="description-box">
+				<h1 class="text-center">{% set name_list = law_name.split('_') %}{% for word in name_list %} {{ word|title }}{% endfor %}</h1>
+				<h2><b>Description:</b></h2>
+				<p>
+					The National Invasive Species Act (NISA) is a United States federal law intended to prevent invasive species from entering inland waters through ballast water carried by ships. NISA reauthorized and amended a previous measure, the Non-indigenous Aquatic Nuisance Prevention and Control Act of 1990 (NANPCA).
+				</p>
+				<p>
+					<a href="https://www.govtrack.us/congress/bills/104/hr4283">Click here for more info.</a>
+				</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row align-items-center justify-content-center">
+				<h2 class="text-center col-12">Politicians related to this law</h2>
+				<div class="col-md-4">
+					<div class="card mb-4 box-shadow" id="politician-card">
+						<div id="politician-headshot-box">
+							<a href="/politicians/barack_obama">
+								<img class="card-img-top" id="politician-headshot" src="https://bloximages.chicago2.vip.townnews.com/stljewishlight.com/content/tncms/assets/v3/editorial/b/03/b037b0de-4830-11e1-a8ed-001871e3ce6c/4f216e3f0426f.image.jpg?resize=558%2C759" alt="Card image cap">
+							</a>
+						</div>
+
+						<div class="card-body">
+							<h3 id="card-name">Barack Obama</h3>
+							<div id="card-attr">
+								<li>Party: Democratic</li>
+								<li>Position: N/A</li>
+								<li>Age: 56</li>
+								<li>Legislator’s state: N/A</li>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h2 class="text-center col-12">Action Groups related to this law</h2>
+				<div class="col-md-4">
+					<div class="card mb-4 box-shadow" id="action-group-card">
+						<div id="action-group-headshot-box">
+							<a href="/action_groups/american_civil_liberties_union">
+								<img class="card-img-top" id="action-group-headshot" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/65/New_ACLU_Logo_2017.svg/250px-New_ACLU_Logo_2017.svg.png" alt="Card image cap">
+							</a>
+						</div>
+
+						<div class="card-body">
+							<h3 id="card-name">American Civil Liberties Union</h3>
+							<div id="card-attr">
+								<li>Location: Washington</li>
+								<li>Established: 1920</li>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

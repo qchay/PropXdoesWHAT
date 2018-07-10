@@ -1,69 +1,68 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-	<main>
-		<div class="container">
-			<div class="text-center">
-				<img class="center-block" id="politician-bio-picture" src="https://bloximages.chicago2.vip.townnews.com/stljewishlight.com/content/tncms/assets/v3/editorial/b/03/b037b0de-4830-11e1-a8ed-001871e3ce6c/4f216e3f0426f.image.jpg?resize=558%2C759" alt="Card image cap">
-			</div>
-			<div class="description-box">
-				<h1 class="text-center">{% set name_list = politician_name.split('_') %}{% for word in name_list %} {{ word|title }}{% endfor %}</h1>
-				<h2>BIO</h2>
-				<p>Barack Hussein Obama II is an American politician who served as the 44th President of the United States from January 20, 2009, to January 20, 2017</p>
-
-				<li>Date of Birth: August 4, 1961 (age 56)</li>
-				<li>Party: Democratic</li>
-				<li>Position: N/A</li>
-				<li>Legislator's State: N/A</li>
-				<li>Office Address: N/A</li>
-				<li>Phone Number: N/A</li>
-				<li>Twitter Account: <a href="https://twitter.com/barackobama?lang=en">@BarackObama</a></li>
-				<h2>Political Spectrum</h2>
-				<p>---------------------------</p>
-			</div>
+<main>
+	<div class="container">
+		<div class="text-center">
+			<img class="center-block" id="politician-bio-picture" src="https://bloximages.chicago2.vip.townnews.com/stljewishlight.com/content/tncms/assets/v3/editorial/b/03/b037b0de-4830-11e1-a8ed-001871e3ce6c/4f216e3f0426f.image.jpg?resize=558%2C759" alt="Card image cap">
 		</div>
-		<div class="row">
-			<div class="container">
-				<h2>Laws related to this Politician</h2>
-				<div class="col-md-4">
-						<div class="card mb-4 box-shadow" id="law-card">
-							<div id="law-headshot-box">
-								<a href="laws_1.html">
-									<img class="card-img-top" id="law-headshot" src="https://cdn1.edgedatg.com/aws/v2/abc/SchoolhouseRock/episode/1697098/212f1befce5deb621a01c48a6d717dea/1000x563-Q90_212f1befce5deb621a01c48a6d717dea.jpg" alt="Card image cap">
-								</a>
-							</div>
+		<div class="description-box">
+			<h1 class="text-center">{% set name_list = politician_name.split('_') %}{% for word in name_list %} {{ word|title }}{% endfor %}</h1>
+			<h2>BIO</h2>
+			<p>Barack Hussein Obama II is an American politician who served as the 44th President of the United States from January 20, 2009, to January 20, 2017</p>
 
-							<div class="card-body" id="law-card-body">
-								<h3 id="card-name">National Invasive Species Act of 1996</h3>
-								<p class="card-text" id="law-card-body-attr">
-									<li id="card-attr">Affected Groups: Veterans</li>
-									<li id="card-attr">Primary Subject: Environmental protection</li>
-									<li id="card-attr">Established: 1996-10-26</li>
-								</p>
-							</div>
+			<li>Date of Birth: August 4, 1961 (age 56)</li>
+			<li>Party: Democratic</li>
+			<li>Position: N/A</li>
+			<li>Legislator's State: N/A</li>
+			<li>Office Address: N/A</li>
+			<li>Phone Number: N/A</li>
+			<li>Twitter Account: <a href="https://twitter.com/barackobama?lang=en">@BarackObama</a></li>
+			<h2 class="text-center">Political Spectrum</h2>
+			<p class="text-center">---------------------------</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row align-items-center justify-content-center">
+			<h2 class="text-center col-12">Laws related to this Politician</h2>
+			<div class="col-md-4">
+				<div class="card mb-4 box-shadow" id="law-card">
+					<div id="law-headshot-box">
+						<a href="/laws/national_invasive_species_act_of_1996">
+							<img class="card-img-top" id="law-headshot" src="https://cdn1.edgedatg.com/aws/v2/abc/SchoolhouseRock/episode/1697098/212f1befce5deb621a01c48a6d717dea/1000x563-Q90_212f1befce5deb621a01c48a6d717dea.jpg" alt="Card image cap">
+						</a>
+					</div>
+
+					<div class="card-body">
+						<h3 id="card-name">National Invasive Species Act of 1996</h3>
+						<div id="card-attr">
+							<li>Affected Groups: Veterans</li>
+							<li>Primary Subject: Environmental protection</li>
+							<li>Established: 1996-10-26</li>
 						</div>
 					</div>
-				<h2>Action Groups related to this Politician</h2>
-				<div class="col-md-4">
-					<div class="card mb-4 box-shadow" id="small-card">
-												<a href="action_groups_1.html">
+				</div>
+			</div>
+			<h2 class="text-center col-12">Action Groups related to this Politician</h2>
+			<div class="col-md-4">
+				<div class="card mb-4 box-shadow" id="action-group-card">
+					<div id="action-group-headshot-box">
+						<a href="/action_groups/american_civil_liberties_union">
+							<img class="card-img-top" id="action-group-headshot" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/65/New_ACLU_Logo_2017.svg/250px-New_ACLU_Logo_2017.svg.png" alt="Card image cap">
+						</a>
+					</div>
 
-						<div id="action-group-headshot-box">
-								<img class="card-img-top" id="action-group-headshot" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/65/New_ACLU_Logo_2017.svg/250px-New_ACLU_Logo_2017.svg.png" alt="Card image cap">
-						</div>
-													</a>
-
-
-						<div class="card-body">
-							<h3 id="card-name">American Civil Liberties Union</h3>
-							<p class="card-text">
-								<li id="card-attr">Location: Washington</li>
-								<li id="card-attr">Established: 1920</li>
-							</p>
+					<div class="card-body">
+						<h3 id="card-name">American Civil Liberties Union</h3>
+						<div id="card-attr">
+							<li>Location: Washington</li>
+							<li>Established: 1920</li>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</main>
+	</div>
+</main>
 {% endblock %}

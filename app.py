@@ -10,6 +10,10 @@ def index():
 def laws():
 	return render_template('laws.html')
 
+@app.route('/laws/<law_name>')
+def law_bio(law_name):
+	return render_template('law_bio.html', law_name=law_name)
+
 @app.route('/politicians')
 def politicians():
 	return render_template('politicians.html')
