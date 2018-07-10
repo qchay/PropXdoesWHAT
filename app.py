@@ -23,7 +23,7 @@ def action_groups():
 	return render_template('action_groups.html')
 
 @app.route('/action_groups/<action_group_name>')
-def action_groups_bio(action_group_name):
+def action_group_bio(action_group_name):
 	return render_template('action_group_bio.html', action_group_name=action_group_name)
 
 @app.route('/impacted_groups')
@@ -31,7 +31,7 @@ def impacted_groups():
 	return render_template('impacted_groups.html')
 
 @app.route('/impacted_groups/<impacted_group_name>')
-def impacted_groups_bio(impacted_group_name):
+def impacted_group_bio(impacted_group_name):
 	return render_template('impacted_group_bio.html', impacted_group_name=impacted_group_name)
 
 @app.route('/about')

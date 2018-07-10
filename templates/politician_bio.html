@@ -7,7 +7,7 @@
 				<img class="center-block" id="politician-bio-picture" src="https://bloximages.chicago2.vip.townnews.com/stljewishlight.com/content/tncms/assets/v3/editorial/b/03/b037b0de-4830-11e1-a8ed-001871e3ce6c/4f216e3f0426f.image.jpg?resize=558%2C759" alt="Card image cap">
 			</div>
 			<div class="description-box">
-				<h1 class="text-center">{{ politician_name.split('_')[0]|title }} {{ politician_name.split('_')[1]|title }}</h1>
+				<h1 class="text-center">{% set name_list = politician_name.split('_') %}{% for word in name_list %} {{ word|title }}{% endfor %}</h1>
 				<h2>BIO</h2>
 				<p>Barack Hussein Obama II is an American politician who served as the 44th President of the United States from January 20, 2009, to January 20, 2017</p>
 
