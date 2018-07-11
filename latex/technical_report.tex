@@ -25,7 +25,7 @@ Our goal is to allow groups to see what recent and upcoming laws may impact them
 
 \section{User Stories}
 
-The following are the initial user stories gathered for Phase 1: \\
+The following are the user stories gathered for Phase 1: \\
 
 \begin{itemize}
 	\item As a user, I want to be able to identify which groups are impacted by a law.
@@ -34,6 +34,18 @@ The following are the initial user stories gathered for Phase 1: \\
 	\item As a user, I want to see where the politicians lie on the political spectrum.
 	\item As a user, I want to see the implications of a law.
 	\item As a user, I want to know how I can to contact my senator/representative.
+	
+\end{itemize}
+
+
+The following are the user stories gathered for Phase 2: \\
+	
+\begin{itemize}
+	\item As a user, I would like to see information about what the website does on the homepage.
+	\item As a user, I would like to see more laws, politicians associated with these laws, action groups, and impacted groups.
+	\item As a user, I would like each image on the front page carousel to lead me to a certain page. 
+	\item As a user, I would like an easy way to contact a certain action group. (As of right now, only the action groups website is displayed)
+	\item As a user, I would like the impacted group's website pages to have a little more info (do a little more than just list laws affecting group and action groups associated)
 \end{itemize}
 
 \section{Models}
@@ -96,10 +108,26 @@ Full API Documentation at: documenter.getpostman.com/view/4704075/RWEmKHJp
 	\item Grammarly	--- Spelling/grammar feedback for this report
 	\item Piazza	--- Collecting User Stories from end users
 	\item Slack		--- Team communication and collaboration
+	\item Flask     --- 
+	\item React     ---
+	\item AWS       --- Server
 \end{itemize}
 
 \section{Hosting}
 
 PropXdoesWHAT is currently hosted on Amazon Web Services with the custom domain propxdoeswhat.me provided by Namecheap.
+
+Currently, we have 2 different running EC2 instances, one for the front-end and one for the back-end. Through Namecheap we set up our domain name to redirect to the front-end server and our subdomain name to the back-end server.
+
+\section{AWS}
+
+First, we launched an EC2 instance with Amazon Linux AMI(Amazon Machine Image). Since by default, all incoming ports are blocked, we added security group rules that allow incoming SSH and HTTP requests from anywhere. Next, we SSH'd into the EC2 instance by using the private key file we were given as we launched the instance, the username ec2-user, and the public IP address of the instance. \\
+\\
+$ssh -i my-ec2-key-pair.pem ec2-user@<EC2-INSTANCE-PUBLIC-IP-ADDRESS>$\\
+\\
+Next, we updated the working Linux server running in the AWS cloud and installed docker on it. Then, we transferred our local files onto the server using FileZilla's SSH File Transfer Protocol. Finally, we built our Docker image and ran our web application on our Docker container.
+
+\section(Docker)
+
 
 \end{document}
