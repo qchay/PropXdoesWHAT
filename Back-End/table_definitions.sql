@@ -24,7 +24,7 @@ CREATE TABLE `laws`
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `politicians`
+CREATE TABLE `politicians_2`
 (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`first_name` VARCHAR(64) NOT NULL,
@@ -36,8 +36,9 @@ CREATE TABLE `politicians`
 	
 	`site` VARCHAR(256),
 	`contact_form` VARCHAR(256),
+	`phone` VARCHAR(32),
 	
-	`raw` JSON,
+	`raw` TEXT,
 	PRIMARY KEY (`id`)
 );
 
