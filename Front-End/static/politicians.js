@@ -75,8 +75,8 @@ var data_mccain = 	{
 
 var dataArray = [data_barack, data_cruz, data_mccain];
 
-var page_number = JSON.parse(document.getElementById("page_number").dataset.page);
-console.log(page_number)
+// var page_number = JSON.parse(document.getElementById("page_number").dataset.page);
+// console.log(page_number)
 
 
 // var renderInsert =[]
@@ -93,13 +93,13 @@ ReactDOM.render(
 	document.getElementById('target')
 );
 
-// var httpRequest = new XMLHttpRequest();
-// var api = "http://api.propxdoeswhat.me/api/politicians";
-// httpRequest.open("GET", api, false);
-// httpRequest.send();
-// var jsonResponse = JSON.parse(httpRequest.responseText);
+var httpRequest = new XMLHttpRequest();
+var api = "http://api.propxdoeswhat.me/api/politicians";
+httpRequest.open("GET", api, false);
+httpRequest.send();
+var jsonResponse = JSON.parse(httpRequest.responseText);
 
-// console.log(jsonResponse);
+console.log(jsonResponse);
 
 // for(var politician of jsonResponse.objects) {
 // 	console.log(politician);
@@ -133,9 +133,9 @@ ReactDOM.render(
 // );
 
 
-fetch('http://api.propxdoeswhat.me/api/politicians')
-  .then(response => console.log(response.json()))
-  .then(data => console.log(data));
+// fetch('http://api.propxdoeswhat.me/api/politicians')
+//   .then(response => console.log(response.json()))
+//   .then(data => console.log(data));
 
 
 
