@@ -24,7 +24,7 @@ CREATE TABLE `laws`
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `politicians_2`
+CREATE TABLE `politicians`
 (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`first_name` VARCHAR(64) NOT NULL,
