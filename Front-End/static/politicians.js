@@ -85,6 +85,7 @@ var data_cruz = 	{
 			};
 
 var data_mccain = 	{
+
 			chamber : "Senate",
 			contact_form: null,
 			first_name: "John",
@@ -101,7 +102,6 @@ var data_mccain = 	{
 var politician_array = [data_barack, data_cruz, data_mccain];
 var row_array = [politician_array,politician_array,politician_array];
 */
-
 
 // Getting json response
 var page_number = JSON.parse(document.getElementById("page_number").dataset.page);
@@ -137,5 +137,4 @@ ReactDOM.render(
 	</div>, 
 	document.getElementById('target')
 );
-
 
