@@ -1,3 +1,5 @@
+# pylint: disable-all
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -14,13 +16,14 @@ def laws():
 def law_bio(law_name):
 	return render_template('law_bio.html', law_name=law_name)
 
-@app.route('/politicians')
-def politicians():
-	return render_template('politicians.html')
+#@app.route('/politicians?page=<int:page_number>')
+@app.route('/politicians/page/<int:page_number>')
+def politicians(page_number):
+	return render_template('politicians.html', page_number=page_number)
 
-@app.route('/politicians/<politician_name>')
-def politician_bio(politician_name):
-	return render_template('politician_bio.html', politician_name=politician_name)
+@app.route('/politicians/<politician_name>/<int:id_number>')
+def politician_bio(politician_name, id_number):
+	return render_template('politician_bio.html', politician_name=politician_name, id_number=id_number)
 
 @app.route('/action_groups')
 def action_groups():
@@ -43,4 +46,4 @@ def about():
 	return render_template('about.html')
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0')
+	app.run(host='0.0.0.0', debug = True)

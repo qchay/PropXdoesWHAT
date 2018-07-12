@@ -2,6 +2,8 @@
 
 {% block body %}
 <main>
+	<div id="id_number" data-id_number="{{ id_number }}"></div>
+	<p>{{ id_number }}</p>
 	<div class="container">
 		<div class="text-center">
 			<img class="center-block" id="politician-bio-picture" src="https://bloximages.chicago2.vip.townnews.com/stljewishlight.com/content/tncms/assets/v3/editorial/b/03/b037b0de-4830-11e1-a8ed-001871e3ce6c/4f216e3f0426f.image.jpg?resize=558%2C759" alt="Card image cap">
@@ -64,5 +66,11 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">console.log(JSON.parse(document.getElementById("id_number").dataset.id_number))</script>
 </main>
 {% endblock %}
+
+
+
+
+
