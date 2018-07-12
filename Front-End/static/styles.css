@@ -12,6 +12,14 @@
 	object-fit: cover;
 }
 
+.carousel-caption {
+    bottom: 70%;
+}
+
+.carousel-site-info{
+	bottom: 70%;
+
+}
 #small-card {
 	height: 500px;
 	margin-bottom: 400px;

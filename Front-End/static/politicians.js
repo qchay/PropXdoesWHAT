@@ -48,7 +48,7 @@ var data_barack = 	{
 			position : "Ex-President",
 			age : 56,
 			state : "WA",
-			imgage_srouce : "https://bloximages.chicago2.vip.townnews.com/stljewishlight.com/content/tncms/assets/v3/editorial/b/03/b037b0de-4830-11e1-a8ed-001871e3ce6c/4f216e3f0426f.image.jpg?resize=558%2C759",
+			imgage_srouce : "https://scontent.fftw1-1.fna.fbcdn.net/v/t1.0-9/16681592_606500959548601_7691110575713909985_n.jpg?_nc_cat=0&oh=2c7744391f9b2d1b5da4f01a6faa79cb&oe=5BA1FDCE",
 			href : "/politicians/barack_obama"
 			};
 
@@ -59,7 +59,7 @@ var data_cruz = 	{
 			position : "Senator",
 			age : 47,
 			state : "TX",
-			imgage_srouce : "https://upload.wikimedia.org/wikipedia/commons/8/87/Ted_Cruz%2C_official_portrait%2C_113th_Congress.jpg",
+			imgage_srouce : "http://vincentsammons.com/wp-content/uploads/2018/03/republican-party-clipart-18.jpg",
 			href : "/politicians/ted_cruz"
 			};
 
@@ -69,7 +69,7 @@ var data_mccain = 	{
 			position : "Senator",
 			age : 81,
 			state : "AZ",
-			imgage_srouce : "https://upload.wikimedia.org/wikipedia/commons/e/e1/John_McCain_official_portrait_2009.jpg",
+			imgage_srouce : "https://scontent.fftw1-1.fna.fbcdn.net/v/t1.0-9/16681592_606500959548601_7691110575713909985_n.jpg?_nc_cat=0&oh=2c7744391f9b2d1b5da4f01a6faa79cb&oe=5BA1FDCE",
 			href : "/politicians/john_mccain"
 			};
 
