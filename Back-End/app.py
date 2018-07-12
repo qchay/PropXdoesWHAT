@@ -22,6 +22,6 @@ class politicians (db.Model):
 	#raw = db.Column(db.Unicode, nullable=False)
 
 manager = APIManager(app, flask_sqlalchemy_db=db)
-manager.create_api(politicians, methods =['GET'])
+manager.create_api(politicians, methods =['GET'], results_per_page=12)
 
 app.run(host ='0.0.0.0', debug = True)
