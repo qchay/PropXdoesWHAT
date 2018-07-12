@@ -2,11 +2,12 @@
 from flask import Flask
 from flask_restless import APIManager
 from flask_sqlalchemy import SQLAlchemy
-
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://Propxdoeswhat:Propxdoeswhat@propxdoeswhatdb.cnsfq0o1clx8.us-east-2.rds.amazonaws.com/PropxdoeswhatDB'
 db = SQLAlchemy(app)
+CORS(app)
 
 class politicians (db.Model):
 	id = db.Column(db.Integer, primary_key=True, nullable=False)
