@@ -75,6 +75,10 @@ var data_mccain = 	{
 
 var dataArray = [data_barack, data_cruz, data_mccain];
 
+var page_number = JSON.parse(document.getElementById("page_number").dataset.page);
+console.log(page_number)
+
+
 ReactDOM.render(
 	<div className="container">
 		<Row dataArray={dataArray}/>
@@ -83,6 +87,18 @@ ReactDOM.render(
 	</div>, 
 	document.getElementById('target')
 );
+
+var httpRequest = new XMLHttpRequest();
+var api = "http://api.propxdoeswhat.me/api/politicians";
+httpRequest.open("GET", api, false);
+httpRequest.send();
+var jsonResponse = JSON.parse(httpRequest.responseText);
+
+console.log(jsonResponse);
+
+// for(var politician of jsonResponse.objects) {
+// 	console.log(politician);
+// }
 
 
 
