@@ -79,6 +79,11 @@ var page_number = JSON.parse(document.getElementById("page_number").dataset.page
 console.log(page_number)
 
 
+// var renderInsert =[]
+// for (i = 0; i < 3; i++) { 
+    
+// }
+
 ReactDOM.render(
 	<div className="container">
 		<Row dataArray={dataArray}/>
@@ -88,18 +93,49 @@ ReactDOM.render(
 	document.getElementById('target')
 );
 
-var httpRequest = new XMLHttpRequest();
-var api = "http://api.propxdoeswhat.me/api/politicians";
-httpRequest.open("GET", api, false);
-httpRequest.send();
-var jsonResponse = JSON.parse(httpRequest.responseText);
+// var httpRequest = new XMLHttpRequest();
+// var api = "http://api.propxdoeswhat.me/api/politicians";
+// httpRequest.open("GET", api, false);
+// httpRequest.send();
+// var jsonResponse = JSON.parse(httpRequest.responseText);
 
-console.log(jsonResponse);
+// console.log(jsonResponse);
 
 // for(var politician of jsonResponse.objects) {
 // 	console.log(politician);
 // }
 
+
+// class App extends React.Component {
+//   constructor(props) {
+//     super(props);
+
+//     this.state = {
+//       data: [],
+//     };
+//   }
+
+//   componentDidMount() {
+//     fetch('http://api.propxdoeswhat.me/api/politicians')
+//       .then(response => response.json())
+//       .then(data => this.setState({ data }));
+//   }
+
+// }
+
+// ReactDOM.render(
+// 	<div className="container">
+// 		<Row dataArray={dataArray}/>
+// 		<Row dataArray={dataArray}/>
+// 		<Row dataArray={dataArray}/>
+// 	</div>, 
+// 	document.getElementById('target')
+// );
+
+
+fetch('http://api.propxdoeswhat.me/api/politicians')
+  .then(response => console.log(response.json()))
+  .then(data => console.log(data));
 
 
 
