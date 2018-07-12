@@ -32,7 +32,7 @@ class Laws extends React.Component {
 						<div id="card-attr">
 							<li>Affected Groups: {this.props.data.affectedGroups}</li>
 							<li>Subject: {this.props.data.subject}</li>
-							<li>established: {this.props.data.establishedDate}</li>
+							<li>Established: {this.props.data.establishedDate}</li>
 						</div>
 					</div>
 				</div>
