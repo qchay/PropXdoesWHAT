@@ -18,7 +18,7 @@ class politicians (db.Model):
 	site = db.Column(db.Unicode, nullable=False)
 	contact_form = db.Column(db.Unicode, nullable=False)
 	phone = db.Column(db.Unicode, nullable=False)
-	raw = db.Column(db.Unicode, nullable=False)
+	#raw = db.Column(db.Unicode, nullable=False)
 
 manager = APIManager(app, flask_sqlalchemy_db=db)
 manager.create_api(politicians, methods =['GET'])
