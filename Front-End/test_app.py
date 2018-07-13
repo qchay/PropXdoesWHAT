@@ -35,8 +35,8 @@ class TestWebsite(unittest.TestCase):
 		response = self.client.get('/action_groups')
 		self.assertEqual(response.status_code, 200)
 
-	def test_impacted_groups_page(self):
-		response = self.client.get('/impacted_groups')
+	def test_affected_groups_page(self):
+		response = self.client.get('/affected_groups')
 		self.assertEqual(response.status_code, 200)
 
 	def test_about_page(self):

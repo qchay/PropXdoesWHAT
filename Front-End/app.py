@@ -32,13 +32,13 @@ def action_groups():
 def action_group_bio(action_group_name):
 	return render_template('action_group_bio.html', action_group_name=action_group_name)
 
-@app.route('/impacted_groups')
-def impacted_groups():
-	return render_template('impacted_groups.html')
+@app.route('/affected_groups')
+def affected_groups():
+	return render_template('affected_groups.html')
 
-@app.route('/impacted_groups/<impacted_group_name>')
-def impacted_group_bio(impacted_group_name):
-	return render_template('impacted_group_bio.html', impacted_group_name=impacted_group_name)
+@app.route('/affected_groups/<affected_group_name>')
+def affected_group_bio(affected_group_name):
+	return render_template('affected_group_bio.html', affected_group_name=affected_group_name)
 
 @app.route('/about')
 def about():

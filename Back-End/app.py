@@ -71,7 +71,9 @@ class Affected_groups (db.Model):
 class Action_groups (db.Model):
 	id = db.Column(db.Integer, primary_key=True, nullable=False)
 	name = db.Column(db.Unicode, nullable=False)
-	description = db.Column(db.Unicode, nullable=False)
+	url = db.Column(db.Unicode, nullable=False)
+	type = db.Column(db.Unicode, nullable=False)
+	desc = db.Column(db.Unicode, nullable=False)
 
 manager = APIManager(app, flask_sqlalchemy_db=db)
 manager.create_api(Politicians, methods =['GET'], results_per_page=12)
