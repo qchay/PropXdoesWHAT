@@ -1,7 +1,5 @@
 class Row extends React.Component {
-	constructor(props) {
-		super(props);
-		}
+	constructor(props) { super(props); }
 	render() {
   		return (
  			<div className="row">
@@ -84,6 +82,5 @@ ReactDOM.render(
 	<div className="container">	
     	{row_array.map((row_array_item, i) => <Row key = {i} politician_array = {row_array_item}/>)}
 	</div>, 
-	document.getElementById('target')
+	document.getElementById('album')
 );
-

@@ -8,15 +8,14 @@ app = Flask(__name__)
 def index():
 	return render_template('index.html')
 
-@app.route('/laws')
-def laws():
-	return render_template('laws.html')
+@app.route('/laws/page/<int:page_number>')
+def laws(page_number):
+	return render_template('laws.html', page_number=page_number)
 
-@app.route('/laws/<law_name>')
-def law_bio(law_name):
-	return render_template('law_bio.html', law_name=law_name)
+@app.route('/laws/<law_name>/<int:id_number>')
+def law_bio(law_name, id_number):
+	return render_template('law_bio.html', law_name=law_name, id_number=id_number)
 
-#@app.route('/politicians?page=<int:page_number>')
 @app.route('/politicians/page/<int:page_number>')
 def politicians(page_number):
 	return render_template('politicians.html', page_number=page_number)

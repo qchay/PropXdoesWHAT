@@ -1,4 +1,4 @@
-# int: disable-all
+# pylint: disable-all
 from flask import Flask
 from flask_restless import APIManager
 from flask_sqlalchemy import SQLAlchemy
@@ -80,3 +80,4 @@ manager.create_api(Affected_groups, methods =['GET'], results_per_page=12)
 manager.create_api(Action_groups, methods =['GET'], results_per_page=12)
 
 app.run(host ='0.0.0.0', debug = True)
+
