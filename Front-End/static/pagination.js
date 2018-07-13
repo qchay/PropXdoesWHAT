@@ -46,7 +46,7 @@ class Page_Footer extends React.Component {
 	constructor(props) { super(props); }
 	render() {
   		return (		
-			<nav aria-label=""+result+" pages">
+			<nav aria-label="pages">
 				<ul className="pagination pagination-lg justify-content-center">
 					<Prev_Page prev_page={this.props.page_data.prev_page}/>
 					{this.props.page_data.page_array.map((page, i) => 
