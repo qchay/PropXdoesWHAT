@@ -1,6 +1,7 @@
 
 	var httpRequest = new XMLHttpRequest();
-	var api = "https://gitlab.com/api/v4/projects/7226786/repository/contributors?private_token=oM2-Sn_4rwcBcuSsybbt";
+	var api = "https://gitlab.com/api/v4/projects/7226786/repository/contributors?private_token=oM2-Sn_4rwcBcuSsybbt&per_page=100";
+	// "page" to access higher paginations, max val for "per_page" is 100, so that's just a temp fix
 	httpRequest.open("GET", api, false);
 	httpRequest.send();
 	var jsonResponse = JSON.parse(httpRequest.responseText)
