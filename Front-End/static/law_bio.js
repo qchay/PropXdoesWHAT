@@ -3,9 +3,6 @@ class Bio extends React.Component {
 	render() {
   		return (
 		  	<div className="container">
-				<div className="text-center">
-					<img className="center-block" id="politician-bio-picture" src="https://cdn1.edgedatg.com/aws/v2/abc/SchoolhouseRock/episode/1697098/212f1befce5deb621a01c48a6d717dea/1000x563-Q90_212f1befce5deb621a01c48a6d717dea.jpg" alt="Card image cap"/>
-				</div>
 				<div className="description-box">
 					<h1 className="text-center">{this.props.law_data.title}</h1>
 					<h2>Description</h2>
