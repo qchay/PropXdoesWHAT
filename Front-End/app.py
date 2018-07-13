@@ -28,9 +28,9 @@ def politician_bio(politician_name, id_number):
 def action_groups(page_number):
 	return render_template('action_groups.html', page_number=page_number)
 
-@app.route('/action_groups/<action_group_name>')
-def action_group_bio(action_group_name):
-	return render_template('action_group_bio.html', action_group_name=action_group_name)
+@app.route('/action_groups/<action_group_name>/<int:id_number>')
+def action_group_bio(action_group_name, id_number):
+	return render_template('action_group_bio.html', action_group_name=action_group_name, id_number=id_number)
 
 @app.route('/affected_groups/page/<int:page_number>')
 def affected_groups(page_number):

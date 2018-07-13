@@ -1,76 +1,38 @@
-class Row extends React.Component {
-	constructor(props) {
-		super(props);
-		}
+class Action_Group extends React.Component {
+	constructor(props) { super(props); }
 	render() {
   		return (
- 			<div className="row">
- 				<ActionGroups data={this.props.dataArray[0]}/>
-				<ActionGroups data={this.props.dataArray[1]}/>
-				<ActionGroups data={this.props.dataArray[2]}/>
-			</div>
-    	);
-  	}
-}	
-
-class ActionGroups extends React.Component {
-	constructor(props) {
-		super(props);
-		}
-	render() {
-  		return (
-	  		<div className="col-md-4">
-	 			<div className="card mb-4 box-shadow" id="action-group-card">
-					<a href={this.props.data.href}>
-						<div id="action-group-headshot-box">
-							<img className="card-img-top" id="action-group-headshot" src={this.props.data.image_source} alt="Card image cap"/>
+	  		<div className="list-group">
+					<a href={'/action_groups/' + this.props.action_group_data.name.replace(/\s/g, '') + '/' + this.props.action_group_data.id} className="list-group-item">
+						<h4>{this.props.action_group_data.name}</h4>
+						<div className="law-info">
+						<li>Type: {this.props.action_group_data.type}</li>
 						</div>
 					</a>
-
-					<div className="card-body">
-						<h3 id="card-name">{this.props.data.name}</h3>
-						<div id="card-attr">
-							<li>Location: {this.props.data.location}</li>
-							<li>Established: {this.props.data.establishedYear}</li>
-						</div>
-					</div>
-				</div>
 			</div>
     	);
   	}
 }	
 
-var data_1 = 	{
-			name : "American Civil Liberties Union",
-			location : "Washington",
-			establishedYear : "1920",
-			image_source : "https://upload.wikimedia.org/wikipedia/en/thumb/6/65/New_ACLU_Logo_2017.svg/250px-New_ACLU_Logo_2017.svg.png",
-			href : "/action_groups/american_civil_liberties_union"
-			};
+// Getting json response
+var page_number = JSON.parse(document.getElementById("page_number").dataset.page);
+var httpRequest = new XMLHttpRequest();
+var api = "http://api.propxdoeswhat.me/api/action_groups?page=" + page_number;
+httpRequest.open("GET", api, false);
+httpRequest.send();
+var jsonResponse = JSON.parse(httpRequest.responseText);
 
-var data_2 = 	{
-			name : "National Association for the Advancement of Colored People",
-			location : "New York",
-			establishedYear : "1909",
-			image_source : "http://mediad.publicbroadcasting.net/p/wkms/files/styles/medium/public/201609/naacp4.jpg",
-			href : "/action_groups/national_association_for_the_advancement_of_colored_people"
-			};
+// Parsing json response, putting data into rows
+var action_group_array = [];
+for (var action_group of jsonResponse.objects) {
+		action_group_array.push(action_group);
+}
 
-var data_3 = 	{
-			name : "Southern Poverty Law Center",
-			location : "Alabama",
-			establishedYear : "1971",
-			image_source : "http://gemstatepatriot.com/blog/wp-content/uploads/2018/01/splc.jpg",
-			href : "/action_groups/southern_poverty_law_center"
-			};
-
-var dataArray = [data_1, data_2, data_3];
-
+// Rendering DOM elements
 ReactDOM.render(
-	<div className="container">
-		<Row dataArray={dataArray}/>
-		<Row dataArray={dataArray}/>
-		<Row dataArray={dataArray}/>
+	<div className="container">	
+    	{action_group_array.map((action_group_array_item, i) => 
+ 			<Action_Group key = {i} action_group_data = {action_group_array_item}/>)}
 	</div>, 
-	document.getElementById('target')
+	document.getElementById('album')
 );
