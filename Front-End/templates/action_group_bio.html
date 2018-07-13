@@ -1,67 +1,38 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-	<main>
-		<div class="container">
-			<div class="text-center">
-				<img class="center-block" id="action-group-bio-picture" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/65/New_ACLU_Logo_2017.svg/250px-New_ACLU_Logo_2017.svg.png" alt="Card image cap" >
-			</div>
-			<div class="description-box">
-				<h1 class="text-center">{% set name_list = action_group_name.split('_') %}{% for word in name_list %} {{ word|title }}{% endfor %}</h1>
-				<h2><b>BIO:</b></h2>
-				<p>For nearly 100 years, the ACLU has been our nation’s guardian of liberty, working in courts, legislatures, and communities to defend and preserve the individual rights and liberties that the Constitution and the laws of the United States guarantee everyone in this country.
 
-					Whether it’s achieving full equality for LGBT people, establishing new privacy protections for our digital age of widespread government surveillance, ending mass incarceration, or preserving the right to vote or the right to have an abortion, the ACLU takes up the toughest civil liberties cases and issues to defend all people from government abuse and overreach.
-
-					With more than 2 million members, activists, and supporters, the ACLU is a nationwide organization that fights tirelessly in all 50 states, Puerto Rico, and Washington, D.C., to safeguard everyone’s rights.
-				</p>
-				<p>
-					<a href="https://www.aclu.org/">Click here to go to their website.</a>
-				</p>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row align-items-center justify-content-center">
-				<h2 class="text-center col-12">Laws related to this Action Group</h2>
-				<div class="col-md-4">
-					<div class="card mb-4 box-shadow" id="law-card">
-						<div id="law-headshot-box">
-							<a href="/laws/national_invasive_species_act_of_1996">
-								<img class="card-img-top" id="law-headshot" src="https://cdn1.edgedatg.com/aws/v2/abc/SchoolhouseRock/episode/1697098/212f1befce5deb621a01c48a6d717dea/1000x563-Q90_212f1befce5deb621a01c48a6d717dea.jpg" alt="Card image cap">
-							</a>
-						</div>
-
-						<div class="card-body">
-							<h3 id="card-name">National Invasive Species Act of 1996</h3>
-							<div id="card-attr">
-								<li>Affected Groups: Veterans</li>
-								<li>Primary Subject: Environmental protection</li>
-								<li>Established: 1996-10-26</li>
-							</div>
-						</div>
+<main>
+	<div id="id_number" data-id_number="{{ id_number }}"></div>
+	<div id="bio"></div>
+	<!-- <div class="container">
+		<div class="row align-items-center justify-content-center">
+			<h2 class="text-center col-12">Politicians related to this law</h2>
+			<div class="col-md-4" id='politician'></div>
+			<h2 class="text-center col-12">Action Groups related to this law</h2>
+			<div class="col-md-4">
+				<div class="card mb-4 box-shadow" id="action-group-card">
+					<div id="action-group-headshot-box">
+						<a href="/action_groups/american_civil_liberties_union">
+							<img class="card-img-top" id="action-group-headshot" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/65/New_ACLU_Logo_2017.svg/250px-New_ACLU_Logo_2017.svg.png" alt="Card image cap">
+						</a>
 					</div>
-				</div>
-				<h2 class="text-center col-12">Politicians related to this Action Group</h2>
-				<div class="col-md-4">
-					<div class="card mb-4 box-shadow" id="politician-card">
-						<div id="politician-headshot-box">
-							<a href="/politicians/barack_obama">
-								<img class="card-img-top" id="politician-headshot" src="https://bloximages.chicago2.vip.townnews.com/stljewishlight.com/content/tncms/assets/v3/editorial/b/03/b037b0de-4830-11e1-a8ed-001871e3ce6c/4f216e3f0426f.image.jpg?resize=558%2C759" alt="Card image cap">
-							</a>
-						</div>
 
-						<div class="card-body">
-							<h3 id="card-name">Barack Obama</h3>
-							<div id="card-attr">
-								<li>Party: Democratic</li>
-								<li>Position: N/A</li>
-								<li>Age: 56</li>
-								<li>Legislator’s state: N/A</li>
-							</div>
+					<div class="card-body">
+						<h3 id="card-name">American Civil Liberties Union</h3>
+						<div id="card-attr">
+							<li>Location: Washington</li>
+							<li>Established: 1920</li>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</main>
+		</div> -->
+	</div>
+</main>
+{% endblock %}
+
+
+{% block script %}
+<script type="text/babel" src="{{ url_for('static', filename='action_group_bio.js') }}"></script>
 {% endblock %}
