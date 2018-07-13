@@ -67,6 +67,6 @@ var jsonResponse = JSON.parse(httpRequest.responseText);
 // Rendering DOM elements
 ReactDOM.render(
 	<Bio politician_data={jsonResponse}/>,
-	document.getElementById('target')
+	document.getElementById('bio')
 );
 
