@@ -10,7 +10,7 @@ CREATE TABLE `action_groups`
 (
 	`id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(256) NOT NULL,
-	
+	`url` VARCHAR(256) NOT NULL,
 	`desc` TEXT,
 	PRIMARY KEY (`id`)
 );
