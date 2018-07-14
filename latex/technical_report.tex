@@ -204,7 +204,7 @@ Next, we updated the working Linux server running in the AWS cloud and installed
 We use a MySQL 5.6 instance running on Amazon RDS. The Amazon default settings use \code{latin1} for text (this is bad), we had to manually adjust them to use \code{utf8mb4} and rebuild tables. Note: \code{utf8} in MySQL does not meet the utf8 spec, as it will not work with astral glyphs (four-byte characters). While this is unlikely to occur in our dataset, for future-proofing we use \code{utf8mb4} which correctly implements the standard. 
 
 \begin{itemize}
-	\item[] `laws`
+	\item[] Table: \code{`laws`}
 	\begin{itemize}
 		\item \code{`id` INT UNSIGNED NOT NULL AUTO\_INCREMENT}	-- internal id, auto-generated
 		\item \code{`bill\_id` VARCHAR(32) NOT NULL}			-- unique bill name across legislatures, ie: hr5515-115
@@ -224,7 +224,7 @@ We use a MySQL 5.6 instance running on Amazon RDS. The Amazon default settings u
 		\item \code{`desc` TEXT}								-- propublica summary
 		\item \code{`raw` TEXT}									-- raw json from source for this entry
 	\end{itemize}
-	\item[] Politicians
+	\item[] Table: \code{`politicians`}
 	\begin{itemize}
 		\item \code{`id` INT UNSIGNED NOT NULL AUTO\_INCREMENT}	-- internal id, auto-generated
 		\item \code{`first\_name` VARCHAR(64) NOT NULL}
@@ -239,7 +239,7 @@ We use a MySQL 5.6 instance running on Amazon RDS. The Amazon default settings u
 		\item \code{`phone` VARCHAR(32)}
 		\item \code{`raw` TEXT}									-- raw json from source for this entry
 	\end{itemize}
-	\item[] Action Groups
+	\item[] Table: \code{`action\_groups`}
 	\begin{itemize}
 		\item \code{`id` INT UNSIGNED NOT NULL AUTO\_INCREMENT}	-- internal id, auto-generated
 		\item \code{`name` VARCHAR(256) NOT NULL}
