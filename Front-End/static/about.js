@@ -29,6 +29,7 @@
 			"bio" : "Upcoming Senior, studying Computer Science"},
 		"Chris Renard": {
 			"tasks" : "Technical Writing",
+			"pic" : "http://rilne-kitsune.com/img/rune.png",
 			"bio" : ""},
 		"Eder Garza": {
 			"pic" : "https://cdn-images-1.medium.com/max/800/1*CH78x9KtC8Ldx1c8mZ3_VA.png",
