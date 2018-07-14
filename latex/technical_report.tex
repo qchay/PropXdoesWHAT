@@ -163,9 +163,17 @@ Full API Documentation at: documenter.getpostman.com/view/4704075/RWEmKHJp
 
 \section{Hosting}
 
-PropXdoesWHAT is currently hosted on Amazon Web Services with the custom domain propxdoeswhat.me provided by Namecheap.
+\subsection{Database}
 
-Currently, we have 2 different running EC2 instances, one for the front-end and one for the back-end. Through Namecheap we set up our domain name to redirect to the front-end server and our sub-domain name to the back-end server.
+Our database is hosted on Amazon's Relational Database service. We used MySQL to design and populate our database.
+
+\subsection{Back End}
+
+The back end is hosted on an AWS EC2 instance. The main file is "Back-end/app.py" and it is running in a docker container on the server. The back end utilizes flask, sqlalchemy and flask-restless to create an API. The API is hosted on "api.propxdoeswhat.me/api/".
+
+\subsection{Front End}
+
+The front end is also hosted on an AWS EC2 instance. The main file is "Front-end/app.py" and it is running in a docker container on the server. We used React and Bootstap to build the front end. The front end gets data from our back end and serves it to the client. The front end is hosted on "propxdoeswhat.me".
 
 \section{AWS}
 
