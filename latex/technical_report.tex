@@ -4,9 +4,12 @@
 \usepackage[english]{babel}
 \usepackage{graphicx}
 
-\setlength{\parindent}{0.5in}
+\setlength{\parindent}{0.0in}
+%\setlength{\parskip}{1em}
 
 \setlist[itemize]{nosep}
+
+\newcommand{\code}[1]{\texttt{#1}}
 
 \title{PropXdoesWHAT}
 \author{Chris Renard \and Dustin Huang \and Eder Garza \and Jae Lee \and Kevin Kuney}
@@ -29,48 +32,49 @@ Our goal is to allow groups to see what recent and upcoming laws may affect them
 The following are the user stories gathered for Phase 1: \\
 
 \begin{itemize}
-	\item\textbf{As a user, I want to be able to identify which groups are affected by a law.} 
-	\\We solved this issue by mapping the laws to the affected group and displaying them within each law model. In our API model, we set up a relationship between the laws and the affected groups. From there, we were able to call our API and display the mappings in a well-structured format using Bootstrap and ReactJS.
+	\item\textbf{As a user, I want to be able to identify which groups are affected by a law.} \\
+	We solved this issue by mapping the laws to the affected group and displaying them within each law model. In our API model, we set up a relationship between the laws and the affected groups. From there, we were able to call our API and display the mappings in a well-structured format using Bootstrap and ReactJS.
 	\\
 	
-	\item\textbf{As a user, I want to see what congressmen, senators, city-council, etc. are supporting a law.} 
-	\\ We solved this issue by mapping the laws to the corresponding politician and displaying them within each law model. In our API model, we set up a relationship between the laws and the policitians involved. From there, we were able to call our API and display the mappings in a well-structured format using Bootstrap and ReactJS.
+	\item\textbf{As a user, I want to see what congressmen, senators, city-council, etc. are supporting a law.} \\
+	We solved this issue by mapping the laws to the corresponding politician and displaying them within each law model. In our API model, we set up a relationship between the laws and the policitians involved. From there, we were able to call our API and display the mappings in a well-structured format using Bootstrap and ReactJS.
 	\\
 	
-	\item\textbf{As a user, I want to see where the politicians lie on the political spectrum.} 
-	\\ We solved this issue by grabbing the politician's political affiliation from our API database and structuring the information using Bootstrap and ReactJS.
+	\item\textbf{As a user, I want to see where the politicians lie on the political spectrum.} \\
+	We solved this issue by grabbing the politician's political affiliation from our API database and structuring the information using Bootstrap and ReactJS.
 	\\
 	
-	\item\textbf{As a user, I want to see the implications of a law.} \\ We solved this issue by having a description for each law. This was done by querying the description parameter data from our law API and displaying it onto the appropriate model page. 
+	\item\textbf{As a user, I want to see the implications of a law.} \\
+	We solved this issue by having a description for each law. This was done by querying the description parameter data from our law API and displaying it onto the appropriate model page. 
 	\\
 	
-	\item\textbf{As a user, I want to know how I can contact my senator/representative.} 
-	\\ We solved this issue by displaying each politician's bio, which includes their website and number. This was done by querying the relevant contact information parameters from our API and displaying it onto our website with front-end tools, such as Bootstrap and ReactJS.
+	\item\textbf{As a user, I want to know how I can contact my senator/representative.} \\
+	We solved this issue by displaying each politician's bio, which includes their website and number. This was done by querying the relevant contact information parameters from our API and displaying it onto our website with front-end tools, such as Bootstrap and ReactJS.
 	
 \end{itemize} ~\\
 
 
-\noindent The following are the user stories gathered for Phase 2: \\
+The following are the user stories gathered for Phase 2: \\
 	
 \begin{itemize}
-	\item\textbf{As a user, I would like to see information about what the website does on the homepage.} 
-	\\ We solved this issue by displaying the purpose of the website in the homepage.
+	\item\textbf{As a user, I would like to see information about what the website does on the homepage.} \\
+	We solved this issue by displaying the purpose of the website in the homepage.
 	\\
 	
-	\item\textbf{As a user, I would like to see more laws, politicians associated with these laws, action groups, and affected groups.}
-	\\We resolved this user story by having the front-end gather the data from the API and displaying it. Our models are linked with foreign keys creating relationships with each other. Within our JavaScript code, we displayed the necessary data which now displays more laws, politicians associated with these laws, action groups, and affected groups.
+	\item\textbf{As a user, I would like to see more laws, politicians associated with these laws, action groups, and affected groups.} \\
+	We resolved this user story by having the front-end gather the data from the API and displaying it. Our models are linked with foreign keys creating relationships with each other. Within our JavaScript code, we displayed the necessary data which now displays more laws, politicians associated with these laws, action groups, and affected groups.
 	\\
 	
-	\item\textbf{As a user, I would like each image on the front page carousel to lead me to a certain page.} 
-	\\ We solved this issue by making each image a link to different pages.
+	\item\textbf{As a user, I would like each image on the front page carousel to lead me to a certain page.} \\
+	We solved this issue by making each image a link to different pages.
 	\\
 	
-	\item\textbf{As a user, I would like an easy way to contact a certain action group.}
-	\\We solved this issue by displaying the necessary contact information of a certain action group on the model page. This was done through querying the data from our API and displaying it to the website with front-end tools such as Bootstrap and ReactJS.
+	\item\textbf{As a user, I would like an easy way to contact a certain action group.} \\
+	We solved this issue by displaying the necessary contact information of a certain action group on the model page. This was done through querying the data from our API and displaying it to the website with front-end tools such as Bootstrap and ReactJS.
 	\\ 
 	
-	\item\textbf{As a user, I would like the affected group's website pages to have a little more info (do a little more than just list laws affecting group and action groups associated)} 
-	\\ We solved this issue by displaying more than just laws and action groups related to this affected group. From our API model for affected groups, we queried the data and displayed it to the model web page for affected groups with front-end tools such as Bootstrap and ReactJS.
+	\item\textbf{As a user, I would like the affected group's website pages to have a little more info (do a little more than just list laws affecting group and action groups associated)} \\
+	We solved this issue by displaying more than just laws and action groups related to this affected group. From our API model for affected groups, we queried the data and displayed it to the model web page for affected groups with front-end tools such as Bootstrap and ReactJS.
 \end{itemize}
 
 \section{Models}
@@ -80,20 +84,30 @@ The following are the user stories gathered for Phase 1: \\
 	\item[] Laws
 	\begin{itemize}
 		\item Name
+		\item Title
 		\item Description
-		\item link to official text (if available)
-		\item Authors (relation)
-		\item Supporters (relation)
-		\item Affected Groups (relation)
+		\item Sponsor
+		\item Affected Groups (incoming table relation) (not built)
+		\item Primary Subject
+		\item Congress.gov Link
+		\item GovTrack Link
+		\item Date Introduced
+		\item Date of last vote  (if occurred)
+		\item Date bill passed Senate (if occurred)
+		\item Date bill passed House (if occurred)
+		\item Date bill was vetoed (if occurred)
+		\item Date bill was enacted  (if occurred)
 	\end{itemize}
 	\item[] Politicians
 	\begin{itemize}
-		\item Name
-		\item Position
-		\item Level (Nat/State/Local)
-		\item Contact
-		\item Link to official site (if available)
-		\item Party Affiliation (if present)
+		\item First Name
+		\item Last Name
+		\item State
+		\item Party Affiliation
+		\item Chamber (House or Senate)
+		\item Phone
+		\item Link to official site
+		\item Link to contact page (if present)
 	\end{itemize}
 	\item[] Affected Groups
 	\begin{itemize}
@@ -104,10 +118,10 @@ The following are the user stories gathered for Phase 1: \\
 	\begin{itemize}
 		\item Name
 		\item Description
-		\item Contact
-		\item Link to official site (if available)
-		\item Assisted groups (relation)
-		\item Statements on laws (relation + text)
+		\item Type/Category
+		\item Link to official site
+		\item Assisted groups (incoming table relation) (not built)
+		\item Statements on laws (incoming table relation, text) (not built)
 	\end{itemize}
 \end{itemize}
 
@@ -152,24 +166,96 @@ Currently, we have 2 different running EC2 instances, one for the front-end and 
 \section{AWS}
 
 First, we launched an EC2 instance with Amazon Linux AMI(Amazon Machine Image). Since by default, all incoming ports are blocked, we added security group rules that allow incoming SSH and HTTP requests from anywhere. Next, we SSH'd into the EC2 instance by using the private key file we were given as we launched the instance, the username EC2-user, and the public IP address of the instance. \\
-\\
-$ssh -i my-ec2-key-pair.pem ec2-user@<EC2-INSTANCE-PUBLIC-IP-ADDRESS>$\\
-\\
+
+\code{ssh -i my-ec2-key-pair.pem ec2-user@<EC2-INSTANCE-PUBLIC-IP-ADDRESS} \\
+
 Next, we updated the working Linux server running in the AWS cloud and installed docker on it. Then, we transferred our local files onto the server using FileZilla's SSH File Transfer Protocol. Finally, we built our Docker image and ran our web application on our Docker container.
 
 \section{Database}
 
-\textbf{TODO: Describe database in AWS, and two servers for front and back end}
+\begin{itemize}
+	\item[] `laws`
+	\begin{itemize}
+		\item \code{`id` INT UNSIGNED NOT NULL AUTO_INCREMENT}	-- internal id, auto-generated
+		\item \code{`bill_id` VARCHAR(32) NOT NULL}				-- unique bill name across legislatures, ie: hr5515-115
+		\item \code{`name` VARCHAR(32) NOT NULL}				-- name of bill, ie: H.R.5515
+		\item \code{`title` VARCHAR(256) NOT NULL}				-- short title of bill
+		\item \code{`subject` VARCHAR(256) NOT NULL}			-- primary subject of bill
+	
+		\item \code{`sponsor_id` INT UNSIGNED NOT NULL}			-- foreign key to `politicians`
+		\item \code{`sponsor_bio_id` VARCHAR(16) NOT NULL}		-- T000238
+		\item \code{`cdotgov_url` VARCHAR(256),			-- https://www.congress.gov/bill/115th-congress/house-bill/5515
+		\item \code{`govtrack_url` VARCHAR(256),		-- https://www.govtrack.us/congress/bills/115/hr5515
+	
+		\item \code{`introduced` DATE,					-- YYYY-MM-DD
+		\item \code{`last_vote` DATE,					-- YYYY-MM-DD
+		\item \code{`house_pass` DATE,					-- YYYY-MM-DD
+		\item \code{`senate_pass` DATE,					-- YYYY-MM-DD
+		\item \code{`enacted` DATE,						-- YYYY-MM-DD
+		\item \code{`vetoed` DATE,						-- YYYY-MM-DD
+	
+	`desc` TEXT,						-- propub summary
+	
+	`raw` TEXT,
+		
+		Internal Id (auto-generated primary key)
+		\item Name
+		\item Title
+		\item Description
+		\item Link to official text
+		\item Sponsor (foreign key)
+		\item Affected Groups (incoming table relation) (not built)
+		\item Primary Subject
+		\item Congress.gov Link
+		\item GovTrack Link
+		\item Date Introduced
+		\item Date of last vote  (if occurred)
+		\item Date bill passed Senate (if occurred)
+		\item Date bill passed House (if occurred)
+		\item Date bill was vetoed (if occurred)
+		\item Date bill was enacted  (if occurred)
+		\item Raw JSON from source for entry
+	\end{itemize}
+	\item[] Politicians
+	\begin{itemize}
+		\item Internal Id (auto-generated primary key)
+		\item First Name
+		\item Last Name
+		\item State
+		\item Chamber (House or Senate)
+		\item Phone
+		\item Link to official site
+		\item Link to contact page
+		\item Party Affiliation
+		\item Raw JSON from source for entry
+	\end{itemize}
+	\item[] Affected Groups
+	\begin{itemize}
+		\item Internal Id (auto-generated primary key)
+		\item Name
+		\item Description
+	\end{itemize}
+	\item[] Action Groups
+	\begin{itemize}
+		\item Internal Id (auto-generated primary key)
+		\item Name
+		\item Description
+		\item Type/Category
+		\item Link to official site
+		\item Assisted groups (incoming table relation) (not built)
+		\item Statements on laws (incoming table relation, text) (not built)
+	\end{itemize}
+\end{itemize}
 
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{../Group8_UML.png}
+\end{figure}
 \section{Pagination}
 
 For our models, the data in our database contains a large number of instances of laws, politicians, action groups, and affected groups. To give the user a better experience navigating through all of our data, we implemented a traditional pagination number system. Our API paginates all the data. Using React components and Bootstrap, we created functionality to the buttons. Our pagination number system contains a previous page, next page, page items, and a page footer.
-\\
 
 \section{Testing}
 
-\begin{figure}[h!]
-  \includegraphics[width=\linewidth]{Group8_UML(1).png}
-\end{figure}
+
 
 \end{document}
