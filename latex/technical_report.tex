@@ -2,6 +2,7 @@
 \usepackage[letterpaper]{geometry}
 \usepackage{enumitem}
 \usepackage[english]{babel}
+\usepackage{graphicx}
 
 \setlength{\parindent}{0.5in}
 
@@ -28,27 +29,52 @@ Our goal is to allow groups to see what recent and upcoming laws may affect them
 The following are the user stories gathered for Phase 1: \\
 
 \begin{itemize}
-	\item As a user, I want to be able to identify which groups are affected by a law.
-	\item As a user, I want to see what congressmen, senators, city-council, etc. are supporting a law.
-	\item As a user, I want to be able to compare advocacy groups.
-	\item As a user, I want to see where the politicians lie on the political spectrum.
-	\item As a user, I want to see the implications of a law.
-	\item As a user, I want to know how I can to contact my senator/representative.
+	\item\textbf{As a user, I want to be able to identify which groups are affected by a law.} 
+	\\We solved this issue by mapping the laws to the affected group and displaying them within each law model. In our API model, we set up a relationship between the laws and the affected groups. From there, we were able to call our API and display the mappings in a well-structured format using Bootstrap and ReactJS.
+	\\
 	
-\end{itemize}
+	\item\textbf{As a user, I want to see what congressmen, senators, city-council, etc. are supporting a law.} 
+	\\ We solved this issue by mapping the laws to the corresponding politician and displaying them within each law model. In our API model, we set up a relationship between the laws and the policitians involved. From there, we were able to call our API and display the mappings in a well-structured format using Bootstrap and ReactJS.
+	\\
+	
+	\item\textbf{As a user, I want to see where the politicians lie on the political spectrum.} 
+	\\ We solved this issue by grabbing the politician's political affiliation from our API database and structuring the information using Bootstrap and ReactJS.
+	\\
+	
+	\item\textbf{As a user, I want to see the implications of a law.} \\ We solved this issue by having a description for each law. This was done by querying the description parameter data from our law API and displaying it onto the appropriate model page. 
+	\\
+	
+	\item\textbf{As a user, I want to know how I can contact my senator/representative.} 
+	\\ We solved this issue by displaying each politician's bio, which includes their website and number. This was done by querying the relevant contact information parameters from our API and displaying it onto our website with front-end tools, such as Bootstrap and ReactJS.
+	
+\end{itemize} ~\\
 
 
-The following are the user stories gathered for Phase 2: \\
+\noindent The following are the user stories gathered for Phase 2: \\
 	
 \begin{itemize}
-	\item As a user, I would like to see information about what the website does on the homepage.
-	\item As a user, I would like to see more laws, politicians associated with these laws, action groups, and affected groups.
-	\item As a user, I would like each image on the front page carousel to lead me to a certain page. 
-	\item As a user, I would like an easy way to contact a certain action group. (As of right now, only the action groups website is displayed)
-	\item As a user, I would like the affected group's website pages to have a little more info (do a little more than just list laws affecting group and action groups associated)
+	\item\textbf{As a user, I would like to see information about what the website does on the homepage.} 
+	\\ We solved this issue by displaying the purpose of the website in the homepage.
+	\\
+	
+	\item\textbf{As a user, I would like to see more laws, politicians associated with these laws, action groups, and affected groups.}
+	\\We resolved this user story by having the front-end gather the data from the API and displaying it. Our models are linked with foreign keys creating relationships with each other. Within our JavaScript code, we displayed the necessary data which now displays more laws, politicians associated with these laws, action groups, and affected groups.
+	\\
+	
+	\item\textbf{As a user, I would like each image on the front page carousel to lead me to a certain page.} 
+	\\ We solved this issue by making each image a link to different pages.
+	\\
+	
+	\item\textbf{As a user, I would like an easy way to contact a certain action group.}
+	\\We solved this issue by displaying the necessary contact information of a certain action group on the model page. This was done through querying the data from our API and displaying it to the website with front-end tools such as Bootstrap and ReactJS.
+	\\ 
+	
+	\item\textbf{As a user, I would like the affected group's website pages to have a little more info (do a little more than just list laws affecting group and action groups associated)} 
+	\\ We solved this issue by displaying more than just laws and action groups related to this affected group. From our API model for affected groups, we queried the data and displayed it to the model web page for affected groups with front-end tools such as Bootstrap and ReactJS.
 \end{itemize}
 
 \section{Models}
+    Each politician model shows each law and action group associated with them. Each law shows each politician and action group associated with them. Each affected group shows each politician and law associated with them. These associations lead to their respective model page. Each action group shows each law that affects the group. \\
 
 \begin{itemize}
 	\item[] Laws
@@ -85,15 +111,15 @@ The following are the user stories gathered for Phase 2: \\
 	\end{itemize}
 \end{itemize}
 
-\section{API}
+\section{RESTful API}
 
 API Endpoints: \\
 
 \begin{itemize}
-	\item api.propxdoeswhat.me/politicians
-	\item api.propxdoeswhat.me/affected\_groups
-	\item api.propxdoeswhat.me/action\_groups
-	\item api.propxdoeswhat.me/laws
+	\item api.propxdoeswhat.me/api/politicians
+	\item api.propxdoeswhat.me/api/affected\_groups
+	\item api.propxdoeswhat.me/api/action\_groups
+	\item api.propxdoeswhat.me/api/laws
 \end{itemize}
 
 ~\\
@@ -113,21 +139,37 @@ Full API Documentation at: documenter.getpostman.com/view/4704075/RWEmKHJp
 	\item AWS       --- Server
 \end{itemize}
 
+\section{Setup}
+
+\textbf{HOW WE SETUP TOOLS}
+
 \section{Hosting}
 
 PropXdoesWHAT is currently hosted on Amazon Web Services with the custom domain propxdoeswhat.me provided by Namecheap.
 
-Currently, we have 2 different running EC2 instances, one for the front-end and one for the back-end. Through Namecheap we set up our domain name to redirect to the front-end server and our subdomain name to the back-end server.
+Currently, we have 2 different running EC2 instances, one for the front-end and one for the back-end. Through Namecheap we set up our domain name to redirect to the front-end server and our sub-domain name to the back-end server.
 
 \section{AWS}
 
-First, we launched an EC2 instance with Amazon Linux AMI(Amazon Machine Image). Since by default, all incoming ports are blocked, we added security group rules that allow incoming SSH and HTTP requests from anywhere. Next, we SSH'd into the EC2 instance by using the private key file we were given as we launched the instance, the username ec2-user, and the public IP address of the instance. \\
+First, we launched an EC2 instance with Amazon Linux AMI(Amazon Machine Image). Since by default, all incoming ports are blocked, we added security group rules that allow incoming SSH and HTTP requests from anywhere. Next, we SSH'd into the EC2 instance by using the private key file we were given as we launched the instance, the username EC2-user, and the public IP address of the instance. \\
 \\
 $ssh -i my-ec2-key-pair.pem ec2-user@<EC2-INSTANCE-PUBLIC-IP-ADDRESS>$\\
 \\
 Next, we updated the working Linux server running in the AWS cloud and installed docker on it. Then, we transferred our local files onto the server using FileZilla's SSH File Transfer Protocol. Finally, we built our Docker image and ran our web application on our Docker container.
 
-\section(Docker)
+\section{Database}
 
+\textbf{TODO: Describe database in AWS, and two servers for front and back end}
+
+\section{Pagination}
+
+For our models, the data in our database contains a large number of instances of laws, politicians, action groups, and affected groups. To give the user a better experience navigating through all of our data, we implemented a traditional pagination number system. Our API paginates all the data. Using React components and Bootstrap, we created functionality to the buttons. Our pagination number system contains a previous page, next page, page items, and a page footer.
+\\
+
+\section{Testing}
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{Group8_UML(1).png}
+\end{figure}
 
 \end{document}
