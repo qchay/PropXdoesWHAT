@@ -1,6 +1,6 @@
 
 	var httpRequest = new XMLHttpRequest();
-	var api = "https://gitlab.com/api/v4/projects/7226786/repository/contributors?private_token=oM2-Sn_4rwcBcuSsybbt&per_page=100";
+	var api = "https://gitlab.com/api/v4/projects/7226786/repository/contributors?private_token=oM2-Sn_4rwcBcuSsybbt";
 	// "page" to access higher paginations, max val for "per_page" is 100, so that's just a temp fix
 	httpRequest.open("GET", api, false);
 	httpRequest.send();
@@ -61,7 +61,7 @@
 	}
 
 	httpRequest = new XMLHttpRequest();
-	api = "https://gitlab.com/api/v4/projects/7226786/issues?private_token=oM2-Sn_4rwcBcuSsybbt";
+	api = "https://gitlab.com/api/v4/projects/7226786/issues?private_token=oM2-Sn_4rwcBcuSsybbt&per_page=100";
 	httpRequest.open("GET", api, false);
 	httpRequest.send();
 	jsonResponse = JSON.parse(httpRequest.responseText)

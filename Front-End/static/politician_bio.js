@@ -1,3 +1,29 @@
+class Law extends React.Component {
+	constructor(props) { super(props); }
+	render() {
+  		return (
+			<li><a href={'/laws/' + this.props.law_data.name + '/' + this.props.law_data.id}>{this.props.law_data.title}</a></li>
+    	);
+  	}
+}
+
+class Law_List extends React.Component {
+	constructor(props) { super(props); }
+	render() {
+  		return (
+		  	<div className="container">
+				<div className="description-box">
+					<h2>Laws related to this Politician</h2>
+		  			<ol>
+		  				{this.props.law_array.map((law_array_item, i) => <Law key = {i} law_data = {law_array_item}/>)}
+					</ol>
+				</div>
+			</div>
+    	);
+  	}
+}
+
+// {row_array.map((row_array_item, i) => <Row key = {i} politician_array = {row_array_item}/>)}
 class Bio extends React.Component {
 	constructor(props) {
 		super(props);
@@ -31,8 +57,6 @@ class Bio extends React.Component {
 					<li>Legislator's State: {this.props.politician_data.state}</li>
 					<li>Website: <a href={this.props.politician_data.site}>{this.props.politician_data.site}</a></li>
 					<li>Phone Number: {this.props.politician_data.phone}</li>
-					<h2 className="text-center">Political Spectrum</h2>
-					<p className="text-center">---------------------------</p>
 				</div>
 			</div>
     	);
@@ -67,6 +91,11 @@ var jsonResponse = JSON.parse(httpRequest.responseText);
 // Rendering DOM elements
 ReactDOM.render(
 	<Bio politician_data={jsonResponse}/>,
-	document.getElementById('target')
+	document.getElementById('bio')
 );
 
+// Rendering DOM elements
+ReactDOM.render(
+	<Law_List law_array={jsonResponse.law}/>,
+	document.getElementById('law_list')
+);
