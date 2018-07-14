@@ -176,27 +176,27 @@ Next, we updated the working Linux server running in the AWS cloud and installed
 \begin{itemize}
 	\item[] `laws`
 	\begin{itemize}
-		\item \code{`id` INT UNSIGNED NOT NULL AUTO_INCREMENT}	-- internal id, auto-generated
-		\item \code{`bill_id` VARCHAR(32) NOT NULL}				-- unique bill name across legislatures, ie: hr5515-115
+		\item \code{`id` INT UNSIGNED NOT NULL AUTO\_INCREMENT}	-- internal id, auto-generated
+		\item \code{`bill\_id` VARCHAR(32) NOT NULL}				-- unique bill name across legislatures, ie: hr5515-115
 		\item \code{`name` VARCHAR(32) NOT NULL}				-- name of bill, ie: H.R.5515
 		\item \code{`title` VARCHAR(256) NOT NULL}				-- short title of bill
 		\item \code{`subject` VARCHAR(256) NOT NULL}			-- primary subject of bill
 	
-		\item \code{`sponsor_id` INT UNSIGNED NOT NULL}			-- foreign key to `politicians`
-		\item \code{`sponsor_bio_id` VARCHAR(16) NOT NULL}		-- T000238
-		\item \code{`cdotgov_url` VARCHAR(256),			-- https://www.congress.gov/bill/115th-congress/house-bill/5515
-		\item \code{`govtrack_url` VARCHAR(256),		-- https://www.govtrack.us/congress/bills/115/hr5515
+		\item \code{`sponsor\_id` INT UNSIGNED NOT NULL}			-- foreign key to `politicians`
+		\item \code{`sponsor\_bio\_id` VARCHAR(16) NOT NULL}		-- Biography of Congress unique id for sponsor, ie: T000238
+		\item \code{`cdotgov\_url` VARCHAR(256),}					-- https://www.congress.gov/bill/115th-congress/house-bill/5515
+		\item \code{`govtrack\_url` VARCHAR(256),}		-- https://www.govtrack.us/congress/bills/115/hr5515
 	
-		\item \code{`introduced` DATE,					-- YYYY-MM-DD
-		\item \code{`last_vote` DATE,					-- YYYY-MM-DD
-		\item \code{`house_pass` DATE,					-- YYYY-MM-DD
-		\item \code{`senate_pass` DATE,					-- YYYY-MM-DD
-		\item \code{`enacted` DATE,						-- YYYY-MM-DD
-		\item \code{`vetoed` DATE,						-- YYYY-MM-DD
+		\item \code{`introduced` DATE,	}				-- YYYY-MM-DD
+		\item \code{`last\_vote` DATE,}					-- YYYY-MM-DD
+		\item \code{`house\_pass` DATE,}					-- YYYY-MM-DD
+		\item \code{`senate\_pass` DATE,	}				-- YYYY-MM-DD
+		\item \code{`enacted` DATE,	}					-- YYYY-MM-DD
+		\item \code{`vetoed` DATE,	}					-- YYYY-MM-DD
 	
-	`desc` TEXT,						-- propub summary
+	\item \code{`desc` TEXT,}						-- propub summary
 	
-	`raw` TEXT,
+	\item \code{`raw` TEXT,}
 		
 		Internal Id (auto-generated primary key)
 		\item Name
