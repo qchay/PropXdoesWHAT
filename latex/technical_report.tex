@@ -246,6 +246,18 @@ For our models, the data in our database contains a large number of instances of
 
 \section{Testing}
 
+\section{Testing}
+
+We are using Selenium Python to test the GUI(Graphical User Interface) of our website. We installed Selenium with pip and downloaded the required interface driver for the Firefox browser, geckodriver, and then added geckodriver.exe in the system PATH. This let us use instances of Firefox WebDriver in our Python unit test to navigate around our website and test our GUI.
+\\
+\\
+Since we are using Flask-Restless and SQLAlchemy to create our RESTFul API, we did not test our back-end because those tools handle it.
+\\
+\\
+We are using Postman for API testing. The Postman test requests GET methods to our API and we make sure that all the fields we need in the database are present and have correct number of pages. 
+\\
+\\
+We are using Mocha, Chai, and Enzyme to test our javascript. We installed Mocha, Chai, Enzyme, babel-preset-env, babel-core, babel-preset-react, and react in npm and ran mocha with arguments --require babel-core/register.
 
 
 \end{document}
