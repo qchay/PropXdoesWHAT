@@ -1,8 +1,7 @@
-before_script:
-    - date
-    - uname -a
-    - printenv | sort
-
-# test:
-# 	script:
-# 		python ./Front-End/test_app.py
+test:
+  image: gpdowning/python
+  script:
+  # this configures Django application to use attached postgres database that is run on `postgres` host
+  - ls
+  - pip install -r requirements.txt
+  - python /Front-End/test_app.py
