@@ -1,6 +1,7 @@
 test:
-  image: idb_front-end
+  image: gpdowning/python
   script:
   # this configures Django application to use attached postgres database that is run on `postgres` host
   - ls
+  - pip install -r /Front-End/requirements.txt
   - python /Front-End/test_app.py
