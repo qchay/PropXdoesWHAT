@@ -5,4 +5,5 @@ test:
   - ls
   - cd Front-End
   - pip install -r requirements.txt
-  - python test_app.py
+  - npm install newman --global
+  - newman run ../Postman.json
