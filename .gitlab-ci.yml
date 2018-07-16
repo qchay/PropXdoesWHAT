@@ -1,0 +1,3 @@
+test:
+	script:
+		python /Front-End/test_app.py
