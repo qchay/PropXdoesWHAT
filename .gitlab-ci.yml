@@ -3,6 +3,6 @@ before_script:
     - uname -a
     - printenv | sort
 
-test:
-	script:
-		python ./Front-End/test_app.py
+# test:
+# 	script:
+# 		python ./Front-End/test_app.py
