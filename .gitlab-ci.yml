@@ -1,3 +1,8 @@
+before_script:
+    - date
+    - uname -a
+    - printenv | sort
+
 test:
 	script:
-		python /Front-End/test_app.py
+		python ./Front-End/test_app.py
