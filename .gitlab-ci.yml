@@ -2,7 +2,9 @@ image: "gpdowning/python"
 
 before_script:
   - python --version
+  - cd Front-End
   - pip install -r requirements.txt
+
 
 test:
   script:
