@@ -15,7 +15,6 @@ test:
   script:
     - ls
     - python servertests.py
-    - python guitests.py
     - cd ..
     - cd Back-End
     - newman run Postman.json
