@@ -6,9 +6,13 @@ before_script:
   - apt-get install -yq nodejs build-essential
   - npm install -g npm
   - npm install newman --global;
-  - python --version
   - cd Front-End
   - pip install -r requirements.txt
+  - python --version
+  - flask --version
+  - node --version
+  - npm --version
+  - newman --version
 
 
 test:
