@@ -1,11 +1,11 @@
-image: gpdowning/python
+image: "gpdowning/python"
 
 before_script:
-	- python --version
-	- pip install -r requirements.txt
+  - python --version
+  - pip install -r requirements.txt
 
-	test:
-		script:
-			- ls
-			- cd Front-End
-			- python servertests.py
+test:
+  script:
+    - ls
+    - cd Front-End
+    - python servertests.py
