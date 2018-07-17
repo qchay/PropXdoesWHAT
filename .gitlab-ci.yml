@@ -1,10 +1,11 @@
-test:
-  image: tiangolo/uwsgi-nginx-flask:python3.6
-  script:
-  # this configures Django application to use attached postgres database that is run on `postgres` host
-  - ls
-  - cd Front-End
-  - python servertests.py
-  # - pip install -r requirements.txt
-  # - npm install newman --global
-  # - newman run ../Postman.json
+image: gpdowning/python
+
+before_script:
+	- python --version
+	- pip install -r requirements.txt
+
+	test:
+		script:
+			- ls
+			- cd Front-End
+			- python servertests.py
