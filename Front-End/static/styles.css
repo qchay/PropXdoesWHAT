@@ -13,13 +13,23 @@
 }
 
 .carousel-caption {
-    bottom: 70%;
+    bottom: 51%;
 }
 
 .carousel-site-info{
 	bottom: 70%;
 
 }
+
+#home-link {
+	color: #FFF;
+}
+
+#home-link:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+
 #small-card {
 	height: 500px;
 	margin-bottom: 400px;
