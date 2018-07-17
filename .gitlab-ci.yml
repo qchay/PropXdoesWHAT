@@ -2,7 +2,8 @@ image: "gpdowning/python"
 
 before_script:
   - apt-get update -yq && apt-get upgrade -yq && apt-get install -yq curl git nano
-  - curl -sL https://deb.nodesource.com/setup | sudo bash - && apt-get install -yq nodejs build-essential
+  - curl -sL https://deb.nodesource.com/setup_8.x | bash -
+  - apt-get install -yq nodejs build-essential
   - npm install -g npm
   - npm install newman
   - python --version
@@ -15,3 +16,6 @@ test:
     - ls
     - python servertests.py
     - python guitests.py
+    - cd ..
+    - cd Back-End
+    - newman run Postman.json
