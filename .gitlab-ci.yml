@@ -1,6 +1,12 @@
 image: "gpdowning/python"
 
 before_script:
+  - apt-get update -yq && apt-get upgrade -yq && \
+apt-get install -yq curl git nano
+  - curl -sL https://deb.nodesource.com/setup | sudo bash - && \
+apt-get install -yq nodejs build-essential
+  - npm install -g npm
+  - npm install newman
   - python --version
   - cd Front-End
   - pip install -r requirements.txt
@@ -10,3 +16,4 @@ test:
   script:
     - ls
     - python servertests.py
+    - python guitests.py
