@@ -1,5 +1,5 @@
 test:
-  image: gpdowning/python
+  image: 35eb2cc281fb
   script:
   # this configures Django application to use attached postgres database that is run on `postgres` host
   - ls
