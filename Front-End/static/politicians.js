@@ -47,12 +47,12 @@ class Politician extends React.Component {
 				I : "Independent"
 			},
 			pictureMap: {
-				R : "http://vincentsammons.com/wp-content/uploads/2018/03/republican-party-clipart-18.jpg",
-				D : "https://scontent.fftw1-1.fna.fbcdn.net/v/t1.0-9/16681592_606500959548601_7691110575713909985_n.jpg?_nc_cat=0&oh=2c7744391f9b2d1b5da4f01a6faa79cb&oe=5BA1FDCE",
-				I : "https://img.etsystatic.com/il/5e6507/1278371421/il_340x270.1278371421_t0rs.jpg?version=0"
+				R : "/static/images/republican.jpg",
+				D : "/static/images/democrat.jpg",
+				I : "/static/images/independent.jpg"
 			},
 		};
-		}
+	}
 	render() {
   		return (
 	  		<div className="col-md-4">
