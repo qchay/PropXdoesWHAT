@@ -2,6 +2,14 @@ var pathname = document.location.pathname.substring(1);
 var parts = pathname.split(/\//);
 var result = parts[0];
 
+var httpRequest = new XMLHttpRequest();
+var api = "http://api.propxdoeswhat.me/api/" + parts[0] + "?page=" + parts[2];
+httpRequest.open("GET", api, false);
+httpRequest.send();
+var jsonResponse = JSON.parse(httpRequest.responseText);
+
+var page_data = getPageData(jsonResponse);
+//var page_data = getPageData(JSON.parse(localStorage.getItem("response")));
 
 class First_Page extends React.Component {
 	constructor(props) { super(props); }
@@ -82,10 +90,11 @@ class Page_Footer extends React.Component {
   	}
 }	
 
+
 // Getting page information for pagination
-function getPageData(jsonResponse) {
-	const page = jsonResponse.page;
-	const total_pages = jsonResponse.total_pages;
+function getPageData(response) {
+	const page = response.page;
+	const total_pages = response.total_pages;
 	var page_count = page - 2;
 	var page_array = [];
 	if ((total_pages - page) < 2) {
@@ -111,11 +120,8 @@ function getPageData(jsonResponse) {
 	return page_data;
 }
 
-var page_data = getPageData(jsonResponse);
-
 
 ReactDOM.render(
 	<Page_Footer page_data={page_data}/>,
 	document.getElementById('page_footer')
 );
-

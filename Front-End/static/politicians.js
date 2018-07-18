@@ -1,3 +1,30 @@
+var page_number = JSON.parse(document.getElementById("page_number").dataset.page);
+var httpRequest = new XMLHttpRequest();
+var api = "http://api.propxdoeswhat.me/api/politicians?page=" + page_number;
+httpRequest.open("GET", api, false);
+httpRequest.send();
+var jsonResponse = JSON.parse(httpRequest.responseText);
+//localStorage.setItem("response", JSON.stringify(jsonResponse));
+
+// Parsing json response, putting data into rows
+var row_array = [];
+var politician_array = [];
+var count = 1;
+for (var politician of jsonResponse.objects) {
+	if (!(count%3)){
+		politician_array.push(politician);
+		row_array.push(politician_array);
+		var politician_array = [];
+	} else {
+		politician_array.push(politician);
+	}
+
+	if ((count == jsonResponse.objects.length) && (count%3)) {
+		row_array.push(politician_array);
+	}
+	count++;
+}
+
 class Row extends React.Component {
 	constructor(props) { super(props); }
 	render() {
@@ -49,33 +76,6 @@ class Politician extends React.Component {
     	);
   	}
 }	
-
-// Getting json response
-var page_number = JSON.parse(document.getElementById("page_number").dataset.page);
-var httpRequest = new XMLHttpRequest();
-var api = "http://api.propxdoeswhat.me/api/politicians?page=" + page_number;
-httpRequest.open("GET", api, false);
-httpRequest.send();
-var jsonResponse = JSON.parse(httpRequest.responseText);
-
-// Parsing json response, putting data into rows
-var row_array = [];
-var politician_array = [];
-var count = 1;
-for (var politician of jsonResponse.objects) {
-	if (!(count%3)){
-		politician_array.push(politician);
-		row_array.push(politician_array);
-		var politician_array = [];
-	} else {
-		politician_array.push(politician);
-	}
-
-	if ((count == jsonResponse.objects.length) && (count%3)) {
-		row_array.push(politician_array);
-	}
-	count++;
-}
 
 // Rendering DOM elements
 ReactDOM.render(
