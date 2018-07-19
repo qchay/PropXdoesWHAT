@@ -1,7 +1,10 @@
 // App.jsx
 import React from 'react';
+import Layout from "./Layout";
+
 export default class App extends React.Component {
-  render () {
-    return <p> Hello React!</p>;
-  }
+	constructor(props) { super(props); }
+	render () {
+		return (<Layout />);
+	}
 }
