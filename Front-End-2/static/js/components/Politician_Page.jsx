@@ -3,8 +3,12 @@ import React from 'react';
 import Album from './Album';
 
 export default class Politician_Page extends React.Component {
-	constructor(props) { super(props); }
-	render() {
+	constructor(props) { 
+		super(props); 
+		this.state = { jsonResponse : this.getJsonResponse() };
+	}
+
+	getJsonResponse() {
 		var page_number = this.props.match.params.page_number
 		console.log(page_number);
 		var httpRequest = new XMLHttpRequest();
@@ -12,9 +16,11 @@ export default class Politician_Page extends React.Component {
 		httpRequest.open("GET", api, false);
 		httpRequest.send();
 		var jsonResponse = JSON.parse(httpRequest.responseText);
-		//localStorage.setItem("response", JSON.stringify(jsonResponse));
-		console.log(jsonResponse);
-		//Parsing json response, putting data into rows
+
+		return jsonResponse
+	}
+
+	getRowArray(jsonResponse) {
 		var row_array = [];
 		var politician_array = [];
 		var count = 1;
@@ -32,12 +38,16 @@ export default class Politician_Page extends React.Component {
 			}
 			count++;
 		}
-		console.log(row_array);
+
+		return row_array
+	}
+	render() {
+		let row_array = this.getRowArray(this.state.jsonResponse)
   		return (
   			<div>
 				<p>Politician_Page! Page: {this.props.match.params.page_number}</p>
 				<main>
-					<Album row_array={row_array} />
+					<Album row_array={row_array} page_name={"politician_page"}/>
 				</main>
 			</div>
     	);

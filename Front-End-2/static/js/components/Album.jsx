@@ -11,7 +11,7 @@ export default class Album extends React.Component {
   		return (
   			<div className="album py-5" id="album">
   				<div className="container">	
-    				{row_array.map((row_array_item, i) => <Row key = {i} politician_array = {row_array_item}/>)}
+    				{row_array.map((row_array_item, i) => <Row key = {i} politician_array = {row_array_item} page_name={this.props.page_name}/>)}
 				</div>
   			</div>
     	);
