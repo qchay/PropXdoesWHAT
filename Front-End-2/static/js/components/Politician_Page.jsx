@@ -2,6 +2,7 @@
 import React from 'react';
 import Album from './Album';
 import Filter from './Filter';
+import PartyFilter from './PartyFilter';
 
 export default class Politician_Page extends React.Component {
 	constructor(props) { 
@@ -52,11 +53,17 @@ export default class Politician_Page extends React.Component {
 
 	render() {
 		let row_array = this.getRowArray(this.state.jsonResponse)
+		const partyOptions = [
+		  { value: 'R', label: 'Republican' },
+		  { value: 'D', label: 'Democrat' },
+		  { value: 'I', label: 'Independent' }
+		]
   		return (
   			<div>
 				<p>Politician_Page! Page: {this.props.match.params.page_number}</p>
 				<main>
 					<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack}/>
+					<PartyFilter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={partyOptions}/>
 					<Album row_array={row_array} page_name={"politician_page"} />
 				</main>
 			</div>
