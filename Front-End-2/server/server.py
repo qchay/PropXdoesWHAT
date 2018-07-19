@@ -7,6 +7,10 @@ app = Flask(__name__, static_folder="../static/dist", template_folder="../static
 def index():
     return render_template("index.html")
 
+@app.route("/example/page/<int:page_number>")
+def mang(page_number):
+    return render_template("index.html", page_number=page_number)
+
 @app.route("/hello")
 def hello():
     return "Hello World!"
