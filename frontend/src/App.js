@@ -5,8 +5,9 @@ import Home from './Components/Home/Home';
 // import Laws from './components/Laws/Laws';
 
 import Navbar from './Components/Navbar/Navbar';
-import Filter from './Components/Filter/Filter';
+import PartyFilter from './Components/Filter/PartyFilter';
 
+import StateFilter from './Components/Filter/StateFilter';
 
 class App extends Component {
 
@@ -21,7 +22,9 @@ class App extends Component {
     <Router>
       <div>
       <Navbar/>
-      <Filter/>
+      <PartyFilter/>
+      <StateFilter/>
+
         <Switch>
           <Route exact path='/' component={Home} />
         </Switch>
