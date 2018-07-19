@@ -8,14 +8,31 @@ const partyOptions = [
   { value: 'independent', label: 'Independent' }
 ]
 
-export default function Filter() {
+export default class Filter extends React.Component {
+
+constructor(props) {
+    super(props);
+    this.onChange = this.onChange.bind(this);
+    this.state = { value: [] }
+  }
+  onChange(val) {
+    console.log('Setting value to ',val)
+    this.setState({value: val})
+  }
+  render(){
   return (
+    <div>
     <Select
       closeMenuOnSelect={false}
       components={makeAnimated()}
-      defaultValue={[]}
+      value={this.state.value}
+      onChange={this.onChange}
       isMulti
       options={partyOptions}
     />
+    </div>
   );
 }
+}
+
+
