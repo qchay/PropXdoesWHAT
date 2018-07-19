@@ -9,14 +9,10 @@ use open ( ":encoding(UTF-8)", ":std" );
 
 sub connect_to_db 
 {
-	my $databaseName = 'PropxdoeswhatDB';
-	my $driver 		 = 'mysql';
-	my $host 		 = 'propxdoeswhatdb.cnsfq0o1clx8.us-east-2.rds.amazonaws.com:3306';
-	my $username 	 = 'Propxdoeswhat';
-	my $password 	 = 'Propxdoeswhat';
-	my $dsn 		 = "DBI:$driver:database=$databaseName;host=$host;";
-	my $drh 		 = DBI->install_driver("$driver");
-	return DBI->connect($dsn, $username, $password, {mysql_enable_utf8 => 1}) 
+	my $settings	 = decode_json(read_file("db_info.json"));
+	my $dsn 		 = "DBI:$settings->{db_driver}:database=$settings->{db_name};host=$settings->{db_host};";
+	my $drh 		 = DBI->install_driver($settings->{'db_driver'});
+	return DBI->connect($dsn, $settings->{'db_user'}, $settings->{'db_pass'}, $settings->{'db_extra'}) 
 		or die "DB Connect error: $DBI::errstr";
 }
 
