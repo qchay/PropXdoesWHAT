@@ -1,18 +1,26 @@
 // Politician_Page.jsx
 import React from 'react';
 import Album from './Album';
+import Filter from './Filter';
 
 export default class Politician_Page extends React.Component {
 	constructor(props) { 
 		super(props); 
-		this.state = { jsonResponse : this.getJsonResponse() };
+		this.state = { jsonResponse : this.getJsonResponse({}) };
+		this.getJsonResponseCallBack = this.getJsonResponseCallBack.bind(this)  
 	}
 
-	getJsonResponse() {
+	getJsonResponseCallBack(json_from_filter){
+		// return (json_from_filter) => {this.setState({jsonResponse : this.getJsonResponse(json_from_filter)});};
+		this.setState({jsonResponse : this.getJsonResponse(json_from_filter)});
+
+	}
+
+	getJsonResponse(filterJson) {
 		var page_number = this.props.match.params.page_number
-		console.log(page_number);
 		var httpRequest = new XMLHttpRequest();
-		var api = "http://api.propxdoeswhat.me/api/politicians?page=" + page_number;
+		var api = "http://api.propxdoeswhat.me/api/politicians?page=" + page_number + "&q=" + JSON.stringify(filterJson);
+		console.log(api);
 		httpRequest.open("GET", api, false);
 		httpRequest.send();
 		var jsonResponse = JSON.parse(httpRequest.responseText);
@@ -41,13 +49,15 @@ export default class Politician_Page extends React.Component {
 
 		return row_array
 	}
+
 	render() {
 		let row_array = this.getRowArray(this.state.jsonResponse)
   		return (
   			<div>
 				<p>Politician_Page! Page: {this.props.match.params.page_number}</p>
 				<main>
-					<Album row_array={row_array} page_name={"politician_page"}/>
+					<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack}/>
+					<Album row_array={row_array} page_name={"politician_page"} />
 				</main>
 			</div>
     	);
