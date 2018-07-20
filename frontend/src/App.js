@@ -8,6 +8,8 @@ import Law_Page from "./components/Law_Page";
 import Politician_Page from "./components/Politician_Page";
 // import Politician_Bio from "./Politician_Bio";
 import Action_Group_Page from "./components/Action_Group_Page";
+import About from "./components/About/About";
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './CSS/styles.css'
 class App extends Component {
@@ -22,6 +24,8 @@ class App extends Component {
               <Route path='/laws/page/:page_number' component={Law_Page} />
               <Route path='/politicians/page/:page_number' component={Politician_Page} />
               <Route path='/action_groups/page/:page_number' component={Action_Group_Page} />
+              <Route path='/about' component={About} />
+
             </Switch>
           </div>
         </Router>
