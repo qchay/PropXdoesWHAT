@@ -8,21 +8,30 @@ import { Container, Row, Col } from 'reactstrap';
 export default class Action_Group_Page extends React.Component {
 	constructor(props) { 
 		super(props); 
-		this.state = { jsonResponse : this.getJsonResponse({}) };
-		this.getJsonResponseCallBack = this.getJsonResponseCallBack.bind(this);
+		this.state = { 
+						filter1 : {"or" : []},
+						orderByArray : []
+					 };
+		this.filterCallBack1 = this.filterCallBack1.bind(this)  
+		this.orderByCallBack = this.orderByCallBack.bind(this)
 	}
 
-	getJsonResponseCallBack(json_from_filter){
-		// return (json_from_filter) => {this.setState({jsonResponse : this.getJsonResponse(json_from_filter)});};
-		this.setState({jsonResponse : this.getJsonResponse(json_from_filter)});
+	filterCallBack1 (filter1) {
+		this.setState({filter1 : filter1});
+	}
 
+	orderByCallBack (orderByArray) {
+		this.setState({orderByArray : orderByArray});
+	}
+
+	combineFilters(filter1, orderByArray) {
+		return { "filters": [ { "and":[filter1]}], "order_by" : orderByArray};
 	}
 
 	getJsonResponse(filterJson) {
 		var page_number = this.props.match.params.page_number;
 		var httpRequest = new XMLHttpRequest();
 		var api = "http://api.propxdoeswhat.me/api/action_groups?page=" + page_number + "&q=" + JSON.stringify(filterJson);
-		console.log(api);
 		httpRequest.open("GET", api, false);
 		httpRequest.send();
 		var jsonResponse = JSON.parse(httpRequest.responseText);
@@ -67,10 +76,11 @@ export default class Action_Group_Page extends React.Component {
 	}
 
 	render() {
-		let action_group_array = this.getActionGroupArray(this.state.jsonResponse);
-
-		let page_data = this.getPageData(this.state.jsonResponse);
-		console.log(page_data);
+		const subjectOptions = [
+		{ label: 'Progressive Political Parties' , value: 'Progressive Political Parties'},
+		{ label: 'Progressive State and Local Legislation Groups' , value: 'Progressive State and Local Legislation Groups'},
+		];
+		
 		let page_name = "action_groups"
 
 		var filterBoxStyles = {
@@ -78,19 +88,26 @@ export default class Action_Group_Page extends React.Component {
 			marginBottom:'100px'
 		};
 
+		let jsonfilter = this.combineFilters(this.state.filter1, this.state.orderByArray);
+		let jsonResponse = this.getJsonResponse(jsonfilter);
+		let action_group_array = this.getActionGroupArray(jsonResponse);
+		let page_data = this.getPageData(jsonResponse);
+
 		return (
 			<div>
 				<main>
 					<Container style={filterBoxStyles}>
 						<Row>
 							<Col xs="6" sm={{ size: '8', offset: '1' }}>
-								<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} type={"type"}/>
+								<Filter filterCallBack = {this.filterCallBack1} filterOptions={subjectOptions} type={"type"}/>
 							</Col>
 							<Col sm={{ size: 'auto', offset: 0 }}>
-								<Sort getJsonResponseCallBack = {this.getJsonResponseCallBack} type={"name"}/>
+								<Sort orderByCallBack = {this.orderByCallBack} type={"name"}/>
 							</Col>
 						</Row>
 					</Container>
+
+
 
 					<Action_Group_List action_group_array={action_group_array} page_name={"action_group_page"} />
 					<Page_Footer page_data={page_data} page_name={page_name}/>

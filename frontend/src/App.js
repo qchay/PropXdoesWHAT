@@ -11,7 +11,6 @@ import Action_Group_Page from "./components/Action_Group_Page";
 import About from "./components/About/About";
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './CSS/styles.css'
 class App extends Component {
   render() {
     return (
