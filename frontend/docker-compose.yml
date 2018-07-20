@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+        front-end:
+                build: .
+                volumes:
+                        - .:/home/website
+                ports:
+                        - "80:5000"
+                command:
+                        bash -c "yarn run build && yarn global add serve && serve -s build"
