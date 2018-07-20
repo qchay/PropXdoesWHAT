@@ -8,21 +8,30 @@ import { Container, Row, Col } from 'reactstrap';
 export default class Law_Page extends React.Component {
 	constructor(props) { 
 		super(props); 
-		this.state = { jsonResponse : this.getJsonResponse({}) };
-		this.getJsonResponseCallBack = this.getJsonResponseCallBack.bind(this);
+		this.state = { 
+					 	filter1 : {"or" : []},
+					 	orderByArray : []
+					 };
+		this.filterCallBack1 = this.filterCallBack1.bind(this)  
+		this.orderByCallBack = this.orderByCallBack.bind(this)
 	}
 
-	getJsonResponseCallBack(json_from_filter){
-		// return (json_from_filter) => {this.setState({jsonResponse : this.getJsonResponse(json_from_filter)});};
-		this.setState({jsonResponse : this.getJsonResponse(json_from_filter)});
+	filterCallBack1 (filter1) {
+		this.setState({filter1 : filter1});
+	}
 
+	orderByCallBack (orderByArray) {
+		this.setState({orderByArray : orderByArray});
+	}
+
+	combineFilters(filter1, orderByArray) {
+		return { "filters": [ { "and":[filter1]}], "order_by" : orderByArray};
 	}
 
 	getJsonResponse(filterJson) {
 		var page_number = this.props.match.params.page_number;
 		var httpRequest = new XMLHttpRequest();
 		var api = "http://api.propxdoeswhat.me/api/laws?page=" + page_number + "&q=" + JSON.stringify(filterJson);
-		console.log(api);
 		httpRequest.open("GET", api, false);
 		httpRequest.send();
 		var jsonResponse = JSON.parse(httpRequest.responseText);
@@ -67,8 +76,6 @@ export default class Law_Page extends React.Component {
 	}
 
 	render() {
-		let law_array = this.getLawArray(this.state.jsonResponse);
-
 		const subjectOptions = [
 		{ label: 'Animals' , value: 'Animals'},
 		{ label: 'Agriculture and Food' , value: 'Agriculture and Food'},
@@ -102,8 +109,6 @@ export default class Law_Page extends React.Component {
 		{ label: 'Undefined' , value: ''}
 		];
 
-		let page_data = this.getPageData(this.state.jsonResponse);
-		//console.log(page_data);
 		let page_name = "laws"
 
 		var filterBoxStyles = {
@@ -111,16 +116,21 @@ export default class Law_Page extends React.Component {
 			marginBottom:'100px'
 		};
 
+		let jsonfilter = this.combineFilters(this.state.filter1, this.state.orderByArray);
+		let jsonResponse = this.getJsonResponse(jsonfilter);
+		let law_array = this.getLawArray(jsonResponse);
+		let page_data = this.getPageData(jsonResponse);
+
 		return (
 			<div>
 				<main>
 					<Container style={filterBoxStyles}>
 						<Row>
 							<Col xs="6" sm={{ size: '8', offset: '1' }}>
-								<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={subjectOptions} type={"subject"}/>
+								<Filter filterCallBack = {this.filterCallBack1} filterOptions={subjectOptions} type={"subject"}/>
 							</Col>
 							<Col sm={{ size: 'auto', offset: 0 }}>
-								<Sort getJsonResponseCallBack = {this.getJsonResponseCallBack} type={"introduced"}/>
+								<Sort orderByCallBack = {this.orderByCallBack} type={"introduced"}/>
 							</Col>
 						</Row>
 					</Container>

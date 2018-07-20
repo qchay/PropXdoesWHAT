@@ -18,7 +18,7 @@ export default class Politician_Page extends React.Component {
 		this.filterCallBack1 = this.filterCallBack1.bind(this)  
 		this.filterCallBack2 = this.filterCallBack2.bind(this)
 		this.filterCallBack3 = this.filterCallBack3.bind(this)
-		this.orderByCallBack = this.orderByCallBack.bind(this) 
+		this.orderByCallBack = this.orderByCallBack.bind(this)
 	}
 
 	filterCallBack1 (filter1) {
