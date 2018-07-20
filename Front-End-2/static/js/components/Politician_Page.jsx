@@ -4,6 +4,7 @@ import Album from './Album';
 import Filter from './Filter';
 import Page_Footer from './Page_Footer'
 import Sort from './Sort'
+import { Container, Row, Col } from 'reactstrap';
 
 export default class Politician_Page extends React.Component {
 	constructor(props) { 
@@ -141,19 +142,36 @@ export default class Politician_Page extends React.Component {
 		{ label: 'WY' , value: 'WY'}]
 
 		let page_data = this.getPageData(this.state.jsonResponse);
-		console.log(page_data);
+		//console.log(page_data);
 		let page_name = "politicians"
-  		return (
-  			<div>
+
+		var filterBoxStyles = {
+			marginTop:'50px',
+			marginBottom:'100px'
+		};
+
+		return (
+			<div>
 				<main>
-					<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={partyOptions} type={"party"}/>
-					<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={stateOptions} type={"state"}/>
-					<Sort/>
+					<Container style={filterBoxStyles}>
+						<Row>
+							<Col xs="6" sm={{ size: '3', offset: '2' }}>
+								<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={partyOptions} type={"party"}/>
+							</Col>
+							<Col xs="6" sm="3">
+								<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={stateOptions} type={"state"}/>
+							</Col>
+							<Col xs={{ size: '6', offset: '3' }} sm={{ size: '3', offset: '0' }}>
+								<Sort/>
+							</Col>
+						</Row>
+					</Container>
+					
 					<Album row_array={row_array} page_name={"politician_page"} />
 					<Page_Footer page_data={page_data} page_name={page_name}/>
 				</main>
 			</div>
-    	);
-  	}
+		);
+	}
 }
 

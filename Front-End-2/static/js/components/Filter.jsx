@@ -9,7 +9,7 @@ export default class Filter extends React.Component {
 		this.state = { value: [] }    
 	}  
 
-	onChange(val) {     
+	onChange(val) {
 		var string = "{\"filters\":[{\"or\":["     
 		var i;     
 		for(i = 0; i <val.length;i++){       
@@ -19,7 +19,7 @@ export default class Filter extends React.Component {
 			string+="{\"name\":\""+this.props.type+"\",\"op\":\"eq\",\"val\":\""+val[i].value+"\"}"     
 		}     
 		string+="]}]}"     
-		console.log(string);      
+		//console.log(string);      
 		let filterjson = JSON.parse(string)     
 		this.props.getJsonResponseCallBack(filterjson);     
 		this.setState({value: val})    
@@ -32,7 +32,8 @@ export default class Filter extends React.Component {
 			closeMenuOnSelect={false}       
 			components={makeAnimated()}       
 			onChange={this.onChange}       
-			isMulti       
+			isMulti
+			placeholder={"Select " + this.props.type.slice(0,1).toUpperCase() + this.props.type.slice(1,this.props.type.lenth)}
 			options={this.props.filterOptions}       
 			value={this.state.value}      
 			/>     
