@@ -1,4 +1,3 @@
-// Politician_Page.jsx
 import React from 'react';
 import Law_List from './Law_List';
 import Filter from './Filter';
@@ -38,6 +37,7 @@ export default class Law_Page extends React.Component {
 		}
 		return law_array;
 	}
+	
 	getPageData(jsonResponse) {
 		const page = jsonResponse.page;
 		const total_pages = jsonResponse.total_pages;
@@ -120,7 +120,7 @@ export default class Law_Page extends React.Component {
 								<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={subjectOptions} type={"subject"}/>
 							</Col>
 							<Col sm={{ size: 'auto', offset: 0 }}>
-								<Sort/>
+								<Sort type={"Subject"}/>
 							</Col>
 						</Row>
 					</Container>

@@ -21,7 +21,7 @@ export default class Sort extends React.Component {
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
-          Sort by Date
+          Sort by {this.props.type}
         </DropdownToggle>
         <DropdownMenu>
           <DropdownItem>Ascending</DropdownItem>

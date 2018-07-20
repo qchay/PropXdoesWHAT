@@ -162,7 +162,7 @@ export default class Politician_Page extends React.Component {
 								<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={stateOptions} type={"state"}/>
 							</Col>
 							<Col xs={{ size: '6', offset: '3' }} sm={{ size: '3', offset: '0' }}>
-								<Sort/>
+								<Sort type={"Name"}/>
 							</Col>
 						</Row>
 					</Container>

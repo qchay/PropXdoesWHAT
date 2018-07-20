@@ -1,4 +1,3 @@
-// Album.jsx
 import React from 'react';
 import Law from './Law';
 
