@@ -18,12 +18,12 @@ export default class Sort extends React.Component {
   }
 
   clickHandler(val) {
-    var string = "{\"order_by\":[{\"field\":\""+this.props.type+"\",\"direction\":\""+val+"\"}]}"
-    //console.log(string);      
-    let filterjson = JSON.parse(string)     
-    this.props.getJsonResponseCallBack(filterjson);     
-  }   
+    this.props.orderByCallBack(this.getOrderByArray(val));
+  }
 
+  getOrderByArray (val) {
+    return [{"field": this.props.type, "direction": val}];
+  }
 
   render() {
     return (
@@ -39,5 +39,3 @@ export default class Sort extends React.Component {
     );
   }
 }
-
-// {"order_by":[{"field": "first_name","direction":"asc"}]}

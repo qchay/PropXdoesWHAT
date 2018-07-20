@@ -9,21 +9,42 @@ import { Container, Row, Col } from 'reactstrap';
 export default class Politician_Page extends React.Component {
 	constructor(props) { 
 		super(props); 
-		this.state = { jsonResponse : this.getJsonResponse({}) };
-		this.getJsonResponseCallBack = this.getJsonResponseCallBack.bind(this)  
+		this.state = { 
+					 	filter1 : {"or" : []},
+					 	filter2 : {"or" : []},
+					 	filter3 : {"or" : []},
+					 	orderByArray : []
+					 };
+		this.filterCallBack1 = this.filterCallBack1.bind(this)  
+		this.filterCallBack2 = this.filterCallBack2.bind(this)
+		this.filterCallBack3 = this.filterCallBack3.bind(this)
+		this.orderByCallBack = this.orderByCallBack.bind(this) 
 	}
 
-	getJsonResponseCallBack(json_from_filter){
-		// return (json_from_filter) => {this.setState({jsonResponse : this.getJsonResponse(json_from_filter)});};
-		this.setState({jsonResponse : this.getJsonResponse(json_from_filter)});
+	filterCallBack1 (filter1) {
+		this.setState({filter1 : filter1});
+	}
 
+	filterCallBack2 (filter2) {
+		this.setState({filter2 : filter2});
+	}
+
+	filterCallBack3 (filter3) {
+		this.setState({filter3 : filter3});
+	}
+
+	orderByCallBack (orderByArray) {
+		this.setState({orderByArray : orderByArray});
+	}
+
+	combineFilters(filter1, filter2, filter3, orderByArray) {
+		return { "filters": [ { "and":[filter1, filter2, filter3]}], "order_by" : orderByArray};
 	}
 
 	getJsonResponse(filterJson) {
 		var page_number = this.props.match.params.page_number
 		var httpRequest = new XMLHttpRequest();
 		var api = "http://api.propxdoeswhat.me/api/politicians?page=" + page_number + "&q=" + JSON.stringify(filterJson);
-		console.log(api);
 		httpRequest.open("GET", api, false);
 		httpRequest.send();
 		var jsonResponse = JSON.parse(httpRequest.responseText);
@@ -82,11 +103,15 @@ export default class Politician_Page extends React.Component {
 	}
 
 	render() {
-		let row_array = this.getRowArray(this.state.jsonResponse);
 		const partyOptions = [
 		  { value: 'R', label: 'Republican' },
 		  { value: 'D', label: 'Democrat' },
 		  { value: 'I', label: 'Independent' }
+		];
+
+		const chamberOptions = [
+		  { value: 'house', label: 'House' },
+		  { value: 'senate', label: 'Senate' }
 		];
 
 		const stateOptions = [
@@ -141,14 +166,16 @@ export default class Politician_Page extends React.Component {
 		{ label: 'WI' , value: 'WI'},
 		{ label: 'WY' , value: 'WY'}]
 
-		let page_data = this.getPageData(this.state.jsonResponse);
-		//console.log(page_data);
-		let page_name = "politicians"
+		const page_name = "politicians"
 
 		var filterBoxStyles = {
 			marginTop:'50px',
 			marginBottom:'100px'
 		};
+		let jsonfilter = this.combineFilters(this.state.filter1, this.state.filter2, this.state.filter3, this.state.orderByArray);
+		let jsonResponse = this.getJsonResponse(jsonfilter);
+		let row_array = this.getRowArray(jsonResponse);
+		let page_data = this.getPageData(jsonResponse);
 
 		return (
 			<div>
@@ -156,13 +183,18 @@ export default class Politician_Page extends React.Component {
 					<Container style={filterBoxStyles}>
 						<Row>
 							<Col xs="6" sm={{ size: '3', offset: '2' }}>
-								<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={partyOptions} type={"party"}/>
+								<Filter filterCallBack = {this.filterCallBack1} filterOptions={partyOptions} type={"party"}/>
 							</Col>
 							<Col xs="6" sm="3">
-								<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={stateOptions} type={"state"}/>
+								<Filter filterCallBack = {this.filterCallBack2} filterOptions={stateOptions} type={"state"}/>
 							</Col>
+							<Col xs="6" sm="3">
+								<Filter filterCallBack = {this.filterCallBack3} filterOptions={chamberOptions} type={"chamber"}/>
+							</Col>
+						</Row>
+						<Row>
 							<Col xs={{ size: '6', offset: '3' }} sm={{ size: '3', offset: '0' }}>
-								<Sort getJsonResponseCallBack = {this.getJsonResponseCallBack} type={"first_name"}/>
+								<Sort orderByCallBack = {this.orderByCallBack} type={"first_name"}/>
 							</Col>
 						</Row>
 					</Container>
