@@ -15,7 +15,7 @@
 import React from 'react';
 import Navbar from "./Navbar";
 import Home from "./Home";
-// import Law_Page from "./Law_Page";
+import Law_Page from "./Law_Page";
 // import Law_Bio from "./Law_Bio";
 import Politician_Page from "./Politician_Page";
 // import Politician_Bio from "./Politician_Bio";
@@ -34,9 +34,8 @@ export default class App extends React.Component {
 			    	<Navbar />
 			        <Switch>
 			          <Route exact path='/' component={Home} />
+			          <Route path='/laws/page/:page_number' component={Law_Page} />
 			          <Route path='/politicians/page/:page_number' component={Politician_Page} />
-			          
-
 			        </Switch>
 		        </div>
 		    </Router>
