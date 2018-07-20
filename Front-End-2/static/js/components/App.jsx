@@ -13,12 +13,12 @@
 
 // App.jsx
 import React from 'react';
-import Example from "./Example";
 import Navbar from "./Navbar";
 import Home from "./Home";
 
 import Politician_Page from "./Politician_Page";
 
+import Politician from "./Politician";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 export default class App extends React.Component {
@@ -33,8 +33,9 @@ export default class App extends React.Component {
 			    	<Navbar />
 			        <Switch>
 			          <Route exact path='/' component={Home} />
-			          <Route exact path='/example/page/:page_number' component={Example} />
-			          <Route exact path='/politicians/page/:page_number' component={Politician_Page} />
+			          <Route path='/politicians/page/:page_number' component={Politician_Page} />
+			          <Route path='/politicians/:politician_name/:id_number' component={Politician_Page} />
+
 			        </Switch>
 		        </div>
 		    </Router>

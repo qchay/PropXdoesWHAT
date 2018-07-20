@@ -3,6 +3,7 @@ import React from 'react';
 import Album from './Album';
 import Filter from './Filter';
 import Page_Footer from './Page_Footer'
+import Sort from './Sort'
 
 export default class Politician_Page extends React.Component {
 	constructor(props) { 
@@ -144,11 +145,10 @@ export default class Politician_Page extends React.Component {
 		let page_name = "politicians"
   		return (
   			<div>
-				<p>Politician_Page! Page: {this.props.match.params.page_number}</p>
 				<main>
 					<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={partyOptions} type={"party"}/>
 					<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={stateOptions} type={"state"}/>
-
+					<Sort/>
 					<Album row_array={row_array} page_name={"politician_page"} />
 					<Page_Footer page_data={page_data} page_name={page_name}/>
 				</main>
