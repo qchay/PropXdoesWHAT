@@ -87,7 +87,7 @@ export default class Action_Group_Page extends React.Component {
 								<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} type={"type"}/>
 							</Col>
 							<Col sm={{ size: 'auto', offset: 0 }}>
-								<Sort type={"Name"}/>
+								<Sort getJsonResponseCallBack = {this.getJsonResponseCallBack} type={"name"}/>
 							</Col>
 						</Row>
 					</Container>

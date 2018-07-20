@@ -17,6 +17,14 @@ export default class Sort extends React.Component {
     });
   }
 
+  clickHandler(val) {
+    var string = "{\"order_by\":[{\"field\":\""+this.props.type+"\",\"direction\":\""+val+"\"}]}"
+    //console.log(string);      
+    let filterjson = JSON.parse(string)     
+    this.props.getJsonResponseCallBack(filterjson);     
+  }   
+
+
   render() {
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
@@ -24,10 +32,12 @@ export default class Sort extends React.Component {
           Sort by {this.props.type}
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>Ascending</DropdownItem>
-          <DropdownItem>Descending</DropdownItem>
+          <DropdownItem onClick={() => this.clickHandler("asc")}>Ascending</DropdownItem>
+          <DropdownItem onClick={() => this.clickHandler("desc")}>Descending</DropdownItem>
         </DropdownMenu>
       </ButtonDropdown>
     );
   }
 }
+
+// {"order_by":[{"field": "first_name","direction":"asc"}]}

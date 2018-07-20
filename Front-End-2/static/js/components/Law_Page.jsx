@@ -120,7 +120,7 @@ export default class Law_Page extends React.Component {
 								<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={subjectOptions} type={"subject"}/>
 							</Col>
 							<Col sm={{ size: 'auto', offset: 0 }}>
-								<Sort type={"Subject"}/>
+								<Sort getJsonResponseCallBack = {this.getJsonResponseCallBack} type={"introduced"}/>
 							</Col>
 						</Row>
 					</Container>
