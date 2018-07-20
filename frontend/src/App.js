@@ -1,41 +1,33 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Law_Page from "./components/Law_Page";
+// import Law_Bio from "./Law_Bio";
+import Politician_Page from "./components/Politician_Page";
+// import Politician_Bio from "./Politician_Bio";
+import Action_Group_Page from "./components/Action_Group_Page";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
-import Home from './Components/Home/Home';
-// import Laws from './components/Laws/Laws';
-
-import Navbar from './Components/Navbar/Navbar';
-import PartyFilter from './Components/Filter/PartyFilter';
-
-import StateFilter from './Components/Filter/StateFilter';
-
+import './CSS/styles.css'
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-
-  return (
-    <div>
-    <Router>
+    return (
       <div>
-      <Navbar/>
-      <PartyFilter/>
-      <StateFilter/>
-
-        <Switch>
-          <Route exact path='/' component={Home} />
-        </Switch>
+        <Router>
+          <div>
+            <Navbar />
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/laws/page/:page_number' component={Law_Page} />
+              <Route path='/politicians/page/:page_number' component={Politician_Page} />
+              <Route path='/action_groups/page/:page_number' component={Action_Group_Page} />
+            </Switch>
+          </div>
+        </Router>
       </div>
-    </Router>
-    </div>
     );
   }
-
-
-
 }
 
 export default App;
