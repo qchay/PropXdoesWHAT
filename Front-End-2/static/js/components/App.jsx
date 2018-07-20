@@ -13,9 +13,10 @@
 
 // App.jsx
 import React from 'react';
-import Layout from "./Layout";
 import Example from "./Example";
 import Navbar from "./Navbar";
+import Home from "./Home";
+
 import Politician_Page from "./Politician_Page";
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -31,7 +32,7 @@ export default class App extends React.Component {
 		    	<div>
 			    	<Navbar />
 			        <Switch>
-			          <Route exact path='/' component={Layout} />
+			          <Route exact path='/' component={Home} />
 			          <Route exact path='/example/page/:page_number' component={Example} />
 			          <Route exact path='/politicians/page/:page_number' component={Politician_Page} />
 			        </Switch>
