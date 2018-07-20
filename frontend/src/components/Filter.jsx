@@ -28,7 +28,6 @@ export default class Filter extends React.Component {
 		return (     
 			<div>     
 			<Select       
-				closeMenuOnSelect={false}       
 				components={makeAnimated()}       
 				onChange={this.onChange}       
 				isMulti
