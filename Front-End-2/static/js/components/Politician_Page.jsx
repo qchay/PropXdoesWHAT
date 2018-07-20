@@ -3,6 +3,7 @@ import React from 'react';
 import Album from './Album';
 import Filter from './Filter';
 import PartyFilter from './PartyFilter';
+import Page_Footer from './Page_Footer'
 
 export default class Politician_Page extends React.Component {
 	constructor(props) { 
@@ -51,20 +52,52 @@ export default class Politician_Page extends React.Component {
 		return row_array
 	}
 
+	getPageData(jsonResponse) {
+	const page = jsonResponse.page;
+	const total_pages = jsonResponse.total_pages;
+	var page_count = page - 2;
+	var page_array = [];
+	if ((total_pages - page) < 2) {
+		page_count += -2 + total_pages - page;
+	}
+	while (true) {
+		while (page_count < 1) { 
+			page_count++;
+		}
+		page_array.push(page_count);
+		if ((page_count === total_pages) || (page_array.length === 5)) {
+			break;
+		}
+		page_count++;
+	}
+	var page_data = {
+		page: page, 
+		total_pages: total_pages, 
+		page_array: page_array, 
+		prev_page: (page === 1 ? 1 : page - 1),
+		next_page: (page === total_pages ? total_pages : page + 1)
+		}
+	return page_data;
+	}
+
 	render() {
-		let row_array = this.getRowArray(this.state.jsonResponse)
+		let row_array = this.getRowArray(this.state.jsonResponse);
 		const partyOptions = [
 		  { value: 'R', label: 'Republican' },
 		  { value: 'D', label: 'Democrat' },
 		  { value: 'I', label: 'Independent' }
-		]
+		];
+
+		let page_data = this.getPageData(this.state.jsonResponse);
+		console.log(page_data);
+		let page_name = "politicians"
   		return (
   			<div>
 				<p>Politician_Page! Page: {this.props.match.params.page_number}</p>
 				<main>
-					<Filter getJsonResponseCallBack = {this.getJsonResponseCallBack}/>
 					<PartyFilter getJsonResponseCallBack = {this.getJsonResponseCallBack} filterOptions={partyOptions}/>
 					<Album row_array={row_array} page_name={"politician_page"} />
+					<Page_Footer page_data={page_data} page_name={page_name}/>
 				</main>
 			</div>
     	);
