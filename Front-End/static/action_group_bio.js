@@ -16,7 +16,7 @@ class Bio extends React.Component {
 }
 
 // Getting json response
-var action_group_id = JSON.parse(document.getElementById("id_number").dataset.id_number);
+var action_group_id = this.props.match.params.id;
 var httpRequest = new XMLHttpRequest();
 var api = "http://api.propxdoeswhat.me/api/action_groups/" + action_group_id;
 httpRequest.open("GET", api, false);
