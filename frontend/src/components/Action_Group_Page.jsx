@@ -77,8 +77,18 @@ export default class Action_Group_Page extends React.Component {
 
 	render() {
 		const subjectOptions = [
-		{ label: 'Progressive Political Parties' , value: 'Progressive Political Parties'},
-		{ label: 'Progressive State and Local Legislation Groups' , value: 'Progressive State and Local Legislation Groups'},
+		{ label: 'Coalitions of Peace Groups' , value: 'Coalitions of Peace Groups' },
+		{ label: 'Election Reform Groups' , value: 'Election Reform Groups' },
+		{ label: 'General Peace Groups' , value: 'General Peace Groups' },
+		{ label: 'Government Accountability Groups' , value: 'Government Accountability Groups' },
+		{ label: 'Nuclear Weapons-Focused Groups' , value: 'Nuclear Weapons-Focused Groups' },
+		{ label: 'Progressive Democratic Party Election Groups' , value: 'Progressive Democratic Party Election Groups' },
+		{ label: 'Progressive Lobbying and Electoral Action Groups' , value: 'Progressive Lobbying and Electoral Action Groups' },
+		{ label: 'Progressive Political Parties' , value: 'Progressive Political Parties' },
+		{ label: 'Progressive State and Local Legislation Groups' , value: 'Progressive State and Local Legislation Groups' },
+		{ label: 'Progressive Voter Engagement Groups' , value: 'Progressive Voter Engagement Groups' },
+		{ label: 'Student Peace Groups' , value: 'Student Peace Groups' },
+		{ label: 'Veterans Peace Groups' , value: 'Veterans Peace Groups' }
 		];
 		
 		let page_name = "action_groups"
