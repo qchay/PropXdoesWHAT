@@ -86,19 +86,23 @@ The following are the user stories gathered for Phase 3: \\
 	
 \begin{itemize}
 	\item\textbf{As a user, for the laws model, I want to be able to filter by subject.} \\
-	% what we did to fix it here
-	
+	We implemented this user story by creating a filter option that has options of the subjects to select.
+	\\
 	\item\textbf{As a user, for the politicians model, I want to be able to filter by Legislator's state.} \\
-	% what we did to fix it here
+	We implemented this user story by creating a filter option that has options of the Legislator's state to select.
+	\\
 	
 	\item\textbf{As a user, I would like to search for laws, politicians, and action groups from the home page.} \\
-	% what we did to fix it here
+	a
+	\\
 	
 	\item\textbf{As a user, for the politicians model, I want to be able to filter by republican or democrat.} \\
-	% what we did to fix it here
+	We implemented this user story by creating a filter option that has options of the politicians's party to select.
+	\\
 	
 	\item\textbf{As a user, for the laws model, I want to be able to sort by date introduced} \\
-	% what we did to fix it here
+	We implemented this user story by creating a sort option that sorts by ascending or descending for date introduced.
+	\\
 \end{itemize}
 
 \section{Models}
@@ -167,7 +171,7 @@ Full API Documentation at: documenter.getpostman.com/view/4704075/RWEmKHJp
 \section{Tools}
 
 \begin{itemize}
-	\item GitLab		--- Version Control
+	\item Git		    --- Version Control
 	\item GitLab		--- Git repository hosting, issue tracking
 	\item Postman		--- API design and testing % thing is a PoS though
 	\item Grammarly		--- Spelling/grammar feedback for this report
@@ -290,5 +294,12 @@ We are using Postman for API testing. The Postman test requests GET methods to o
 \\
 We are using Mocha, Chai, and Enzyme to test our javascript. We installed Mocha, Chai, Enzyme, babel-preset-env, babel-core, babel-preset-react, and react in npm and ran mocha with arguments --require babel-core/register.
 
+\section{Filter}
+
+The website implements filtering options for each of our models. The laws models filters based on the API parameter of subject, the politicians models filters based on party,state,and chamber, and the action group model filters by the API parameter "type". Whenever a user clicks on a filter on our page, we GET a JSON response and parse it. After parsing it, we generate the respective model with the applied filters. If another filter gets applied from the same filter category, we OR the two filters and display the results. If another filter gets applied from a different filter category, we AND the two categories and display the results. 
+
+\section{Sort}
+
+For the models, we allow the users to sort the displayed results by ascending or descending order.This is done by utilizing the API calls of \textit{order\_by}. In the Laws model, the laws are sorted by the date introduced. In the Politicians model, the politicians are sorted by name.In the Action Groups model, the action groups are sorted by type. The sort component is implemented in the same way as filter by GET of JSON response and parsing it.
 
 \end{document}
