@@ -36,11 +36,12 @@ class SearchableMixin(object):
         query = db.session.query(cls)
         ids = g.pop('search_ids', None)
         if ids is not None:
-            when = []
-            for i in range(len(ids)):
-                when.append((ids[i], i))
-            query = query.filter(cls.id.in_(ids)).order_by(
-                db.case(when, value=cls.id))
+            query = query.filter(cls.id.in_(ids))
+            if('has_order' not in g):
+                when = []
+                for i in range(len(ids)):
+                    when.append((ids[i], i))
+                query = query.order_by(db.case(when, value=cls.id))
         return query
 
 # politicians_laws=db.Table('politicians_laws',
@@ -81,14 +82,7 @@ class Politicians (SearchableMixin, db.Model):
     #raw = db.Column(db.Unicode, nullable=False)
 
 def pre_politicians(search_params=None, **kw):
-    print(search_params, file=sys.stderr)
-    query = search_params.pop('search', None)
-    print(query, file=sys.stderr)
-    if query is not None:
-        hits, total = Politicians.search(query, 1, 64)
-        if(total > 0):
-            g.setdefault('search_ids', hits)
-
+    pre_generic(Politicians, search_params)
 
 class Laws (SearchableMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
@@ -109,13 +103,7 @@ class Laws (SearchableMixin, db.Model):
     desc = db.Column(db.Unicode, nullable=False)
 
 def pre_laws(search_params=None, **kw):
-    print(search_params, file=sys.stderr)
-    query = search_params.pop('search', None)
-    print(query, file=sys.stderr)
-    if query is not None:
-        hits, total = Laws.search(query, 1, 64)
-        if(total > 0):
-            g.setdefault('search_ids', hits)
+    pre_generic(Laws, search_params)
 
 class Affected_groups (db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
@@ -131,14 +119,18 @@ class Action_groups (SearchableMixin, db.Model):
     desc = db.Column(db.Unicode, nullable=False)
 
 def pre_action_groups(search_params=None, **kw):
+    pre_generic(Action_groups, search_params)
+
+def pre_generic(cls, search_params):
     print(search_params, file=sys.stderr)
     query = search_params.pop('search', None)
     print(query, file=sys.stderr)
     if query is not None:
-        hits, total = Action_groups.search(query, 1, 64)
+        hits, total = cls.search(query, 1, 64)
         if(total > 0):
             g.setdefault('search_ids', hits)
-
+            if('order_by' in search_params):
+                g.setdefault('has_order', True)
 
 manager = APIManager(app, flask_sqlalchemy_db=db)
 manager.create_api(Politicians, methods=['GET'], preprocessors={'GET_MANY': [pre_politicians]},results_per_page=12)
