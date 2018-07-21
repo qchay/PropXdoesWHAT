@@ -2,12 +2,27 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 export default class Example extends React.Component {
+    constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.updateInputValue = this.updateInputValue.bind(this);
+    this.state = {inputValue : ""}
+  }
+
+  handleClick() {
+    this.props.searchCallBack(this.state.inputValue);
+  }
+
+  updateInputValue(evt) {
+    this.setState({inputValue: evt.target.value});
+  }
+
   render() {
     return (
      <div className="input-group mb-3">
-        <input type="text" className="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2" />
+        <input type="text" className="form-control" value={this.state.inputValue} placeholder="Search" aria-label="Search" onChange={this.updateInputValue} aria-describedby="basic-addon2" />
         <div className="input-group-append">
-          <button className="btn btn-outline-secondary" type="button">Search</button>
+          <button onClick={this.handleClick} className="btn btn-outline-secondary" type="button">Search</button>
         </div>
       </div>
 

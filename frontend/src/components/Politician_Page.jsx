@@ -14,12 +14,14 @@ export default class Politician_Page extends React.Component {
 					 	filter1 : {"or" : []},
 					 	filter2 : {"or" : []},
 					 	filter3 : {"or" : []},
-					 	orderByArray : []
+					 	orderByArray : [],
+					 	searchText : ""
 					 };
 		this.filterCallBack1 = this.filterCallBack1.bind(this)  
 		this.filterCallBack2 = this.filterCallBack2.bind(this)
 		this.filterCallBack3 = this.filterCallBack3.bind(this)
 		this.orderByCallBack = this.orderByCallBack.bind(this)
+		this.searchCallBack = this.searchCallBack.bind(this)
 	}
 
 	filterCallBack1 (filter1) {
@@ -38,8 +40,12 @@ export default class Politician_Page extends React.Component {
 		this.setState({orderByArray : orderByArray});
 	}
 
-	combineFilters(filter1, filter2, filter3, orderByArray) {
-		return { "filters": [ { "and":[filter1, filter2, filter3]}], "order_by" : orderByArray};
+	searchCallBack (searchText) {
+		this.setState({searchText: searchText})
+	}
+
+	combineFilters(filter1, filter2, filter3, orderByArray, searchText) {
+		return { "search":searchText, "filters": [ { "and":[filter1, filter2, filter3]}], "order_by" : orderByArray};
 	}
 
 	getJsonResponse(filterJson) {
@@ -173,7 +179,7 @@ export default class Politician_Page extends React.Component {
 			marginTop:'50px',
 			marginBottom:'100px'
 		};
-		let jsonfilter = this.combineFilters(this.state.filter1, this.state.filter2, this.state.filter3, this.state.orderByArray);
+		let jsonfilter = this.combineFilters(this.state.filter1, this.state.filter2, this.state.filter3, this.state.orderByArray, this.state.searchText);
 		let jsonResponse = this.getJsonResponse(jsonfilter);
 		let row_array = this.getRowArray(jsonResponse);
 		let page_data = this.getPageData(jsonResponse);
@@ -184,7 +190,7 @@ export default class Politician_Page extends React.Component {
 					<Container style={filterBoxStyles}>
 						<Row>
 							<Col xs="12" lg={{ size: '12', offset: '1' }}>
-								<Search/>
+								<Search searchCallBack = {this.searchCallBack}/>
 							</Col>
 						</Row>
 						<Row>
