@@ -1,13 +1,47 @@
 # pylint: disable-all
-from flask import Flask
+from flask import Flask, jsonify, g
 from flask_restless import APIManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
+from elasticsearch import Elasticsearch
+import sys
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://Propxdoeswhat:Propxdoeswhat@propxdoeswhatdb.cnsfq0o1clx8.us-east-2.rds.amazonaws.com/PropxdoeswhatDB'
 db = SQLAlchemy(app)
 CORS(app)
+
+es = Elasticsearch(["http://search-propxdoeswhat-4wzolamil7fvs4ylzdfayxl6va.us-east-2.es.amazonaws.com:80"])
+
+# adapted from blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvi-full-text-search
+def query_index(index, type, query, page, per_page):
+    if not es:
+        return [], 0
+    search = es.search(
+        index=index, doc_type=type,
+        body={'query': {'match': {'merged': query}},
+              'from': (page - 1) * per_page, 'size': per_page})
+    ids = [int(hit['_id']) for hit in search['hits']['hits']]
+    return ids, search['hits']['total']
+
+class SearchableMixin(object):
+    @classmethod
+    def search(cls, query, page, per_page):
+        type = cls.__tablename__ if cls.__tablename__ != 'laws' else 'law'
+        ids, total = query_index(cls.__tablename__, type, query, page, per_page)
+        return ids, total
+        
+    @classmethod
+    def query(cls):
+        query = db.session.query(cls)
+        ids = g.pop('search_ids', None)
+        if ids is not None:
+            when = []
+            for i in range(len(ids)):
+                when.append((ids[i], i))
+            query = query.filter(cls.id.in_(ids)).order_by(
+                db.case(when, value=cls.id))
+        return query
 
 # politicians_laws=db.Table('politicians_laws',
 # 	db.Column('politician_id',db.Integer, db.ForeignKey('politicians.id')),
@@ -31,7 +65,7 @@ CORS(app)
 # 	)
 
 
-class Politicians (db.Model):
+class Politicians (SearchableMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     first_name = db.Column(db.Unicode, nullable=False)
     last_name = db.Column(db.Unicode, nullable=False)
@@ -46,8 +80,17 @@ class Politicians (db.Model):
     law = db.relationship('Laws', backref='sponsor')
     #raw = db.Column(db.Unicode, nullable=False)
 
+def pre_politicians(search_params=None, **kw):
+    print(search_params, file=sys.stderr)
+    query = search_params.pop('search', None)
+    print(query, file=sys.stderr)
+    if query is not None:
+        hits, total = Politicians.search(query, 1, 64)
+        if(total > 0):
+            g.setdefault('search_ids', hits)
 
-class Laws (db.Model):
+
+class Laws (SearchableMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     bill_id = db.Column(db.Unicode, nullable=False)
     name = db.Column(db.Unicode, nullable=False)
@@ -65,6 +108,14 @@ class Laws (db.Model):
     vetoed = db.Column(db.Unicode, nullable=False)
     desc = db.Column(db.Unicode, nullable=False)
 
+def pre_laws(search_params=None, **kw):
+    print(search_params, file=sys.stderr)
+    query = search_params.pop('search', None)
+    print(query, file=sys.stderr)
+    if query is not None:
+        hits, total = Laws.search(query, 1, 64)
+        if(total > 0):
+            g.setdefault('search_ids', hits)
 
 class Affected_groups (db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
@@ -72,18 +123,27 @@ class Affected_groups (db.Model):
     description = db.Column(db.Unicode, nullable=False)
 
 
-class Action_groups (db.Model):
+class Action_groups (SearchableMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     name = db.Column(db.Unicode, nullable=False)
     url = db.Column(db.Unicode, nullable=False)
     type = db.Column(db.Unicode, nullable=False)
     desc = db.Column(db.Unicode, nullable=False)
 
+def pre_action_groups(search_params=None, **kw):
+    print(search_params, file=sys.stderr)
+    query = search_params.pop('search', None)
+    print(query, file=sys.stderr)
+    if query is not None:
+        hits, total = Action_groups.search(query, 1, 64)
+        if(total > 0):
+            g.setdefault('search_ids', hits)
+
 
 manager = APIManager(app, flask_sqlalchemy_db=db)
-manager.create_api(Politicians, methods=['GET'], results_per_page=12)
-manager.create_api(Laws, methods=['GET'], results_per_page=12)
+manager.create_api(Politicians, methods=['GET'], preprocessors={'GET_MANY': [pre_politicians]},results_per_page=12)
+manager.create_api(Laws, methods=['GET'], preprocessors={'GET_MANY': [pre_laws]}, results_per_page=12)
 manager.create_api(Affected_groups, methods=['GET'], results_per_page=12)
-manager.create_api(Action_groups, methods=['GET'], results_per_page=12)
+manager.create_api(Action_groups, methods=['GET'], preprocessors={'GET_MANY': [pre_action_groups]}, results_per_page=12)
 
 app.run(host='0.0.0.0', debug=True)
