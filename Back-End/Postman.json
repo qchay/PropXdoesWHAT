@@ -333,6 +333,530 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "http://api.propxdoeswhat.me/api/politicians?page=1&q={\"filters\":[{\"and\":[{\"or\":[{\"name\":\"party\",\"op\":\"eq\",\"val\":\"D\"}]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"TX\"}]},{\"or\":[{\"name\":\"chamber\",\"op\":\"eq\",\"val\":\"house\"}]}]}],\"order_by\":[]}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bce4bab2-f6c1-44cb-8933-e34f4d4c2f51",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 1000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Number of results is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.num_results).to.eql(11);",
+							"});",
+							"",
+							"pm.test(\"Has Castro\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Castro\");",
+							"});",
+							"",
+							"pm.test(\"Has Veasey\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Veasey\");",
+							"});",
+							"",
+							"pm.test(\"Has Filemon Vela's laws\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"hr4940-115\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.propxdoeswhat.me/api/politicians?page=1&q={\"filters\":[{\"and\":[{\"or\":[{\"name\":\"party\",\"op\":\"eq\",\"val\":\"D\"}]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"TX\"}]},{\"or\":[{\"name\":\"chamber\",\"op\":\"eq\",\"val\":\"house\"}]}]}],\"order_by\":[]}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"propxdoeswhat",
+						"me"
+					],
+					"path": [
+						"api",
+						"politicians"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "q",
+							"value": "{\"filters\":[{\"and\":[{\"or\":[{\"name\":\"party\",\"op\":\"eq\",\"val\":\"D\"}]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"TX\"}]},{\"or\":[{\"name\":\"chamber\",\"op\":\"eq\",\"val\":\"house\"}]}]}],\"order_by\":[]}"
+						}
+					]
+				},
+				"description": "Politician Filter Test"
+			},
+			"response": []
+		},
+		{
+			"name": "http://api.propxdoeswhat.me/api/politicians?page=1&q={\"filters\":[{\"and\":[{\"or\":[]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"LA\"}]},{\"or\":[]}]}],\"order_by\":[{\"field\":\"first_name\",\"direction\":\"asc\"}]}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee8bb018-18f8-4715-8cf9-be9a6413aba3",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 1000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Number of results is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.num_results).to.eql(8);",
+							"});",
+							"",
+							"pm.test(\"First politician sorted is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[0].last_name).to.eql(\"Cassidy\");",
+							"});",
+							"",
+							"pm.test(\"Last politician sorted is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[7].last_name).to.eql(\"Scalise\");",
+							"});",
+							"",
+							"pm.test(\"Sort works with filter\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[3].state).to.eql(\"LA\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.propxdoeswhat.me/api/politicians?page=1&q={\"filters\":[{\"and\":[{\"or\":[]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"LA\"}]},{\"or\":[]}]}],\"order_by\":[{\"field\":\"first_name\",\"direction\":\"asc\"}]}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"propxdoeswhat",
+						"me"
+					],
+					"path": [
+						"api",
+						"politicians"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "q",
+							"value": "{\"filters\":[{\"and\":[{\"or\":[]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"LA\"}]},{\"or\":[]}]}],\"order_by\":[{\"field\":\"first_name\",\"direction\":\"asc\"}]}"
+						}
+					]
+				},
+				"description": "Politician Sort Test"
+			},
+			"response": []
+		},
+		{
+			"name": "http://api.propxdoeswhat.me/api/politicians?page=1&q={\"search\":\"Ted Cruz\",\"filters\":[{\"and\":[{\"or\":[]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"TX\"}]},{\"or\":[]}]}],\"order_by\":[]}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "585c5a2c-7d68-4bd1-989c-ae31554c6f46",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 1000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Number of results is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.num_results).to.eql(2);",
+							"});",
+							"",
+							"pm.test(\"Relevance search test 1\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[0].last_name).to.eql(\"Cruz\");",
+							"});",
+							"",
+							"pm.test(\"Relevance search test 2\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[1].last_name).to.eql(\"Poe\");",
+							"});",
+							"",
+							"pm.test(\"Search works with filter\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[0].state).to.eql(\"TX\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.propxdoeswhat.me/api/politicians?page=1&q={\"search\":\"Ted Cruz\",\"filters\":[{\"and\":[{\"or\":[]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"TX\"}]},{\"or\":[]}]}],\"order_by\":[]}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"propxdoeswhat",
+						"me"
+					],
+					"path": [
+						"api",
+						"politicians"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "q",
+							"value": "{\"search\":\"Ted Cruz\",\"filters\":[{\"and\":[{\"or\":[]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"TX\"}]},{\"or\":[]}]}],\"order_by\":[]}"
+						}
+					]
+				},
+				"description": "Politician Search Test"
+			},
+			"response": []
+		},
+		{
+			"name": "http://api.propxdoeswhat.me/api/laws?page=1&q={\"search\":\"gun violence awareness\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"subject\",\"op\":\"eq\",\"val\":\"Crime and Law Enforcement\"}]}]}],\"order_by\":[]}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fc6cbb7b-f139-4b53-851c-b7a7ab26b69f",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 1000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Number of results is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.num_results).to.eql(23);",
+							"});",
+							"",
+							"pm.test(\"Relevance search test\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[0].bill_id).to.eql(\"hres373-115\");",
+							"});",
+							"",
+							"pm.test(\"Search works with filter 1\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[4].subject).to.eql(\"Crime and Law Enforcement\");",
+							"});",
+							"",
+							"pm.test(\"Search works with filter 2\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[7].subject).to.eql(\"Crime and Law Enforcement\");",
+							"});",
+							"",
+							"pm.test(\"Search works with filter 3\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[11].subject).to.eql(\"Crime and Law Enforcement\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.propxdoeswhat.me/api/laws?page=1&q={\"search\":\"gun violence awareness\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"subject\",\"op\":\"eq\",\"val\":\"Crime and Law Enforcement\"}]}]}],\"order_by\":[]}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"propxdoeswhat",
+						"me"
+					],
+					"path": [
+						"api",
+						"laws"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "q",
+							"value": "{\"search\":\"gun violence awareness\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"subject\",\"op\":\"eq\",\"val\":\"Crime and Law Enforcement\"}]}]}],\"order_by\":[]}"
+						}
+					]
+				},
+				"description": "Law Search Test"
+			},
+			"response": []
+		},
+		{
+			"name": "http://api.propxdoeswhat.me/api/laws?page=1&q={\"search\":\"\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"subject\",\"op\":\"eq\",\"val\":\"Agriculture and Food\"}]}]}],\"order_by\":[{\"field\":\"introduced\",\"direction\":\"desc\"}]}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "77aef9dd-4f4c-4743-a367-b3446080d868",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 1000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Number of results is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.num_results).to.eql(25);",
+							"});",
+							"",
+							"pm.test(\"Sort desc test 1\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[0].introduced).to.eql(\"2018-06-11\");",
+							"});",
+							"",
+							"pm.test(\"Sort desc test 2\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[1].introduced).to.eql(\"2018-06-05\");",
+							"});",
+							"",
+							"pm.test(\"Filter works with filter test 1\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[0].subject).to.eql(\"Agriculture and Food\");",
+							"});",
+							"",
+							"pm.test(\"Filter works with filter test 2\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[4].subject).to.eql(\"Agriculture and Food\");",
+							"});",
+							"",
+							"pm.test(\"Filter works with filter test 3\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[8].subject).to.eql(\"Agriculture and Food\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.propxdoeswhat.me/api/laws?page=1&q={\"search\":\"\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"subject\",\"op\":\"eq\",\"val\":\"Agriculture and Food\"}]}]}],\"order_by\":[{\"field\":\"introduced\",\"direction\":\"desc\"}]}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"propxdoeswhat",
+						"me"
+					],
+					"path": [
+						"api",
+						"laws"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "q",
+							"value": "{\"search\":\"\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"subject\",\"op\":\"eq\",\"val\":\"Agriculture and Food\"}]}]}],\"order_by\":[{\"field\":\"introduced\",\"direction\":\"desc\"}]}"
+						}
+					]
+				},
+				"description": "Law Filter and Sort Test"
+			},
+			"response": []
+		},
+		{
+			"name": "http://api.propxdoeswhat.me/api/action_groups?page=1&q={\"search\":\"United\",\"filters\":[{\"and\":[{\"or\":[]}]}],\"order_by\":[]}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6e3e929e-9ed5-4a7a-9762-3c6bd860c9d7",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 1000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Number of results is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.num_results).to.eql(46);",
+							"});",
+							"",
+							"pm.test(\"Relevance search test\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[0].id).to.eql(58);",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.propxdoeswhat.me/api/action_groups?page=1&q={\"search\":\"United\",\"filters\":[{\"and\":[{\"or\":[]}]}],\"order_by\":[]}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"propxdoeswhat",
+						"me"
+					],
+					"path": [
+						"api",
+						"action_groups"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "q",
+							"value": "{\"search\":\"United\",\"filters\":[{\"and\":[{\"or\":[]}]}],\"order_by\":[]}"
+						}
+					]
+				},
+				"description": "Action Group Search Test"
+			},
+			"response": []
+		},
+		{
+			"name": "http://api.propxdoeswhat.me/api/action_groups?page=1&q={\"search\":\"\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Simple Living Advocacy Groups\"},{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Civic and Neighborhood Groups\"}]}]}],\"order_by\":[]}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1fd96daa-4de3-4fc0-8001-738902d4ba40",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 1000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Number of results is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.num_results).to.eql(3);",
+							"});",
+							"",
+							"pm.test(\"Filter multiple test 1\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[0].type).to.eql(\"Civic and Neighborhood Groups\");",
+							"});",
+							"",
+							"pm.test(\"Filter multiple test 1\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[2].type).to.eql(\"Simple Living Advocacy Groups\");",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.propxdoeswhat.me/api/action_groups?page=1&q={\"search\":\"\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Simple Living Advocacy Groups\"},{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Civic and Neighborhood Groups\"}]}]}],\"order_by\":[]}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"propxdoeswhat",
+						"me"
+					],
+					"path": [
+						"api",
+						"action_groups"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "q",
+							"value": "{\"search\":\"\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Simple Living Advocacy Groups\"},{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Civic and Neighborhood Groups\"}]}]}],\"order_by\":[]}"
+						}
+					]
+				},
+				"description": "Action Group Filter Multiple Test"
+			},
+			"response": []
 		}
 	]
 }
