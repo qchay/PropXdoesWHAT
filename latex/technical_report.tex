@@ -89,7 +89,7 @@ The following are the user stories gathered for Phase 3:  \vspace{0.5em}
 	\\
 	
 	\item\textbf{As a user, I would like to search for laws, politicians, and action groups from the home page.} \\
-	a
+	We implemented a search bar that will utilize full-text searching. We also have searching within our models that will take into account any filters applied.
 	\\
 	
 	\item\textbf{As a user, for the politicians model, I want to be able to filter by republican or democrat.} \\
@@ -162,37 +162,49 @@ API Endpoints: \\
 \end{itemize}
 
 ~\\
-Full API Documentation at: documenter.getpostman.com/view/4704075/RWEmKHJp
+Full API Documentation at: https://documenter.getpostman.com/view/4704075/RWMCtUm6
 
 \section{Tools}
 
-\begin{itemize}
-	\item GitLab		--- Git repository hosting, issue tracking
-	\item Postman		--- API design and testing % thing is a PoS though
-	\item Grammarly		--- Spelling/grammar feedback for this report
-	\item Piazza		--- Collecting User Stories from end users
-	\item Slack			--- Team communication and collaboration
-	\item Flask     	--- Micro web framework
-	\item React     	--- Render UI
-	\item AWS       	--- Server hosting for Flash, Node, MySQL, ElasticSearch instances
-	\item Selenium 		--- Test GUI
-	\item React Router 	--- Routing from URL on page to scripts
-	\item npm 			--- Node Package manager
-	\item Mocha 		--- Test framework for JavaScript
-	\item Babel 		--- JavaScript compiler
-	\item Chai 			--- Assertion library that paired with JavaScript testing framework
-	\item Docker 		--- Virtual machine
-	\item Enzyme 		--- Tests React
-	\item JavaScript 	--- Programming language used to interact within web browsers
-	\item Bootstrap 	--- Front-end framework
-	\item Python 		--- Programming language
-	\item ElasticSearch --- Standalone full-text index server based on Lucene
-
-\end{itemize}
-
-\section{Setup}
-
-\textbf{TO DO: HOW WE SETUP TOOLS}
+\textbf{GitLab}		\\We used GitLab as our Git repository hosting to collaborate on our IDB project. Gitlab is easy to use because it has issue tracking and continuous integration. \\
+\\
+\textbf {Postman}		\\Postman is a useful tool for testing,developing, and documenting our RESTful API. With Postman, building our API model for our website was easier. Postman also has a documentation feature for our API model. This makes things understandable for anyone who wishes to use our API.\\ 
+\\
+\textbf {Grammarly}		\\Spelling/grammar feedback for this report\\
+\\
+\textbf {Piazza}		\\Collecting User Stories from end users. Giving feedback and receiving criticism made easier with Piazza.\\
+\\
+\textbf {Slack}			\\Slack is very useful in keeping up with team members and git commits. Slack is integrated with the GitLab repo. \\
+\\
+\textbf {Flask}     	\\Flask was used for our back-end framework for PropXdoesWHAT! In the Flask app, we used SQL-Alchemy to connect to our database and constructing our table models. Flask Restless was used create our API endpoints.\\
+\\
+\textbf {React}   	\\React was used to create a dynamic website by utilizing re-usable components. This made it easier to make our models, and add features such as filtering, sorting, and searching.\\
+\\
+\textbf {AWS}      	\\Server hosting for Flash, Node, MySQL, ElasticSearch instances (More Description in AWS section)\\
+\\
+\textbf {Selenium} 		\\Test GUI\\
+\\
+\textbf {React Router} 	\\React Router allowed for routing from URL on page to scripts. This allowed our front end to run without the need for flask.\\
+\\
+\textbf {npm} 			\\Node Package manager\\
+\\
+\textbf {Mocha} 		\\Test framework for JavaScript\\
+\\
+\textbf {Babel} 		\\JavaScript compiler that\\
+\\
+\textbf {Chai} 			\\Assertion library that paired with JavaScript testing framework\\
+\\
+\textbf {Docker} 		\\We used docker to contain our front-end (React) and back-end (Flask). This made it easier to isolate and work on each end without worrying about any interference.\\
+\\
+\textbf {Enzyme} 		\\Tests React\\
+\\
+\textbf {JavaScript} 	\\Programming language used to interact within web browsers\\
+\\
+\textbf {Bootstrap} 	\\Front-end framework used to style and design our website. Bootstrap made it easier to develop our front-end to be more appealing. \\
+\\
+\textbf {Python} 		\\Programming language used to code our back-end Flask App\\
+\\
+\textbf {ElasticSearch} \\Standalone full-text index server based on Lucene\\
 
 \section{Hosting}
 
@@ -218,6 +230,14 @@ Next, we updated the working Linux server running in the AWS cloud and installed
 \section{Full-text Search}
 
 We use an ElasticSearch instance running on AWS as an external server to host the full-text indexes and perform searches. Indexes are built after database tables are loaded by scripts which dump the tables and load the indexes. Currently, fields are indexed as-is with no stemming or other prossessing. The Flask-Restless API manager was modified to first recognize a new parameter \code{search} (using a request pre-processor handler), call the ElasticSearch instance with the given query, and then adjust the query filter for the rest of that request to only include results with the returned ids (using a custom \code{query} model field).
+
+\section{Filter}
+
+The website implements filtering options for each of our models. The laws models filters based on the API parameter of subject, the politicians models filters based on party,state,and chamber, and the action group model filters by the API parameter "type". Whenever a user clicks on a filter on our page, we GET a JSON response and parse it. After parsing it, we generate the respective model with the applied filters. If another filter gets applied from the same filter category, we OR the two filters and display the results. If another filter gets applied from a different filter category, we AND the two categories and display the results. 
+
+\section{Sort}
+
+For the models, we allow the users to sort the displayed results by ascending or descending order.This is done by utilizing the API calls of \textit{order\_by}. In the Laws model, the laws are sorted by the date introduced. In the Politicians model, the politicians are sorted by name.In the Action Groups model, the action groups are sorted by type. The sort component is implemented in the same way as filter by GET of JSON response and parsing it.
 
 \section{Database}
 
@@ -289,13 +309,4 @@ We are using Postman for API testing. The Postman test requests GET methods to o
 \\
 \\
 We are using Mocha, Chai, and Enzyme to test our javascript. We installed Mocha, Chai, Enzyme, babel-preset-env, babel-core, babel-preset-react, and react in npm and ran mocha with arguments --require babel-core/register.
-
-\section{Filter}
-
-The website implements filtering options for each of our models. The laws models filters based on the API parameter of subject, the politicians models filters based on party,state,and chamber, and the action group model filters by the API parameter "type". Whenever a user clicks on a filter on our page, we GET a JSON response and parse it. After parsing it, we generate the respective model with the applied filters. If another filter gets applied from the same filter category, we OR the two filters and display the results. If another filter gets applied from a different filter category, we AND the two categories and display the results. 
-
-\section{Sort}
-
-For the models, we allow the users to sort the displayed results by ascending or descending order.This is done by utilizing the API calls of \textit{order\_by}. In the Laws model, the laws are sorted by the date introduced. In the Politicians model, the politicians are sorted by name.In the Action Groups model, the action groups are sorted by type. The sort component is implemented in the same way as filter by GET of JSON response and parsing it.
-
 \end{document}
