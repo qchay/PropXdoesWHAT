@@ -4,6 +4,7 @@ import Album from './Album';
 import Filter from './Filter';
 import Page_Footer from './Page_Footer'
 import Sort from './Sort'
+import Search from './Search';
 import { Container, Row, Col } from 'reactstrap';
 
 export default class Politician_Page extends React.Component {
@@ -182,6 +183,12 @@ export default class Politician_Page extends React.Component {
 				<main>
 					<Container style={filterBoxStyles}>
 						<Row>
+							<Col xs="12" lg={{ size: '12', offset: '1' }}>
+								<Search/>
+							</Col>
+						</Row>
+						<Row>
+							
 							<Col xs="6" sm={{ size: '3', offset: '2' }}>
 								<Filter filterCallBack = {this.filterCallBack1} filterOptions={partyOptions} type={"party"}/>
 							</Col>
