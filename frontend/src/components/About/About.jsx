@@ -1,6 +1,4 @@
 import React from 'react';
-import Jumbotron from './Jumbotron';
-import Pill from './Pill';
 import Card from './Card';
 
 export default class About extends React.Component {
@@ -109,19 +107,6 @@ export default class About extends React.Component {
 				{ return num + " " + b;  }
 			}
 			
-			// for (var i = 0; i < contributers.length; i++) {
-			// 	var name = contributers[i];
-			// 	$("#name" + i).html(name);
-		 //    	$("#commits" + i).html(pluralize(commits[name],'commit','commits'));
-		 //    	$("#issues" + i).html(pluralize(issues[name],'issue','issues') + " closed");
-		 //    	$("#issues-created" + i).html(pluralize(issuesOpened[name],'issue','issues') + " created");
-			// 	if(teamInfo[name]["bio"] !== "")
-			// 	{ $("#bio" + i).html(teamInfo[name]["bio"]); }
-			// 	if(teamInfo[name]["tasks"] !== "")
-			// 	{ $("#tasks" + i).html(teamInfo[name]["tasks"]); }
-			// 	if(teamInfo[name].hasOwnProperty("pic"))
-			// 	{ $("#pic" + i).attr("src", teamInfo[name]["pic"]) };
-			// }
 			var card_data = [];
 
 			for (var i = 0; i < contributers.length; i++) {
@@ -136,9 +121,6 @@ export default class About extends React.Component {
 					"pic" : teamInfo[name]["pic"]
 				};
 			}
-
-			// $("#total").html(totalCommits + " Total Commits");
-			// $("#issues").html(totalIssuesClosed + " of " + totalIssues + " Issues Closed");
 
 
 		return (

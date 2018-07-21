@@ -54,10 +54,6 @@ class Politician extends React.Component {
   render() {
       return (
         // this div is here in politicians.js
-        <div className="container">
-        <div className="row align-items-center justify-content-center">
-          <h2 className="text-center col-12">Politicians related to this law</h2>
-          <div className="col-md-4" id="politician" />
       <div className="card mb-4 box-shadow" id="politician-card">
         <div id="politician-headshot-box">
           <a href={'/politicians/' + this.props.politician_data.first_name + '_' + this.props.politician_data.last_name + '/' + this.props.politician_data.id}>
@@ -74,7 +70,6 @@ class Politician extends React.Component {
           </div>
         </div>
       </div>
-      </div></div>
       );
     }
 } 
@@ -111,10 +106,20 @@ httpRequest.send();
 var jsonResponsePolitician = JSON.parse(httpRequest.responseText);
 
 
-    return (   
+    return (  
       <main>
-    <Bio law_data={jsonResponse}/>,
-    <Politician politician_data={jsonResponsePolitician}/>,
+        <div id="id_number" data-id_number="{{ id_number }}"></div>
+        <div>
+          <Bio law_data={jsonResponse}/>,
+        </div>
+        <div className="container">
+          <div className="row align-items-center justify-content-center">
+            <h2 className="text-center col-12">Politicians related to this law</h2>
+            <div className="col-md-4">
+              <Politician politician_data={jsonResponsePolitician}/>
+            </div>
+          </div>
+        </div>
       </main>
     );
 
