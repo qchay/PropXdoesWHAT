@@ -195,7 +195,7 @@ export default class Politician_Page extends React.Component {
 						</Row>
 						<Row>
 							
-							<Col xs="6" sm={{ size: '3', offset: '2' }}>
+							<Col xs="6" sm={{ size: '3', offset: '1' }}>
 								<Filter filterCallBack = {this.filterCallBack1} filterOptions={partyOptions} type={"party"}/>
 							</Col>
 							<Col xs="6" sm="3">
@@ -206,7 +206,7 @@ export default class Politician_Page extends React.Component {
 							</Col>
 						</Row>
 						<Row>
-							<Col xs={{ size: '6', offset: '3' }} sm={{ size: '3', offset: '0' }}>
+							<Col xs="12" lg={{ size: '12', offset: '1' }}>
 								<Sort orderByCallBack = {this.orderByCallBack} type={"first_name"}/>
 							</Col>
 						</Row>
