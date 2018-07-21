@@ -33,7 +33,7 @@ Our goal is to allow groups to see what recent and upcoming laws may affect them
 
 \section{User Stories}
 
-The following are the user stories gathered for Phase 1: \\
+The following are the user stories gathered for Phase 1: \vspace{0.5em}
 
 \begin{itemize}
 	\item\textbf{As a user, I want to be able to identify which groups are affected by a law.} \\
@@ -56,9 +56,7 @@ The following are the user stories gathered for Phase 1: \\
 	We solved this issue by displaying each politician's bio, which includes their website and number. This was done by querying the relevant contact information parameters from our API and displaying it onto our website with front-end tools, such as Bootstrap and ReactJS.
 	
 \end{itemize} ~\\
-
-
-The following are the user stories gathered for Phase 2: \\
+The following are the user stories gathered for Phase 2: \vspace{0.5em}
 	
 \begin{itemize}
 	\item\textbf{As a user, I would like to see information about what the website does on the homepage.} \\
@@ -80,9 +78,7 @@ The following are the user stories gathered for Phase 2: \\
 	\item\textbf{As a user, I would like the affected group's website pages to have a little more info (do a little more than just list laws affecting group and action groups associated)} \\
 	We solved this issue by displaying more than just laws and action groups related to this affected group. From our API model for affected groups, we queried the data and displayed it to the model web page for affected groups with front-end tools such as Bootstrap and ReactJS.
 \end{itemize}~\\
-
-
-The following are the user stories gathered for Phase 3: \\
+The following are the user stories gathered for Phase 3:  \vspace{0.5em}
 	
 \begin{itemize}
 	\item\textbf{As a user, for the laws model, I want to be able to filter by subject.} \\
@@ -167,7 +163,6 @@ Full API Documentation at: documenter.getpostman.com/view/4704075/RWEmKHJp
 \section{Tools}
 
 \begin{itemize}
-	\item GitLab		--- Version Control
 	\item GitLab		--- Git repository hosting, issue tracking
 	\item Postman		--- API design and testing % thing is a PoS though
 	\item Grammarly		--- Spelling/grammar feedback for this report
@@ -175,10 +170,10 @@ Full API Documentation at: documenter.getpostman.com/view/4704075/RWEmKHJp
 	\item Slack			--- Team communication and collaboration
 	\item Flask     	--- Micro web framework
 	\item React     	--- Render UI
-	\item AWS       	--- Server
+	\item AWS       	--- Server hosting for Flash, Node, MySQL, ElasticSearch instances
 	\item Selenium 		--- Test GUI
 	\item React Router 	--- Routing from URL on page to scripts
-	\item npm 			--- Package manager
+	\item npm 			--- Node Package manager
 	\item Mocha 		--- Test framework for JavaScript
 	\item Babel 		--- JavaScript compiler
 	\item Chai 			--- Assertion library that paired with JavaScript testing framework
@@ -187,6 +182,7 @@ Full API Documentation at: documenter.getpostman.com/view/4704075/RWEmKHJp
 	\item JavaScript 	--- Programming language used to interact within web browsers
 	\item Bootstrap 	--- Front-end framework
 	\item Python 		--- Programming language
+	\item ElasticSearch --- Standalone full-text index server based on Lucene
 
 \end{itemize}
 
@@ -195,10 +191,6 @@ Full API Documentation at: documenter.getpostman.com/view/4704075/RWEmKHJp
 \textbf{TO DO: HOW WE SETUP TOOLS}
 
 \section{Hosting}
-
-\subsection{Database}
-
-Our database is hosted on Amazon's Relational Database service. We used MySQL to design and populate our database.
 
 \subsection{Back End}
 
@@ -218,6 +210,10 @@ Backend access: \\
 \code{ssh -i back-end-private-key.pem ec2-user@api.propxdoeswhat.me} \\
 
 Next, we updated the working Linux server running in the AWS cloud and installed docker on it. Then, we transferred our local files onto the server using FileZilla's SSH File Transfer Protocol. Finally, we built our Docker image and ran our web application on our Docker container.
+
+\section{Full-text Search}
+
+We use an ElasticSearch instance running on AWS as an external server to host the full-text indexes and perform searches. Indexes are built after database tables are loaded by scripts which dump the tables and load the indexes. Currently, fields are indexed as-is with no stemming or other prossessing. The Flask-Restless API manager was modified to first recognize a new parameter \code{search} (using a request pre-processor handler), call the ElasticSearch instance with the given query, and then adjust the query filter for the rest of that request to only include results with the returned ids (using a custom \code{query} model field).
 
 \section{Database}
 
