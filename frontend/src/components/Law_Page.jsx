@@ -3,6 +3,7 @@ import Law_List from './Law_List';
 import Filter from './Filter';
 import Page_Footer from './Page_Footer'
 import Sort from './Sort'
+import Search from './Search';
 import { Container, Row, Col } from 'reactstrap';
 
 export default class Law_Page extends React.Component {
@@ -10,10 +11,12 @@ export default class Law_Page extends React.Component {
 		super(props); 
 		this.state = { 
 					 	filter1 : {"or" : []},
-					 	orderByArray : []
+					 	orderByArray : [],
+					 	searchText : ""
 					 };
 		this.filterCallBack1 = this.filterCallBack1.bind(this)  
 		this.orderByCallBack = this.orderByCallBack.bind(this)
+		this.searchCallBack = this.searchCallBack.bind(this)
 	}
 
 	filterCallBack1 (filter1) {
@@ -24,8 +27,12 @@ export default class Law_Page extends React.Component {
 		this.setState({orderByArray : orderByArray});
 	}
 
-	combineFilters(filter1, orderByArray) {
-		return { "filters": [ { "and":[filter1]}], "order_by" : orderByArray};
+	searchCallBack (searchText) {
+		this.setState({searchText: searchText})
+	}
+
+	combineFilters(filter1, orderByArray, searchText) {
+		return { "search":searchText, "filters": [ { "and":[filter1]}], "order_by" : orderByArray};
 	}
 
 	getJsonResponse(filterJson) {
@@ -116,7 +123,7 @@ export default class Law_Page extends React.Component {
 			marginBottom:'100px'
 		};
 
-		let jsonfilter = this.combineFilters(this.state.filter1, this.state.orderByArray);
+		let jsonfilter = this.combineFilters(this.state.filter1, this.state.orderByArray, this.state.searchText);
 		let jsonResponse = this.getJsonResponse(jsonfilter);
 		let law_array = this.getLawArray(jsonResponse);
 		let page_data = this.getPageData(jsonResponse);
@@ -125,6 +132,11 @@ export default class Law_Page extends React.Component {
 			<div>
 				<main>
 					<Container style={filterBoxStyles}>
+						<Row>
+							<Col xs="12" lg={{ size: '12', offset: '1' }}>
+								<Search searchCallBack = {this.searchCallBack}/>
+							</Col>
+						</Row>
 						<Row>
 							<Col xs="6" sm={{ size: '8', offset: '1' }}>
 								<Filter filterCallBack = {this.filterCallBack1} filterOptions={subjectOptions} type={"subject"}/>
