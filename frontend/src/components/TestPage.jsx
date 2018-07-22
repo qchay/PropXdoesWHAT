@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Test_Page extends React.Component {
+export default class TestPage extends React.Component {
 	constructor(props) { super(props); }
 
 	render() {
