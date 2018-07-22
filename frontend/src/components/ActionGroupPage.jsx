@@ -1,12 +1,12 @@
 import React from 'react';
-import Action_Group_List from './Action_Group_List';
+import ActionGroupList from './ActionGroupList';
 import Filter from './Filter';
-import Page_Footer from './Page_Footer'
+import PageFooter from './Pagination'
 import Sort from './Sort'
 import Search from './Search'
 import { Container, Row, Col } from 'reactstrap';
 
-export default class Action_Group_Page extends React.Component {
+export default class ActionGroupPage extends React.Component {
 	constructor(props) { 
 		super(props); 
 		this.state = { 
@@ -206,8 +206,8 @@ export default class Action_Group_Page extends React.Component {
 
 
 
-					<Action_Group_List action_group_array={action_group_array} page_name={"action_group_page"} />
-					<Page_Footer page_data={page_data} page_name={page_name}/>
+					<ActionGroupList action_group_array={action_group_array} page_name={"action_group_page"} />
+					<PageFooter page_data={page_data} page_name={page_name}/>
 				</main>
 			</div>
 		);

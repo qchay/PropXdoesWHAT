@@ -26,7 +26,7 @@ export default class Politician extends React.Component {
 	 			<div className="card mb-4 box-shadow" id="politician-card">
 					<div id="politician-headshot-box">
 						<a href={'/politicians/' + this.props.politician_data.first_name + '_' + this.props.politician_data.last_name + '/' + this.props.politician_data.id}>
-							<img className="card-img-top" id="politician-headshot" src={this.state.pictureMap[this.props.politician_data.party]} alt="Card image cap"/>
+							<img className="card-img-top" id="politician-headshot" src={this.state.pictureMap[this.props.politician_data.party]} alt="alt"/>
 						</a>
 					</div>
 

@@ -1,10 +1,7 @@
 import React from 'react';
 import Law from './Law';
 
-export default class Law_List extends React.Component {
-	constructor(props) {
-		super(props);
-	}
+export default class LawList extends React.Component {
 	render() {
 		var law_array = this.props.law_array
   		return (

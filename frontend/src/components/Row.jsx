@@ -3,7 +3,6 @@ import React from 'react';
 import Politician from './Politician'
 
 export default class Row extends React.Component {
-	constructor(props) { super(props); }
 	render() {
 		let item
 		if (this.props.page_name === "politician_page" ) {

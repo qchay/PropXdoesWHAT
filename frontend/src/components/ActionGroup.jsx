@@ -1,9 +1,6 @@
 import React from 'react';
 
-export default class Action_Group extends React.Component {
-	constructor(props) {
-		super(props);
-	}
+export default class ActionGroup extends React.Component {
 	render() {
 		return (
 			<div className="list-group">
