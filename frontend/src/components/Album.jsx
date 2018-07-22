@@ -3,9 +3,6 @@ import React from 'react';
 import Row from './Row';
 
 export default class Album extends React.Component {
-	constructor(props) {
-		super(props);
-	}
 	render() {
 		var row_array = this.props.row_array
   		return (

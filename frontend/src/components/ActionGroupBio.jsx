@@ -1,10 +1,6 @@
 import React from 'react';
 
-export default class Action_Group_Bio extends React.Component {  
-	constructor(props) {
-		super(props);
-	}
-
+export default class ActionGroupBio extends React.Component {  
 	render(){
 		class Bio extends React.Component {
 			constructor(props) {

@@ -1,12 +1,12 @@
 import React from 'react';
-import Law_List from './Law_List';
+import LawList from './LawList';
 import Filter from './Filter';
-import Page_Footer from './Page_Footer'
+import PageFooter from './Pagination'
 import Sort from './Sort'
 import Search from './Search';
 import { Container, Row, Col } from 'reactstrap';
 
-export default class Law_Page extends React.Component {
+export default class LawPage extends React.Component {
 	constructor(props) { 
 		super(props); 
 		this.state = { 
@@ -149,8 +149,8 @@ export default class Law_Page extends React.Component {
 
 
 					
-					<Law_List law_array={law_array} page_name={"law_page"} />
-					<Page_Footer page_data={page_data} page_name={page_name}/>
+					<LawList law_array={law_array} page_name={"law_page"} />
+					<PageFooter page_data={page_data} page_name={page_name}/>
 				</main>
 			</div>
 		);

@@ -2,14 +2,10 @@ import React from 'react';
 
 
 export default class Card extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
-      
     return (
         <div className="card">
-          <img className="card-img-top" src={this.props.card_data.pic} alt="Card image cap" />
+          <img className="card-img-top" src={this.props.card_data.pic} alt="alt" />
           <div className="card-body">
             <h5 className="card-name">{this.props.card_data.name}</h5>
             <p className="card-text">

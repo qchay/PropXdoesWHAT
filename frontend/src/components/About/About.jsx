@@ -77,11 +77,11 @@ export default class About extends React.Component {
 			jsonResponse = JSON.parse(httpRequest.responseText)
 			
 			
-			for(var x = 0; x < jsonResponse.length; x++)
+			for(x = 0; x < jsonResponse.length; x++)
 			{
 				if(jsonResponse[x]["closed_by"] != null)
 				{
-					var name = namesMapping[jsonResponse[x]["closed_by"]["name"]];
+					name = namesMapping[jsonResponse[x]["closed_by"]["name"]];
 					if(! issues.hasOwnProperty(name))
 					{ issues[name] = 0; }
 					issues[name]++;
@@ -89,7 +89,7 @@ export default class About extends React.Component {
 				}
 				if(jsonResponse[x]["author"] != null)
 				{
-					var name = namesMapping[jsonResponse[x]["author"]["name"]];
+					name = namesMapping[jsonResponse[x]["author"]["name"]];
 					if(! issues.hasOwnProperty(name))
 					{ issuesOpened[name] = 0; }
 					issuesOpened[name]++;
@@ -101,7 +101,7 @@ export default class About extends React.Component {
 			{
 				if(num == null)
 				{ num = 0; }
-				if(num == 1)
+				if(num === 1)
 				{ return num + " " + a; }
 				else
 				{ return num + " " + b;  }
@@ -110,7 +110,7 @@ export default class About extends React.Component {
 			var card_data = [];
 
 			for (var i = 0; i < contributers.length; i++) {
-				var name = contributers[i];
+				name = contributers[i];
 				card_data[i] = {
 					"name": name,
 					"commits": pluralize(commits[name],'commit','commits'),

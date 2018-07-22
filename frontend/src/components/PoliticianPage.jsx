@@ -2,12 +2,12 @@
 import React from 'react';
 import Album from './Album';
 import Filter from './Filter';
-import Page_Footer from './Page_Footer'
+import PageFooter from './Pagination'
 import Sort from './Sort'
 import Search from './Search';
 import { Container, Row, Col } from 'reactstrap';
 
-export default class Politician_Page extends React.Component {
+export default class PoliticianPage extends React.Component {
 	constructor(props) { 
 		super(props); 
 		this.state = { 
@@ -67,12 +67,12 @@ export default class Politician_Page extends React.Component {
 			if (!(count%3)){
 				politician_array.push(politician);
 				row_array.push(politician_array);
-				var politician_array = [];
+				politician_array = [];
 			} else {
 				politician_array.push(politician);
 			}
 
-			if ((count == jsonResponse.objects.length) && (count%3)) {
+			if ((count === jsonResponse.objects.length) && (count%3)) {
 				row_array.push(politician_array);
 			}
 			count++;
@@ -213,7 +213,7 @@ export default class Politician_Page extends React.Component {
 					</Container>
 					
 					<Album row_array={row_array} page_name={"politician_page"} />
-					<Page_Footer page_data={page_data} page_name={page_name}/>
+					<PageFooter page_data={page_data} page_name={page_name}/>
 				</main>
 			</div>
 		);

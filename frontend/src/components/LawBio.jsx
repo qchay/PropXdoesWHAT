@@ -1,19 +1,9 @@
 import React from 'react'; 
-import Select from 'react-select'; 
-import makeAnimated from 'react-select/lib/animated';
-import ReactDOM from 'react-dom';
 import democrat from '../images/democrat.jpg';
 import independent from '../images/independent.jpg';
 import republican from '../images/republican.jpg';
 
-export default class Law_Bio extends React.Component {  
-  constructor(props) {     
-    super(props);     
-  }  
-
-  render(){ 
-    class Bio extends React.Component {
-  constructor(props) { super(props); }
+class Bio extends React.Component {
   render() {
       return (
         <div className="container">
@@ -57,7 +47,7 @@ class Politician extends React.Component {
       <div className="card mb-4 box-shadow" id="politician-card">
         <div id="politician-headshot-box">
           <a href={'/politicians/' + this.props.politician_data.first_name + '_' + this.props.politician_data.last_name + '/' + this.props.politician_data.id}>
-            <img className="card-img-top" id="politician-headshot" src={this.state.pictureMap[this.props.politician_data.party]} alt="Card image cap"/>
+            <img className="card-img-top" id="politician-headshot" src={this.state.pictureMap[this.props.politician_data.party]} alt="alt"/>
           </a>
         </div>
 
@@ -74,36 +64,23 @@ class Politician extends React.Component {
     }
 } 
 
-// Returns Birthday and Age in a nice format
-function getBirthdayAndAge(dateStr) {
-  const monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-  const [birth_year, birth_month, birth_day] = dateStr.split("-");
-  const birthDate =  new Date(birth_year, birth_month - 1, birth_day);
-    var today = new Date();
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) 
-    {
-        age--;
-    }
-  return (monthNames[birthDate.getMonth()] + ' ' + birthDate.getDate() + ', ' + birthDate.getFullYear() + ' (age ' + age + ')');
-}
 
-// Getting json response
-var law_id = this.props.match.params.id;
-var httpRequest = new XMLHttpRequest();
-var api = "http://api.propxdoeswhat.me/api/laws/" + law_id;
-httpRequest.open("GET", api, false);
-httpRequest.send();
-var jsonResponse = JSON.parse(httpRequest.responseText);
+export default class LawBio extends React.Component {  
+  render(){ 
 
-// Getting json response
-var api = "http://api.propxdoeswhat.me/api/politicians/" + jsonResponse.sponsor.id;
-httpRequest.open("GET", api, false);
-httpRequest.send();
-var jsonResponsePolitician = JSON.parse(httpRequest.responseText);
+    // Getting json response
+    var law_id = this.props.match.params.id;
+    var httpRequest = new XMLHttpRequest();
+    var api = "http://api.propxdoeswhat.me/api/laws/" + law_id;
+    httpRequest.open("GET", api, false);
+    httpRequest.send();
+    var jsonResponse = JSON.parse(httpRequest.responseText);
+
+    // Getting json response
+    api = "http://api.propxdoeswhat.me/api/politicians/" + jsonResponse.sponsor.id;
+    httpRequest.open("GET", api, false);
+    httpRequest.send();
+    var jsonResponsePolitician = JSON.parse(httpRequest.responseText);
 
 
     return (  
