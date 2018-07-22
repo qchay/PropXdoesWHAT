@@ -13,6 +13,7 @@ import Affected_Group_Page from "./components/Affected_Group_Page";
 import Affected_Group_Bio from "./components/Affected_Group_Bio";
 import About from "./components/About/About";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Test_Page from "./components/Test_Page"
 
 class App extends Component {
 	render() {
@@ -32,6 +33,7 @@ class App extends Component {
 							<Route path='/affected_groups/page/:page_number' component={Affected_Group_Page} />
 							<Route path='/affected_groups/:affected_group_name' component={Affected_Group_Bio} />
 							<Route path='/about' component={About} />
+							<Route path='/testpage' component={Test_Page} />
 						</Switch>
 					</div>
 				</Router>
