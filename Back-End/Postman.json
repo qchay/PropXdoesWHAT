@@ -530,7 +530,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://api.propxdoeswhat.me/api/politicians?page=1&q={\"search\":\"Ted Cruz\",\"filters\":[{\"and\":[{\"or\":[]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"TX\"}]},{\"or\":[]}]}],\"order_by\":[]}",
+					"raw": "http://api.propxdoeswhat.me/api/politicians?page=1&q={\"search\":\"Ted Cruz\",\"filters\":[{\"and\":[{\"or\":[]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"TX\"}]},{\"or\":[]}]}]}",
 					"protocol": "http",
 					"host": [
 						"api",
@@ -548,7 +548,7 @@
 						},
 						{
 							"key": "q",
-							"value": "{\"search\":\"Ted Cruz\",\"filters\":[{\"and\":[{\"or\":[]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"TX\"}]},{\"or\":[]}]}],\"order_by\":[]}"
+							"value": "{\"search\":\"Ted Cruz\",\"filters\":[{\"and\":[{\"or\":[]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"TX\"}]},{\"or\":[]}]}]}"
 						}
 					]
 				},
@@ -562,7 +562,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "fc6cbb7b-f139-4b53-851c-b7a7ab26b69f",
+						"id": "fbbefac3-599f-46b8-b710-580b34fa895c",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
@@ -584,7 +584,7 @@
 							"",
 							"pm.test(\"Relevance search test\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.objects[0].bill_id).to.eql(\"hres373-115\");",
+							"    pm.expect(jsonData.objects[0].bill_id).to.eql(\"s2349-115\");",
 							"});",
 							"",
 							"pm.test(\"Search works with filter 1\", function () {",
@@ -727,7 +727,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6e3e929e-9ed5-4a7a-9762-3c6bd860c9d7",
+						"id": "7480c348-46e0-4902-bb43-85889caffa19",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
@@ -749,7 +749,7 @@
 							"",
 							"pm.test(\"Relevance search test\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.objects[0].id).to.eql(58);",
+							"    pm.expect(jsonData.objects[0].id).to.eql(3);",
 							"});",
 							""
 						]
