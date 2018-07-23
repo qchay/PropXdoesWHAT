@@ -29,7 +29,7 @@ export default class Sort extends React.Component {
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
-          Sort by {this.props.type}
+          Sort by {this.props.type.split('_').join(' ')}
         </DropdownToggle>
         <DropdownMenu>
           <DropdownItem onClick={() => this.clickHandler("asc")}>Ascending</DropdownItem>

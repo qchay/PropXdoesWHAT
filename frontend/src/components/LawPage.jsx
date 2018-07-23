@@ -133,12 +133,12 @@ export default class LawPage extends React.Component {
 				<main>
 					<Container style={filterBoxStyles}>
 						<Row>
-							<Col xs="12" lg={{ size: '12', offset: '1' }}>
+							<Col xs="12" lg={{ size: '10', offset: '1' }}>
 								<Search searchCallBack = {this.searchCallBack}/>
 							</Col>
 						</Row>
 						<Row>
-							<Col xs="6" sm={{ size: '8', offset: '1' }}>
+							<Col xs="6" sm={{ size: '6', offset: '1' }}>
 								<Filter filterCallBack = {this.filterCallBack1} filterOptions={subjectOptions} type={"subject"}/>
 							</Col>
 							<Col sm={{ size: 'auto', offset: 0 }}>

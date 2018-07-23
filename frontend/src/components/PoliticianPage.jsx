@@ -189,7 +189,7 @@ export default class PoliticianPage extends React.Component {
 				<main>
 					<Container style={filterBoxStyles}>
 						<Row>
-							<Col xs="12" lg={{ size: '12', offset: '1' }}>
+							<Col xs="12" lg={{ size: '10', offset: '1' }}>
 								<Search searchCallBack = {this.searchCallBack}/>
 							</Col>
 						</Row>
@@ -198,18 +198,17 @@ export default class PoliticianPage extends React.Component {
 							<Col xs="6" sm={{ size: '3', offset: '1' }}>
 								<Filter filterCallBack = {this.filterCallBack1} filterOptions={partyOptions} type={"party"}/>
 							</Col>
-							<Col xs="6" sm="3">
+							<Col xs="6" sm="2">
 								<Filter filterCallBack = {this.filterCallBack2} filterOptions={stateOptions} type={"state"}/>
 							</Col>
 							<Col xs="6" sm="3">
 								<Filter filterCallBack = {this.filterCallBack3} filterOptions={chamberOptions} type={"chamber"}/>
 							</Col>
-						</Row>
-						<Row>
-							<Col xs="12" lg={{ size: '12', offset: '1' }}>
-								<Sort orderByCallBack = {this.orderByCallBack} type={"first_name"}/>
+							<Col xs="6" sm={{ size: '2' }}>
+								<Sort orderByCallBack = {this.orderByCallBack} type={"last_name"}/>
 							</Col>
 						</Row>
+
 					</Container>
 					
 					<Album row_array={row_array} page_name={"politician_page"} />

@@ -5,7 +5,9 @@ class FirstPage extends React.Component {
 	render() {
   		return (
   			<li className={"page-item" + (this.props.active ? " active" : "")}>
-  				<a className="page-link" href={"/" + this.props.page_name + "/page/1"}>1</a>
+  				<a className="page-link" href={"/" + this.props.page_name + "/page/1"}>
+  				      <i className="fas fa-angle-double-left" />
+  				</a>
   			</li>	
     	);
   	}
@@ -15,7 +17,9 @@ class LastPage extends React.Component {
 	render() {
   		return (
   			<li className={"page-item" + (this.props.active ? " active" : "")}>
-  				<a className="page-link" href={"/" + this.props.page_name + "/page/" + this.props.last_page}>{this.props.last_page}</a>
+  				<a className="page-link" href={"/" + this.props.page_name + "/page/" + this.props.last_page}>
+  				      <i className="fas fa-angle-double-right" />
+				</a>
   			</li>	
     	);
   	}

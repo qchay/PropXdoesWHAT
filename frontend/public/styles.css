@@ -35,8 +35,31 @@
 	margin-bottom: 400px;
 }
 
+/* Tools Attributes */
+.tools-img{
+width: 100%;
+height: 60%;
+}
+
+.tools-card-body{
+
+}
+
+.tools-title{
+
+}
 
 /* Card Attributes */
+.card-img-top{
+    border-radius: 30%;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
 #card-name {
 	text-align: center;
 	max-height: 100px;
@@ -200,3 +223,7 @@ li {
 }
 
 /* Affected Group Bio */
+
+.jumbotron{
+	background-color: #eaecff;
+}
