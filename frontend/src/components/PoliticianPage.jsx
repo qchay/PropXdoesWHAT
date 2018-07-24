@@ -177,7 +177,7 @@ export default class PoliticianPage extends React.Component {
 
 		var filterBoxStyles = {
 			marginTop:'85px',
-			marginBottom:'80px'
+			marginBottom:'60px'
 		};
 		var filterRowStyles = {
 			marginTop:'50px'

@@ -176,8 +176,14 @@ export default class ActionGroupPage extends React.Component {
 		let page_name = "action_groups"
 
 		var filterBoxStyles = {
-			marginTop:'50px',
+			marginTop:'85px',
 			marginBottom:'100px'
+		};
+		var filterRowStyles = {
+			marginTop:'50px'
+		};
+		var filterColStyles = {
+			marginLeft:'35px'
 		};
 
 		let jsonfilter = this.combineFilters(this.state.filter1, this.state.orderByArray, this.state.searchText);
@@ -189,7 +195,7 @@ export default class ActionGroupPage extends React.Component {
 			<div>
 				<main>
 					<Container style={filterBoxStyles}>
-						<Row>
+						<Row style={filterRowStyles}>
 							<Col xs="12" lg={{ size: '10', offset: '1' }}>
 								<Search searchCallBack = {this.searchCallBack}/>
 							</Col>
@@ -198,7 +204,7 @@ export default class ActionGroupPage extends React.Component {
 							<Col xs="6" sm={{ size: '8', offset: '1' }}>
 								<Filter filterCallBack = {this.filterCallBack1} filterOptions={subjectOptions} type={"type"}/>
 							</Col>
-							<Col sm={{ size: 'auto', offset: 0 }}>
+							<Col sm={{ size: '1', offset: '0' }} style={filterColStyles}>
 								<Sort orderByCallBack = {this.orderByCallBack} type={"name"}/>
 							</Col>
 						</Row>

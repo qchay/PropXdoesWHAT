@@ -120,13 +120,13 @@ export default class LawPage extends React.Component {
 
 		var filterBoxStyles = {
 			marginTop:'85px',
-			marginBottom:'120px'
+			marginBottom:'100px'
 		};
 		var filterRowStyles = {
 			marginTop:'50px'
 		};
 		var filterColStyles = {
-			marginLeft:'180px'
+			marginLeft:'60px'
 		};
 
 		let jsonfilter = this.combineFilters(this.state.filter1, this.state.orderByArray, this.state.searchText);
@@ -144,10 +144,10 @@ export default class LawPage extends React.Component {
 							</Col>
 						</Row>
 						<Row>
-							<Col xs="6" sm={{ size: '6', offset: '1' }}>
+							<Col xs="6" sm={{ size: '7', offset: '1' }}>
 								<Filter filterCallBack = {this.filterCallBack1} filterOptions={subjectOptions} type={"subject"}/>
 							</Col>
-							<Col xs="6" sm={{ size: '1', offset: '1' }} style={filterColStyles}>
+							<Col xs="6" sm={{ size: '1', offset: '0' }} style={filterColStyles}>
 								<Sort orderByCallBack = {this.orderByCallBack} type={"introduced"}/>
 							</Col>
 						</Row>
