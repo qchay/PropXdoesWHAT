@@ -9,15 +9,15 @@ class Bio extends React.Component {
 			<div className="container">
 				<div className="description-box">
 					<h1 className="text-center" id="bio-title">{this.props.law_data.title}</h1>
-					<h3 className="text-center">Description</h3>
+					<h2 className="text-center">Description</h2>
 					<h5 id="description">{this.props.law_data.desc}</h5>
 
 					<li className="list-group-item list-group-item-primary">Sponsor: {this.props.law_data.sponsor.first_name + ' '
 					+ this.props.law_data.sponsor.last_name + ' (' + this.props.law_data.sponsor.party + ')'}</li>
 					<li className="list-group-item list-group-item-primary">Introduced: {this.props.law_data.introduced} </li>
 					<li className="list-group-item list-group-item-primary">Name: {this.props.law_data.name}</li>
-					<li className="list-group-item list-group-item-primary">GovTrack: 
-						<a href={this.props.law_data.govtrack_url}>{this.props.law_data.govtrack_url}</a>
+					<li className="list-group-item list-group-item-primary">
+						GovTrack: <a href={this.props.law_data.govtrack_url}>{this.props.law_data.govtrack_url}</a>
 					</li>
 					<li className="list-group-item list-group-item-primary">Subject: {this.props.law_data.subject}</li>
 				</div>
@@ -91,7 +91,7 @@ export default class LawBio extends React.Component {
 				</div>
 				<div className="container">
 					<div className="row align-items-center justify-content-center" id="relatedBox">
-						<h1 className="text-center col-12" id="relatedHeader">Politician related to this law</h1>
+						<h2 className="text-center col-12" id="relatedHeader">Politician related to this law</h2>
 						<div className="col-md-4">
 							<Politician politician_data={jsonResponsePolitician}/>
 						</div>
