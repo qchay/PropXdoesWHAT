@@ -67,14 +67,14 @@ height: 60%;
 }
 
 #card-attr {
-	margin-bottom: 5px;
-	margin-left: 23px;
+	margin-bottom: 25px;
+	margin-left: 77px;
 	position: absolute;
 	bottom: 0;
 	font-size: 1.0em;
 }
 
-li {
+#card-list {
 	padding-bottom: 7px;
 }
 

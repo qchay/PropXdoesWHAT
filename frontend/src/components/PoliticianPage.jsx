@@ -176,8 +176,11 @@ export default class PoliticianPage extends React.Component {
 		const page_name = "politicians"
 
 		var filterBoxStyles = {
-			marginTop:'50px',
-			marginBottom:'100px'
+			marginTop:'85px',
+			marginBottom:'80px'
+		};
+		var filterRowStyles = {
+			marginTop:'50px'
 		};
 		let jsonfilter = this.combineFilters(this.state.filter1, this.state.filter2, this.state.filter3, this.state.orderByArray, this.state.searchText);
 		let jsonResponse = this.getJsonResponse(jsonfilter);
@@ -188,13 +191,13 @@ export default class PoliticianPage extends React.Component {
 			<div>
 				<main>
 					<Container style={filterBoxStyles}>
-						<Row>
+						<Row style={filterRowStyles}>
 							<Col xs="12" lg={{ size: '10', offset: '1' }}>
 								<Search searchCallBack = {this.searchCallBack}/>
 							</Col>
 						</Row>
+
 						<Row>
-							
 							<Col xs="6" sm={{ size: '3', offset: '1' }}>
 								<Filter filterCallBack = {this.filterCallBack1} filterOptions={partyOptions} type={"party"}/>
 							</Col>

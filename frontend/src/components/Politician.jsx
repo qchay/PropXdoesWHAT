@@ -33,9 +33,9 @@ export default class Politician extends React.Component {
 					<div className="card-body">
 						<h3 id="card-name">{this.props.politician_data.first_name} {this.props.politician_data.last_name}</h3>
 						<div id="card-attr">
-							<li>Party: {this.state.partyMap[this.props.politician_data.party]}</li>
-							<li>Chamber: {this.props.politician_data.chamber[0].toUpperCase() + this.props.politician_data.chamber.substring(1)}</li>
-							<li>Legislator’s state: {this.props.politician_data.state}</li>
+							<li id="card-list">Party: {this.state.partyMap[this.props.politician_data.party]}</li>
+							<li id="card-list">Chamber: {this.props.politician_data.chamber[0].toUpperCase() + this.props.politician_data.chamber.substring(1)}</li>
+							<li id="card-list">Legislator’s state: {this.props.politician_data.state}</li>
 						</div>
 					</div>
 				</div>
