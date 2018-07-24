@@ -83,19 +83,35 @@ height: 60%;
 
 /* Law List */
 
-.list-group{
+.list-group {
 	padding: 10px;
+	margin-bottom: 25px;
 }
 
 .list-group-item {
+	background: #c0dfff;
 	color: black;
 }
 
-/*.law-info li{
-
-	padding-top: 5px;
+.list-info {
+	padding-top: 15px;
 	padding-bottom: 5px;
-}*/
+}
+
+#list-group-box {
+	background-color: #f7fbff;
+}
+
+#law-list-name {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;	
+}
+
+#law-list-container {
+	padding-bottom: 35px;
+}
 
 /* Law Bio */
 
@@ -172,6 +188,17 @@ height: 60%;
 	left: 0;
 	right: 0;
 	object-fit: cover;
+}
+
+#action-group-list-container {
+	padding-bottom: 35px;
+}
+
+#action-group-list-name {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 /* Action Group Card */
