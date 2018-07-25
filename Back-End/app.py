@@ -36,13 +36,28 @@ class SearchableMixin(object):
         query = db.session.query(cls)
         ids = g.pop('search_ids', None)
         if ids is not None:
-            query = query.filter(cls.id.in_(ids))
-            if('has_order' not in g):
-                when = []
-                for i in range(len(ids)):
-                    when.append((ids[i], i))
-                query = query.order_by(db.case(when, value=cls.id))
+            if ids != []:
+                query = query.filter(cls.id.in_(ids))
+                if('has_order' not in g):
+                    when = []
+                    for i in range(len(ids)):
+                        when.append((ids[i], i))
+                    query = query.order_by(db.case(when, value=cls.id))
+            else:
+                query = query.filter(cls.id.in_([0]))
         return query
+    
+    @classmethod
+    def get_pre_handler(cls):
+        def pre_handler(search_params=None, **kw):
+            query = search_params.pop('search', None)
+            #print(query, file=sys.stderr)
+            if query is not None:
+                hits, total = cls.search(query, 1, 64)
+                g.setdefault('search_ids', hits)
+                if('order_by' in search_params):
+                    g.setdefault('has_order', True)
+        return pre_handler
 
 # politicians_laws=db.Table('politicians_laws',
 # 	db.Column('politician_id',db.Integer, db.ForeignKey('politicians.id')),
@@ -81,9 +96,6 @@ class Politicians (SearchableMixin, db.Model):
     law = db.relationship('Laws', backref='sponsor')
     #raw = db.Column(db.Unicode, nullable=False)
 
-def pre_politicians(search_params=None, **kw):
-    pre_generic(Politicians, search_params)
-
 class Laws (SearchableMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     bill_id = db.Column(db.Unicode, nullable=False)
@@ -102,9 +114,6 @@ class Laws (SearchableMixin, db.Model):
     vetoed = db.Column(db.Unicode, nullable=False)
     desc = db.Column(db.Unicode, nullable=False)
 
-def pre_laws(search_params=None, **kw):
-    pre_generic(Laws, search_params)
-
 class Affected_groups (db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     name = db.Column(db.Unicode, nullable=False)
@@ -118,24 +127,16 @@ class Action_groups (SearchableMixin, db.Model):
     type = db.Column(db.Unicode, nullable=False)
     desc = db.Column(db.Unicode, nullable=False)
 
-def pre_action_groups(search_params=None, **kw):
-    pre_generic(Action_groups, search_params)
-
-def pre_generic(cls, search_params):
-    print(search_params, file=sys.stderr)
-    query = search_params.pop('search', None)
-    print(query, file=sys.stderr)
-    if query is not None:
-        hits, total = cls.search(query, 1, 64)
-        if(total > 0):
-            g.setdefault('search_ids', hits)
-            if('order_by' in search_params):
-                g.setdefault('has_order', True)
-
 manager = APIManager(app, flask_sqlalchemy_db=db)
-manager.create_api(Politicians, methods=['GET'], preprocessors={'GET_MANY': [pre_politicians]},results_per_page=12)
-manager.create_api(Laws, methods=['GET'], preprocessors={'GET_MANY': [pre_laws]}, results_per_page=12)
+manager.create_api(Politicians, methods=['GET'],
+                   preprocessors={'GET_MANY': [Politicians.get_pre_handler()]},
+                   results_per_page=12)
+manager.create_api(Laws, methods=['GET'],
+                   preprocessors={'GET_MANY': [Laws.get_pre_handler()]},
+                   results_per_page=12)
 manager.create_api(Affected_groups, methods=['GET'], results_per_page=12)
-manager.create_api(Action_groups, methods=['GET'], preprocessors={'GET_MANY': [pre_action_groups]}, results_per_page=12)
+manager.create_api(Action_groups, methods=['GET'],
+                   preprocessors={'GET_MANY': [Action_groups.get_pre_handler()]},
+                   results_per_page=12)
 
 app.run(host='0.0.0.0', debug=True)
