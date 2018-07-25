@@ -85,7 +85,10 @@
 
 .list-group {
 	padding: 10px;
-	margin-bottom: 25px;
+}
+
+.list-group-item {
+	padding: .05rem 1.25rem;
 }
 
 .list-group-item-primary {
@@ -94,7 +97,6 @@
 }
 
 .list-info {
-	padding-top: 15px;
 	padding-bottom: 5px;
 }
 
@@ -102,15 +104,19 @@
 	background-color: #f7fbff;
 }
 
-#law-list-name {
-	padding-left: 15px;
+#list-name {
+	padding-top: 5px;
+	padding-left: 10px;
 	padding-right: 15px;
-	padding-top: 10px;
-	padding-bottom: 10px;	
+	color: #000;
 }
 
-#law-list-container {
-	padding-bottom: 35px;
+#list-name:hover {
+	color: #007bff;
+}
+
+#list-container {
+	padding-bottom: 55px;
 }
 
 /* Bio */
@@ -217,17 +223,6 @@
 	left: 0;
 	right: 0;
 	object-fit: cover;
-}
-
-#action-group-list-container {
-	padding-bottom: 35px;
-}
-
-#action-group-list-name {
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 10px;
-	padding-bottom: 10px;
 }
 
 /* Action Group Card */

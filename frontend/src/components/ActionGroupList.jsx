@@ -5,7 +5,7 @@ export default class ActionGroupList extends React.Component {
 	render() {
 		var action_group_array = this.props.action_group_array
 		return (
-			<div className="container"  id="action-group-list-container">	
+			<div className="container"  id="list-container">	
 				{action_group_array.map((action_group_array_item, i) => <ActionGroup key = {i} action_group_data = {action_group_array_item}/>)}
 			</div>
 		);
