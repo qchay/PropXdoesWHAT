@@ -3,9 +3,10 @@ import React from 'react';
 
 class FirstPage extends React.Component {
 	render() {
+		let update = {name: "page", value: 1};
   		return (
   			<li className={"page-item" + (this.props.active ? " active" : "")}>
-  				<a className="page-link" onClick={() => {this.props.pageUpdateCallBack(1)}}>1</a>
+  				<a className="page-link" onClick={() => {this.props.pageUpdateCallBack([update])}}>1</a>
   			</li>	
     	);
   	}
@@ -13,19 +14,21 @@ class FirstPage extends React.Component {
 
 class LastPage extends React.Component {
 	render() {
+		let update = {name: "page", value: this.props.last_page};
   		return (
   			<li className={"page-item" + (this.props.active ? " active" : "")}>
-  				<a className="page-link" onClick={() => {this.props.pageUpdateCallBack(this.props.last_page)}} >{this.props.last_page}</a>
+  				<a className="page-link" onClick={() => {this.props.pageUpdateCallBack([update])}} >{this.props.last_page}</a>
   			</li>	
     	);
   	}
-}	
+}
 
 class PrevPage extends React.Component {
 	render() {
+		let update = {name: "page", value: this.props.prev_page};
   		return (
 			<li className="page-item">
-				<a className="page-link" onClick={() => {this.props.pageUpdateCallBack(this.props.prev_page)}} aria-label="Previous">
+				<a className="page-link" onClick={() => {this.props.pageUpdateCallBack([update])}} aria-label="Previous">
 					<span aria-hidden="true">Prev</span>
 					<span className="sr-only">Previous</span>
 				</a>
@@ -36,9 +39,10 @@ class PrevPage extends React.Component {
 
 class NextPage extends React.Component {
 	render() {
+		let update = {name: "page", value: this.props.next_page};
   		return (
 			<li className="page-item">
-				<a className="page-link" onClick={() => {this.props.pageUpdateCallBack(this.props.next_page)}} aria-label="Next">
+				<a className="page-link" onClick={() => {this.props.pageUpdateCallBack([update])}} aria-label="Next">
 					<span aria-hidden="true">Next</span>
 					<span className="sr-only">Next</span>
 				</a>
@@ -49,9 +53,10 @@ class NextPage extends React.Component {
 
 class PageItem extends React.Component {
 	render() {
+		let update = {name: "page", value: this.props.page};
   		return (
   			<li className={"page-item" + (this.props.active ? " active" : "")}>
-  				<a className="page-link" onClick={() => {this.props.pageUpdateCallBack(this.props.page)}}>{this.props.page}</a>
+  				<a className="page-link" onClick={() => {this.props.pageUpdateCallBack([update])}}>{this.props.page}</a>
   			</li>	
     	);
   	}
