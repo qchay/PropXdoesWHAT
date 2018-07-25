@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutCard from './Card';
+import AboutCard from './AboutCard';
 import ToolsCard from './ToolsCard';
 import { CardGroup } from 'reactstrap'
 
