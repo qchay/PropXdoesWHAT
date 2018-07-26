@@ -1,11 +1,11 @@
 // Politician_Page.jsx
 import React from 'react';
 import Album from './Album';
-import Filter from './Filter2';
-import PageFooter from './Pagination2'
-import Sort from './Sort2'
+import Filter from './Filter';
+import PageFooter from './Pagination'
+import Sort from './Sort'
 import SortRelevance from './SortRelevance'
-import Search from './Search2';
+import Search from './Search';
 import { Container, Row, Col } from 'reactstrap';
 import queryString from 'query-string'
 
