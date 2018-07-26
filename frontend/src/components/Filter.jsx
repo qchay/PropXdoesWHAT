@@ -9,28 +9,18 @@ export default class Filter extends React.Component {
 	}  
 
 	onChange(val) {
-		this.props.filterCallBack(this.getFilter(val))
-	}
-
-	getFilter (val) {
-		console.log(val)
-		let json = {"or" : []};
-		for(let i = 0; i <val.length;i++){       
-    		json.or[i] = { 
-    						"name" : this.props.type,
-    						"op" : "eq",
-    						"val" : val[i].value
-    					} ;
+		// console.log("*** onChange in Filter ***");
+		let update = {name: this.props.type, value : []};
+		if (val.length !== 0) {
+			for(let i = 0; i <val.length;i++){       
+	    		update.value[i] = val[i].value;
+			}
 		}
-		return json;
+		this.props.filterCallBack([update])
 	}
 
-	componentDidMount() {
-		// console.log(queryString.parse(this.props.location.search).page)
-		//this.setState({page : queryString.parse(this.props.location.search).filter})
-	}
-
-	render(){   
+	render(){
+		// console.log("*** render in Filter ***");
 		return (     
 			<div>     
 			<Select

@@ -12,7 +12,6 @@ import AffectedGroupPage from "./components/AffectedGroupPage";
 import AffectedGroupBio from "./components/AffectedGroupBio";
 import About from "./components/About/About";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import TestPage from "./components/TestPage"
 import SearchResults from "./components/SearchResults"
 
 
@@ -34,7 +33,6 @@ class App extends Component {
 							<Route path='/affected_groups/page/:page_number' component={AffectedGroupPage} />
 							<Route path='/affected_groups/:affected_group_name' component={AffectedGroupBio} />
 							<Route path='/about' component={About} />
-							<Route path='/testpage' component={TestPage} />
 							<Route path='/search' component={SearchResults} />
 
 						</Switch>
