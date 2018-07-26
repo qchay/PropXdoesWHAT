@@ -7,7 +7,7 @@ before_script:
   - npm install -g npm
   - npm install newman --global
   - cd backend
-  - pip install -r requirements
+  - pip install -r requirements.txt
   - python --version
   - node --version
   - npm --version
