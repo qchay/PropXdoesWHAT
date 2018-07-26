@@ -8,7 +8,7 @@ import Search from './Search2';
 import { Container, Row, Col } from 'reactstrap';
 import queryString from 'query-string'
 
-export default class TestPage extends React.Component {
+export default class LawPage extends React.Component {
 	constructor(props) { 
 		super(props);
 		const subjectOptions = [

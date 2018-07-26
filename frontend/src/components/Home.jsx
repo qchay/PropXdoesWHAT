@@ -13,7 +13,7 @@ class Home extends Component {
         </ol>
         <div className="carousel-inner">
           <div className="relative-pos carousel-item active">
-            <a id="home-link" href="/laws/page/1">					
+            <a id="home-link" href="/laws">					
               <img className="carousel-img img-responsive" src="https://images7.alphacoders.com/462/462202.jpg" alt="First slide" />
               <div className="container">
                 <div className="carousel-caption">
@@ -29,7 +29,7 @@ class Home extends Component {
             </a>
           </div>
           <div className="carousel-item">
-            <a id="home-link" href="/politicians/page/1">
+            <a id="home-link" href="/politicians">
               <img className="carousel-img img-responsive" src="https://stmed.net/sites/default/files/mount-rushmore-wallpapers-28751-8647311.jpg" alt="Second slide" />
               <div className="container">
                 <div className="carousel-caption">
@@ -39,7 +39,7 @@ class Home extends Component {
             </a>
           </div>
           <div className="carousel-item">
-            <a id="home-link" href="/action_groups/page/1">
+            <a id="home-link" href="/action_groups">
               <img className="carousel-img img-responsive" src="https://images4.alphacoders.com/278/thumb-1920-278048.jpg" alt="Second slide" />
               <div className="container">
                 <div className="carousel-caption">

@@ -20,7 +20,7 @@ export default class Navbar extends React.Component {
 							<a className="nav-link" href="/politicians">Politicians</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="/action_groups/page/1">Action Groups</a>
+							<a className="nav-link" href="/action_groups">Action Groups</a>
 						</li>
 						<li className="nav-item">
 							<a className="nav-link" href="/affected_groups/page/1">Affected Groups</a>

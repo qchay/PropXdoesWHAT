@@ -29,7 +29,7 @@ class App extends Component {
 							<Route path='/laws/:law_name/:id' component={LawBio} />
 							<Route exact path='/politicians' component={PoliticianPage} />
 							<Route path='/politicians/:politcian_name/:id' component={PoliticianBio} />
-							<Route path='/action_groups/page/:page_number' component={ActionGroupPage} />
+							<Route exact path='/action_groups' component={ActionGroupPage} />
 							<Route path='/action_groups/:action_group_name/:id' component={ActionGroupBio} />
 							<Route path='/affected_groups/page/:page_number' component={AffectedGroupPage} />
 							<Route path='/affected_groups/:affected_group_name' component={AffectedGroupBio} />
