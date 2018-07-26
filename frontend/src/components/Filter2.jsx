@@ -15,11 +15,13 @@ export default class Filter extends React.Component {
 			for(let i = 0; i <val.length;i++){       
 	    		update.value[i] = val[i].value;
 			}
-		}	
+		}
+		console.log("update: ", update)
 		this.props.filterCallBack([update])
 	}
 
-	render(){   
+	render(){
+		console.log("*** render in Filter ***");
 		return (     
 			<div>     
 			<Select

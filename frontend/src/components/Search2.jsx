@@ -29,6 +29,7 @@ export default class Search extends React.Component {
   }
 
   render() {
+    console.log("*** render in Search ***");
     return (
      <div className="input-group mb-3">
         <input 

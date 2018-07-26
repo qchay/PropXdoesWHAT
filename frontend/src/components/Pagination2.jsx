@@ -1,5 +1,6 @@
 // Pagination.jsx
 import React from 'react';
+import _ from 'lodash';
 
 class FirstPage extends React.Component {
 	render() {
@@ -64,18 +65,23 @@ class PageItem extends React.Component {
 
 export default class PageFooter extends React.Component {
 	render() {
-  		return (		
-			<nav aria-label="pages">
-				<ul className="pagination pagination-lg justify-content-center">
-					<FirstPage active={this.props.page_data.page === 1} pageUpdateCallBack={this.props.pageUpdateCallBack}/>
-					<PrevPage prev_page={this.props.page_data.prev_page} pageUpdateCallBack={this.props.pageUpdateCallBack}/>
-					{this.props.page_data.page_array.map((page, i) => 
-						<PageItem key = {i} page={page} active={page === this.props.page_data.page} pageUpdateCallBack={this.props.pageUpdateCallBack}/>)}
-					<NextPage next_page={this.props.page_data.next_page} pageUpdateCallBack={this.props.pageUpdateCallBack}/>
-					<LastPage last_page={this.props.page_data.total_pages} active={this.props.page_data.page === this.props.page_data.total_pages} pageUpdateCallBack={this.props.pageUpdateCallBack}/>
-				</ul>
-			</nav>
-    	);
+		console.log("*** render in PageFooter ***");
+		if (_.isEmpty(this.props.page_data)) {
+			return (<p align="center" >Page Footer Loading...</p>);
+		} else {
+	  		return (		
+				<nav aria-label="pages">
+					<ul className="pagination pagination-lg justify-content-center">
+						<FirstPage active={this.props.page_data.page === 1} pageUpdateCallBack={this.props.pageUpdateCallBack}/>
+						<PrevPage prev_page={this.props.page_data.prev_page} pageUpdateCallBack={this.props.pageUpdateCallBack}/>
+						{this.props.page_data.page_array.map((page, i) => 
+							<PageItem key = {i} page={page} active={page === this.props.page_data.page} pageUpdateCallBack={this.props.pageUpdateCallBack}/>)}
+						<NextPage next_page={this.props.page_data.next_page} pageUpdateCallBack={this.props.pageUpdateCallBack}/>
+						<LastPage last_page={this.props.page_data.total_pages} active={this.props.page_data.page === this.props.page_data.total_pages} pageUpdateCallBack={this.props.pageUpdateCallBack}/>
+					</ul>
+				</nav>
+	    	);
+	    }
   	}
 }
 
