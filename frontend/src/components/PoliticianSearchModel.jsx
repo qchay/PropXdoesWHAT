@@ -33,10 +33,14 @@ export default class PoliticianSearchModel extends React.Component {
 			<div>
 			<ul class="list-group">
 			  <li class="list-group-item">
-				<a href={'/laws/' + this.props.law_data.name + '/' + this.props.law_data.id}>
+				<a href={'/politicians/' + this.props.politician_data.first_name + '_' + this.props.politician_data.last_name + '/' + this.props.politician_data.id}>
 					<Row>
+					<img className="politician-img" src={this.state.pictureMap[this.props.politician_data.party]} alt="alt"/>
 					<div className="body-text">
-				<h5 id="list-name">{this.props.law_data.title.substring(0,180) + (this.props.law_data.title.length > 180 ? '...' : ' ')}</h5>
+					<h5 id="list-name">Name: {this.props.politician_data.first_name} {this.props.politician_data.last_name}</h5>
+  					<p id="list-name">Party: {this.state.partyMap[this.props.politician_data.party]}
+  					, Chamber: {this.props.politician_data.chamber[0].toUpperCase() + this.props.politician_data.chamber.substring(1)}
+					, Legislator’s state: {this.props.politician_data.state}</p>
 					</div>
 					</Row>
   				</a>

@@ -49,6 +49,16 @@
 
 }
 
+.politician-img{
+	border-radius: 30%;
+	position: relative;
+	width: 4%;
+	height: 4%;
+	background-size: cover;
+	border-top-left-radius: calc(.25rem - 1px);
+	border-top-right-radius: calc(.25rem - 1px);
+}
+
 /* Card Attributes */
 .card-img-top{
 	border-radius: 30%;
