@@ -1,7 +1,6 @@
 flask
 flask_sqlalchemy
 flask_restless
-Flask-Testing
 pymysql
 flask_cors
 elasticsearch
