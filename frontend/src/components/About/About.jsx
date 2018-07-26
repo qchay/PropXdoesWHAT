@@ -40,7 +40,7 @@ export default class About extends React.Component {
 				"tasks" : "Frontend",
 				"bio" : "Upcoming Senior"},
 			"Chris Renard": {
-				"tasks" : "Technical Writing",
+				"tasks" : "Database, Full-Text Search, API, Technical Writing, General Debugging",
 				"pic" : "http://rilne-kitsune.com/img/rune.png",
 				"bio" : "Bio"},
 			"Eder Garza": {
