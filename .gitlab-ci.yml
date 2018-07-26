@@ -20,5 +20,5 @@ test:
     - ls
     - python servertests.py
     - cd ..
-    - cd Back-End
+    - cd backend
     - newman run Postman.json
