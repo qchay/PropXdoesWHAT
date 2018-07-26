@@ -6,8 +6,8 @@ before_script:
   - apt-get install -yq nodejs build-essential
   - npm install -g npm
   - npm install newman --global
-  - cd frontend
-  - pip install -r requirements.txt
+  - cd backend
+  - pip install -r requirements
   - python --version
   - node --version
   - npm --version
@@ -18,6 +18,4 @@ test:
   script:
     - ls
     - python servertests.py
-    - cd ..
-    - cd backend
     - newman run Postman.json
