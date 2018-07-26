@@ -6,7 +6,8 @@
 	},
 	"item": [
 		{
-			"name": "http://api.propxdoeswhat.me/api/politicians",
+			"_postman_id": "823fb35a-a686-42d1-a678-4bf8cbc77528",
+			"name": "Politicians Results",
 			"event": [
 				{
 					"listen": "test",
@@ -125,7 +126,8 @@
 			"response": []
 		},
 		{
-			"name": "http://api.propxdoeswhat.me/api/laws",
+			"_postman_id": "a00af8b1-7a09-40d5-ad58-3c3186ac2bff",
+			"name": "Laws Results",
 			"event": [
 				{
 					"listen": "test",
@@ -244,7 +246,8 @@
 			"response": []
 		},
 		{
-			"name": "http://api.propxdoeswhat.me/api/action_groups",
+			"_postman_id": "ae3c91f5-237a-46b7-a32d-f7369c8e842e",
+			"name": "Action Groups Results",
 			"event": [
 				{
 					"listen": "test",
@@ -335,7 +338,8 @@
 			"response": []
 		},
 		{
-			"name": "http://api.propxdoeswhat.me/api/politicians?page=1&q={\"filters\":[{\"and\":[{\"or\":[{\"name\":\"party\",\"op\":\"eq\",\"val\":\"D\"}]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"TX\"}]},{\"or\":[{\"name\":\"chamber\",\"op\":\"eq\",\"val\":\"house\"}]}]}],\"order_by\":[]}",
+			"_postman_id": "1fce0bb7-c5ec-4a32-80b1-ab1e2d6a65ad",
+			"name": "Politicians Multiple Filters",
 			"event": [
 				{
 					"listen": "test",
@@ -407,7 +411,8 @@
 			"response": []
 		},
 		{
-			"name": "http://api.propxdoeswhat.me/api/politicians?page=1&q={\"filters\":[{\"and\":[{\"or\":[]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"LA\"}]},{\"or\":[]}]}],\"order_by\":[{\"field\":\"first_name\",\"direction\":\"asc\"}]}",
+			"_postman_id": "29bad442-699d-452f-852a-ee07f55e4923",
+			"name": "Politicians Filter and Sort",
 			"event": [
 				{
 					"listen": "test",
@@ -482,7 +487,8 @@
 			"response": []
 		},
 		{
-			"name": "http://api.propxdoeswhat.me/api/politicians?page=1&q={\"search\":\"Ted Cruz\",\"filters\":[{\"and\":[{\"or\":[]},{\"or\":[{\"name\":\"state\",\"op\":\"eq\",\"val\":\"TX\"}]},{\"or\":[]}]}],\"order_by\":[]}",
+			"_postman_id": "bfcaf2bf-6706-488e-933d-fb48ef6e94ee",
+			"name": "Politicians Search and Filter",
 			"event": [
 				{
 					"listen": "test",
@@ -557,7 +563,8 @@
 			"response": []
 		},
 		{
-			"name": "http://api.propxdoeswhat.me/api/laws?page=1&q={\"search\":\"gun violence awareness\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"subject\",\"op\":\"eq\",\"val\":\"Crime and Law Enforcement\"}]}]}],\"order_by\":[]}",
+			"_postman_id": "44e4f41d-699e-441c-bdd9-83c9f6d87c25",
+			"name": "Laws Search and Filter",
 			"event": [
 				{
 					"listen": "test",
@@ -637,12 +644,13 @@
 			"response": []
 		},
 		{
-			"name": "http://api.propxdoeswhat.me/api/laws?page=1&q={\"search\":\"\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"subject\",\"op\":\"eq\",\"val\":\"Agriculture and Food\"}]}]}],\"order_by\":[{\"field\":\"introduced\",\"direction\":\"desc\"}]}",
+			"_postman_id": "36e7ac01-e719-427c-af9b-6325c72e20c3",
+			"name": "Laws Filter and Sort",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "b34cefaf-3ae1-4e4b-80b0-f10f48f5871a",
+						"id": "4f9f5feb-2123-49e5-b819-38191ea38091",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
@@ -681,7 +689,7 @@
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData.objects[4].subject).to.eql(\"Agriculture and Food\");",
 							"});",
-							"s",
+							"",
 							"pm.test(\"Filter works with filter test 3\", function () {",
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData.objects[5].subject).to.eql(\"Agriculture and Food\");",
@@ -722,7 +730,8 @@
 			"response": []
 		},
 		{
-			"name": "http://api.propxdoeswhat.me/api/action_groups?page=1&q={\"search\":\"United\",\"filters\":[{\"and\":[{\"or\":[]}]}],\"order_by\":[]}",
+			"_postman_id": "d1fb5677-3cd3-4fb0-a4c0-65f705237a47",
+			"name": "Action Groups Search",
 			"event": [
 				{
 					"listen": "test",
@@ -788,7 +797,8 @@
 			"response": []
 		},
 		{
-			"name": "http://api.propxdoeswhat.me/api/action_groups?page=1&q={\"search\":\"\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Simple Living Advocacy Groups\"},{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Civic and Neighborhood Groups\"}]}]}],\"order_by\":[]}",
+			"_postman_id": "c92f2ebe-150d-4864-ba27-be6814ddeccb",
+			"name": "Action Groups Multiple Filters",
 			"event": [
 				{
 					"listen": "test",
