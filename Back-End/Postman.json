@@ -642,7 +642,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "77aef9dd-4f4c-4743-a367-b3446080d868",
+						"id": "b34cefaf-3ae1-4e4b-80b0-f10f48f5871a",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
@@ -659,17 +659,17 @@
 							"",
 							"pm.test(\"Number of results is correct\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.num_results).to.eql(25);",
+							"    pm.expect(jsonData.num_results).to.eql(7);",
 							"});",
 							"",
 							"pm.test(\"Sort desc test 1\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.objects[0].introduced).to.eql(\"2018-06-11\");",
+							"    pm.expect(jsonData.objects[0].introduced).to.eql(\"2018-04-12\");",
 							"});",
 							"",
 							"pm.test(\"Sort desc test 2\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.objects[1].introduced).to.eql(\"2018-06-05\");",
+							"    pm.expect(jsonData.objects[1].introduced).to.eql(\"2018-02-13\");",
 							"});",
 							"",
 							"pm.test(\"Filter works with filter test 1\", function () {",
@@ -681,10 +681,10 @@
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData.objects[4].subject).to.eql(\"Agriculture and Food\");",
 							"});",
-							"",
+							"s",
 							"pm.test(\"Filter works with filter test 3\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.objects[8].subject).to.eql(\"Agriculture and Food\");",
+							"    pm.expect(jsonData.objects[5].subject).to.eql(\"Agriculture and Food\");",
 							"});"
 						]
 					}
@@ -695,7 +695,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://api.propxdoeswhat.me/api/laws?page=1&q={\"search\":\"\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"subject\",\"op\":\"eq\",\"val\":\"Agriculture and Food\"}]}]}],\"order_by\":[{\"field\":\"introduced\",\"direction\":\"desc\"}]}",
+					"raw": "http://api.propxdoeswhat.me/api/laws?page=1&q={\"search\":\"food\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"subject\",\"op\":\"eq\",\"val\":\"Agriculture and Food\"}]}]}],\"order_by\":[{\"field\":\"introduced\",\"direction\":\"desc\"}]}",
 					"protocol": "http",
 					"host": [
 						"api",
@@ -713,7 +713,7 @@
 						},
 						{
 							"key": "q",
-							"value": "{\"search\":\"\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"subject\",\"op\":\"eq\",\"val\":\"Agriculture and Food\"}]}]}],\"order_by\":[{\"field\":\"introduced\",\"direction\":\"desc\"}]}"
+							"value": "{\"search\":\"food\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"subject\",\"op\":\"eq\",\"val\":\"Agriculture and Food\"}]}]}],\"order_by\":[{\"field\":\"introduced\",\"direction\":\"desc\"}]}"
 						}
 					]
 				},
@@ -793,7 +793,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1fd96daa-4de3-4fc0-8001-738902d4ba40",
+						"id": "b459d0d9-087a-46f8-a7ec-10b3be460d38",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
@@ -832,7 +832,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://api.propxdoeswhat.me/api/action_groups?page=1&q={\"search\":\"\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Simple Living Advocacy Groups\"},{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Civic and Neighborhood Groups\"}]}]}],\"order_by\":[]}",
+					"raw": "http://api.propxdoeswhat.me/api/action_groups?page=1&q={\"search\":\"civic simple\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Simple Living Advocacy Groups\"},{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Civic and Neighborhood Groups\"}]}]}]}",
 					"protocol": "http",
 					"host": [
 						"api",
@@ -850,7 +850,7 @@
 						},
 						{
 							"key": "q",
-							"value": "{\"search\":\"\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Simple Living Advocacy Groups\"},{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Civic and Neighborhood Groups\"}]}]}],\"order_by\":[]}"
+							"value": "{\"search\":\"civic simple\",\"filters\":[{\"and\":[{\"or\":[{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Simple Living Advocacy Groups\"},{\"name\":\"type\",\"op\":\"eq\",\"val\":\"Civic and Neighborhood Groups\"}]}]}]}"
 						}
 					]
 				},
