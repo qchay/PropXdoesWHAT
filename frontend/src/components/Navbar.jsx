@@ -16,7 +16,7 @@ export default class Navbar extends React.Component {
 							<a className="nav-link" href="/laws">Laws</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="/politicians/page/1">Politicians</a>
+							<a className="nav-link" href="/politicians">Politicians</a>
 						</li>
 						<li className="nav-item">
 							<a className="nav-link" href="/action_groups/page/1">Action Groups</a>

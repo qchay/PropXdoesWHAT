@@ -10,7 +10,7 @@ export default class Filter extends React.Component {
 
 	onChange(val) {
 		// console.log("*** onChange in Filter ***");
-		let update = {name: "subject", value : []};
+		let update = {name: this.props.type, value : []};
 		if (val.length !== 0) {
 			for(let i = 0; i <val.length;i++){       
 	    		update.value[i] = val[i].value;

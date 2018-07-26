@@ -44,12 +44,12 @@ export default class TestPage extends React.Component {
 		{ label: 'Undefined' , value: ''}
 		];
 		const page_name = "laws";
-		var filterBoxStyles = { marginTop:'85px', marginBottom:'100px'};
-		var filterRowStyles = { marginTop:'50px'};
-		var filterColStyles = { marginLeft:'60px'};
-		const queryStr = this.props.location.search;
-		const law_array = [];
-		const page_data = {};
+		const filterBoxStyles = { marginTop:'85px', marginBottom:'100px'};
+		const filterRowStyles = { marginTop:'50px'};
+		const filterColStyles = { marginLeft:'60px'};
+		var queryStr = this.props.location.search;
+		var law_array = [];
+		var page_data = {};
 		const filterList = ["subject"];
 		this.state = { subjectOptions : subjectOptions,
 					   page_name : page_name,
@@ -75,6 +75,7 @@ export default class TestPage extends React.Component {
 		}
 
 		// Filters
+		qJSON.filters = [{and: []}]
 		for (var filterName of this.state.filterList) {
 			let filter = queryString.parse(queryStr)[filterName];
 			if (typeof filter !== "undefined") {
@@ -86,7 +87,7 @@ export default class TestPage extends React.Component {
 			    		filterJSON.or[i] = { "name" : filterName, "op" : "eq", "val" : filter[i]};
 					}
 				}
-				qJSON.filters = [{and: [filterJSON]}];
+				qJSON.filters[0].and.push(filterJSON);
 			}
 		}
 
@@ -172,14 +173,6 @@ export default class TestPage extends React.Component {
 	componentDidMount () {
 		this.getJSONsetState(this.state.page_name, this.props.location.search)
 	}
-
-	getLawArray(responseJSON) {
-		var law_array = [];
-		for (var law of responseJSON.objects) {
-			law_array.push(law);
-		}
-		return law_array;
-	}
 	
 	getPageData(responseJSON) {
 		const page = responseJSON.page;
@@ -207,6 +200,14 @@ export default class TestPage extends React.Component {
 			next_page: (page === total_pages ? total_pages : page + 1)
 			}
 		return page_data;
+	}
+
+	getLawArray(responseJSON) {
+		var law_array = [];
+		for (var law of responseJSON.objects) {
+			law_array.push(law);
+		}
+		return law_array;
 	}
 
 	render() {

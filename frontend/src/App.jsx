@@ -25,7 +25,7 @@ class App extends Component {
 							<Route exact path='/' component={Home} />
 							<Route exact path='/laws' component={LawPage} />
 							<Route path='/laws/:law_name/:id' component={LawBio} />
-							<Route path='/politicians/page/:page_number' component={PoliticianPage} />
+							<Route exact path='/politicians' component={PoliticianPage} />
 							<Route path='/politicians/:politcian_name/:id' component={PoliticianBio} />
 							<Route path='/action_groups/page/:page_number' component={ActionGroupPage} />
 							<Route path='/action_groups/:action_group_name/:id' component={ActionGroupBio} />
