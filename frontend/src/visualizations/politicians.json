@@ -1,0 +1,5542 @@
+[
+   {
+      "value" : 1,
+      "dob" : "1966-08-16",
+      "key" : "Doug Collins",
+      "party" : "Republican",
+      "chamber" : "House",
+      "bio_id" : "C001093",
+      "laws_sponsored" : 32,
+      "state" : "GA"
+   },
+   {
+      "value" : 1,
+      "dob" : "1942-02-20",
+      "party" : "Republican",
+      "key" : "Mitch McConnell",
+      "bio_id" : "M000355",
+      "chamber" : "Senate",
+      "state" : "KY",
+      "laws_sponsored" : 32
+   },
+   {
+      "state" : "AK",
+      "laws_sponsored" : 28,
+      "bio_id" : "Y000033",
+      "chamber" : "House",
+      "dob" : "1933-06-09",
+      "party" : "Republican",
+      "key" : "Don Young",
+      "value" : 1
+   },
+   {
+      "bio_id" : "B001297",
+      "chamber" : "House",
+      "state" : "CO",
+      "laws_sponsored" : 26,
+      "value" : 1,
+      "dob" : "1959-02-16",
+      "party" : "Republican",
+      "key" : "Ken Buck"
+   },
+   {
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Joseph Crowley",
+      "dob" : "1962-03-16",
+      "bio_id" : "C001038",
+      "chamber" : "House",
+      "state" : "NY",
+      "laws_sponsored" : 25
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "B001248",
+      "laws_sponsored" : 25,
+      "state" : "TX",
+      "value" : 1,
+      "dob" : "1950-12-23",
+      "key" : "Michael Burgess",
+      "party" : "Republican"
+   },
+   {
+      "party" : "Republican",
+      "key" : "Charles Grassley",
+      "dob" : "1933-09-17",
+      "value" : 1,
+      "state" : "IA",
+      "laws_sponsored" : 24,
+      "bio_id" : "G000386",
+      "chamber" : "Senate"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "C001056",
+      "laws_sponsored" : 21,
+      "state" : "TX",
+      "value" : 1,
+      "key" : "John Cornyn",
+      "party" : "Republican",
+      "dob" : "1952-02-02"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "C001109",
+      "laws_sponsored" : 21,
+      "state" : "WY",
+      "value" : 1,
+      "key" : "Liz Cheney",
+      "party" : "Republican",
+      "dob" : "1966-07-28"
+   },
+   {
+      "laws_sponsored" : 21,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "S000250",
+      "dob" : "1955-03-22",
+      "key" : "Pete Sessions",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "dob" : "1943-10-05",
+      "party" : "Democrat",
+      "key" : "Benjamin Cardin",
+      "value" : 1,
+      "state" : "MD",
+      "laws_sponsored" : 21,
+      "bio_id" : "C000141",
+      "chamber" : "Senate"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "R000582",
+      "laws_sponsored" : 20,
+      "state" : "TN",
+      "value" : 1,
+      "dob" : "1945-07-21",
+      "party" : "Republican",
+      "key" : "Phil Roe"
+   },
+   {
+      "key" : "Edward Royce",
+      "party" : "Republican",
+      "dob" : "1951-10-12",
+      "value" : 1,
+      "state" : "CA",
+      "laws_sponsored" : 19,
+      "bio_id" : "R000487",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "dob" : "1952-09-22",
+      "party" : "Republican",
+      "key" : "Robert Goodlatte",
+      "chamber" : "House",
+      "bio_id" : "G000289",
+      "laws_sponsored" : 19,
+      "state" : "VA"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "K000367",
+      "laws_sponsored" : 18,
+      "state" : "MN",
+      "value" : 1,
+      "dob" : "1960-05-25",
+      "party" : "Democrat",
+      "key" : "Amy Klobuchar"
+   },
+   {
+      "bio_id" : "M001153",
+      "chamber" : "Senate",
+      "state" : "AK",
+      "laws_sponsored" : 17,
+      "value" : 1,
+      "key" : "Lisa Murkowski",
+      "party" : "Republican",
+      "dob" : "1957-05-22"
+   },
+   {
+      "bio_id" : "B001289",
+      "chamber" : "House",
+      "state" : "AL",
+      "laws_sponsored" : 17,
+      "value" : 1,
+      "dob" : "1955-02-16",
+      "party" : "Republican",
+      "key" : "Bradley Byrne"
+   },
+   {
+      "party" : "Republican",
+      "key" : "John Katko",
+      "dob" : "1962-11-09",
+      "value" : 1,
+      "state" : "NY",
+      "laws_sponsored" : 17,
+      "bio_id" : "K000386",
+      "chamber" : "House"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "S000522",
+      "laws_sponsored" : 17,
+      "state" : "NJ",
+      "value" : 1,
+      "dob" : "1953-03-04",
+      "key" : "Christopher Smith",
+      "party" : "Republican"
+   },
+   {
+      "value" : 1,
+      "key" : "Steve Daines",
+      "party" : "Republican",
+      "dob" : "1962-08-20",
+      "bio_id" : "D000618",
+      "chamber" : "Senate",
+      "state" : "MT",
+      "laws_sponsored" : 17
+   },
+   {
+      "laws_sponsored" : 17,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "J000032",
+      "dob" : "1950-01-12",
+      "key" : "Sheila Jackson Lee",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1962-12-31",
+      "key" : "Jeff Flake",
+      "party" : "Republican",
+      "bio_id" : "F000444",
+      "chamber" : "Senate",
+      "state" : "AZ",
+      "laws_sponsored" : 17
+   },
+   {
+      "value" : 1,
+      "dob" : "1970-02-11",
+      "key" : "Rob Woodall",
+      "party" : "Republican",
+      "bio_id" : "W000810",
+      "chamber" : "House",
+      "state" : "GA",
+      "laws_sponsored" : 17
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 17,
+      "bio_id" : "F000062",
+      "chamber" : "Senate",
+      "dob" : "1933-06-22",
+      "key" : "Dianne Feinstein",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "laws_sponsored" : 16,
+      "state" : "NC",
+      "chamber" : "Senate",
+      "bio_id" : "B001135",
+      "key" : "Richard Burr",
+      "party" : "Republican",
+      "dob" : "1955-11-30",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "key" : "John Conyers",
+      "party" : "Democrat",
+      "dob" : "1929-05-16",
+      "chamber" : "House",
+      "bio_id" : "C000714",
+      "laws_sponsored" : 16,
+      "state" : "MI"
+   },
+   {
+      "dob" : "1934-03-22",
+      "key" : "Orrin Hatch",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 16,
+      "state" : "UT",
+      "chamber" : "Senate",
+      "bio_id" : "H000338"
+   },
+   {
+      "value" : 1,
+      "key" : "John Thune",
+      "party" : "Republican",
+      "dob" : "1961-01-07",
+      "bio_id" : "T000250",
+      "chamber" : "Senate",
+      "state" : "SD",
+      "laws_sponsored" : 16
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Robert Latta",
+      "dob" : "1956-04-18",
+      "chamber" : "House",
+      "bio_id" : "L000566",
+      "laws_sponsored" : 16,
+      "state" : "OH"
+   },
+   {
+      "state" : "DC",
+      "laws_sponsored" : 16,
+      "bio_id" : "N000147",
+      "chamber" : "House",
+      "party" : "Democrat",
+      "key" : "Eleanor Norton",
+      "dob" : "1937-06-13",
+      "value" : 1
+   },
+   {
+      "laws_sponsored" : 15,
+      "state" : "OR",
+      "chamber" : "House",
+      "bio_id" : "D000191",
+      "dob" : "1947-05-27",
+      "key" : "Peter DeFazio",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "bio_id" : "C001035",
+      "chamber" : "Senate",
+      "state" : "ME",
+      "laws_sponsored" : 15,
+      "value" : 1,
+      "dob" : "1952-12-07",
+      "party" : "Republican",
+      "key" : "Susan Collins"
+   },
+   {
+      "bio_id" : "N000189",
+      "chamber" : "House",
+      "state" : "WA",
+      "laws_sponsored" : 15,
+      "value" : 1,
+      "dob" : "1955-07-10",
+      "key" : "Dan NewHouse",
+      "party" : "Republican"
+   },
+   {
+      "dob" : "1951-07-05",
+      "key" : "Roger Wicker",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "MS",
+      "laws_sponsored" : 15,
+      "bio_id" : "W000437",
+      "chamber" : "Senate"
+   },
+   {
+      "value" : 1,
+      "key" : "David Cicilline",
+      "party" : "Democrat",
+      "dob" : "1961-07-15",
+      "chamber" : "House",
+      "bio_id" : "C001084",
+      "laws_sponsored" : 15,
+      "state" : "RI"
+   },
+   {
+      "value" : 1,
+      "key" : "Michael McCaul",
+      "party" : "Republican",
+      "dob" : "1962-01-14",
+      "chamber" : "House",
+      "bio_id" : "M001157",
+      "laws_sponsored" : 15,
+      "state" : "TX"
+   },
+   {
+      "dob" : "1940-07-03",
+      "party" : "Republican",
+      "key" : "Lamar Alexander",
+      "value" : 1,
+      "laws_sponsored" : 15,
+      "state" : "TN",
+      "chamber" : "Senate",
+      "bio_id" : "A000360"
+   },
+   {
+      "state" : "AZ",
+      "laws_sponsored" : 15,
+      "bio_id" : "M001197",
+      "chamber" : "House",
+      "key" : "Martha McSally",
+      "party" : "Republican",
+      "dob" : "1966-03-22",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1956-06-01",
+      "key" : "Gregg Harper",
+      "party" : "Republican",
+      "bio_id" : "H001045",
+      "chamber" : "House",
+      "state" : "MS",
+      "laws_sponsored" : 14
+   },
+   {
+      "value" : 1,
+      "key" : "Johnny Isakson",
+      "party" : "Republican",
+      "dob" : "1944-12-28",
+      "chamber" : "Senate",
+      "bio_id" : "I000055",
+      "laws_sponsored" : 14,
+      "state" : "GA"
+   },
+   {
+      "value" : 1,
+      "key" : "Tom Cole",
+      "party" : "Republican",
+      "dob" : "1949-04-28",
+      "chamber" : "House",
+      "bio_id" : "C001053",
+      "laws_sponsored" : 14,
+      "state" : "OK"
+   },
+   {
+      "value" : 1,
+      "dob" : "1969-05-22",
+      "party" : "Republican",
+      "key" : "Cathy McMorris Rodgers",
+      "chamber" : "House",
+      "bio_id" : "M001159",
+      "laws_sponsored" : 14,
+      "state" : "WA"
+   },
+   {
+      "value" : 1,
+      "dob" : "1951-07-13",
+      "key" : "Rob Bishop",
+      "party" : "Republican",
+      "chamber" : "House",
+      "bio_id" : "B001250",
+      "laws_sponsored" : 14,
+      "state" : "UT"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "M000639",
+      "laws_sponsored" : 14,
+      "state" : "NJ",
+      "value" : 1,
+      "key" : "Robert Menendez",
+      "party" : "Democrat",
+      "dob" : "1954-01-01"
+   },
+   {
+      "party" : "Republican",
+      "key" : "Ileana Ros-Lehtinen",
+      "dob" : "1952-07-15",
+      "value" : 1,
+      "state" : "FL",
+      "laws_sponsored" : 14,
+      "bio_id" : "R000435",
+      "chamber" : "House"
+   },
+   {
+      "state" : "NY",
+      "laws_sponsored" : 14,
+      "bio_id" : "E000179",
+      "chamber" : "House",
+      "key" : "Eliot Engel",
+      "party" : "Democrat",
+      "dob" : "1947-02-18",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Nydia Velázquez",
+      "dob" : "1953-03-28",
+      "bio_id" : "V000081",
+      "chamber" : "House",
+      "state" : "NY",
+      "laws_sponsored" : 14
+   },
+   {
+      "value" : 1,
+      "dob" : "1950-01-10",
+      "party" : "Republican",
+      "key" : "Roy Blunt",
+      "chamber" : "Senate",
+      "bio_id" : "B000575",
+      "laws_sponsored" : 13,
+      "state" : "MO"
+   },
+   {
+      "key" : "Scott Tipton",
+      "party" : "Republican",
+      "dob" : "1956-11-09",
+      "value" : 1,
+      "laws_sponsored" : 13,
+      "state" : "CO",
+      "chamber" : "House",
+      "bio_id" : "T000470"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "C001088",
+      "laws_sponsored" : 13,
+      "state" : "DE",
+      "value" : 1,
+      "dob" : "1963-09-09",
+      "party" : "Democrat",
+      "key" : "Christopher Coons"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "R000595",
+      "laws_sponsored" : 13,
+      "state" : "FL",
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Marco Rubio",
+      "dob" : "1971-05-28"
+   },
+   {
+      "laws_sponsored" : 13,
+      "state" : "WI",
+      "chamber" : "House",
+      "bio_id" : "D000614",
+      "party" : "Republican",
+      "key" : "Sean Duffy",
+      "dob" : "1971-10-03",
+      "value" : 1
+   },
+   {
+      "bio_id" : "C001070",
+      "chamber" : "Senate",
+      "state" : "PA",
+      "laws_sponsored" : 13,
+      "value" : 1,
+      "dob" : "1960-04-13",
+      "key" : "Bob Casey",
+      "party" : "Democrat"
+   },
+   {
+      "value" : 1,
+      "dob" : "1955-04-08",
+      "party" : "Republican",
+      "key" : "Ron Johnson",
+      "chamber" : "Senate",
+      "bio_id" : "J000293",
+      "laws_sponsored" : 13,
+      "state" : "WI"
+   },
+   {
+      "laws_sponsored" : 13,
+      "state" : "TN",
+      "chamber" : "House",
+      "bio_id" : "B001243",
+      "party" : "Republican",
+      "key" : "Marsha Blackburn",
+      "dob" : "1952-06-06",
+      "value" : 1
+   },
+   {
+      "bio_id" : "H001061",
+      "chamber" : "Senate",
+      "state" : "ND",
+      "laws_sponsored" : 13,
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "John Hoeven",
+      "dob" : "1957-03-13"
+   },
+   {
+      "bio_id" : "L000551",
+      "chamber" : "House",
+      "state" : "CA",
+      "laws_sponsored" : 13,
+      "value" : 1,
+      "dob" : "1946-07-16",
+      "party" : "Democrat",
+      "key" : "Barbara Lee"
+   },
+   {
+      "value" : 1,
+      "key" : "Kristi Noem",
+      "party" : "Republican",
+      "dob" : "1971-11-30",
+      "chamber" : "House",
+      "bio_id" : "N000184",
+      "laws_sponsored" : 13,
+      "state" : "SD"
+   },
+   {
+      "key" : "David McKinley",
+      "party" : "Republican",
+      "dob" : "1947-03-28",
+      "value" : 1,
+      "state" : "WV",
+      "laws_sponsored" : 13,
+      "bio_id" : "M001180",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Rob Portman",
+      "dob" : "1955-12-19",
+      "chamber" : "Senate",
+      "bio_id" : "P000449",
+      "laws_sponsored" : 12,
+      "state" : "OH"
+   },
+   {
+      "dob" : "1951-03-01",
+      "key" : "Deb Fischer",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "NE",
+      "laws_sponsored" : 12,
+      "bio_id" : "F000463",
+      "chamber" : "Senate"
+   },
+   {
+      "dob" : "1961-05-01",
+      "key" : "Matt Cartwright",
+      "party" : "Democrat",
+      "value" : 1,
+      "state" : "PA",
+      "laws_sponsored" : 12,
+      "bio_id" : "C001090",
+      "chamber" : "House"
+   },
+   {
+      "laws_sponsored" : 12,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "P000592",
+      "party" : "Republican",
+      "key" : "Ted Poe",
+      "dob" : "1948-09-10",
+      "value" : 1
+   },
+   {
+      "laws_sponsored" : 12,
+      "state" : "MO",
+      "chamber" : "Senate",
+      "bio_id" : "M001170",
+      "dob" : "1953-07-24",
+      "party" : "Democrat",
+      "key" : "Claire McCaskill",
+      "value" : 1
+   },
+   {
+      "state" : "PA",
+      "laws_sponsored" : 12,
+      "bio_id" : "F000466",
+      "chamber" : "House",
+      "dob" : "1973-12-17",
+      "key" : "Brian Fitzpatrick",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "laws_sponsored" : 12,
+      "state" : "CA",
+      "chamber" : "House",
+      "bio_id" : "M001165",
+      "key" : "Kevin McCarthy",
+      "party" : "Republican",
+      "dob" : "1965-01-26",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Barbara Comstock",
+      "dob" : "1959-06-30",
+      "chamber" : "House",
+      "bio_id" : "C001105",
+      "laws_sponsored" : 12,
+      "state" : "VA"
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Cory Gardner",
+      "dob" : "1974-08-22",
+      "bio_id" : "G000562",
+      "chamber" : "Senate",
+      "state" : "CO",
+      "laws_sponsored" : 12
+   },
+   {
+      "value" : 1,
+      "key" : "Heidi Heitkamp",
+      "party" : "Democrat",
+      "dob" : "1955-10-30",
+      "bio_id" : "H001069",
+      "chamber" : "Senate",
+      "state" : "ND",
+      "laws_sponsored" : 12
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "B001282",
+      "laws_sponsored" : 11,
+      "state" : "KY",
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Andy Barr",
+      "dob" : "1973-07-24"
+   },
+   {
+      "dob" : "1947-11-03",
+      "key" : "Mazie Hirono",
+      "party" : "Democrat",
+      "value" : 1,
+      "state" : "HI",
+      "laws_sponsored" : 11,
+      "bio_id" : "H001042",
+      "chamber" : "Senate"
+   },
+   {
+      "state" : "NC",
+      "laws_sponsored" : 11,
+      "bio_id" : "M001187",
+      "chamber" : "House",
+      "party" : "Republican",
+      "key" : "Mark Meadows",
+      "dob" : "1959-07-28",
+      "value" : 1
+   },
+   {
+      "dob" : "1951-04-12",
+      "key" : "Tim Walberg",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "MI",
+      "laws_sponsored" : 11,
+      "bio_id" : "W000798",
+      "chamber" : "House"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "M001188",
+      "laws_sponsored" : 11,
+      "state" : "NY",
+      "value" : 1,
+      "dob" : "1975-10-01",
+      "key" : "Grace Meng",
+      "party" : "Democrat"
+   },
+   {
+      "value" : 1,
+      "dob" : "1964-11-13",
+      "party" : "Republican",
+      "key" : "Dan Sullivan",
+      "chamber" : "Senate",
+      "bio_id" : "S001198",
+      "laws_sponsored" : 11,
+      "state" : "AK"
+   },
+   {
+      "bio_id" : "S000244",
+      "chamber" : "House",
+      "state" : "WI",
+      "laws_sponsored" : 11,
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "F. Sensenbrenner",
+      "dob" : "1943-06-14"
+   },
+   {
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Tim Kaine",
+      "dob" : "1958-02-26",
+      "bio_id" : "K000384",
+      "chamber" : "Senate",
+      "state" : "VA",
+      "laws_sponsored" : 11
+   },
+   {
+      "value" : 1,
+      "dob" : "1967-03-26",
+      "party" : "Republican",
+      "key" : "Jason Chaffetz",
+      "bio_id" : "C001076",
+      "chamber" : "House",
+      "state" : "UT",
+      "laws_sponsored" : 11
+   },
+   {
+      "key" : "Earl Blumenauer",
+      "party" : "Democrat",
+      "dob" : "1948-08-16",
+      "value" : 1,
+      "laws_sponsored" : 11,
+      "state" : "OR",
+      "chamber" : "House",
+      "bio_id" : "B000574"
+   },
+   {
+      "bio_id" : "C001071",
+      "chamber" : "Senate",
+      "state" : "TN",
+      "laws_sponsored" : 11,
+      "value" : 1,
+      "key" : "Bob Corker",
+      "party" : "Republican",
+      "dob" : "1952-08-24"
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Lee Zeldin",
+      "dob" : "1980-01-30",
+      "bio_id" : "Z000017",
+      "chamber" : "House",
+      "state" : "NY",
+      "laws_sponsored" : 11
+   },
+   {
+      "laws_sponsored" : 11,
+      "state" : "OR",
+      "chamber" : "Senate",
+      "bio_id" : "W000779",
+      "dob" : "1949-05-03",
+      "party" : "Democrat",
+      "key" : "Ron Wyden",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Steven Chabot",
+      "dob" : "1953-01-22",
+      "bio_id" : "C000266",
+      "chamber" : "House",
+      "state" : "OH",
+      "laws_sponsored" : 11
+   },
+   {
+      "value" : 1,
+      "key" : "Jerry Moran",
+      "party" : "Republican",
+      "dob" : "1954-05-29",
+      "bio_id" : "M000934",
+      "chamber" : "Senate",
+      "state" : "KS",
+      "laws_sponsored" : 11
+   },
+   {
+      "dob" : "1958-03-15",
+      "key" : "Morgan Griffith",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "VA",
+      "laws_sponsored" : 11,
+      "bio_id" : "G000568",
+      "chamber" : "House"
+   },
+   {
+      "laws_sponsored" : 11,
+      "state" : "FL",
+      "chamber" : "House",
+      "bio_id" : "H000324",
+      "key" : "Alcee Hastings",
+      "party" : "Democrat",
+      "dob" : "1936-09-05",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1956-01-28",
+      "party" : "Republican",
+      "key" : "Lou Barletta",
+      "bio_id" : "B001269",
+      "chamber" : "House",
+      "state" : "PA",
+      "laws_sponsored" : 11
+   },
+   {
+      "bio_id" : "N000032",
+      "chamber" : "Senate",
+      "state" : "FL",
+      "laws_sponsored" : 10,
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Bill Nelson",
+      "dob" : "1942-09-29"
+   },
+   {
+      "key" : "Steve Knight",
+      "party" : "Republican",
+      "dob" : "1966-12-17",
+      "value" : 1,
+      "laws_sponsored" : 10,
+      "state" : "CA",
+      "chamber" : "House",
+      "bio_id" : "K000387"
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Sam Johnson",
+      "dob" : "1930-10-11",
+      "bio_id" : "J000174",
+      "chamber" : "House",
+      "state" : "TX",
+      "laws_sponsored" : 10
+   },
+   {
+      "value" : 1,
+      "key" : "Ted Yoho",
+      "party" : "Republican",
+      "dob" : "1955-04-13",
+      "bio_id" : "Y000065",
+      "chamber" : "House",
+      "state" : "FL",
+      "laws_sponsored" : 10
+   },
+   {
+      "value" : 1,
+      "dob" : "1948-02-19",
+      "key" : "Raúl Grijalva",
+      "party" : "Democrat",
+      "bio_id" : "G000551",
+      "chamber" : "House",
+      "state" : "AZ",
+      "laws_sponsored" : 10
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Rick Nolan",
+      "dob" : "1943-12-17",
+      "value" : 1,
+      "laws_sponsored" : 10,
+      "state" : "MN",
+      "chamber" : "House",
+      "bio_id" : "N000127"
+   },
+   {
+      "state" : "NC",
+      "laws_sponsored" : 10,
+      "bio_id" : "F000450",
+      "chamber" : "House",
+      "dob" : "1943-06-29",
+      "party" : "Republican",
+      "key" : "Virginia Foxx",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1959-10-24",
+      "key" : "Michelle Lujan Grisham",
+      "party" : "Democrat",
+      "chamber" : "House",
+      "bio_id" : "L000580",
+      "laws_sponsored" : 10,
+      "state" : "NM"
+   },
+   {
+      "key" : "Will Hurd",
+      "party" : "Republican",
+      "dob" : "1977-08-19",
+      "value" : 1,
+      "state" : "TX",
+      "laws_sponsored" : 10,
+      "bio_id" : "H001073",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "key" : "John Barrasso",
+      "party" : "Republican",
+      "dob" : "1952-07-21",
+      "bio_id" : "B001261",
+      "chamber" : "Senate",
+      "state" : "WY",
+      "laws_sponsored" : 10
+   },
+   {
+      "state" : "NJ",
+      "laws_sponsored" : 10,
+      "bio_id" : "F000372",
+      "chamber" : "House",
+      "dob" : "1946-04-29",
+      "key" : "Rodney Frelinghuysen",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1956-11-06",
+      "key" : "Daniel Donovan",
+      "party" : "Republican",
+      "bio_id" : "D000625",
+      "chamber" : "House",
+      "state" : "NY",
+      "laws_sponsored" : 10
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "K000362",
+      "laws_sponsored" : 10,
+      "state" : "IA",
+      "value" : 1,
+      "dob" : "1949-05-28",
+      "key" : "Steve King",
+      "party" : "Republican"
+   },
+   {
+      "value" : 1,
+      "dob" : "1947-01-28",
+      "key" : "Jeanne Shaheen",
+      "party" : "Democrat",
+      "bio_id" : "S001181",
+      "chamber" : "Senate",
+      "state" : "NH",
+      "laws_sponsored" : 10
+   },
+   {
+      "value" : 1,
+      "dob" : "1951-01-16",
+      "party" : "Republican",
+      "key" : "Diane Black",
+      "bio_id" : "B001273",
+      "chamber" : "House",
+      "state" : "TN",
+      "laws_sponsored" : 10
+   },
+   {
+      "key" : "Gus Bilirakis",
+      "party" : "Republican",
+      "dob" : "1963-02-08",
+      "value" : 1,
+      "laws_sponsored" : 10,
+      "state" : "FL",
+      "chamber" : "House",
+      "bio_id" : "B001257"
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Bennie Thompson",
+      "dob" : "1948-01-28",
+      "value" : 1,
+      "laws_sponsored" : 10,
+      "state" : "MS",
+      "chamber" : "House",
+      "bio_id" : "T000193"
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 10,
+      "bio_id" : "R000599",
+      "chamber" : "House",
+      "dob" : "1972-08-25",
+      "party" : "Democrat",
+      "key" : "Raul Ruiz",
+      "value" : 1
+   },
+   {
+      "key" : "Beto O'Rourke",
+      "party" : "Democrat",
+      "dob" : "1972-09-26",
+      "value" : 1,
+      "laws_sponsored" : 10,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "O000170"
+   },
+   {
+      "dob" : "1957-01-10",
+      "key" : "Greg Walden",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 10,
+      "state" : "OR",
+      "chamber" : "House",
+      "bio_id" : "W000791"
+   },
+   {
+      "value" : 1,
+      "dob" : "1958-06-17",
+      "party" : "Republican",
+      "key" : "Brad Wenstrup",
+      "chamber" : "House",
+      "bio_id" : "W000815",
+      "laws_sponsored" : 9,
+      "state" : "OH"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "P000594",
+      "laws_sponsored" : 9,
+      "state" : "MN",
+      "value" : 1,
+      "dob" : "1965-05-14",
+      "party" : "Republican",
+      "key" : "Erik Paulsen"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "D000620",
+      "laws_sponsored" : 9,
+      "state" : "MD",
+      "value" : 1,
+      "dob" : "1963-04-16",
+      "party" : "Democrat",
+      "key" : "John Delaney"
+   },
+   {
+      "value" : 1,
+      "dob" : "1962-09-13",
+      "key" : "Ann Wagner",
+      "party" : "Republican",
+      "bio_id" : "W000812",
+      "chamber" : "House",
+      "state" : "MO",
+      "laws_sponsored" : 9
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "W000817",
+      "laws_sponsored" : 9,
+      "state" : "MA",
+      "value" : 1,
+      "dob" : "1949-06-22",
+      "party" : "Democrat",
+      "key" : "Elizabeth Warren"
+   },
+   {
+      "value" : 1,
+      "key" : "Carolyn Maloney",
+      "party" : "Democrat",
+      "dob" : "1946-02-19",
+      "bio_id" : "M000087",
+      "chamber" : "House",
+      "state" : "NY",
+      "laws_sponsored" : 9
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Thomas Garrett",
+      "dob" : "1972-03-27",
+      "chamber" : "House",
+      "bio_id" : "G000580",
+      "laws_sponsored" : 9,
+      "state" : "VA"
+   },
+   {
+      "dob" : "1948-05-10",
+      "key" : "Mike Kelly",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 9,
+      "state" : "PA",
+      "chamber" : "House",
+      "bio_id" : "K000376"
+   },
+   {
+      "laws_sponsored" : 9,
+      "state" : "AR",
+      "chamber" : "House",
+      "bio_id" : "H001072",
+      "dob" : "1956-12-05",
+      "key" : "French Hill",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1964-02-18",
+      "key" : "Brett Guthrie",
+      "party" : "Republican",
+      "chamber" : "House",
+      "bio_id" : "G000558",
+      "laws_sponsored" : 9,
+      "state" : "KY"
+   },
+   {
+      "value" : 1,
+      "dob" : "1947-05-02",
+      "party" : "Democrat",
+      "key" : "Peter Welch",
+      "chamber" : "House",
+      "bio_id" : "W000800",
+      "laws_sponsored" : 9,
+      "state" : "VT"
+   },
+   {
+      "laws_sponsored" : 9,
+      "state" : "OK",
+      "chamber" : "Senate",
+      "bio_id" : "L000575",
+      "party" : "Republican",
+      "key" : "James Lankford",
+      "dob" : "1968-03-04",
+      "value" : 1
+   },
+   {
+      "laws_sponsored" : 9,
+      "state" : "CA",
+      "chamber" : "House",
+      "bio_id" : "H001048",
+      "party" : "Republican",
+      "key" : "Duncan Hunter",
+      "dob" : "1976-12-07",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "key" : "Mike Simpson",
+      "party" : "Republican",
+      "dob" : "1950-09-08",
+      "chamber" : "House",
+      "bio_id" : "S001148",
+      "laws_sponsored" : 9,
+      "state" : "ID"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "N000181",
+      "laws_sponsored" : 9,
+      "state" : "CA",
+      "value" : 1,
+      "dob" : "1973-10-01",
+      "key" : "Devin Nunes",
+      "party" : "Republican"
+   },
+   {
+      "state" : "FL",
+      "laws_sponsored" : 9,
+      "bio_id" : "M001199",
+      "chamber" : "House",
+      "key" : "Brian Mast",
+      "party" : "Republican",
+      "dob" : "1980-07-10",
+      "value" : 1
+   },
+   {
+      "party" : "Republican",
+      "key" : "Keith Rothfus",
+      "dob" : "1962-04-25",
+      "value" : 1,
+      "laws_sponsored" : 9,
+      "state" : "PA",
+      "chamber" : "House",
+      "bio_id" : "R000598"
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Jared Polis",
+      "dob" : "1975-05-12",
+      "value" : 1,
+      "laws_sponsored" : 9,
+      "state" : "CO",
+      "chamber" : "House",
+      "bio_id" : "P000598"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "K000382",
+      "laws_sponsored" : 9,
+      "state" : "NH",
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Ann Kuster",
+      "dob" : "1956-09-05"
+   },
+   {
+      "state" : "MD",
+      "laws_sponsored" : 9,
+      "bio_id" : "C000984",
+      "chamber" : "House",
+      "party" : "Democrat",
+      "key" : "Elijah Cummings",
+      "dob" : "1951-01-18",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1950-08-29",
+      "party" : "Republican",
+      "key" : "Dave Reichert",
+      "chamber" : "House",
+      "bio_id" : "R000578",
+      "laws_sponsored" : 9,
+      "state" : "WA"
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 9,
+      "bio_id" : "I000056",
+      "chamber" : "House",
+      "dob" : "1953-11-01",
+      "party" : "Republican",
+      "key" : "Darrell Issa",
+      "value" : 1
+   },
+   {
+      "dob" : "1947-09-01",
+      "party" : "Democrat",
+      "key" : "Al Green",
+      "value" : 1,
+      "laws_sponsored" : 9,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "G000553"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "W000187",
+      "laws_sponsored" : 8,
+      "state" : "CA",
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Maxine Waters",
+      "dob" : "1938-08-15"
+   },
+   {
+      "key" : "Maria Cantwell",
+      "party" : "Democrat",
+      "dob" : "1958-10-13",
+      "value" : 1,
+      "state" : "WA",
+      "laws_sponsored" : 8,
+      "bio_id" : "C000127",
+      "chamber" : "Senate"
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Dean Heller",
+      "dob" : "1960-05-10",
+      "bio_id" : "H001041",
+      "chamber" : "Senate",
+      "state" : "NV",
+      "laws_sponsored" : 8
+   },
+   {
+      "bio_id" : "K000381",
+      "chamber" : "House",
+      "state" : "WA",
+      "laws_sponsored" : 8,
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Derek Kilmer",
+      "dob" : "1974-01-01"
+   },
+   {
+      "value" : 1,
+      "dob" : "1952-09-02",
+      "key" : "John Rutherford",
+      "party" : "Republican",
+      "bio_id" : "R000609",
+      "chamber" : "House",
+      "state" : "FL",
+      "laws_sponsored" : 8
+   },
+   {
+      "dob" : "1967-03-18",
+      "party" : "Republican",
+      "key" : "Mike Bishop",
+      "value" : 1,
+      "state" : "MI",
+      "laws_sponsored" : 8,
+      "bio_id" : "B001293",
+      "chamber" : "House"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "E000293",
+      "laws_sponsored" : 8,
+      "state" : "CT",
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Elizabeth Esty",
+      "dob" : "1959-08-25"
+   },
+   {
+      "value" : 1,
+      "dob" : "1963-08-04",
+      "key" : "Keith Ellison",
+      "party" : "Democrat",
+      "bio_id" : "E000288",
+      "chamber" : "House",
+      "state" : "MN",
+      "laws_sponsored" : 8
+   },
+   {
+      "bio_id" : "B000755",
+      "chamber" : "House",
+      "state" : "TX",
+      "laws_sponsored" : 8,
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Kevin Brady",
+      "dob" : "1955-04-11"
+   },
+   {
+      "dob" : "1956-08-21",
+      "key" : "Jon Tester",
+      "party" : "Democrat",
+      "value" : 1,
+      "laws_sponsored" : 8,
+      "state" : "MT",
+      "chamber" : "Senate",
+      "bio_id" : "T000464"
+   },
+   {
+      "state" : "NY",
+      "laws_sponsored" : 8,
+      "bio_id" : "G000555",
+      "chamber" : "Senate",
+      "key" : "Kirsten Gillibrand",
+      "party" : "Democrat",
+      "dob" : "1966-12-09",
+      "value" : 1
+   },
+   {
+      "dob" : "1980-03-01",
+      "party" : "Republican",
+      "key" : "Carlos Curbelo",
+      "value" : 1,
+      "state" : "FL",
+      "laws_sponsored" : 8,
+      "bio_id" : "C001107",
+      "chamber" : "House"
+   },
+   {
+      "state" : "MA",
+      "laws_sponsored" : 8,
+      "bio_id" : "L000562",
+      "chamber" : "House",
+      "dob" : "1955-03-31",
+      "key" : "Stephen Lynch",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "laws_sponsored" : 8,
+      "state" : "CO",
+      "chamber" : "House",
+      "bio_id" : "L000564",
+      "key" : "Doug Lamborn",
+      "party" : "Republican",
+      "dob" : "1954-05-24",
+      "value" : 1
+   },
+   {
+      "bio_id" : "B001286",
+      "chamber" : "House",
+      "state" : "IL",
+      "laws_sponsored" : 8,
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Cheri Bustos",
+      "dob" : "1961-10-17"
+   },
+   {
+      "dob" : "1961-12-12",
+      "party" : "Republican",
+      "key" : "Blake Farenthold",
+      "value" : 1,
+      "laws_sponsored" : 8,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "F000460"
+   },
+   {
+      "bio_id" : "M000303",
+      "chamber" : "Senate",
+      "state" : "AZ",
+      "laws_sponsored" : 8,
+      "value" : 1,
+      "key" : "John McCain",
+      "party" : "Republican",
+      "dob" : "1936-08-29"
+   },
+   {
+      "key" : "Neal Dunn",
+      "party" : "Republican",
+      "dob" : "1953-02-16",
+      "value" : 1,
+      "state" : "FL",
+      "laws_sponsored" : 8,
+      "bio_id" : "D000628",
+      "chamber" : "House"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "H001077",
+      "laws_sponsored" : 8,
+      "state" : "LA",
+      "value" : 1,
+      "dob" : "1961-08-24",
+      "party" : "Republican",
+      "key" : "Clay Higgins"
+   },
+   {
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Joe Donnelly",
+      "dob" : "1955-09-28",
+      "chamber" : "Senate",
+      "bio_id" : "D000607",
+      "laws_sponsored" : 8,
+      "state" : "IN"
+   },
+   {
+      "state" : "WY",
+      "laws_sponsored" : 8,
+      "bio_id" : "E000285",
+      "chamber" : "Senate",
+      "dob" : "1944-02-01",
+      "key" : "Michael Enzi",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1969-01-31",
+      "party" : "Republican",
+      "key" : "Bill Huizenga",
+      "bio_id" : "H001058",
+      "chamber" : "House",
+      "state" : "MI",
+      "laws_sponsored" : 8
+   },
+   {
+      "dob" : "1947-08-24",
+      "key" : "Joe Manchin",
+      "party" : "Democrat",
+      "value" : 1,
+      "laws_sponsored" : 8,
+      "state" : "WV",
+      "chamber" : "Senate",
+      "bio_id" : "M001183"
+   },
+   {
+      "bio_id" : "M001189",
+      "chamber" : "House",
+      "state" : "IN",
+      "laws_sponsored" : 8,
+      "value" : 1,
+      "dob" : "1969-02-27",
+      "party" : "Republican",
+      "key" : "Luke Messer"
+   },
+   {
+      "value" : 1,
+      "key" : "Lindsey Graham",
+      "party" : "Republican",
+      "dob" : "1955-07-09",
+      "bio_id" : "G000359",
+      "chamber" : "Senate",
+      "state" : "SC",
+      "laws_sponsored" : 8
+   },
+   {
+      "key" : "John Ratcliffe",
+      "party" : "Republican",
+      "dob" : "1965-10-20",
+      "value" : 1,
+      "state" : "TX",
+      "laws_sponsored" : 8,
+      "bio_id" : "R000601",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1960-05-24",
+      "key" : "Charlie Dent",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 8,
+      "state" : "PA",
+      "chamber" : "House",
+      "bio_id" : "D000604"
+   },
+   {
+      "dob" : "1951-01-26",
+      "key" : "Albio Sires",
+      "party" : "Democrat",
+      "value" : 1,
+      "state" : "NJ",
+      "laws_sponsored" : 7,
+      "bio_id" : "S001165",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1971-10-21",
+      "key" : "Ted Budd",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 7,
+      "state" : "NC",
+      "chamber" : "House",
+      "bio_id" : "B001305"
+   },
+   {
+      "laws_sponsored" : 7,
+      "state" : "SC",
+      "chamber" : "House",
+      "bio_id" : "W000795",
+      "key" : "Joe Wilson",
+      "party" : "Republican",
+      "dob" : "1947-07-31",
+      "value" : 1
+   },
+   {
+      "state" : "WI",
+      "laws_sponsored" : 7,
+      "bio_id" : "G000579",
+      "chamber" : "House",
+      "dob" : "1984-03-03",
+      "party" : "Republican",
+      "key" : "Mike Gallagher",
+      "value" : 1
+   },
+   {
+      "bio_id" : "S001192",
+      "chamber" : "House",
+      "state" : "UT",
+      "laws_sponsored" : 7,
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Chris Stewart",
+      "dob" : "1960-07-15"
+   },
+   {
+      "key" : "Richard Hudson",
+      "party" : "Republican",
+      "dob" : "1971-11-04",
+      "value" : 1,
+      "laws_sponsored" : 7,
+      "state" : "NC",
+      "chamber" : "House",
+      "bio_id" : "H001067"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "L000570",
+      "laws_sponsored" : 7,
+      "state" : "NM",
+      "value" : 1,
+      "dob" : "1972-06-07",
+      "key" : "Ben Luján",
+      "party" : "Democrat"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "B001270",
+      "laws_sponsored" : 7,
+      "state" : "CA",
+      "value" : 1,
+      "key" : "Karen Bass",
+      "party" : "Democrat",
+      "dob" : "1953-10-03"
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Bill Pascrell",
+      "dob" : "1937-01-25",
+      "value" : 1,
+      "state" : "NJ",
+      "laws_sponsored" : 7,
+      "bio_id" : "P000096",
+      "chamber" : "House"
+   },
+   {
+      "laws_sponsored" : 7,
+      "state" : "ID",
+      "chamber" : "Senate",
+      "bio_id" : "R000584",
+      "dob" : "1943-05-03",
+      "party" : "Republican",
+      "key" : "Jim Risch",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1965-03-24",
+      "key" : "Steve Stivers",
+      "party" : "Republican",
+      "bio_id" : "S001187",
+      "chamber" : "House",
+      "state" : "OH",
+      "laws_sponsored" : 7
+   },
+   {
+      "bio_id" : "L000569",
+      "chamber" : "House",
+      "state" : "MO",
+      "laws_sponsored" : 7,
+      "value" : 1,
+      "dob" : "1952-05-07",
+      "party" : "Republican",
+      "key" : "Blaine Luetkemeyer"
+   },
+   {
+      "state" : "WV",
+      "laws_sponsored" : 7,
+      "bio_id" : "C001047",
+      "chamber" : "Senate",
+      "dob" : "1953-11-26",
+      "party" : "Republican",
+      "key" : "Shelley Capito",
+      "value" : 1
+   },
+   {
+      "key" : "Mike Thompson",
+      "party" : "Democrat",
+      "dob" : "1951-01-24",
+      "value" : 1,
+      "state" : "CA",
+      "laws_sponsored" : 7,
+      "bio_id" : "T000460",
+      "chamber" : "House"
+   },
+   {
+      "laws_sponsored" : 7,
+      "state" : "GA",
+      "chamber" : "House",
+      "bio_id" : "H001071",
+      "dob" : "1960-04-22",
+      "party" : "Republican",
+      "key" : "Jody Hice",
+      "value" : 1
+   },
+   {
+      "dob" : "1958-07-15",
+      "key" : "William Thornberry",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 7,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "T000238"
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Lamar Smith",
+      "dob" : "1947-11-19",
+      "bio_id" : "S000583",
+      "chamber" : "House",
+      "state" : "TX",
+      "laws_sponsored" : 7
+   },
+   {
+      "laws_sponsored" : 7,
+      "state" : "FL",
+      "chamber" : "House",
+      "bio_id" : "D000621",
+      "key" : "Ron DeSantis",
+      "party" : "Republican",
+      "dob" : "1978-09-14",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Danny Davis",
+      "dob" : "1941-09-06",
+      "chamber" : "House",
+      "bio_id" : "D000096",
+      "laws_sponsored" : 7,
+      "state" : "IL"
+   },
+   {
+      "dob" : "1984-07-02",
+      "party" : "Republican",
+      "key" : "Elise Stefanik",
+      "value" : 1,
+      "laws_sponsored" : 7,
+      "state" : "NY",
+      "chamber" : "House",
+      "bio_id" : "S001196"
+   },
+   {
+      "bio_id" : "B001302",
+      "chamber" : "House",
+      "state" : "AZ",
+      "laws_sponsored" : 7,
+      "value" : 1,
+      "dob" : "1958-11-07",
+      "party" : "Republican",
+      "key" : "Andy Biggs"
+   },
+   {
+      "dob" : "1963-06-10",
+      "key" : "Lynn Jenkins",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "KS",
+      "laws_sponsored" : 7,
+      "bio_id" : "J000290",
+      "chamber" : "House"
+   },
+   {
+      "state" : "IL",
+      "laws_sponsored" : 7,
+      "bio_id" : "S001190",
+      "chamber" : "House",
+      "party" : "Democrat",
+      "key" : "Brad Schneider",
+      "dob" : "1961-08-20",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "key" : "Vicky Hartzler",
+      "party" : "Republican",
+      "dob" : "1960-10-13",
+      "bio_id" : "H001053",
+      "chamber" : "House",
+      "state" : "MO",
+      "laws_sponsored" : 7
+   },
+   {
+      "key" : "Bill Cassidy",
+      "party" : "Republican",
+      "dob" : "1957-09-28",
+      "value" : 1,
+      "laws_sponsored" : 7,
+      "state" : "LA",
+      "chamber" : "Senate",
+      "bio_id" : "C001075"
+   },
+   {
+      "laws_sponsored" : 7,
+      "state" : "OR",
+      "chamber" : "Senate",
+      "bio_id" : "M001176",
+      "dob" : "1956-10-24",
+      "party" : "Democrat",
+      "key" : "Jeff Merkley",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "key" : "Mia Love",
+      "party" : "Republican",
+      "dob" : "1975-12-06",
+      "bio_id" : "L000584",
+      "chamber" : "House",
+      "state" : "UT",
+      "laws_sponsored" : 7
+   },
+   {
+      "value" : 1,
+      "key" : "Ted Lieu",
+      "party" : "Democrat",
+      "dob" : "1969-03-29",
+      "bio_id" : "L000582",
+      "chamber" : "House",
+      "state" : "CA",
+      "laws_sponsored" : 7
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "O000171",
+      "laws_sponsored" : 7,
+      "state" : "AZ",
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Tom O'Halleran",
+      "dob" : "1946-01-24"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "P000034",
+      "laws_sponsored" : 7,
+      "state" : "NJ",
+      "value" : 1,
+      "key" : "Frank Pallone",
+      "party" : "Democrat",
+      "dob" : "1951-10-30"
+   },
+   {
+      "value" : 1,
+      "key" : "Pat Roberts",
+      "party" : "Republican",
+      "dob" : "1936-04-20",
+      "chamber" : "Senate",
+      "bio_id" : "R000307",
+      "laws_sponsored" : 7,
+      "state" : "KS"
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 7,
+      "bio_id" : "T000474",
+      "chamber" : "House",
+      "party" : "Democrat",
+      "key" : "Norma Torres",
+      "dob" : "1965-04-04",
+      "value" : 1
+   },
+   {
+      "state" : "AZ",
+      "laws_sponsored" : 7,
+      "bio_id" : "G000565",
+      "chamber" : "House",
+      "key" : "Paul Gosar",
+      "party" : "Republican",
+      "dob" : "1958-11-22",
+      "value" : 1
+   },
+   {
+      "laws_sponsored" : 7,
+      "state" : "MN",
+      "chamber" : "House",
+      "bio_id" : "E000294",
+      "dob" : "1961-03-03",
+      "party" : "Republican",
+      "key" : "Tom Emmer",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "key" : "John Boozman",
+      "party" : "Republican",
+      "dob" : "1950-12-10",
+      "chamber" : "Senate",
+      "bio_id" : "B001236",
+      "laws_sponsored" : 7,
+      "state" : "AR"
+   },
+   {
+      "laws_sponsored" : 7,
+      "state" : "OH",
+      "chamber" : "House",
+      "bio_id" : "R000577",
+      "dob" : "1973-07-16",
+      "party" : "Democrat",
+      "key" : "Tim Ryan",
+      "value" : 1
+   },
+   {
+      "bio_id" : "C001077",
+      "chamber" : "House",
+      "state" : "CO",
+      "laws_sponsored" : 7,
+      "value" : 1,
+      "dob" : "1955-03-19",
+      "key" : "Mike Coffman",
+      "party" : "Republican"
+   },
+   {
+      "dob" : "1943-03-02",
+      "party" : "Democrat",
+      "key" : "Rosa DeLauro",
+      "value" : 1,
+      "laws_sponsored" : 6,
+      "state" : "CT",
+      "chamber" : "House",
+      "bio_id" : "D000216"
+   },
+   {
+      "laws_sponsored" : 6,
+      "state" : "VI",
+      "chamber" : "House",
+      "bio_id" : "P000610",
+      "dob" : "1964-05-13",
+      "party" : "Democrat",
+      "key" : "Stacey Plaskett",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1952-01-09",
+      "key" : "Michael Capuano",
+      "party" : "Democrat",
+      "bio_id" : "C001037",
+      "chamber" : "House",
+      "state" : "MA",
+      "laws_sponsored" : 6
+   },
+   {
+      "bio_id" : "B001298",
+      "chamber" : "House",
+      "state" : "NE",
+      "laws_sponsored" : 6,
+      "value" : 1,
+      "key" : "Don Bacon",
+      "party" : "Republican",
+      "dob" : "1963-08-16"
+   },
+   {
+      "laws_sponsored" : 6,
+      "state" : "WA",
+      "chamber" : "House",
+      "bio_id" : "D000617",
+      "party" : "Democrat",
+      "key" : "Suzan DelBene",
+      "dob" : "1962-02-17",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Al Lawson",
+      "dob" : "1948-09-21",
+      "bio_id" : "L000586",
+      "chamber" : "House",
+      "state" : "FL",
+      "laws_sponsored" : 6
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Markwayne Mullin",
+      "dob" : "1977-07-26",
+      "chamber" : "House",
+      "bio_id" : "M001190",
+      "laws_sponsored" : 6,
+      "state" : "OK"
+   },
+   {
+      "bio_id" : "R000122",
+      "chamber" : "Senate",
+      "state" : "RI",
+      "laws_sponsored" : 6,
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Jack Reed",
+      "dob" : "1949-11-12"
+   },
+   {
+      "state" : "IN",
+      "laws_sponsored" : 6,
+      "bio_id" : "R000592",
+      "chamber" : "House",
+      "dob" : "1970-02-09",
+      "key" : "Todd Rokita",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "dob" : "1962-05-27",
+      "key" : "Scott Perry",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 6,
+      "state" : "PA",
+      "chamber" : "House",
+      "bio_id" : "P000605"
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Tammy Duckworth",
+      "dob" : "1968-03-12",
+      "value" : 1,
+      "laws_sponsored" : 6,
+      "state" : "IL",
+      "chamber" : "Senate",
+      "bio_id" : "D000622"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "K000210",
+      "laws_sponsored" : 6,
+      "state" : "NY",
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Peter King",
+      "dob" : "1944-04-05"
+   },
+   {
+      "state" : "CT",
+      "laws_sponsored" : 6,
+      "bio_id" : "B001277",
+      "chamber" : "Senate",
+      "dob" : "1946-02-13",
+      "key" : "Richard Blumenthal",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "bio_id" : "F000464",
+      "chamber" : "House",
+      "state" : "NY",
+      "laws_sponsored" : 6,
+      "value" : 1,
+      "dob" : "1952-08-25",
+      "party" : "Republican",
+      "key" : "John Faso"
+   },
+   {
+      "dob" : "1952-08-28",
+      "party" : "Democrat",
+      "key" : "Julia Brownley",
+      "value" : 1,
+      "state" : "CA",
+      "laws_sponsored" : 6,
+      "bio_id" : "B001285",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "key" : "Buddy Carter",
+      "party" : "Republican",
+      "dob" : "1957-09-06",
+      "chamber" : "House",
+      "bio_id" : "C001103",
+      "laws_sponsored" : 6,
+      "state" : "GA"
+   },
+   {
+      "value" : 1,
+      "key" : "Vern Buchanan",
+      "party" : "Republican",
+      "dob" : "1951-05-08",
+      "bio_id" : "B001260",
+      "chamber" : "House",
+      "state" : "FL",
+      "laws_sponsored" : 6
+   },
+   {
+      "value" : 1,
+      "dob" : "1954-11-10",
+      "party" : "Republican",
+      "key" : "Bill Johnson",
+      "chamber" : "House",
+      "bio_id" : "J000292",
+      "laws_sponsored" : 6,
+      "state" : "OH"
+   },
+   {
+      "laws_sponsored" : 6,
+      "state" : "MI",
+      "chamber" : "House",
+      "bio_id" : "D000624",
+      "dob" : "1953-11-23",
+      "party" : "Democrat",
+      "key" : "Debbie Dingell",
+      "value" : 1
+   },
+   {
+      "dob" : "1952-08-15",
+      "key" : "Tom Marino",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 6,
+      "state" : "PA",
+      "chamber" : "House",
+      "bio_id" : "M001179"
+   },
+   {
+      "laws_sponsored" : 6,
+      "state" : "LA",
+      "chamber" : "House",
+      "bio_id" : "J000299",
+      "dob" : "1972-01-30",
+      "key" : "Mike Johnson",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "state" : "PA",
+      "laws_sponsored" : 6,
+      "bio_id" : "T000461",
+      "chamber" : "Senate",
+      "dob" : "1961-11-17",
+      "party" : "Republican",
+      "key" : "Patrick Toomey",
+      "value" : 1
+   },
+   {
+      "key" : "David Young",
+      "party" : "Republican",
+      "dob" : "1968-05-11",
+      "value" : 1,
+      "laws_sponsored" : 6,
+      "state" : "IA",
+      "chamber" : "House",
+      "bio_id" : "Y000066"
+   },
+   {
+      "state" : "WA",
+      "laws_sponsored" : 6,
+      "bio_id" : "J000298",
+      "chamber" : "House",
+      "dob" : "1965-09-21",
+      "party" : "Democrat",
+      "key" : "Pramila Jayapal",
+      "value" : 1
+   },
+   {
+      "bio_id" : "K000378",
+      "chamber" : "House",
+      "state" : "IL",
+      "laws_sponsored" : 6,
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Adam Kinzinger",
+      "dob" : "1978-02-27"
+   },
+   {
+      "value" : 1,
+      "dob" : "1979-07-16",
+      "key" : "Jim Banks",
+      "party" : "Republican",
+      "bio_id" : "B001299",
+      "chamber" : "House",
+      "state" : "IN",
+      "laws_sponsored" : 6
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "P000604",
+      "laws_sponsored" : 6,
+      "state" : "NJ",
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Donald Payne",
+      "dob" : "1958-12-17"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "B001295",
+      "laws_sponsored" : 6,
+      "state" : "IL",
+      "value" : 1,
+      "key" : "Mike Bost",
+      "party" : "Republican",
+      "dob" : "1960-12-30"
+   },
+   {
+      "value" : 1,
+      "dob" : "1966-03-01",
+      "party" : "Republican",
+      "key" : "Randy Hultgren",
+      "bio_id" : "H001059",
+      "chamber" : "House",
+      "state" : "IL",
+      "laws_sponsored" : 6
+   },
+   {
+      "value" : 1,
+      "key" : "J. Correa",
+      "party" : "Democrat",
+      "dob" : "1958-01-24",
+      "bio_id" : "C001110",
+      "chamber" : "House",
+      "state" : "CA",
+      "laws_sponsored" : 6
+   },
+   {
+      "state" : "NY",
+      "laws_sponsored" : 6,
+      "bio_id" : "S000248",
+      "chamber" : "House",
+      "party" : "Democrat",
+      "key" : "José Serrano",
+      "dob" : "1943-10-24",
+      "value" : 1
+   },
+   {
+      "state" : "IL",
+      "laws_sponsored" : 6,
+      "bio_id" : "R000580",
+      "chamber" : "House",
+      "dob" : "1961-09-13",
+      "party" : "Republican",
+      "key" : "Peter Roskam",
+      "value" : 1
+   },
+   {
+      "bio_id" : "W000822",
+      "chamber" : "House",
+      "state" : "NJ",
+      "laws_sponsored" : 6,
+      "value" : 1,
+      "dob" : "1945-02-06",
+      "key" : "Bonnie Watson Coleman",
+      "party" : "Democrat"
+   },
+   {
+      "bio_id" : "H001050",
+      "chamber" : "House",
+      "state" : "HI",
+      "laws_sponsored" : 6,
+      "value" : 1,
+      "dob" : "1951-05-04",
+      "key" : "Colleen Hanabusa",
+      "party" : "Democrat"
+   },
+   {
+      "dob" : "1962-10-21",
+      "key" : "Pat Tiberi",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "OH",
+      "laws_sponsored" : 6,
+      "bio_id" : "T000462",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1944-03-31",
+      "key" : "Angus King",
+      "party" : "I",
+      "value" : 1,
+      "laws_sponsored" : 6,
+      "state" : "ME",
+      "chamber" : "Senate",
+      "bio_id" : "K000383"
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Kyrsten Sinema",
+      "dob" : "1976-07-12",
+      "value" : 1,
+      "laws_sponsored" : 6,
+      "state" : "AZ",
+      "chamber" : "House",
+      "bio_id" : "S001191"
+   },
+   {
+      "value" : 1,
+      "key" : "Paul Cook",
+      "party" : "Republican",
+      "dob" : "1943-03-03",
+      "chamber" : "House",
+      "bio_id" : "C001094",
+      "laws_sponsored" : 6,
+      "state" : "CA"
+   },
+   {
+      "dob" : "1962-12-09",
+      "party" : "Republican",
+      "key" : "Pete Olson",
+      "value" : 1,
+      "laws_sponsored" : 6,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "O000168"
+   },
+   {
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Thomas Carper",
+      "dob" : "1947-01-23",
+      "bio_id" : "C000174",
+      "chamber" : "Senate",
+      "state" : "DE",
+      "laws_sponsored" : 6
+   },
+   {
+      "laws_sponsored" : 6,
+      "state" : "HI",
+      "chamber" : "House",
+      "bio_id" : "G000571",
+      "dob" : "1981-04-12",
+      "key" : "Tulsi Gabbard",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "bio_id" : "P000611",
+      "chamber" : "House",
+      "state" : "ME",
+      "laws_sponsored" : 6,
+      "value" : 1,
+      "dob" : "1953-11-01",
+      "key" : "Bruce Poliquin",
+      "party" : "Republican"
+   },
+   {
+      "value" : 1,
+      "dob" : "1963-07-17",
+      "key" : "Katherine Clark",
+      "party" : "Democrat",
+      "chamber" : "House",
+      "bio_id" : "C001101",
+      "laws_sponsored" : 6,
+      "state" : "MA"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "S000320",
+      "laws_sponsored" : 6,
+      "state" : "AL",
+      "value" : 1,
+      "dob" : "1934-05-06",
+      "key" : "Richard Shelby",
+      "party" : "Republican"
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Brian Babin",
+      "dob" : "1948-03-23",
+      "bio_id" : "B001291",
+      "chamber" : "House",
+      "state" : "TX",
+      "laws_sponsored" : 6
+   },
+   {
+      "key" : "Madeleine Bordallo",
+      "party" : "Democrat",
+      "dob" : "1933-05-31",
+      "value" : 1,
+      "laws_sponsored" : 5,
+      "state" : "GU",
+      "chamber" : "House",
+      "bio_id" : "B001245"
+   },
+   {
+      "laws_sponsored" : 5,
+      "state" : "CA",
+      "chamber" : "House",
+      "bio_id" : "S001150",
+      "party" : "Democrat",
+      "key" : "Adam Schiff",
+      "dob" : "1960-06-22",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Randy Weber",
+      "dob" : "1953-07-02",
+      "chamber" : "House",
+      "bio_id" : "W000814",
+      "laws_sponsored" : 5,
+      "state" : "TX"
+   },
+   {
+      "state" : "NY",
+      "laws_sponsored" : 5,
+      "bio_id" : "S000480",
+      "chamber" : "House",
+      "dob" : "1929-08-14",
+      "party" : "Democrat",
+      "key" : "Louise Slaughter",
+      "value" : 1
+   },
+   {
+      "dob" : "1958-06-12",
+      "party" : "Republican",
+      "key" : "Mark Amodei",
+      "value" : 1,
+      "laws_sponsored" : 5,
+      "state" : "NV",
+      "chamber" : "House",
+      "bio_id" : "A000369"
+   },
+   {
+      "value" : 1,
+      "dob" : "1953-04-23",
+      "key" : "Fred Upton",
+      "party" : "Republican",
+      "bio_id" : "U000031",
+      "chamber" : "House",
+      "state" : "MI",
+      "laws_sponsored" : 5
+   },
+   {
+      "value" : 1,
+      "dob" : "1980-10-04",
+      "party" : "Democrat",
+      "key" : "Joseph Kennedy",
+      "chamber" : "House",
+      "bio_id" : "K000379",
+      "laws_sponsored" : 5,
+      "state" : "MA"
+   },
+   {
+      "laws_sponsored" : 5,
+      "state" : "HI",
+      "chamber" : "Senate",
+      "bio_id" : "S001194",
+      "dob" : "1972-10-20",
+      "key" : "Brian Schatz",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "state" : "LA",
+      "laws_sponsored" : 5,
+      "bio_id" : "G000577",
+      "chamber" : "House",
+      "party" : "Republican",
+      "key" : "Garret Graves",
+      "dob" : "1972-01-31",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1958-12-03",
+      "party" : "Republican",
+      "key" : "Jim Renacci",
+      "bio_id" : "R000586",
+      "chamber" : "House",
+      "state" : "OH",
+      "laws_sponsored" : 5
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "J000297",
+      "laws_sponsored" : 5,
+      "state" : "WV",
+      "value" : 1,
+      "dob" : "1960-09-12",
+      "party" : "Republican",
+      "key" : "Evan Jenkins"
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Steve Pearce",
+      "dob" : "1947-08-24",
+      "chamber" : "House",
+      "bio_id" : "P000588",
+      "laws_sponsored" : 5,
+      "state" : "NM"
+   },
+   {
+      "value" : 1,
+      "dob" : "1965-09-19",
+      "party" : "Republican",
+      "key" : "Tim Scott",
+      "bio_id" : "S001184",
+      "chamber" : "Senate",
+      "state" : "SC",
+      "laws_sponsored" : 5
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "P000595",
+      "laws_sponsored" : 5,
+      "state" : "MI",
+      "value" : 1,
+      "dob" : "1958-12-01",
+      "key" : "Gary Peters",
+      "party" : "Democrat"
+   },
+   {
+      "dob" : "1950-10-11",
+      "key" : "Patty Murray",
+      "party" : "Democrat",
+      "value" : 1,
+      "state" : "WA",
+      "laws_sponsored" : 5,
+      "bio_id" : "M001111",
+      "chamber" : "Senate"
+   },
+   {
+      "laws_sponsored" : 5,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "C001051",
+      "dob" : "1941-11-06",
+      "party" : "Republican",
+      "key" : "John Carter",
+      "value" : 1
+   },
+   {
+      "state" : "VA",
+      "laws_sponsored" : 5,
+      "bio_id" : "C001078",
+      "chamber" : "House",
+      "dob" : "1950-03-30",
+      "party" : "Democrat",
+      "key" : "Gerald Connolly",
+      "value" : 1
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "L000397",
+      "laws_sponsored" : 5,
+      "state" : "CA",
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Zoe Lofgren",
+      "dob" : "1947-12-21"
+   },
+   {
+      "bio_id" : "E000297",
+      "chamber" : "House",
+      "state" : "NY",
+      "laws_sponsored" : 5,
+      "value" : 1,
+      "dob" : "1954-09-27",
+      "party" : "Democrat",
+      "key" : "Adriano Espaillat"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "C001068",
+      "laws_sponsored" : 5,
+      "state" : "TN",
+      "value" : 1,
+      "dob" : "1949-05-24",
+      "key" : "Steve Cohen",
+      "party" : "Democrat"
+   },
+   {
+      "value" : 1,
+      "key" : "John Larson",
+      "party" : "Democrat",
+      "dob" : "1948-07-22",
+      "bio_id" : "L000557",
+      "chamber" : "House",
+      "state" : "CT",
+      "laws_sponsored" : 5
+   },
+   {
+      "laws_sponsored" : 5,
+      "state" : "NY",
+      "chamber" : "House",
+      "bio_id" : "N000002",
+      "dob" : "1947-06-13",
+      "key" : "Jerrold Nadler",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "bio_id" : "D000619",
+      "chamber" : "House",
+      "state" : "IL",
+      "laws_sponsored" : 5,
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Rodney Davis",
+      "dob" : "1970-01-05"
+   },
+   {
+      "dob" : "1982-05-07",
+      "key" : "Matt Gaetz",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 5,
+      "state" : "FL",
+      "chamber" : "House",
+      "bio_id" : "G000578"
+   },
+   {
+      "value" : 1,
+      "key" : "Kathleen Rice",
+      "party" : "Democrat",
+      "dob" : "1965-02-15",
+      "chamber" : "House",
+      "bio_id" : "R000602",
+      "laws_sponsored" : 5,
+      "state" : "NY"
+   },
+   {
+      "state" : "VA",
+      "laws_sponsored" : 5,
+      "bio_id" : "T000477",
+      "chamber" : "House",
+      "dob" : "1979-06-27",
+      "key" : "Scott Taylor",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "C001049",
+      "laws_sponsored" : 5,
+      "state" : "MO",
+      "value" : 1,
+      "dob" : "1956-07-27",
+      "party" : "Democrat",
+      "key" : "William Clay"
+   },
+   {
+      "key" : "Hakeem Jeffries",
+      "party" : "Democrat",
+      "dob" : "1970-08-04",
+      "value" : 1,
+      "state" : "NY",
+      "laws_sponsored" : 5,
+      "bio_id" : "J000294",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1970-12-22",
+      "party" : "Republican",
+      "key" : "Ted Cruz",
+      "value" : 1,
+      "laws_sponsored" : 5,
+      "state" : "TX",
+      "chamber" : "Senate",
+      "bio_id" : "C001098"
+   },
+   {
+      "key" : "Jeffrey Denham",
+      "party" : "Republican",
+      "dob" : "1967-07-29",
+      "value" : 1,
+      "laws_sponsored" : 5,
+      "state" : "CA",
+      "chamber" : "House",
+      "bio_id" : "D000612"
+   },
+   {
+      "laws_sponsored" : 5,
+      "state" : "OK",
+      "chamber" : "House",
+      "bio_id" : "R000604",
+      "dob" : "1963-05-25",
+      "key" : "Steve Russell",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "bio_id" : "J000288",
+      "chamber" : "House",
+      "state" : "GA",
+      "laws_sponsored" : 5,
+      "value" : 1,
+      "key" : "Hank Johnson",
+      "party" : "Democrat",
+      "dob" : "1954-10-02"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "S000148",
+      "laws_sponsored" : 5,
+      "state" : "NY",
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Charles Schumer",
+      "dob" : "1950-11-23"
+   },
+   {
+      "laws_sponsored" : 5,
+      "state" : "ND",
+      "chamber" : "House",
+      "bio_id" : "C001096",
+      "key" : "Kevin Cramer",
+      "party" : "Republican",
+      "dob" : "1961-01-21",
+      "value" : 1
+   },
+   {
+      "party" : "Republican",
+      "key" : "Darin LaHood",
+      "dob" : "1968-07-05",
+      "value" : 1,
+      "state" : "IL",
+      "laws_sponsored" : 5,
+      "bio_id" : "L000585",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "key" : "Tom Reed",
+      "party" : "Republican",
+      "dob" : "1971-11-18",
+      "chamber" : "House",
+      "bio_id" : "R000585",
+      "laws_sponsored" : 5,
+      "state" : "NY"
+   },
+   {
+      "key" : "Martin Heinrich",
+      "party" : "Democrat",
+      "dob" : "1971-10-17",
+      "value" : 1,
+      "state" : "NM",
+      "laws_sponsored" : 5,
+      "bio_id" : "H001046",
+      "chamber" : "Senate"
+   },
+   {
+      "laws_sponsored" : 5,
+      "state" : "UT",
+      "chamber" : "House",
+      "bio_id" : "C001114",
+      "party" : "Republican",
+      "key" : "John Curtis",
+      "dob" : "1960-05-10",
+      "value" : 1
+   },
+   {
+      "laws_sponsored" : 5,
+      "state" : "CA",
+      "chamber" : "House",
+      "bio_id" : "M001177",
+      "key" : "Tom McClintock",
+      "party" : "Republican",
+      "dob" : "1956-07-10",
+      "value" : 1
+   },
+   {
+      "dob" : "1953-09-25",
+      "key" : "Gregory Meeks",
+      "party" : "Democrat",
+      "value" : 1,
+      "state" : "NY",
+      "laws_sponsored" : 5,
+      "bio_id" : "M001137",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1978-02-25",
+      "key" : "Darren Soto",
+      "party" : "Democrat",
+      "value" : 1,
+      "laws_sponsored" : 5,
+      "state" : "FL",
+      "chamber" : "House",
+      "bio_id" : "S001200"
+   },
+   {
+      "dob" : "1966-07-15",
+      "party" : "Democrat",
+      "key" : "Daniel Lipinski",
+      "value" : 1,
+      "laws_sponsored" : 5,
+      "state" : "IL",
+      "chamber" : "House",
+      "bio_id" : "L000563"
+   },
+   {
+      "bio_id" : "B000944",
+      "chamber" : "Senate",
+      "state" : "OH",
+      "laws_sponsored" : 5,
+      "value" : 1,
+      "key" : "Sherrod Brown",
+      "party" : "Democrat",
+      "dob" : "1952-11-09"
+   },
+   {
+      "value" : 1,
+      "dob" : "1966-10-08",
+      "party" : "Republican",
+      "key" : "David Kustoff",
+      "bio_id" : "K000392",
+      "chamber" : "House",
+      "state" : "TN",
+      "laws_sponsored" : 5
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Alan Lowenthal",
+      "dob" : "1941-03-08",
+      "value" : 1,
+      "state" : "CA",
+      "laws_sponsored" : 5,
+      "bio_id" : "L000579",
+      "chamber" : "House"
+   },
+   {
+      "party" : "Republican",
+      "key" : "Greg Gianforte",
+      "dob" : "1961-04-17",
+      "value" : 1,
+      "state" : "MT",
+      "laws_sponsored" : 5,
+      "bio_id" : "G000584",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1952-09-06",
+      "party" : "Democrat",
+      "key" : "Bill Keating",
+      "value" : 1,
+      "state" : "MA",
+      "laws_sponsored" : 5,
+      "bio_id" : "K000375",
+      "chamber" : "House"
+   },
+   {
+      "bio_id" : "R000593",
+      "chamber" : "House",
+      "state" : "FL",
+      "laws_sponsored" : 5,
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Dennis Ross",
+      "dob" : "1959-10-18"
+   },
+   {
+      "laws_sponsored" : 5,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "C001063",
+      "dob" : "1955-09-19",
+      "key" : "Henry Cuellar",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "P000606",
+      "laws_sponsored" : 5,
+      "state" : "NC",
+      "value" : 1,
+      "key" : "Robert Pittenger",
+      "party" : "Republican",
+      "dob" : "1948-08-15"
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Stephanie Murphy",
+      "dob" : "1978-09-16",
+      "value" : 1,
+      "state" : "FL",
+      "laws_sponsored" : 5,
+      "bio_id" : "M001202",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1952-06-25",
+      "party" : "Republican",
+      "key" : "Leonard Lance",
+      "value" : 1,
+      "state" : "NJ",
+      "laws_sponsored" : 5,
+      "bio_id" : "L000567",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "dob" : "1956-07-19",
+      "key" : "Ron Estes",
+      "party" : "Republican",
+      "chamber" : "House",
+      "bio_id" : "E000298",
+      "laws_sponsored" : 5,
+      "state" : "KS"
+   },
+   {
+      "state" : "IN",
+      "laws_sponsored" : 5,
+      "bio_id" : "B001284",
+      "chamber" : "House",
+      "party" : "Republican",
+      "key" : "Susan Brooks",
+      "dob" : "1960-08-25",
+      "value" : 1
+   },
+   {
+      "key" : "Lloyd Smucker",
+      "party" : "Republican",
+      "dob" : "1964-01-23",
+      "value" : 1,
+      "laws_sponsored" : 5,
+      "state" : "PA",
+      "chamber" : "House",
+      "bio_id" : "S001199"
+   },
+   {
+      "party" : "Republican",
+      "key" : "Jack Bergman",
+      "dob" : "1947-02-02",
+      "value" : 1,
+      "state" : "MI",
+      "laws_sponsored" : 5,
+      "bio_id" : "B001301",
+      "chamber" : "House"
+   },
+   {
+      "laws_sponsored" : 5,
+      "state" : "IA",
+      "chamber" : "Senate",
+      "bio_id" : "E000295",
+      "party" : "Republican",
+      "key" : "Joni Ernst",
+      "dob" : "1970-07-01",
+      "value" : 1
+   },
+   {
+      "bio_id" : "S001175",
+      "chamber" : "House",
+      "state" : "CA",
+      "laws_sponsored" : 5,
+      "value" : 1,
+      "dob" : "1950-05-14",
+      "key" : "Jackie Speier",
+      "party" : "Democrat"
+   },
+   {
+      "dob" : "1964-10-20",
+      "party" : "Democrat",
+      "key" : "Kamala Harris",
+      "value" : 1,
+      "laws_sponsored" : 5,
+      "state" : "CA",
+      "chamber" : "Senate",
+      "bio_id" : "H001075"
+   },
+   {
+      "dob" : "1934-11-17",
+      "key" : "James Inhofe",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "OK",
+      "laws_sponsored" : 5,
+      "bio_id" : "I000024",
+      "chamber" : "Senate"
+   },
+   {
+      "party" : "Democrat",
+      "key" : "A. McEachin",
+      "dob" : "1961-10-10",
+      "value" : 1,
+      "laws_sponsored" : 5,
+      "state" : "VA",
+      "chamber" : "House",
+      "bio_id" : "M001200"
+   },
+   {
+      "value" : 1,
+      "dob" : "1951-10-19",
+      "party" : "Democrat",
+      "key" : "Kurt Schrader",
+      "bio_id" : "S001180",
+      "chamber" : "House",
+      "state" : "OR",
+      "laws_sponsored" : 5
+   },
+   {
+      "bio_id" : "L000578",
+      "chamber" : "House",
+      "state" : "CA",
+      "laws_sponsored" : 5,
+      "value" : 1,
+      "dob" : "1960-07-02",
+      "key" : "Doug LaMalfa",
+      "party" : "Republican"
+   },
+   {
+      "value" : 1,
+      "dob" : "1963-01-07",
+      "key" : "Rand Paul",
+      "party" : "Republican",
+      "bio_id" : "P000603",
+      "chamber" : "Senate",
+      "state" : "KY",
+      "laws_sponsored" : 4
+   },
+   {
+      "bio_id" : "F000454",
+      "chamber" : "House",
+      "state" : "IL",
+      "laws_sponsored" : 4,
+      "value" : 1,
+      "key" : "Bill Foster",
+      "party" : "Democrat",
+      "dob" : "1955-10-07"
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Linda Sánchez",
+      "dob" : "1969-01-28",
+      "value" : 1,
+      "state" : "CA",
+      "laws_sponsored" : 4,
+      "bio_id" : "S001156",
+      "chamber" : "House"
+   },
+   {
+      "laws_sponsored" : 4,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "C001091",
+      "dob" : "1974-09-16",
+      "key" : "Joaquín Castro",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "dob" : "1947-06-21",
+      "key" : "Dana Rohrabacher",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 4,
+      "state" : "CA",
+      "chamber" : "House",
+      "bio_id" : "R000409"
+   },
+   {
+      "value" : 1,
+      "key" : "Bill Posey",
+      "party" : "Republican",
+      "dob" : "1947-12-18",
+      "chamber" : "House",
+      "bio_id" : "P000599",
+      "laws_sponsored" : 4,
+      "state" : "FL"
+   },
+   {
+      "bio_id" : "W000799",
+      "chamber" : "House",
+      "state" : "MN",
+      "laws_sponsored" : 4,
+      "value" : 1,
+      "dob" : "1964-04-06",
+      "key" : "Tim Walz",
+      "party" : "Democrat"
+   },
+   {
+      "dob" : "1959-07-27",
+      "key" : "Glenn Thompson",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "PA",
+      "laws_sponsored" : 4,
+      "bio_id" : "T000467",
+      "chamber" : "House"
+   },
+   {
+      "state" : "NM",
+      "laws_sponsored" : 4,
+      "bio_id" : "U000039",
+      "chamber" : "Senate",
+      "party" : "Democrat",
+      "key" : "Tom Udall",
+      "dob" : "1948-05-18",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1958-07-16",
+      "party" : "Republican",
+      "key" : "Mike Rogers",
+      "bio_id" : "R000575",
+      "chamber" : "House",
+      "state" : "AL",
+      "laws_sponsored" : 4
+   },
+   {
+      "state" : "PA",
+      "laws_sponsored" : 4,
+      "bio_id" : "B001296",
+      "chamber" : "House",
+      "party" : "Democrat",
+      "key" : "Brendan Boyle",
+      "dob" : "1977-02-06",
+      "value" : 1
+   },
+   {
+      "state" : "IA",
+      "laws_sponsored" : 4,
+      "bio_id" : "L000565",
+      "chamber" : "House",
+      "dob" : "1952-12-23",
+      "key" : "Dave Loebsack",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "state" : "IA",
+      "laws_sponsored" : 4,
+      "bio_id" : "B001294",
+      "chamber" : "House",
+      "party" : "Republican",
+      "key" : "Rod Blum",
+      "dob" : "1955-04-26",
+      "value" : 1
+   },
+   {
+      "dob" : "1980-06-16",
+      "party" : "Republican",
+      "key" : "Jason Smith",
+      "value" : 1,
+      "laws_sponsored" : 4,
+      "state" : "MO",
+      "chamber" : "House",
+      "bio_id" : "S001195"
+   },
+   {
+      "laws_sponsored" : 4,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "A000375",
+      "party" : "Republican",
+      "key" : "Jodey Arrington",
+      "dob" : "1972-03-09",
+      "value" : 1
+   },
+   {
+      "dob" : "1964-08-14",
+      "party" : "Democrat",
+      "key" : "Mark Pocan",
+      "value" : 1,
+      "state" : "WI",
+      "laws_sponsored" : 4,
+      "bio_id" : "P000607",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "key" : "Claudia Tenney",
+      "party" : "Republican",
+      "dob" : "1961-02-04",
+      "bio_id" : "T000478",
+      "chamber" : "House",
+      "state" : "NY",
+      "laws_sponsored" : 4
+   },
+   {
+      "key" : "David Perdue",
+      "party" : "Republican",
+      "dob" : "1949-12-10",
+      "value" : 1,
+      "laws_sponsored" : 4,
+      "state" : "GA",
+      "chamber" : "Senate",
+      "bio_id" : "P000612"
+   },
+   {
+      "value" : 1,
+      "dob" : "1954-02-25",
+      "party" : "Republican",
+      "key" : "Bill Flores",
+      "chamber" : "House",
+      "bio_id" : "F000461",
+      "laws_sponsored" : 4,
+      "state" : "TX"
+   },
+   {
+      "value" : 1,
+      "key" : "John Duncan",
+      "party" : "Republican",
+      "dob" : "1947-07-21",
+      "chamber" : "House",
+      "bio_id" : "D000533",
+      "laws_sponsored" : 4,
+      "state" : "TN"
+   },
+   {
+      "value" : 1,
+      "dob" : "1964-02-18",
+      "party" : "Democrat",
+      "key" : "Jared Huffman",
+      "chamber" : "House",
+      "bio_id" : "H001068",
+      "laws_sponsored" : 4,
+      "state" : "CA"
+   },
+   {
+      "bio_id" : "Y000063",
+      "chamber" : "House",
+      "state" : "KS",
+      "laws_sponsored" : 4,
+      "value" : 1,
+      "key" : "Kevin Yoder",
+      "party" : "Republican",
+      "dob" : "1976-01-08"
+   },
+   {
+      "bio_id" : "L000573",
+      "chamber" : "House",
+      "state" : "ID",
+      "laws_sponsored" : 4,
+      "value" : 1,
+      "dob" : "1967-12-08",
+      "key" : "Raúl Labrador",
+      "party" : "Republican"
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 4,
+      "bio_id" : "V000130",
+      "chamber" : "House",
+      "key" : "Juan Vargas",
+      "party" : "Democrat",
+      "dob" : "1961-03-07",
+      "value" : 1
+   },
+   {
+      "dob" : "1970-03-01",
+      "key" : "Warren Davidson",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 4,
+      "state" : "OH",
+      "chamber" : "House",
+      "bio_id" : "D000626"
+   },
+   {
+      "value" : 1,
+      "dob" : "1962-05-31",
+      "key" : "Larry Bucshon",
+      "party" : "Republican",
+      "bio_id" : "B001275",
+      "chamber" : "House",
+      "state" : "IN",
+      "laws_sponsored" : 4
+   },
+   {
+      "value" : 1,
+      "dob" : "1966-01-07",
+      "key" : "Jeffrey Duncan",
+      "party" : "Republican",
+      "bio_id" : "D000615",
+      "chamber" : "House",
+      "state" : "SC",
+      "laws_sponsored" : 4
+   },
+   {
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Niki Tsongas",
+      "dob" : "1946-04-26",
+      "chamber" : "House",
+      "bio_id" : "T000465",
+      "laws_sponsored" : 4,
+      "state" : "MA"
+   },
+   {
+      "key" : "Barry Loudermilk",
+      "party" : "Republican",
+      "dob" : "1963-12-22",
+      "value" : 1,
+      "laws_sponsored" : 4,
+      "state" : "GA",
+      "chamber" : "House",
+      "bio_id" : "L000583"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "M001193",
+      "laws_sponsored" : 4,
+      "state" : "NJ",
+      "value" : 1,
+      "dob" : "1960-10-16",
+      "party" : "Republican",
+      "key" : "Tom MacArthur"
+   },
+   {
+      "laws_sponsored" : 4,
+      "state" : "CA",
+      "chamber" : "House",
+      "bio_id" : "M001166",
+      "dob" : "1951-06-18",
+      "party" : "Democrat",
+      "key" : "Jerry McNerney",
+      "value" : 1
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 4,
+      "bio_id" : "P000608",
+      "chamber" : "House",
+      "party" : "Democrat",
+      "key" : "Scott Peters",
+      "dob" : "1958-06-17",
+      "value" : 1
+   },
+   {
+      "key" : "Mike Quigley",
+      "party" : "Democrat",
+      "dob" : "1958-10-17",
+      "value" : 1,
+      "laws_sponsored" : 4,
+      "state" : "IL",
+      "chamber" : "House",
+      "bio_id" : "Q000023"
+   },
+   {
+      "value" : 1,
+      "dob" : "1955-10-20",
+      "key" : "Sheldon WhiteHouse",
+      "party" : "Democrat",
+      "bio_id" : "W000802",
+      "chamber" : "Senate",
+      "state" : "RI",
+      "laws_sponsored" : 4
+   },
+   {
+      "laws_sponsored" : 4,
+      "state" : "CA",
+      "chamber" : "House",
+      "bio_id" : "D000623",
+      "dob" : "1952-03-31",
+      "party" : "Democrat",
+      "key" : "Mark DeSaulnier",
+      "value" : 1
+   },
+   {
+      "key" : "Ed Perlmutter",
+      "party" : "Democrat",
+      "dob" : "1953-05-01",
+      "value" : 1,
+      "state" : "CO",
+      "laws_sponsored" : 4,
+      "bio_id" : "P000593",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "dob" : "1953-06-08",
+      "key" : "Ken Calvert",
+      "party" : "Republican",
+      "bio_id" : "C000059",
+      "chamber" : "House",
+      "state" : "CA",
+      "laws_sponsored" : 4
+   },
+   {
+      "dob" : "1955-10-20",
+      "key" : "Pat Meehan",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 4,
+      "state" : "PA",
+      "chamber" : "House",
+      "bio_id" : "M001181"
+   },
+   {
+      "bio_id" : "D000610",
+      "chamber" : "House",
+      "state" : "FL",
+      "laws_sponsored" : 4,
+      "value" : 1,
+      "dob" : "1966-05-07",
+      "party" : "Democrat",
+      "key" : "Ted Deutch"
+   },
+   {
+      "bio_id" : "R000600",
+      "chamber" : "House",
+      "state" : "AS",
+      "laws_sponsored" : 4,
+      "value" : 1,
+      "key" : "Amata Radewagen",
+      "party" : "Republican",
+      "dob" : "1947-12-29"
+   },
+   {
+      "key" : "Tim Murphy",
+      "party" : "Republican",
+      "dob" : "1952-09-11",
+      "value" : 1,
+      "state" : "PA",
+      "laws_sponsored" : 4,
+      "bio_id" : "M001151",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "dob" : "1963-03-16",
+      "key" : "Ron Kind",
+      "party" : "Democrat",
+      "chamber" : "House",
+      "bio_id" : "K000188",
+      "laws_sponsored" : 4,
+      "state" : "WI"
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 4,
+      "bio_id" : "G000559",
+      "chamber" : "House",
+      "dob" : "1945-01-24",
+      "key" : "John Garamendi",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "state" : "VA",
+      "laws_sponsored" : 4,
+      "bio_id" : "S000185",
+      "chamber" : "House",
+      "dob" : "1947-04-30",
+      "key" : "Robert Scott",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "key" : "Patrick McHenry",
+      "party" : "Republican",
+      "dob" : "1975-10-22",
+      "value" : 1,
+      "state" : "NC",
+      "laws_sponsored" : 4,
+      "bio_id" : "M001156",
+      "chamber" : "House"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "Y000064",
+      "laws_sponsored" : 4,
+      "state" : "IN",
+      "value" : 1,
+      "dob" : "1972-08-24",
+      "party" : "Republican",
+      "key" : "Todd Young"
+   },
+   {
+      "key" : "Trey Hollingsworth",
+      "party" : "Republican",
+      "dob" : "1983-09-12",
+      "value" : 1,
+      "laws_sponsored" : 4,
+      "state" : "IN",
+      "chamber" : "House",
+      "bio_id" : "H001074"
+   },
+   {
+      "bio_id" : "R000605",
+      "chamber" : "Senate",
+      "state" : "SD",
+      "laws_sponsored" : 4,
+      "value" : 1,
+      "dob" : "1954-10-24",
+      "key" : "Mike Rounds",
+      "party" : "Republican"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "S001170",
+      "laws_sponsored" : 4,
+      "state" : "NH",
+      "value" : 1,
+      "key" : "Carol Shea-Porter",
+      "party" : "Democrat",
+      "dob" : "1952-12-02"
+   },
+   {
+      "value" : 1,
+      "key" : "Sam Graves",
+      "party" : "Republican",
+      "dob" : "1963-11-07",
+      "chamber" : "House",
+      "bio_id" : "G000546",
+      "laws_sponsored" : 4,
+      "state" : "MO"
+   },
+   {
+      "key" : "Mo Brooks",
+      "party" : "Republican",
+      "dob" : "1954-04-29",
+      "value" : 1,
+      "laws_sponsored" : 4,
+      "state" : "AL",
+      "chamber" : "House",
+      "bio_id" : "B001274"
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 4,
+      "bio_id" : "K000389",
+      "chamber" : "House",
+      "dob" : "1976-09-13",
+      "party" : "Democrat",
+      "key" : "Ro Khanna",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1955-04-02",
+      "key" : "Chellie Pingree",
+      "party" : "Democrat",
+      "bio_id" : "P000597",
+      "chamber" : "House",
+      "state" : "ME",
+      "laws_sponsored" : 4
+   },
+   {
+      "key" : "Paul Tonko",
+      "party" : "Democrat",
+      "dob" : "1949-06-18",
+      "value" : 1,
+      "laws_sponsored" : 4,
+      "state" : "NY",
+      "chamber" : "House",
+      "bio_id" : "T000469"
+   },
+   {
+      "value" : 1,
+      "dob" : "1964-11-21",
+      "key" : "Yvette Clarke",
+      "party" : "Democrat",
+      "chamber" : "House",
+      "bio_id" : "C001067",
+      "laws_sponsored" : 4,
+      "state" : "NY"
+   },
+   {
+      "value" : 1,
+      "key" : "Steny Hoyer",
+      "party" : "Democrat",
+      "dob" : "1939-06-14",
+      "chamber" : "House",
+      "bio_id" : "H000874",
+      "laws_sponsored" : 4,
+      "state" : "MD"
+   },
+   {
+      "dob" : "1949-02-14",
+      "key" : "Richard Neal",
+      "party" : "Democrat",
+      "value" : 1,
+      "laws_sponsored" : 4,
+      "state" : "MA",
+      "chamber" : "House",
+      "bio_id" : "N000015"
+   },
+   {
+      "laws_sponsored" : 4,
+      "state" : "MI",
+      "chamber" : "House",
+      "bio_id" : "L000263",
+      "party" : "Democrat",
+      "key" : "Sander Levin",
+      "dob" : "1931-09-06",
+      "value" : 1
+   },
+   {
+      "key" : "Marc Veasey",
+      "party" : "Democrat",
+      "dob" : "1971-01-03",
+      "value" : 1,
+      "state" : "TX",
+      "laws_sponsored" : 4,
+      "bio_id" : "V000131",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "dob" : "1957-07-29",
+      "party" : "Democrat",
+      "key" : "Diana DeGette",
+      "chamber" : "House",
+      "bio_id" : "D000197",
+      "laws_sponsored" : 4,
+      "state" : "CO"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "C001080",
+      "laws_sponsored" : 4,
+      "state" : "CA",
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Judy Chu",
+      "dob" : "1953-07-07"
+   },
+   {
+      "laws_sponsored" : 4,
+      "state" : "IN",
+      "chamber" : "House",
+      "bio_id" : "W000813",
+      "dob" : "1963-08-17",
+      "key" : "Jackie Walorski",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "dob" : "1964-07-27",
+      "key" : "David Brat",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "VA",
+      "laws_sponsored" : 4,
+      "bio_id" : "B001290",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1953-08-18",
+      "party" : "Republican",
+      "key" : "Louie Gohmert",
+      "value" : 1,
+      "state" : "TX",
+      "laws_sponsored" : 4,
+      "bio_id" : "G000552",
+      "chamber" : "House"
+   },
+   {
+      "laws_sponsored" : 4,
+      "state" : "MI",
+      "chamber" : "House",
+      "bio_id" : "K000380",
+      "key" : "Dan Kildee",
+      "party" : "Democrat",
+      "dob" : "1958-08-11",
+      "value" : 1
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "T000475",
+      "laws_sponsored" : 4,
+      "state" : "MI",
+      "value" : 1,
+      "dob" : "1960-10-16",
+      "key" : "Dave Trott",
+      "party" : "Republican"
+   },
+   {
+      "key" : "Rick Larsen",
+      "party" : "Democrat",
+      "dob" : "1965-06-15",
+      "value" : 1,
+      "state" : "WA",
+      "laws_sponsored" : 4,
+      "bio_id" : "L000560",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "dob" : "1956-04-30",
+      "key" : "Robin Kelly",
+      "party" : "Democrat",
+      "bio_id" : "K000385",
+      "chamber" : "House",
+      "state" : "IL",
+      "laws_sponsored" : 4
+   },
+   {
+      "state" : "MA",
+      "laws_sponsored" : 4,
+      "bio_id" : "M000312",
+      "chamber" : "House",
+      "dob" : "1959-11-20",
+      "key" : "Jim McGovern",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "dob" : "1977-04-14",
+      "key" : "David Valadao",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "CA",
+      "laws_sponsored" : 4,
+      "bio_id" : "V000129",
+      "chamber" : "House"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "M001158",
+      "laws_sponsored" : 4,
+      "state" : "TX",
+      "value" : 1,
+      "key" : "Kenny Marchant",
+      "party" : "Republican",
+      "dob" : "1951-02-23"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "L000480",
+      "laws_sponsored" : 3,
+      "state" : "NY",
+      "value" : 1,
+      "dob" : "1937-07-05",
+      "key" : "Nita Lowey",
+      "party" : "Democrat"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "J000255",
+      "laws_sponsored" : 3,
+      "state" : "NC",
+      "value" : 1,
+      "dob" : "1943-02-10",
+      "key" : "Walter Jones",
+      "party" : "Republican"
+   },
+   {
+      "laws_sponsored" : 3,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "C001062",
+      "key" : "K. Conaway",
+      "party" : "Republican",
+      "dob" : "1948-06-11",
+      "value" : 1
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "P000609",
+      "laws_sponsored" : 3,
+      "state" : "AL",
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Gary Palmer",
+      "dob" : "1954-05-14"
+   },
+   {
+      "laws_sponsored" : 3,
+      "state" : "CA",
+      "chamber" : "House",
+      "bio_id" : "A000371",
+      "party" : "Democrat",
+      "key" : "Pete Aguilar",
+      "dob" : "1979-06-19",
+      "value" : 1
+   },
+   {
+      "laws_sponsored" : 3,
+      "state" : "NE",
+      "chamber" : "House",
+      "bio_id" : "F000449",
+      "dob" : "1960-12-27",
+      "key" : "Jeff Fortenberry",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "M001185",
+      "laws_sponsored" : 3,
+      "state" : "NY",
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Sean Maloney",
+      "dob" : "1966-07-30"
+   },
+   {
+      "value" : 1,
+      "key" : "Dave Joyce",
+      "party" : "Republican",
+      "dob" : "1957-03-17",
+      "chamber" : "House",
+      "bio_id" : "J000295",
+      "laws_sponsored" : 3,
+      "state" : "OH"
+   },
+   {
+      "value" : 1,
+      "dob" : "1950-05-20",
+      "key" : "Chris Collins",
+      "party" : "Republican",
+      "chamber" : "House",
+      "bio_id" : "C001092",
+      "laws_sponsored" : 3,
+      "state" : "NY"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "A000055",
+      "laws_sponsored" : 3,
+      "state" : "AL",
+      "value" : 1,
+      "key" : "Robert Aderholt",
+      "party" : "Republican",
+      "dob" : "1965-07-22"
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Tom Cotton",
+      "dob" : "1977-05-13",
+      "bio_id" : "C001095",
+      "chamber" : "Senate",
+      "state" : "AR",
+      "laws_sponsored" : 3
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "P000601",
+      "laws_sponsored" : 3,
+      "state" : "MS",
+      "value" : 1,
+      "key" : "Steven Palazzo",
+      "party" : "Republican",
+      "dob" : "1970-02-21"
+   },
+   {
+      "laws_sponsored" : 3,
+      "state" : "PR",
+      "chamber" : "House",
+      "bio_id" : "G000582",
+      "dob" : "1976-08-05",
+      "key" : "Jenniffer González-Colón",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "S000364",
+      "laws_sponsored" : 3,
+      "state" : "IL",
+      "value" : 1,
+      "dob" : "1958-02-21",
+      "key" : "John Shimkus",
+      "party" : "Republican"
+   },
+   {
+      "dob" : "1946-11-23",
+      "party" : "Democrat",
+      "key" : "Bobby Rush",
+      "value" : 1,
+      "state" : "IL",
+      "laws_sponsored" : 3,
+      "bio_id" : "R000515",
+      "chamber" : "House"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "B001230",
+      "laws_sponsored" : 3,
+      "state" : "WI",
+      "value" : 1,
+      "key" : "Tammy Baldwin",
+      "party" : "Democrat",
+      "dob" : "1962-02-11"
+   },
+   {
+      "key" : "Margaret Hassan",
+      "party" : "Democrat",
+      "dob" : "1958-02-27",
+      "value" : 1,
+      "state" : "NH",
+      "laws_sponsored" : 3,
+      "bio_id" : "H001076",
+      "chamber" : "Senate"
+   },
+   {
+      "dob" : "1965-03-02",
+      "party" : "Democrat",
+      "key" : "Ami Bera",
+      "value" : 1,
+      "state" : "CA",
+      "laws_sponsored" : 3,
+      "bio_id" : "B001287",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "dob" : "1946-07-11",
+      "key" : "Edward Markey",
+      "party" : "Democrat",
+      "bio_id" : "M000133",
+      "chamber" : "Senate",
+      "state" : "MA",
+      "laws_sponsored" : 3
+   },
+   {
+      "value" : 1,
+      "dob" : "1968-04-17",
+      "party" : "Republican",
+      "key" : "George Holding",
+      "chamber" : "House",
+      "bio_id" : "H001065",
+      "laws_sponsored" : 3,
+      "state" : "NC"
+   },
+   {
+      "bio_id" : "B001288",
+      "chamber" : "Senate",
+      "state" : "NJ",
+      "laws_sponsored" : 3,
+      "value" : 1,
+      "key" : "Cory Booker",
+      "party" : "Democrat",
+      "dob" : "1969-04-27"
+   },
+   {
+      "dob" : "1954-09-16",
+      "key" : "Ralph Abraham",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 3,
+      "state" : "LA",
+      "chamber" : "House",
+      "bio_id" : "A000374"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "C000567",
+      "laws_sponsored" : 3,
+      "state" : "MS",
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Thad Cochran",
+      "dob" : "1937-12-07"
+   },
+   {
+      "laws_sponsored" : 3,
+      "state" : "WA",
+      "chamber" : "House",
+      "bio_id" : "S000510",
+      "party" : "Democrat",
+      "key" : "Adam Smith",
+      "dob" : "1965-06-15",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1970-02-03",
+      "party" : "Republican",
+      "key" : "Tom Graves",
+      "bio_id" : "G000560",
+      "chamber" : "House",
+      "state" : "GA",
+      "laws_sponsored" : 3
+   },
+   {
+      "value" : 1,
+      "dob" : "1961-09-25",
+      "key" : "Mario Diaz-Balart",
+      "party" : "Republican",
+      "bio_id" : "D000600",
+      "chamber" : "House",
+      "state" : "FL",
+      "laws_sponsored" : 3
+   },
+   {
+      "value" : 1,
+      "dob" : "1944-04-13",
+      "party" : "Democrat",
+      "key" : "Susan Davis",
+      "chamber" : "House",
+      "bio_id" : "D000598",
+      "laws_sponsored" : 3,
+      "state" : "CA"
+   },
+   {
+      "bio_id" : "C001048",
+      "chamber" : "House",
+      "state" : "TX",
+      "laws_sponsored" : 3,
+      "value" : 1,
+      "dob" : "1956-08-24",
+      "party" : "Republican",
+      "key" : "John Culberson"
+   },
+   {
+      "state" : "OK",
+      "laws_sponsored" : 3,
+      "bio_id" : "L000491",
+      "chamber" : "House",
+      "party" : "Republican",
+      "key" : "Frank Lucas",
+      "dob" : "1960-01-06",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "key" : "Brenda Lawrence",
+      "party" : "Democrat",
+      "dob" : "1954-10-18",
+      "chamber" : "House",
+      "bio_id" : "L000581",
+      "laws_sponsored" : 3,
+      "state" : "MI"
+   },
+   {
+      "state" : "NJ",
+      "laws_sponsored" : 3,
+      "bio_id" : "G000583",
+      "chamber" : "House",
+      "party" : "Democrat",
+      "key" : "Josh Gottheimer",
+      "dob" : "1975-03-08",
+      "value" : 1
+   },
+   {
+      "bio_id" : "W000804",
+      "chamber" : "House",
+      "state" : "VA",
+      "laws_sponsored" : 3,
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Robert Wittman",
+      "dob" : "1959-02-03"
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Al Franken",
+      "dob" : "1951-05-21",
+      "value" : 1,
+      "laws_sponsored" : 3,
+      "state" : "MN",
+      "chamber" : "Senate",
+      "bio_id" : "F000457"
+   },
+   {
+      "key" : "Debbie Wasserman Schultz",
+      "party" : "Democrat",
+      "dob" : "1966-09-27",
+      "value" : 1,
+      "state" : "FL",
+      "laws_sponsored" : 3,
+      "bio_id" : "W000797",
+      "chamber" : "House"
+   },
+   {
+      "key" : "Mark Warner",
+      "party" : "Democrat",
+      "dob" : "1954-12-15",
+      "value" : 1,
+      "laws_sponsored" : 3,
+      "state" : "VA",
+      "chamber" : "Senate",
+      "bio_id" : "W000805"
+   },
+   {
+      "laws_sponsored" : 3,
+      "state" : "PA",
+      "chamber" : "House",
+      "bio_id" : "S001154",
+      "key" : "Bill Shuster",
+      "party" : "Republican",
+      "dob" : "1961-01-10",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "key" : "Alex Mooney",
+      "party" : "Republican",
+      "dob" : "1971-06-05",
+      "bio_id" : "M001195",
+      "chamber" : "House",
+      "state" : "WV",
+      "laws_sponsored" : 3
+   },
+   {
+      "state" : "RI",
+      "laws_sponsored" : 3,
+      "bio_id" : "L000559",
+      "chamber" : "House",
+      "dob" : "1964-04-22",
+      "party" : "Democrat",
+      "key" : "Jim Langevin",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1970-12-19",
+      "key" : "Adrian Smith",
+      "party" : "Republican",
+      "bio_id" : "S001172",
+      "chamber" : "House",
+      "state" : "NE",
+      "laws_sponsored" : 3
+   },
+   {
+      "laws_sponsored" : 3,
+      "state" : "AR",
+      "chamber" : "House",
+      "bio_id" : "C001087",
+      "party" : "Republican",
+      "key" : "Rick Crawford",
+      "dob" : "1966-01-22",
+      "value" : 1
+   },
+   {
+      "laws_sponsored" : 3,
+      "state" : "PA",
+      "chamber" : "House",
+      "bio_id" : "E000296",
+      "key" : "Dwight Evans",
+      "party" : "Democrat",
+      "dob" : "1954-05-16",
+      "value" : 1
+   },
+   {
+      "dob" : "1963-02-13",
+      "key" : "Filemon Vela",
+      "party" : "Democrat",
+      "value" : 1,
+      "laws_sponsored" : 3,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "V000132"
+   },
+   {
+      "value" : 1,
+      "dob" : "1942-12-13",
+      "key" : "Anna Eshoo",
+      "party" : "Democrat",
+      "chamber" : "House",
+      "bio_id" : "E000215",
+      "laws_sponsored" : 3,
+      "state" : "CA"
+   },
+   {
+      "state" : "WA",
+      "laws_sponsored" : 3,
+      "bio_id" : "H001056",
+      "chamber" : "House",
+      "key" : "Jaime Herrera Beutler",
+      "party" : "Republican",
+      "dob" : "1978-11-03",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1966-07-05",
+      "party" : "Democrat",
+      "key" : "Jim Himes",
+      "bio_id" : "H001047",
+      "chamber" : "House",
+      "state" : "CT",
+      "laws_sponsored" : 3
+   },
+   {
+      "laws_sponsored" : 3,
+      "state" : "CT",
+      "chamber" : "House",
+      "bio_id" : "C001069",
+      "dob" : "1953-04-06",
+      "party" : "Democrat",
+      "key" : "Joe Courtney",
+      "value" : 1
+   },
+   {
+      "dob" : "1940-02-21",
+      "key" : "John Lewis",
+      "party" : "Democrat",
+      "value" : 1,
+      "state" : "GA",
+      "laws_sponsored" : 3,
+      "bio_id" : "L000287",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1946-10-06",
+      "key" : "Lloyd Doggett",
+      "party" : "Democrat",
+      "value" : 1,
+      "state" : "TX",
+      "laws_sponsored" : 2,
+      "bio_id" : "D000399",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1962-03-03",
+      "party" : "Republican",
+      "key" : "David Schweikert",
+      "value" : 1,
+      "laws_sponsored" : 2,
+      "state" : "AZ",
+      "chamber" : "House",
+      "bio_id" : "S001183"
+   },
+   {
+      "state" : "KY",
+      "laws_sponsored" : 2,
+      "bio_id" : "C001108",
+      "chamber" : "House",
+      "party" : "Republican",
+      "key" : "James Comer",
+      "dob" : "1972-08-19",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Tom Rice",
+      "dob" : "1957-08-04",
+      "chamber" : "House",
+      "bio_id" : "R000597",
+      "laws_sponsored" : 2,
+      "state" : "SC"
+   },
+   {
+      "value" : 1,
+      "key" : "Cedric Richmond",
+      "party" : "Democrat",
+      "dob" : "1973-09-13",
+      "bio_id" : "R000588",
+      "chamber" : "House",
+      "state" : "LA",
+      "laws_sponsored" : 2
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Paul Ryan",
+      "dob" : "1970-01-29",
+      "chamber" : "House",
+      "bio_id" : "R000570",
+      "laws_sponsored" : 2,
+      "state" : "WI"
+   },
+   {
+      "laws_sponsored" : 2,
+      "state" : "OH",
+      "chamber" : "House",
+      "bio_id" : "J000289",
+      "key" : "Jim Jordan",
+      "party" : "Republican",
+      "dob" : "1964-02-17",
+      "value" : 1
+   },
+   {
+      "dob" : "1980-04-25",
+      "party" : "Democrat",
+      "key" : "Ruben Kihuen",
+      "value" : 1,
+      "laws_sponsored" : 2,
+      "state" : "NV",
+      "chamber" : "House",
+      "bio_id" : "K000390"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "K000009",
+      "laws_sponsored" : 2,
+      "state" : "OH",
+      "value" : 1,
+      "key" : "Marcy Kaptur",
+      "party" : "Democrat",
+      "dob" : "1946-06-17"
+   },
+   {
+      "dob" : "1976-07-27",
+      "key" : "Martha Roby",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 2,
+      "state" : "AL",
+      "chamber" : "House",
+      "bio_id" : "R000591"
+   },
+   {
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Suzanne Bonamici",
+      "dob" : "1954-10-14",
+      "chamber" : "House",
+      "bio_id" : "B001278",
+      "laws_sponsored" : 2,
+      "state" : "OR"
+   },
+   {
+      "key" : "Sanford Bishop",
+      "party" : "Democrat",
+      "dob" : "1947-02-04",
+      "value" : 1,
+      "state" : "GA",
+      "laws_sponsored" : 2,
+      "bio_id" : "B000490",
+      "chamber" : "House"
+   },
+   {
+      "state" : "TN",
+      "laws_sponsored" : 2,
+      "bio_id" : "F000459",
+      "chamber" : "House",
+      "party" : "Republican",
+      "key" : "Chuck Fleischmann",
+      "dob" : "1962-10-11",
+      "value" : 1
+   },
+   {
+      "bio_id" : "S001177",
+      "chamber" : "House",
+      "state" : "MP",
+      "laws_sponsored" : 2,
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Gregorio Sablan",
+      "dob" : "1955-01-19"
+   },
+   {
+      "party" : "Republican",
+      "key" : "Jason Lewis",
+      "dob" : "1955-09-23",
+      "value" : 1,
+      "state" : "MN",
+      "laws_sponsored" : 2,
+      "bio_id" : "L000587",
+      "chamber" : "House"
+   },
+   {
+      "laws_sponsored" : 2,
+      "state" : "NV",
+      "chamber" : "House",
+      "bio_id" : "R000608",
+      "dob" : "1957-08-02",
+      "key" : "Jacky Rosen",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "key" : "Michael Crapo",
+      "party" : "Republican",
+      "dob" : "1951-05-20",
+      "chamber" : "Senate",
+      "bio_id" : "C000880",
+      "laws_sponsored" : 2,
+      "state" : "ID"
+   },
+   {
+      "laws_sponsored" : 2,
+      "state" : "MI",
+      "chamber" : "House",
+      "bio_id" : "M001201",
+      "dob" : "1961-05-08",
+      "party" : "Republican",
+      "key" : "Paul Mitchell",
+      "value" : 1
+   },
+   {
+      "bio_id" : "C001072",
+      "chamber" : "House",
+      "state" : "IN",
+      "laws_sponsored" : 2,
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "André Carson",
+      "dob" : "1974-10-16"
+   },
+   {
+      "dob" : "1949-09-13",
+      "party" : "Republican",
+      "key" : "Roger Williams",
+      "value" : 1,
+      "state" : "TX",
+      "laws_sponsored" : 2,
+      "bio_id" : "W000816",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "dob" : "1964-11-18",
+      "key" : "Salud Carbajal",
+      "party" : "Democrat",
+      "bio_id" : "C001112",
+      "chamber" : "House",
+      "state" : "CA",
+      "laws_sponsored" : 2
+   },
+   {
+      "dob" : "1937-12-31",
+      "key" : "Harold Rogers",
+      "party" : "Republican",
+      "value" : 1,
+      "laws_sponsored" : 2,
+      "state" : "KY",
+      "chamber" : "House",
+      "bio_id" : "R000395"
+   },
+   {
+      "value" : 1,
+      "dob" : "1944-11-21",
+      "party" : "Democrat",
+      "key" : "Richard Durbin",
+      "chamber" : "Senate",
+      "bio_id" : "D000563",
+      "laws_sponsored" : 2,
+      "state" : "IL"
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 2,
+      "bio_id" : "S001193",
+      "chamber" : "House",
+      "dob" : "1980-11-16",
+      "key" : "Eric Swalwell",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "bio_id" : "H001052",
+      "chamber" : "House",
+      "state" : "MD",
+      "laws_sponsored" : 2,
+      "value" : 1,
+      "dob" : "1957-01-25",
+      "party" : "Republican",
+      "key" : "Andy Harris"
+   },
+   {
+      "value" : 1,
+      "key" : "Kay Granger",
+      "party" : "Republican",
+      "dob" : "1943-01-18",
+      "bio_id" : "G000377",
+      "chamber" : "House",
+      "state" : "TX",
+      "laws_sponsored" : 2
+   },
+   {
+      "bio_id" : "G000576",
+      "chamber" : "House",
+      "state" : "WI",
+      "laws_sponsored" : 2,
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Glenn Grothman",
+      "dob" : "1955-07-03"
+   },
+   {
+      "state" : "NY",
+      "laws_sponsored" : 2,
+      "bio_id" : "S001201",
+      "chamber" : "House",
+      "dob" : "1962-08-31",
+      "key" : "Thomas Suozzi",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "party" : "Republican",
+      "key" : "Mark Sanford",
+      "dob" : "1960-05-28",
+      "value" : 1,
+      "laws_sponsored" : 2,
+      "state" : "SC",
+      "chamber" : "House",
+      "bio_id" : "S000051"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "L000577",
+      "laws_sponsored" : 2,
+      "state" : "UT",
+      "value" : 1,
+      "dob" : "1971-06-04",
+      "key" : "Mike Lee",
+      "party" : "Republican"
+   },
+   {
+      "bio_id" : "C001097",
+      "chamber" : "House",
+      "state" : "CA",
+      "laws_sponsored" : 2,
+      "value" : 1,
+      "key" : "Tony Cárdenas",
+      "party" : "Democrat",
+      "dob" : "1963-03-31"
+   },
+   {
+      "value" : 1,
+      "dob" : "1942-11-05",
+      "party" : "Democrat",
+      "key" : "Frederica Wilson",
+      "chamber" : "House",
+      "bio_id" : "W000808",
+      "laws_sponsored" : 2,
+      "state" : "FL"
+   },
+   {
+      "bio_id" : "G000535",
+      "chamber" : "House",
+      "state" : "IL",
+      "laws_sponsored" : 2,
+      "value" : 1,
+      "key" : "Luis Gutiérrez",
+      "party" : "Democrat",
+      "dob" : "1953-12-10"
+   },
+   {
+      "state" : "NJ",
+      "laws_sponsored" : 2,
+      "bio_id" : "N000188",
+      "chamber" : "House",
+      "dob" : "1958-12-13",
+      "party" : "Democrat",
+      "key" : "Donald Norcross",
+      "value" : 1
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "K000391",
+      "laws_sponsored" : 2,
+      "state" : "IL",
+      "value" : 1,
+      "dob" : "1973-07-19",
+      "party" : "Democrat",
+      "key" : "Raja Krishnamoorthi"
+   },
+   {
+      "dob" : "1940-08-17",
+      "key" : "David Price",
+      "party" : "Democrat",
+      "value" : 1,
+      "state" : "NC",
+      "laws_sponsored" : 2,
+      "bio_id" : "P000523",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "dob" : "1948-05-16",
+      "key" : "Lois Frankel",
+      "party" : "Democrat",
+      "bio_id" : "F000462",
+      "chamber" : "House",
+      "state" : "FL",
+      "laws_sponsored" : 2
+   },
+   {
+      "laws_sponsored" : 2,
+      "state" : "MI",
+      "chamber" : "House",
+      "bio_id" : "A000367",
+      "party" : "Republican",
+      "key" : "Justin Amash",
+      "dob" : "1980-04-18",
+      "value" : 1
+   },
+   {
+      "dob" : "1962-05-22",
+      "key" : "John Sarbanes",
+      "party" : "Democrat",
+      "value" : 1,
+      "laws_sponsored" : 2,
+      "state" : "MD",
+      "chamber" : "House",
+      "bio_id" : "S001168"
+   },
+   {
+      "dob" : "1959-10-06",
+      "party" : "Democrat",
+      "key" : "Brian Higgins",
+      "value" : 1,
+      "laws_sponsored" : 2,
+      "state" : "NY",
+      "chamber" : "House",
+      "bio_id" : "H001038"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "P000613",
+      "laws_sponsored" : 2,
+      "state" : "CA",
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Jimmy Panetta",
+      "dob" : "1969-10-01"
+   },
+   {
+      "bio_id" : "P000258",
+      "chamber" : "House",
+      "state" : "MN",
+      "laws_sponsored" : 2,
+      "value" : 1,
+      "dob" : "1944-06-29",
+      "key" : "Collin Peterson",
+      "party" : "Democrat"
+   },
+   {
+      "value" : 1,
+      "key" : "Alma Adams",
+      "party" : "Democrat",
+      "dob" : "1946-05-27",
+      "chamber" : "House",
+      "bio_id" : "A000370",
+      "laws_sponsored" : 2,
+      "state" : "NC"
+   },
+   {
+      "key" : "Jan Schakowsky",
+      "party" : "Democrat",
+      "dob" : "1944-05-26",
+      "value" : 1,
+      "state" : "IL",
+      "laws_sponsored" : 2,
+      "bio_id" : "S001145",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "key" : "Grace Napolitano",
+      "party" : "Democrat",
+      "dob" : "1936-12-04",
+      "bio_id" : "N000179",
+      "chamber" : "House",
+      "state" : "CA",
+      "laws_sponsored" : 2
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Roger Marshall",
+      "dob" : "1960-08-09",
+      "chamber" : "House",
+      "bio_id" : "M001198",
+      "laws_sponsored" : 2,
+      "state" : "KS"
+   },
+   {
+      "laws_sponsored" : 2,
+      "state" : "NC",
+      "chamber" : "Senate",
+      "bio_id" : "T000476",
+      "dob" : "1960-08-30",
+      "key" : "Thom Tillis",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Anthony Brown",
+      "dob" : "1961-11-21",
+      "chamber" : "House",
+      "bio_id" : "B001304",
+      "laws_sponsored" : 2,
+      "state" : "MD"
+   },
+   {
+      "party" : "Republican",
+      "key" : "Ryan Costello",
+      "dob" : "1976-09-07",
+      "value" : 1,
+      "state" : "PA",
+      "laws_sponsored" : 2,
+      "bio_id" : "C001106",
+      "chamber" : "House"
+   },
+   {
+      "party" : "Republican",
+      "key" : "Steve Scalise",
+      "dob" : "1965-10-06",
+      "value" : 1,
+      "state" : "LA",
+      "laws_sponsored" : 2,
+      "bio_id" : "S001176",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1967-11-18",
+      "party" : "Republican",
+      "key" : "Bruce Westerman",
+      "value" : 1,
+      "laws_sponsored" : 2,
+      "state" : "AR",
+      "chamber" : "House",
+      "bio_id" : "W000821"
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 2,
+      "bio_id" : "R000486",
+      "chamber" : "House",
+      "key" : "Lucille Roybal-Allard",
+      "party" : "Democrat",
+      "dob" : "1941-06-12",
+      "value" : 1
+   },
+   {
+      "laws_sponsored" : 2,
+      "state" : "NC",
+      "chamber" : "House",
+      "bio_id" : "B001251",
+      "dob" : "1947-04-27",
+      "key" : "G. Butterfield",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "laws_sponsored" : 2,
+      "state" : "SC",
+      "chamber" : "House",
+      "bio_id" : "C000537",
+      "key" : "James Clyburn",
+      "party" : "Democrat",
+      "dob" : "1940-07-21",
+      "value" : 1
+   },
+   {
+      "bio_id" : "L000174",
+      "chamber" : "Senate",
+      "state" : "VT",
+      "laws_sponsored" : 2,
+      "value" : 1,
+      "dob" : "1940-03-31",
+      "party" : "Democrat",
+      "key" : "Patrick Leahy"
+   },
+   {
+      "bio_id" : "S001189",
+      "chamber" : "House",
+      "state" : "GA",
+      "laws_sponsored" : 2,
+      "value" : 1,
+      "key" : "Austin Scott",
+      "party" : "Republican",
+      "dob" : "1969-12-10"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "V000128",
+      "laws_sponsored" : 2,
+      "state" : "MD",
+      "value" : 1,
+      "dob" : "1959-01-10",
+      "key" : "Chris Van Hollen",
+      "party" : "Democrat"
+   },
+   {
+      "party" : "Republican",
+      "key" : "Daniel Webster",
+      "dob" : "1949-04-27",
+      "value" : 1,
+      "state" : "FL",
+      "laws_sponsored" : 2,
+      "bio_id" : "W000806",
+      "chamber" : "House"
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Robert Brady",
+      "dob" : "1945-04-07",
+      "value" : 1,
+      "state" : "PA",
+      "laws_sponsored" : 2,
+      "bio_id" : "B001227",
+      "chamber" : "House"
+   },
+   {
+      "value" : 1,
+      "dob" : "1951-04-18",
+      "key" : "Gwen Moore",
+      "party" : "Democrat",
+      "bio_id" : "M001160",
+      "chamber" : "House",
+      "state" : "WI",
+      "laws_sponsored" : 2
+   },
+   {
+      "laws_sponsored" : 2,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "J000126",
+      "dob" : "1935-12-03",
+      "party" : "Democrat",
+      "key" : "Eddie Johnson",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1962-04-18",
+      "key" : "Karen Handel",
+      "party" : "Republican",
+      "bio_id" : "H001078",
+      "chamber" : "House",
+      "state" : "GA",
+      "laws_sponsored" : 2
+   },
+   {
+      "dob" : "1970-11-21",
+      "key" : "Tom Rooney",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "FL",
+      "laws_sponsored" : 2,
+      "bio_id" : "R000583",
+      "chamber" : "House"
+   },
+   {
+      "bio_id" : "W000820",
+      "chamber" : "House",
+      "state" : "CA",
+      "laws_sponsored" : 2,
+      "value" : 1,
+      "dob" : "1962-05-14",
+      "key" : "Mimi Walters",
+      "party" : "Republican"
+   },
+   {
+      "state" : "NC",
+      "laws_sponsored" : 2,
+      "bio_id" : "R000603",
+      "chamber" : "House",
+      "dob" : "1972-02-16",
+      "key" : "David Rouzer",
+      "party" : "Republican",
+      "value" : 1
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Michael Bennet",
+      "dob" : "1964-11-28",
+      "value" : 1,
+      "laws_sponsored" : 1,
+      "state" : "CO",
+      "chamber" : "Senate",
+      "bio_id" : "B001267"
+   },
+   {
+      "dob" : "1964-02-21",
+      "key" : "Scott DesJarlais",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "TN",
+      "laws_sponsored" : 1,
+      "bio_id" : "D000616",
+      "chamber" : "House"
+   },
+   {
+      "laws_sponsored" : 1,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "B000213",
+      "dob" : "1949-09-15",
+      "party" : "Republican",
+      "key" : "Joe Barton",
+      "value" : 1
+   },
+   {
+      "bio_id" : "L000576",
+      "chamber" : "House",
+      "state" : "MO",
+      "laws_sponsored" : 1,
+      "value" : 1,
+      "dob" : "1955-08-11",
+      "key" : "Billy Long",
+      "party" : "Republican"
+   },
+   {
+      "dob" : "1947-10-17",
+      "key" : "Gene Green",
+      "party" : "Democrat",
+      "value" : 1,
+      "laws_sponsored" : 1,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "G000410"
+   },
+   {
+      "party" : "Democrat",
+      "key" : "Kathy Castor",
+      "dob" : "1966-08-20",
+      "value" : 1,
+      "laws_sponsored" : 1,
+      "state" : "FL",
+      "chamber" : "House",
+      "bio_id" : "C001066"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "T000468",
+      "laws_sponsored" : 1,
+      "state" : "NV",
+      "value" : 1,
+      "key" : "Dina Titus",
+      "party" : "Democrat",
+      "dob" : "1950-05-23"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "M001184",
+      "laws_sponsored" : 1,
+      "state" : "KY",
+      "value" : 1,
+      "dob" : "1971-01-13",
+      "party" : "Republican",
+      "key" : "Thomas Massie"
+   },
+   {
+      "value" : 1,
+      "dob" : "1951-11-07",
+      "party" : "Republican",
+      "key" : "Rick Allen",
+      "bio_id" : "A000372",
+      "chamber" : "House",
+      "state" : "GA",
+      "laws_sponsored" : 1
+   },
+   {
+      "bio_id" : "B001303",
+      "chamber" : "House",
+      "state" : "DE",
+      "laws_sponsored" : 1,
+      "value" : 1,
+      "dob" : "1962-02-10",
+      "party" : "Democrat",
+      "key" : "Lisa Blunt Rochester"
+   },
+   {
+      "bio_id" : "R000607",
+      "chamber" : "House",
+      "state" : "FL",
+      "laws_sponsored" : 1,
+      "value" : 1,
+      "dob" : "1953-12-04",
+      "key" : "Francis Rooney",
+      "party" : "Republican"
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 1,
+      "bio_id" : "M001163",
+      "chamber" : "House",
+      "dob" : "1944-09-25",
+      "key" : "Doris Matsui",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "state" : "TX",
+      "laws_sponsored" : 1,
+      "bio_id" : "H001036",
+      "chamber" : "House",
+      "party" : "Republican",
+      "key" : "Jeb Hensarling",
+      "dob" : "1957-05-29",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1946-05-12",
+      "party" : "Republican",
+      "key" : "Frank LoBiondo",
+      "bio_id" : "L000554",
+      "chamber" : "House",
+      "state" : "NJ",
+      "laws_sponsored" : 1
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "G000563",
+      "laws_sponsored" : 1,
+      "state" : "OH",
+      "value" : 1,
+      "dob" : "1954-06-14",
+      "key" : "Bob Gibbs",
+      "party" : "Republican"
+   },
+   {
+      "value" : 1,
+      "dob" : "1962-12-13",
+      "key" : "Jamie Raskin",
+      "party" : "Democrat",
+      "chamber" : "House",
+      "bio_id" : "R000606",
+      "laws_sponsored" : 1,
+      "state" : "MD"
+   },
+   {
+      "value" : 1,
+      "dob" : "1953-08-05",
+      "key" : "Mike Doyle",
+      "party" : "Democrat",
+      "chamber" : "House",
+      "bio_id" : "D000482",
+      "laws_sponsored" : 1,
+      "state" : "PA"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "W000819",
+      "laws_sponsored" : 1,
+      "state" : "NC",
+      "value" : 1,
+      "key" : "Mark Walker",
+      "party" : "Republican",
+      "dob" : "1969-05-20"
+   },
+   {
+      "state" : "WA",
+      "laws_sponsored" : 1,
+      "bio_id" : "H001064",
+      "chamber" : "House",
+      "dob" : "1952-07-29",
+      "party" : "Democrat",
+      "key" : "Denny Heck",
+      "value" : 1
+   },
+   {
+      "bio_id" : "G000566",
+      "chamber" : "House",
+      "state" : "SC",
+      "laws_sponsored" : 1,
+      "value" : 1,
+      "dob" : "1964-08-22",
+      "key" : "Trey Gowdy",
+      "party" : "Republican"
+   },
+   {
+      "dob" : "1976-09-15",
+      "key" : "Nanette Barragán",
+      "party" : "Democrat",
+      "value" : 1,
+      "laws_sponsored" : 1,
+      "state" : "CA",
+      "chamber" : "House",
+      "bio_id" : "B001300"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "M001169",
+      "laws_sponsored" : 1,
+      "state" : "CT",
+      "value" : 1,
+      "dob" : "1973-08-03",
+      "key" : "Christopher Murphy",
+      "party" : "Democrat"
+   },
+   {
+      "state" : "VT",
+      "laws_sponsored" : 1,
+      "bio_id" : "S000033",
+      "chamber" : "Senate",
+      "dob" : "1941-09-08",
+      "party" : "I",
+      "key" : "Bernard Sanders",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1979-11-20",
+      "party" : "Democrat",
+      "key" : "Ruben Gallego",
+      "bio_id" : "G000574",
+      "chamber" : "House",
+      "state" : "AZ",
+      "laws_sponsored" : 1
+   },
+   {
+      "dob" : "1950-06-20",
+      "key" : "Donald Beyer",
+      "party" : "Democrat",
+      "value" : 1,
+      "laws_sponsored" : 1,
+      "state" : "VA",
+      "chamber" : "House",
+      "bio_id" : "B001292"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "N000190",
+      "laws_sponsored" : 1,
+      "state" : "SC",
+      "value" : 1,
+      "dob" : "1953-06-20",
+      "key" : "Ralph Norman",
+      "party" : "Republican"
+   },
+   {
+      "dob" : "1957-06-19",
+      "party" : "Republican",
+      "key" : "Trent Franks",
+      "value" : 1,
+      "laws_sponsored" : 1,
+      "state" : "AZ",
+      "chamber" : "House",
+      "bio_id" : "F000448"
+   },
+   {
+      "party" : "Democrat",
+      "key" : "C.A. Dutch Ruppersberger",
+      "dob" : "1946-01-31",
+      "value" : 1,
+      "state" : "MD",
+      "laws_sponsored" : 1,
+      "bio_id" : "R000576",
+      "chamber" : "House"
+   },
+   {
+      "key" : "Val Demings",
+      "party" : "Democrat",
+      "dob" : "1957-03-12",
+      "value" : 1,
+      "laws_sponsored" : 1,
+      "state" : "FL",
+      "chamber" : "House",
+      "bio_id" : "D000627"
+   },
+   {
+      "value" : 1,
+      "dob" : "1978-10-24",
+      "party" : "Democrat",
+      "key" : "Seth Moulton",
+      "bio_id" : "M001196",
+      "chamber" : "House",
+      "state" : "MA",
+      "laws_sponsored" : 1
+   },
+   {
+      "state" : "GA",
+      "laws_sponsored" : 1,
+      "bio_id" : "F000465",
+      "chamber" : "House",
+      "dob" : "1967-11-15",
+      "party" : "Republican",
+      "key" : "A. Ferguson",
+      "value" : 1
+   },
+   {
+      "dob" : "1967-09-04",
+      "party" : "Democrat",
+      "key" : "Vicente Gonzalez",
+      "value" : 1,
+      "laws_sponsored" : 1,
+      "state" : "TX",
+      "chamber" : "House",
+      "bio_id" : "G000581"
+   },
+   {
+      "value" : 1,
+      "dob" : "1956-07-24",
+      "party" : "Democrat",
+      "key" : "Charlie Crist",
+      "bio_id" : "C001111",
+      "chamber" : "House",
+      "state" : "FL",
+      "laws_sponsored" : 1
+   },
+   {
+      "state" : "LA",
+      "laws_sponsored" : 1,
+      "bio_id" : "K000393",
+      "chamber" : "Senate",
+      "party" : "Republican",
+      "key" : "John Kennedy",
+      "dob" : "1951-11-21",
+      "value" : 1
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "G000585",
+      "laws_sponsored" : 1,
+      "state" : "CA",
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Jimmy Gomez",
+      "dob" : "1974-11-25"
+   },
+   {
+      "state" : "KY",
+      "laws_sponsored" : 1,
+      "bio_id" : "Y000062",
+      "chamber" : "House",
+      "dob" : "1947-11-04",
+      "key" : "John Yarmuth",
+      "party" : "Democrat",
+      "value" : 1
+   },
+   {
+      "bio_id" : "V000108",
+      "chamber" : "House",
+      "state" : "IN",
+      "laws_sponsored" : 1,
+      "value" : 1,
+      "dob" : "1949-08-13",
+      "key" : "Peter Visclosky",
+      "party" : "Democrat"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "S000770",
+      "laws_sponsored" : 1,
+      "state" : "MI",
+      "value" : 1,
+      "dob" : "1950-04-29",
+      "key" : "Debbie Stabenow",
+      "party" : "Democrat"
+   },
+   {
+      "key" : "Catherine Cortez Masto",
+      "party" : "Democrat",
+      "dob" : "1964-03-29",
+      "value" : 1,
+      "state" : "NV",
+      "laws_sponsored" : 0,
+      "bio_id" : "C001113",
+      "chamber" : "Senate"
+   },
+   {
+      "bio_id" : "S001203",
+      "chamber" : "Senate",
+      "state" : "MN",
+      "laws_sponsored" : 0,
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Tina Smith",
+      "dob" : "1958-03-04"
+   },
+   {
+      "value" : 1,
+      "key" : "Jim Bridenstine",
+      "party" : "Republican",
+      "dob" : "1975-06-15",
+      "chamber" : "House",
+      "bio_id" : "B001283",
+      "laws_sponsored" : 0,
+      "state" : "OK"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "F000455",
+      "laws_sponsored" : 0,
+      "state" : "OH",
+      "value" : 1,
+      "party" : "Democrat",
+      "key" : "Marcia Fudge",
+      "dob" : "1952-10-29"
+   },
+   {
+      "key" : "John Moolenaar",
+      "party" : "Republican",
+      "dob" : "1961-05-08",
+      "value" : 1,
+      "laws_sponsored" : 0,
+      "state" : "MI",
+      "chamber" : "House",
+      "bio_id" : "M001194"
+   },
+   {
+      "dob" : "1945-06-27",
+      "party" : "Democrat",
+      "key" : "David Scott",
+      "value" : 1,
+      "laws_sponsored" : 0,
+      "state" : "GA",
+      "chamber" : "House",
+      "bio_id" : "S001157"
+   },
+   {
+      "value" : 1,
+      "key" : "Steve Womack",
+      "party" : "Republican",
+      "dob" : "1957-02-18",
+      "chamber" : "House",
+      "bio_id" : "W000809",
+      "laws_sponsored" : 0,
+      "state" : "AR"
+   },
+   {
+      "dob" : "1972-02-22",
+      "party" : "Republican",
+      "key" : "Ben Sasse",
+      "value" : 1,
+      "state" : "NE",
+      "laws_sponsored" : 0,
+      "bio_id" : "S001197",
+      "chamber" : "Senate"
+   },
+   {
+      "key" : "Joyce Beatty",
+      "party" : "Democrat",
+      "dob" : "1950-03-12",
+      "value" : 1,
+      "state" : "OH",
+      "laws_sponsored" : 0,
+      "bio_id" : "B001281",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1954-06-19",
+      "party" : "Democrat",
+      "key" : "Jim Cooper",
+      "value" : 1,
+      "state" : "TN",
+      "laws_sponsored" : 0,
+      "bio_id" : "C000754",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1958-11-14",
+      "party" : "Republican",
+      "key" : "Debbie Lesko",
+      "value" : 1,
+      "laws_sponsored" : 0,
+      "state" : "AZ",
+      "chamber" : "House",
+      "bio_id" : "L000589"
+   },
+   {
+      "bio_id" : "P000602",
+      "chamber" : "House",
+      "state" : "KS",
+      "laws_sponsored" : 0,
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Mike Pompeo",
+      "dob" : "1963-12-30"
+   },
+   {
+      "bio_id" : "T000472",
+      "chamber" : "House",
+      "state" : "CA",
+      "laws_sponsored" : 0,
+      "value" : 1,
+      "dob" : "1960-12-10",
+      "party" : "Democrat",
+      "key" : "Mark Takano"
+   },
+   {
+      "key" : "Cindy Hyde-Smith",
+      "party" : "Republican",
+      "dob" : "1959-05-10",
+      "value" : 1,
+      "state" : "MS",
+      "laws_sponsored" : 0,
+      "bio_id" : "H001079",
+      "chamber" : "Senate"
+   },
+   {
+      "chamber" : "Senate",
+      "bio_id" : "S001202",
+      "laws_sponsored" : 0,
+      "state" : "AL",
+      "value" : 1,
+      "dob" : "1953-03-01",
+      "key" : "Luther Strange",
+      "party" : "Republican"
+   },
+   {
+      "dob" : "1944-10-26",
+      "party" : "Democrat",
+      "key" : "Emanuel Cleaver",
+      "value" : 1,
+      "state" : "MO",
+      "laws_sponsored" : 0,
+      "bio_id" : "C001061",
+      "chamber" : "House"
+   },
+   {
+      "chamber" : "House",
+      "bio_id" : "K000388",
+      "laws_sponsored" : 0,
+      "state" : "MS",
+      "value" : 1,
+      "key" : "Trent Kelly",
+      "party" : "Republican",
+      "dob" : "1966-03-01"
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Mick Mulvaney",
+      "dob" : "1967-07-21",
+      "chamber" : "House",
+      "bio_id" : "M001182",
+      "laws_sponsored" : 0,
+      "state" : "SC"
+   },
+   {
+      "value" : 1,
+      "dob" : "1965-01-01",
+      "key" : "Terri Sewell",
+      "party" : "Democrat",
+      "bio_id" : "S001185",
+      "chamber" : "House",
+      "state" : "AL",
+      "laws_sponsored" : 0
+   },
+   {
+      "value" : 1,
+      "party" : "Republican",
+      "key" : "Ryan Zinke",
+      "dob" : "1961-11-01",
+      "chamber" : "House",
+      "bio_id" : "Z000018",
+      "laws_sponsored" : 0,
+      "state" : "MT"
+   },
+   {
+      "dob" : "1946-12-24",
+      "party" : "Republican",
+      "key" : "Jeff Sessions",
+      "value" : 1,
+      "state" : "AL",
+      "laws_sponsored" : 0,
+      "bio_id" : "S001141",
+      "chamber" : "Senate"
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 0,
+      "bio_id" : "B000287",
+      "chamber" : "House",
+      "party" : "Democrat",
+      "key" : "Xavier Becerra",
+      "dob" : "1958-01-26",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "key" : "Jim Costa",
+      "party" : "Democrat",
+      "dob" : "1952-04-13",
+      "bio_id" : "C001059",
+      "chamber" : "House",
+      "state" : "CA",
+      "laws_sponsored" : 0
+   },
+   {
+      "value" : 1,
+      "key" : "Betty McCollum",
+      "party" : "Democrat",
+      "dob" : "1954-07-12",
+      "bio_id" : "M001143",
+      "chamber" : "House",
+      "state" : "MN",
+      "laws_sponsored" : 0
+   },
+   {
+      "dob" : "1954-10-08",
+      "key" : "Tom Price",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "GA",
+      "laws_sponsored" : 0,
+      "bio_id" : "P000591",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1960-01-11",
+      "key" : "Michael Turner",
+      "party" : "Republican",
+      "value" : 1,
+      "state" : "OH",
+      "laws_sponsored" : 0,
+      "bio_id" : "T000463",
+      "chamber" : "House"
+   },
+   {
+      "dob" : "1954-05-04",
+      "key" : "Doug Jones",
+      "party" : "Democrat",
+      "value" : 1,
+      "laws_sponsored" : 0,
+      "state" : "AL",
+      "chamber" : "Senate",
+      "bio_id" : "J000300"
+   },
+   {
+      "state" : "TX",
+      "laws_sponsored" : 0,
+      "bio_id" : "C001115",
+      "chamber" : "House",
+      "party" : "Republican",
+      "key" : "Michael Cloud",
+      "dob" : "1975-05-13",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "dob" : "1984-06-27",
+      "key" : "Conor Lamb",
+      "party" : "Democrat",
+      "bio_id" : "L000588",
+      "chamber" : "House",
+      "state" : "PA",
+      "laws_sponsored" : 0
+   },
+   {
+      "state" : "CA",
+      "laws_sponsored" : 0,
+      "bio_id" : "P000197",
+      "chamber" : "House",
+      "key" : "Nancy Pelosi",
+      "party" : "Democrat",
+      "dob" : "1940-03-26",
+      "value" : 1
+   },
+   {
+      "value" : 1,
+      "key" : "Brad Sherman",
+      "party" : "Democrat",
+      "dob" : "1954-10-24",
+      "chamber" : "House",
+      "bio_id" : "S000344",
+      "laws_sponsored" : 0,
+      "state" : "CA"
+   }
+]
