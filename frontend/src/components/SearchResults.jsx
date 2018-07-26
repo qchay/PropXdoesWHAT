@@ -10,7 +10,7 @@ import ActionGroupSearchModel from './ActionGroupSearchModel';
 import PoliticianSearchModel from './PoliticianSearchModel';
 import LawSearchModel from './LawSearchModel';
 
-import Pagination from './Pagination2';
+import Pagination from './Pagination';
 
 
 
