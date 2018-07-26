@@ -1,9 +1,9 @@
 import React from 'react';
 import LawList from './LawList';
-import Filter from './Filter2';
-import PageFooter from './Pagination2'
-import Sort from './Sort2'
-import Search from './Search2';
+import Filter from './Filter';
+import PageFooter from './Pagination'
+import Sort from './Sort'
+import Search from './Search';
 import { Container, Row, Col } from 'reactstrap';
 import queryString from 'query-string'
 
