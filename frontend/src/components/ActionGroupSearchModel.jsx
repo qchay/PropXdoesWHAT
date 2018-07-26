@@ -1,11 +1,4 @@
 import React from 'react';
-import Filter from './Filter';
-import PageFooter from './Pagination'
-import Sort from './Sort'
-import Album from './Album';
-import Search from './Search';
-import { Container, Row, Col } from 'reactstrap';
-import queryString from 'query-string'
 import democrat from '../images/democrat.jpg';
 import independent from '../images/independent.jpg';
 import republican from '../images/republican.jpg';

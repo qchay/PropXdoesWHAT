@@ -1,17 +1,8 @@
 import React from 'react';
-import Filter from './Filter';
-import PageFooter from './Pagination'
-import Sort from './Sort'
-import Album from './Album';
-import Search from './Search';
-import { Container, Row, Col } from 'reactstrap';
-import queryString from 'query-string'
+import { Row, Col } from 'reactstrap';
 import ActionGroupSearchModel from './ActionGroupSearchModel';
 import PoliticianSearchModel from './PoliticianSearchModel';
 import LawSearchModel from './LawSearchModel';
-
-import Pagination from './Pagination';
-
 
 
 export default class SearchResults extends React.Component {

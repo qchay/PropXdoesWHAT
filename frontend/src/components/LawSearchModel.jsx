@@ -1,11 +1,5 @@
 import React from 'react';
-import LawList from './LawList';
-import Filter from './Filter';
-import PageFooter from './Pagination'
-import Sort from './Sort'
-import Search from './Search';
-import { Container, Row, Col } from 'reactstrap';
-import queryString from 'query-string'
+import { Row } from 'reactstrap';
 import democrat from '../images/democrat.jpg';
 import independent from '../images/independent.jpg';
 import republican from '../images/republican.jpg';
@@ -31,8 +25,8 @@ export default class PoliticianSearchModel extends React.Component {
 	render() {
 		return (
 			<div>
-			<ul class="list-group">
-			  <li class="list-group-item">
+			<ul className="list-group">
+			  <li className="list-group-item">
 				<a href={'/laws/' + this.props.law_data.name + '/' + this.props.law_data.id}>
 					<Row>
 					<div className="body-text">

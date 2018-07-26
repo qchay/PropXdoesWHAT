@@ -1,11 +1,5 @@
 import React from 'react';
-import Filter from './Filter';
-import PageFooter from './Pagination'
-import Sort from './Sort'
-import Album from './Album';
-import Search from './Search';
-import { Container, Row, Col } from 'reactstrap';
-import queryString from 'query-string'
+import { Row } from 'reactstrap';
 import democrat from '../images/democrat.jpg';
 import independent from '../images/independent.jpg';
 import republican from '../images/republican.jpg';
@@ -31,8 +25,8 @@ export default class PoliticianSearchModel extends React.Component {
 	render() {
 		return (
 			<div>
-			<ul class="list-group">
-			  <li class="list-group-item">
+			<ul className="list-group">
+			  <li className="list-group-item">
 				<a href={'/politicians/' + this.props.politician_data.first_name + '_' + this.props.politician_data.last_name + '/' + this.props.politician_data.id}>
 					<Row>
 					<img className="politician-img" src={this.state.pictureMap[this.props.politician_data.party]} alt="alt"/>
