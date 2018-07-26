@@ -5,11 +5,10 @@ before_script:
   - curl -sL https://deb.nodesource.com/setup_8.x | bash -
   - apt-get install -yq nodejs build-essential
   - npm install -g npm
-  - npm install newman --global;
-  - cd Front-End
+  - npm install newman --global
+  - cd frontend
   - pip install -r requirements.txt
   - python --version
-  - flask --version
   - node --version
   - npm --version
   - newman --version
