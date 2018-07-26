@@ -28,21 +28,21 @@ export default class Sort extends React.Component {
   }
 
   toggle() {
-    console.log("*** toggle in Sort ***");
+    // console.log("*** toggle in Sort ***");
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
     });
   }
 
   clickHandler(val) {
-    console.log("*** clickHandler in Sort ***");
+    // console.log("*** clickHandler in Sort ***");
     let updateOrderBy = {name: "order_by", value : this.props.type};
     let updateOrder = {name: "order", value : val};
     this.props.orderByCallBack([updateOrderBy, updateOrder])
   }
 
   render() {
-    console.log("*** render in Sort ***");
+    // console.log("*** render in Sort ***");
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>

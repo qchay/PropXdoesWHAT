@@ -65,9 +65,11 @@ class PageItem extends React.Component {
 
 export default class PageFooter extends React.Component {
 	render() {
-		console.log("*** render in PageFooter ***");
+		// console.log("*** render in PageFooter ***");
 		if (_.isEmpty(this.props.page_data)) {
 			return (<p align="center" >Page Footer Loading...</p>);
+		} else if (this.props.page_data.total_pages === 0) {
+			return (<p align="center" >No Results</p>);
 		} else {
 	  		return (		
 				<nav aria-label="pages">

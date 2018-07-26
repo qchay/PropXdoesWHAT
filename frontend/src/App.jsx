@@ -23,7 +23,7 @@ class App extends Component {
 						<Navbar />
 						<Switch>
 							<Route exact path='/' component={Home} />
-							<Route path='/laws/page/:page_number' component={LawPage} />
+							<Route exact path='/laws' component={LawPage} />
 							<Route path='/laws/:law_name/:id' component={LawBio} />
 							<Route path='/politicians/page/:page_number' component={PoliticianPage} />
 							<Route path='/politicians/:politcian_name/:id' component={PoliticianBio} />

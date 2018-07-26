@@ -10,13 +10,13 @@ export default class Search extends React.Component {
   }
 
   handleClick() {
-    console.log("*** handleClick in Search ***");
+    // console.log("*** handleClick in Search ***");
     let update = {name: "search", value : this.state.inputValue};
     this.props.searchCallBack([update])
   }
 
   handleKeyPress(event){
-    console.log("*** handleKeyPress in Search ***")
+    // console.log("*** handleKeyPress in Search ***")
     if(event.key === 'Enter'){
       this.setState({inputValue: event.target.value});
       this.handleClick();
@@ -24,12 +24,12 @@ export default class Search extends React.Component {
   }
 
   updateInputValue(event) {
-    console.log("*** updateInputValue in Search ***")
+    // console.log("*** updateInputValue in Search ***")
     this.setState({inputValue: event.target.value});
   }
 
   render() {
-    console.log("*** render in Search ***");
+    // console.log("*** render in Search ***");
     return (
      <div className="input-group mb-3">
         <input 
