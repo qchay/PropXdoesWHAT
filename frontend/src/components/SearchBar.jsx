@@ -41,7 +41,7 @@ export default class Search extends React.Component {
 			value={this.state.inputValue} 
 			onChange={this.updateInputValue}
 			onKeyPress={this.handleKeyPress} 
-			input/>
+			/>
 			<button onClick={this.handleClick} className="btn btn-outline-info my-2 my-sm-0" type="submit">
  				<i className="fas fa-search"></i>
 			</button>

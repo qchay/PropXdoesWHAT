@@ -1630,20 +1630,20 @@ export default class SearchResults extends React.Component {
 				<Row>
 						<Col xs="12" lg={{ size: '4', offset: '0' }}>
 						<h3>Politicians Results</h3>
-						<p>{this.state.politician_data.map(politician_data => <PoliticianSearchModel politician_data={politician_data}/>)}
-						</p>							
+						<div>{this.state.politician_data.map((politician_data, i) => <PoliticianSearchModel key = {i} politician_data={politician_data}/>)}
+						</div>							
 						</Col>
 
 						<Col xs="12" lg={{ size: '4', offset: '0' }}>
 						<h3>Laws Results</h3>
-						<p>{this.state.law_data.map(law_data => <LawSearchModel law_data={law_data}/>)}
-						</p>
+						<div>{this.state.law_data.map((law_data,i) => <LawSearchModel key = {i} law_data={law_data}/>)}
+						</div>
 						</Col>
 
 						<Col xs="12" lg={{ size: '4', offset: '0' }}>
 						<h3>Action Groups Results</h3>
-						<p>{this.state.action_group_data.map(action_group_data => <ActionGroupSearchModel action_group_data={action_group_data}/>)}
-						</p>
+						<div>{this.state.action_group_data.map((action_group_data,i) => <ActionGroupSearchModel key = {i} action_group_data={action_group_data}/>)}
+						</div>
 						</Col>
 				</Row>
 			</div>
