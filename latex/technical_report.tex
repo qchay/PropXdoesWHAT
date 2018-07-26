@@ -90,10 +90,8 @@ The following are the user stories gathered for Phase III:  \vspace{0.5em}
 \end{description}
 
 \section{Models}
-    Each politician model shows each law and action group associated with them. Each law shows each politician and action group associated with them. Each affected group shows each politician and law associated with them. These associations lead to their respective model page. Each action group shows each law that affects the group. \\
-
-\begin{itemize}
-	\item[] Laws
+\begin{itemize}[label=]
+	\item\textbf{Laws}
 	\begin{itemize}
 		\item Name
 		\item Title
@@ -110,7 +108,7 @@ The following are the user stories gathered for Phase III:  \vspace{0.5em}
 		\item Date bill was vetoed (if occurred)
 		\item Date bill was enacted  (if occurred)
 	\end{itemize}
-	\item[] Politicians
+	\item\textbf{Politicians}
 	\begin{itemize}
 		\item First Name
 		\item Last Name
@@ -121,12 +119,12 @@ The following are the user stories gathered for Phase III:  \vspace{0.5em}
 		\item Link to official site
 		\item Link to contact page (if present)
 	\end{itemize}
-	\item[] Affected Groups
+	\item\textbf{Affected Groups}
 	\begin{itemize}
 		\item Name
 		\item Description
 	\end{itemize}
-	\item[] Action Groups
+	\item\textbf{Action Groups}
 	\begin{itemize}
 		\item Name
 		\item Description
@@ -134,15 +132,24 @@ The following are the user stories gathered for Phase III:  \vspace{0.5em}
 		\item Link to official site
 		\item Assisted groups (incoming table relation) (not built)
 		\item Statements on laws (incoming table relation, text) (not built)
-	\end{itemize}
+	\end{itemize} ~\\
+	Each politician model shows each law and action group associated with them. Each law shows each politician and action group associated with them. Each affected group shows each politician and law associated with them. These associations lead to their respective model page. Each action group shows each law that affects the group.
 \end{itemize}
 
 \section{RESTful API}
-These are the API links we scraped from to fill our database.\\ \\http://docs.openstates.org/en/latest/api/ \\http://projects.propublica.org/api-docs/congress-api/ \\http://opensecrets.org/open-data/api\\
+These are the API links we pulled from to fill our database: \\
 
+\begin{itemize}[label=-]
+	\item docs.openstates.org/en/latest/api/
+	\item projects.propublica.org/api-docs/congress-api/
+	\item opensecrets.org/open-data/api
+	\item http://www.startguide.org/orgs/orgs00.html
+\end{itemize}
+
+~\\
 API Endpoints: \\
 
-\begin{itemize}
+\begin{itemize}[label=-]
 	\item api.propxdoeswhat.me/api/politicians
 	\item api.propxdoeswhat.me/api/affected\_groups
 	\item api.propxdoeswhat.me/api/action\_groups
@@ -150,46 +157,41 @@ API Endpoints: \\
 \end{itemize}
 
 ~\\
-Full API Documentation at:\\ https://documenter.getpostman.com/view/4704075/RWMCtUm6
+Full API Documentation at:\\ documenter.getpostman.com/view/4704075/RWMCtUm6
 
 \section{Tools}
 
-\begin{description}[font=\bfseries]
-	\item[GitLab] We used GitLab as our Git repository hosting to collaborate on our IDB project. Gitlab is easy to use because it has issue tracking and continuous integration.
-	\item[Postman] Postman is a useful tool for testing,developing, and documenting our RESTful API. With Postman, building our API model for our website was easier. Postman also has a documentation feature for our API model. This makes things understandable for anyone who wishes to use our API.
+\begin{description}[font=\bfseries,nosep]
+	\item[GitLab] Git repository hosting, issue tracking, continuous integration
+	\item[Postman] RESTful API testing, development, documentation
 	\item[Grammarly] Spelling/grammar feedback for this report
-	\item[Piazza] Collecting User Stories from end users. Giving feedback and receiving criticism made easier with Piazza.
-	\item[Slack] Slack is very useful in keeping up with team members and git commits. Slack is integrated with the GitLab repo.
-	\item[Flask] Flask was used for our back-end framework for PropXdoesWHAT! In the Flask app, we used SQL-Alchemy to connect to our database and constructing our table models. Flask Restless was used create our API endpoints.
-	\item[React] React was used to create a dynamic website by utilizing re-usable components. This made it easier to make our models, and add features such as filtering, sorting, and searching.
-	\item[AWS] Server hosting for Flash, Node, MySQL, ElasticSearch instances (More Description in AWS section)
-	\item[Selenium] Test GUI
-	\item[React Router] React Router aowed for routing from URL on page to scripts. This allowed our front end to run without the need for flask.
-	\item[npm] Node Package manager
+	\item[Piazza] Collecting User Stories from end users
+	\item[Slack] Team communication, coordination
+	\item[Flask] Back-End framework, along with SQL-Alchemy and Flask Restless
+	\item[React] Front-End server-side framework, along with React Router
+	\item[AWS] Server hosting for Flask, Node, MySQL, ElasticSearch instances
+	\item[Selenium] GUI testing framework
 	\item[Mocha] Test framework for JavaScript
-	\item[Babel] JavaScript compiler
-	\item[Chai] Assertion library that paired with JavaScript testing framework
-	\item[Docker] We used docker to contain our front-end (React) and back-end (Flask). This made it easier to isolate and work on each end without worrying about any interference.
-	\item[Enzyme] Tests React
-	\item[JavaScript] Programming language used to interact within web browsers
-	\item[Bootstrap] Front-end framework used to style and design our website. Bootstrap made it easier to develop our front-end to be more appealing. 
-	\item[Python] Programming language used to code our back-end Flask App
+	\item[Chai] Assertion library paired with JavaScript testing framework
+	\item[Docker] Virtual Images for front-end and back-end configuration
+	\item[Enzyme] React testing framework
+	\item[Bootstrap] Front-end client-side framework
 	\item[ElasticSearch] Standalone full-text index server based on Lucene
 \end{description}
 
 \section{Hosting}
 
-\subsection{Back End}
+\subsection{Back-End}
 
-The back end is hosted on an AWS EC2 instance. The main file is \code{Back-end/app.py} running in a docker container on the server. The back end uses flask, sqlalchemy and flask-restless to create an API hosted at \code{api.propxdoeswhat.me/api/}.
+The back-end is hosted on an AWS EC2 instance. The main file is \code{Back-end/app.py} running in a docker container on the server. The back-end uses flask, sqlalchemy and flask-restless to create an API hosted at \code{api.propxdoeswhat.me/api/}.
 
-\subsection{Front End}
+\subsection{Front-End}
 
-Also hosted on an AWS EC2 instance, the main file is \code{frontend/src/app.jsx} running in a docker container on the server. The front end uses React and Bootstap to get data from our back end and serve it to the client. It is hosted at \code{propxdoeswhat.me}.
+Also hosted on an AWS EC2 instance, the main file is \code{frontend/src/app.jsx} running in a docker container on the server. The front-end uses React to build a client page which uses Bootstap to get data from our back-end and serve it to the client. It is hosted at \code{propxdoeswhat.me}.
 
 \section{AWS}
 
-First, we launched an EC2 instance with Amazon Linux AMI(Amazon Machine Image). Since by default, all incoming ports are blocked, we added security group rules that allow incoming SSH and HTTP requests from anywhere. Next, we SSH'd into the EC2 instance by using the private key file we were given as we launched the instance, the username EC2-user, and the public IP address of the instance. \\
+First, we launched an EC2 instance with Amazon Linux AMI. Since by default all incoming ports are blocked we added security group rules that allow incoming SSH and HTTP requests from anywhere. Next, we SSH'd into the EC2 instance by using the private key file we were given when we launched the instance, the username EC2-user, and the public IP address of the instance. \\
 
 Frontend access: \\
 \code{ssh -i front-end-private-key.pem ec2-user@propxdoeswhat.me} \\
@@ -204,18 +206,18 @@ We use an ElasticSearch instance running on AWS as an external server to host th
 
 \section{Filter}
 
-The website implements filtering options for each of our models. The laws models filters based on the API parameter of subject, the politicians models filters based on party,state,and chamber, and the action group model filters by the API parameter \code{type}. Whenever a user clicks on a filter on our page, we \code{GET} a JSON response and parse it. After parsing it, we generate the respective model with the applied filters. If another filter gets applied from the same filter category, we OR the two filters and display the results. If another filter gets applied from a different filter category, we AND the two categories and display the results. 
+The website implements filtering options for each of our models. The laws models filters based on the API parameter \code{subject}, the politicians models filters based on \code{party}, \code{state}, and \code{chamber}, and the action group model filters by \code{type}. Whenever a user clicks on a filter on our page, we \code{GET} a JSON response and generate the respective model with the applied filters. If another filter gets applied from the same filter category, we OR the two filters and display the results. If another filter gets applied from a different filter category, we AND the two filters. 
 
 \section{Sort}
 
-For the models, we allow the users to sort the displayed results by ascending or descending order.This is done by utilizing the API calls of \code{order\_by}. In the Laws model, the laws are sorted by the date introduced. In the Politicians model, the politicians are sorted by name.In the Action Groups model, the action groups are sorted by type. The sort component is implemented in the same way as filter by \code{GET} of JSON response and parsing it.
+We allow the users to sort the displayed results by ascending or descending order using the API parameter \code{order\_by}. The Laws model allows sorting by the date introduced. The Politicians model allows sorting by last name. The Action Groups model allows sorting by type.
 
 \section{Database}
 
-We use a MySQL 5.6 instance running on Amazon RDS. The Amazon default settings use \code{latin1} for text (this is bad), we had to manually adjust them to use \code{utf8mb4} and rebuild tables. Note: \code{utf8} in MySQL does not meet the utf8 spec, as it will not work with astral glyphs (four-byte characters). While this is unlikely to occur in our dataset, for future-proofing we use \code{utf8mb4} which correctly implements the standard. 
+We use a MySQL 5.6 instance running on Amazon RDS. The Amazon default settings use \code{latin1} for text (this is bad), we had to manually adjust them to use \code{utf8mb4} and rebuild tables. Note: \code{utf8} in MySQL does not meet the utf8 spec, as it will not work with astral glyphs (four-byte characters). While this is unlikely to occur in our dataset, for future-proofing we use \code{utf8mb4} which correctly implements the standard. \\
 
-\begin{itemize}
-	\item[] Table: \code{`laws`}
+\begin{itemize}[font=\bfseries,leftmargin=0px,label=]
+	\item \textbf{Table:} \code{`laws`}
 	\begin{itemize}
 		\item \code{`id` INT UNSIGNED NOT NULL AUTO\_INCREMENT}	-- internal id, auto-generated
 		\item \code{`bill\_id` VARCHAR(32) NOT NULL}			-- unique bill name across legislatures, ie: hr5515-115
@@ -235,7 +237,7 @@ We use a MySQL 5.6 instance running on Amazon RDS. The Amazon default settings u
 		\item \code{`desc` TEXT}								-- propublica summary
 		\item \code{`raw` TEXT}									-- raw json from source for this entry
 	\end{itemize}
-	\item[] Table: \code{`politicians`}
+	\item \textbf{Table:} \code{`politicians`}
 	\begin{itemize}
 		\item \code{`id` INT UNSIGNED NOT NULL AUTO\_INCREMENT}	-- internal id, auto-generated
 		\item \code{`first\_name` VARCHAR(64) NOT NULL}
@@ -250,7 +252,7 @@ We use a MySQL 5.6 instance running on Amazon RDS. The Amazon default settings u
 		\item \code{`phone` VARCHAR(32)}
 		\item \code{`raw` TEXT}									-- raw json from source for this entry
 	\end{itemize}
-	\item[] Table: \code{`action\_groups`}
+	\item \textbf{Table:} \code{`action\_groups`}
 	\begin{itemize}
 		\item \code{`id` INT UNSIGNED NOT NULL AUTO\_INCREMENT}	-- internal id, auto-generated
 		\item \code{`name` VARCHAR(256) NOT NULL}
@@ -266,11 +268,11 @@ We use a MySQL 5.6 instance running on Amazon RDS. The Amazon default settings u
 
 \section{Pagination}
 
-For our models, the data in our database contains a large number of instances of laws, politicians, action groups, and affected groups. To give the user a better experience navigating through all of our data, we implemented a traditional pagination number system. Our API paginates all the data. Using React components and Bootstrap, we created functionality to the buttons. Our pagination number system contains a previous page, next page, page items, and a page footer.
+Our database contains many (hundreds to thousands) instances of laws, politicians and action groups. To give the user a better experience navigating through our data, we implemented a pagination system. Our API returns subsets of requested data by pages to the front-end client, which allows for navigation via links to previous page, next page, and nearby pages.
 
 \section{Testing}
 
-We are using Selenium Python to test the GUI(Graphical User Interface) of our website. We installed Selenium with pip and downloaded the required interface driver for the Firefox browser, geckodriver, and then added geckodriver.exe in the system PATH. This let us use instances of Firefox WebDriver in our Python unit test to navigate around our website and test our GUI.
+We are using Selenium Python to test the GUI of our website. We installed Selenium with pip and downloaded the required interface driver for the Firefox browser (\code{geckodriver}), and then added \code{geckodriver.exe} in the system PATH. This let us use instances of Firefox WebDriver in our Python unit test to navigate around our website and test our GUI.
 \\
 \\
 Since we are using Flask-Restless and SQLAlchemy to create our RESTFul API, we did not test our back-end because those tools handle it.
@@ -282,5 +284,5 @@ We are using Postman for API testing. The Postman test requests GET methods to o
 We are using Mocha, Chai, and Enzyme to test our javascript. We installed Mocha, Chai, Enzyme, \code{babel-preset-env}, \code{babel-core}, \code{babel-preset-react}, and \code{react} in \code{npm} and ran \code{mocha} with arguments \code{--require babel-core/register}.
 
 \section{Obstacles}
-In Phase III of our IDB project we ran into a significant problem. When we were trying to implement filter, sort and search we had an issue with our code because of the way we setup our front-end in Phase I and Phase II. Because of that we had to scrap all of our front-end code we developed in the first two phases and refactor for Phase III. Although Phase III was suppose to be more lightweight on the amount of work needed to be done, that was not the case for us. We had to turn in our project a day late to make sure we had a working and well developed website.
+In Phase III of our IDB project we ran into a significant problem when we were trying to implement filter, sort and search. We had an issue with our code because of the way we set up our front-end in Phase I and Phase II and had to scrap much of the front-end code and refactor for Phase III. Although Phase III was supposed to be a lighter workload, this was not the case for us. We turned in our project a day late to ensure we had a working and well developed website.
 \end{document}
