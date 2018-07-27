@@ -37,59 +37,61 @@ The following are the user stories gathered for Phase I: \vspace{0.5em}
 
 \begin{description}[font=\bfseries,style=nextline]
 	\item[As a user, I want to be able to identify which groups are affected by a law.]
-	We solved this issue by mapping the laws to the affected group and displaying them within each law model. In our API model, we set up a relationship between the laws and the affected groups. From there, we were able to call our API and display the mappings in a well-structured format using Bootstrap and ReactJS.
-	
-	\item[As a user, I want to see what congressmen, senators, city-council, etc. are supporting a law.]
-	We solved this issue by mapping the laws to the corresponding politician and displaying them within each law model. In our API model, we set up a relationship between the laws and the policitians involved. From there, we were able to call our API and display the mappings in a well-structured format using Bootstrap and ReactJS.
-	
-	\item[As a user, I want to see where the politicians lie on the political spectrum.]
-	We solved this issue by grabbing the politician's political affiliation from our API database and structuring the information using Bootstrap and ReactJS.
+	We solved this issue by mapping the laws to the affected group and displaying them within each law's page. In our API model, we set up a relationship between the laws and the affected groups. We were able to call our API and display the mappings with our client code.
 	
 	\item[As a user, I want to see the implications of a law.]
-	We solved this issue by having a description for each law. This was done by querying the description parameter data from our law API and displaying it onto the appropriate model page. 
+	We solved this issue by having a description for each law queried from our law API displayed on that law's page. 
+	
+	\item[As a user, I want to see what congressmen, senators, city-council, etc. are supporting a law.]
+	We solved this issue by mapping the laws to the sponsoring politician and displaying them within each law's page. In our API model, we set up a relationship between the laws and the policitians involved. We were then able to call our API and display the mappings with our client code.
+	
+	\item[As a user, I want to see where the politicians lie on the political spectrum.]
+	We solved this issue by pulling the politician's party affiliation from our API and displaying it in our client code.
 	
 	\item[As a user, I want to know how I can contact my senator/representative.]
-	We solved this issue by displaying each politician's bio, which includes their website and number. This was done by querying the relevant contact information parameters from our API and displaying it onto our website with front-end tools, such as Bootstrap and ReactJS.
+	We solved this issue by displaying each politician's bio, which includes their website and number, by querying the relevant contact information from our API and displaying it on the politician's page.
 	
 \end{description} ~\\
 The following are the user stories gathered for Phase II: \vspace{0.5em}
 
 \begin{description}[font=\bfseries,style=nextline]
 	\item[As a user, I would like to see information about what the website does on the homepage.]
-	We solved this issue by displaying the purpose of the website in the homepage.
+	We solved this issue by displaying the purpose statement of the website in the homepage.
 	
 	\item[As a user, I would like to see more laws, politicians associated with these laws, action groups, and affected groups.]
-	We resolved this user story by having the front-end gather the data from the API and displaying it. Our models are linked with foreign keys creating relationships with each other. Within our JavaScript code, we displayed the necessary data which now displays more laws, politicians associated with these laws, action groups, and affected groups.
+	We resolved this user story by having the front-end gather the data from the API and displaying it. Our models are linked with foreign keys creating relationships with each other. We have fully loaded the laws and politicians models with data from the 115th congress, and the action groups model with 515 groups.
 	
 	\item[As a user, I would like each image on the front page carousel to lead me to a certain page.]
-	We solved this issue by making each image a link to different pages.
+	We solved this issue by making each image a link to various pages.
 	
 	\item[As a user, I would like an easy way to contact a certain action group.]
-	We solved this issue by displaying the necessary contact information of a certain action group on the model page. This was done through querying the data from our API and displaying it to the website with front-end tools such as Bootstrap and ReactJS.
+	We solved this issue by displaying the website link for each action group on the model page.
 	
 	\item[As a user, I would like the affected group's website pages to have a little more info (do a little more than just list laws affecting group and action groups associated)]
-	We solved this issue by displaying more than just laws and action groups related to this affected group. From our API model for affected groups, we queried the data and displayed it to the model web page for affected groups with front-end tools such as Bootstrap and ReactJS.
+	We solved this issue by displaying more than just laws and action groups related to this affected group.
 \end{description} ~\\
 The following are the user stories gathered for Phase III:  \vspace{0.5em}
 	
 \begin{description}[font=\bfseries,style=nextline]
 	\item[As a user, for the laws model, I want to be able to filter by subject.]
-	We implemented this user story by creating a filter option that has options of the subjects to select.
+	We implemented this user story by creating a subject filter option with selections derived from laws in our dataset.
 	
 	\item[As a user, for the politicians model, I want to be able to filter by Legislator's state.]
-	We implemented this user story by creating a filter option that has options of the Legislator's state to select.
+	We implemented this user story by creating a filter by state option for the Politician model page.
 	
 	\item[As a user, I would like to search for laws, politicians, and action groups from the home page.]
-	We implemented a search bar that will utilize full-text searching. We also have searching within our models that will take into account any filters applied.
+	We implemented a search bar that triggers full-text searching. We also have full-text search within our models that takes into account any filters applied.
 	
 	\item[As a user, for the politicians model, I want to be able to filter by republican or democrat.]
-	We implemented this user story by creating a filter option that has options of the politicians's party to select.
+	We implemented this user story by creating a filter by party option for the Politician model page.
 	
 	\item[As a user, for the laws model, I want to be able to sort by date introduced]
-	We implemented this user story by creating a sort option that sorts by ascending or descending for date introduced.
+	We implemented this user story by creating a sort by date introduced option for the Law model page.
 \end{description}
 
 \section{Models}
+Each politician model shows each law and action group associated with them. Each law shows each politician and action group associated with them. Each affected group shows each politician and law associated with them. These associations lead to their respective model page. Each action group shows each law that affects the group. \pagebreak
+
 \begin{itemize}[label=]
 	\item\textbf{Laws}
 	\begin{itemize}
@@ -132,8 +134,7 @@ The following are the user stories gathered for Phase III:  \vspace{0.5em}
 		\item Link to official site
 		\item Assisted groups (incoming table relation) (not built)
 		\item Statements on laws (incoming table relation, text) (not built)
-	\end{itemize} ~\\
-	Each politician model shows each law and action group associated with them. Each law shows each politician and action group associated with them. Each affected group shows each politician and law associated with them. These associations lead to their respective model page. Each action group shows each law that affects the group.
+	\end{itemize}
 \end{itemize}
 
 \section{RESTful API}
@@ -173,7 +174,7 @@ Full API Documentation at:\\ documenter.getpostman.com/view/4704075/RWMCtUm6
 	\item[Selenium] GUI testing framework
 	\item[Mocha] Test framework for JavaScript
 	\item[Chai] Assertion library paired with JavaScript testing framework
-	\item[Docker] Virtual Images for front-end and back-end configuration
+	\item[Docker] Virtual system images for front-end and back-end configuration
 	\item[Enzyme] React testing framework
 	\item[Bootstrap] Front-end client-side framework
 	\item[ElasticSearch] Standalone full-text index server based on Lucene
@@ -191,7 +192,7 @@ Also hosted on an AWS EC2 instance, the main file is \code{frontend/src/app.jsx}
 
 \section{AWS}
 
-First, we launched an EC2 instance with Amazon Linux AMI. Since by default all incoming ports are blocked we added security group rules that allow incoming SSH and HTTP requests from anywhere. Next, we SSH'd into the EC2 instance by using the private key file we were given when we launched the instance, the username EC2-user, and the public IP address of the instance. \\
+First, we launched an EC2 instance with Amazon Linux AMI. Since by default all incoming ports are blocked we added security group rules that allow incoming SSH and HTTP requests from anywhere. Next, we SSH'd into the EC2 instance with the private key file we were given when we launched the instance, the username \code{EC2-user}, and the public IP address of the instance. \\
 
 Frontend access: \\
 \code{ssh -i front-end-private-key.pem ec2-user@propxdoeswhat.me} \\
@@ -200,21 +201,25 @@ Backend access: \\
 
 Next, we updated the working Linux server running in the AWS cloud and installed docker on it. Then, we transferred our local files onto the server using SFTP. Finally, we built our Docker image and ran our web application on our Docker container.
 
+\section{Sort}
+
+We allow the users to sort the displayed results by ascending or descending order using the API parameter \code{order\_by}. The Laws model allows sorting by the date introduced. The Politicians model allows sorting by last name. The Action Groups model allows sorting by type.
+
 \section{Full-text Search}
 
-We use an ElasticSearch instance running on AWS as an external server to host the full-text indexes and perform searches. Indexes are built after database tables are loaded by scripts which dump the tables and load the indexes. Currently, fields are indexed as-is with no stemming or other prossessing. The Flask-Restless API manager was modified to first recognize a new parameter \code{search} (using a request pre-processor handler), call the ElasticSearch instance with the given query, and then adjust the query filter for the rest of that request to only include results with the returned ids (using a custom \code{query} model field).
+We use an ElasticSearch instance running on AWS as an external server to host the full-text indexes and perform searches. Indexes are built after database tables are loaded by scripts which dump the tables and load the indexes. Currently, fields are indexed as-is with no stemming or other prossessing. The Flask-Restless API manager was modified to first recognize a new parameter \code{search} (using a request pre-processor handler), call the ElasticSearch instance with the given query, and then adjust the query filter for the rest of that request to only include results with the returned ids (using a custom \code{query} model field). If there is no \code{order\_by} parameter, the query also imposes the relevency ordering returned by ES.
 
 \section{Filter}
 
 The website implements filtering options for each of our models. The laws models filters based on the API parameter \code{subject}, the politicians models filters based on \code{party}, \code{state}, and \code{chamber}, and the action group model filters by \code{type}. Whenever a user clicks on a filter on our page, we \code{GET} a JSON response and generate the respective model with the applied filters. If another filter gets applied from the same filter category, we OR the two filters and display the results. If another filter gets applied from a different filter category, we AND the two filters. 
 
-\section{Sort}
+\section{Pagination}
 
-We allow the users to sort the displayed results by ascending or descending order using the API parameter \code{order\_by}. The Laws model allows sorting by the date introduced. The Politicians model allows sorting by last name. The Action Groups model allows sorting by type.
+Our database contains many (hundreds to thousands) instances of laws, politicians and action groups. To give the user a better experience navigating through our data, our API returns paginated subsets of requested data to the front-end client which then allows for navigation via links to previous page, next page, and nearby pages.
 
 \section{Database}
 
-We use a MySQL 5.6 instance running on Amazon RDS. The Amazon default settings use \code{latin1} for text (this is bad), we had to manually adjust them to use \code{utf8mb4} and rebuild tables. Note: \code{utf8} in MySQL does not meet the utf8 spec, as it will not work with astral glyphs (four-byte characters). While this is unlikely to occur in our dataset, for future-proofing we use \code{utf8mb4} which correctly implements the standard. \\
+We use a MySQL 5.6 instance running on Amazon RDS. The Amazon default settings use \code{latin1} for text (this is bad), we had to manually adjust them to use \code{utf8mb4} and rebuild tables. Note: \code{utf8} in MySQL does not meet the utf8 spec, as it will not work with astral glyphs (four-byte characters). While this is unlikely to occur in our dataset, for future-proofing we use \code{utf8mb4} which correctly implements the standard. \pagebreak
 
 \begin{itemize}[font=\bfseries,leftmargin=0px,label=]
 	\item \textbf{Table:} \code{`laws`}
@@ -251,7 +256,7 @@ We use a MySQL 5.6 instance running on Amazon RDS. The Amazon default settings u
 		\item \code{`contact\_form` VARCHAR(256)}				-- url for official contact form
 		\item \code{`phone` VARCHAR(32)}
 		\item \code{`raw` TEXT}									-- raw json from source for this entry
-	\end{itemize}
+	\end{itemize} \pagebreak
 	\item \textbf{Table:} \code{`action\_groups`}
 	\begin{itemize}
 		\item \code{`id` INT UNSIGNED NOT NULL AUTO\_INCREMENT}	-- internal id, auto-generated
@@ -265,10 +270,6 @@ We use a MySQL 5.6 instance running on Amazon RDS. The Amazon default settings u
 %\begin{figure}[h!]
 %  \includegraphics[width=\linewidth]{../Group8_UML.png}
 %\end{figure}
-
-\section{Pagination}
-
-Our database contains many (hundreds to thousands) instances of laws, politicians and action groups. To give the user a better experience navigating through our data, we implemented a pagination system. Our API returns subsets of requested data by pages to the front-end client, which allows for navigation via links to previous page, next page, and nearby pages.
 
 \section{Testing}
 
