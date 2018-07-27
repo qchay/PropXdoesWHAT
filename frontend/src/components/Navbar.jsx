@@ -30,13 +30,13 @@ export default class Navbar extends React.Component {
 								Visualizations
 							</a>
 							<div className="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a className="dropdown-item" href="/visualizations/politicians">Politicians</a>
-								<a className="dropdown-item" href="/visualizations/laws">Laws</a>
-								<a className="dropdown-item" href="/visualizations/law_sponsors">Law Sponsors</a>
+								<a className="dropdown-item" href="http://vis.propxdoeswhat.me.s3-website.us-east-2.amazonaws.com/d3_politicians.html">Politicians</a>
+								<a className="dropdown-item" href="http://vis.propxdoeswhat.me.s3-website.us-east-2.amazonaws.com/d3_laws.html">Laws</a>
+								<a className="dropdown-item" href="http://vis.propxdoeswhat.me.s3-website.us-east-2.amazonaws.com/d3_laws_sponsored.html">Law Sponsors</a>
 								<div className="dropdown-divider"></div>
-								<a className="dropdown-item" href="/visualizations/pet_types">Pet Types</a>
-								<a className="dropdown-item" href="/visualizations/vet_ratings">Vet Ratings</a>
-								<a className="dropdown-item" href="/visualizations/shelters_map">Shelters Map</a>
+								<a className="dropdown-item" href="http://vis.propxdoeswhat.me.s3-website.us-east-2.amazonaws.com/d3_pets.html">Pet Types</a>
+								<a className="dropdown-item" href="http://vis.propxdoeswhat.me.s3-website.us-east-2.amazonaws.com/d3_ratings.html">Vet Ratings</a>
+								<a className="dropdown-item" href="http://vis.propxdoeswhat.me.s3-website.us-east-2.amazonaws.com/d3_shelters.html">Shelters Map</a>
 							</div>
 						</li>
 						<li className="nav-item">
