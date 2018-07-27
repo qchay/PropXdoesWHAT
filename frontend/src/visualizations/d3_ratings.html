@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+h1 { 
+    display: block;
+    font-size: 4em;
+    margin-top: 0.5em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 960px;
+  height: 500px;
+  position: relative;
+  color: #000;
+}
+path.slice{
+	stroke-width:2px;
+}
+polyline{
+	opacity: .3;
+	stroke: black;
+	stroke-width: 2px;
+	fill: none;
+} 
+svg text.percent{
+	fill:white;
+	text-anchor:middle;
+	font-size:12px;
+}
+
+</style>
+<body>
+	<h1 align="right">Star Ratings for Vets</h1>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="donuts.js"></script>
+<script>
+
+var salesData=[
+	{label:"1 Star", count: "8", color:"#3366CC"},
+	{label:"2 Stars", count: "6", color:"#ff33f3"},
+	{label:"2.5 Stars", count: "35", color:"#000000"},
+	{label:"3 Stars", count: "35", color:"#FF9900"},
+	{label:"3.5 Stars", count: "165", color:"#990099"},
+	{label:"4 Stars", count: "285", color:"#109618"},
+	{label:"4.5 Stars", count: "391", color:"#2e4053"},
+	{label:"5 Stars", count: "329", color:"#DC3912"}
+];
+
+var svg = d3.select("body").append("svg").attr("width",1400).attr("height",500);
+
+svg.append("g").attr("id","quotesDonut");
+
+Donut3D.draw("quotesDonut", getData(), 750, 200, 230, 200, 30, 0);
+
+function getData(){
+	return salesData.map(function(d){ 
+		return {label:d.label, value:d.count, color:d.color};});
+}
+
+</script>
+
+<div class='my-legend'>
+<div class='legend-title'>Legend</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:#3366CC;'></span>1 Star</li>
+    <li><span style='background:#ff33f3;'></span>2 Stars</li>
+    <li><span style='background:#000000;'></span>2.5 Stars</li>
+    <li><span style='background:#FF9900;'></span>3 Stars</li>
+    <li><span style='background:#990099;'></span>3.5 Stars</li>
+    <li><span style='background:#109618;'></span>4 Stars</li>
+    <li><span style='background:#2e4053;'></span>4.5 Stars</li>
+    <li><span style='background:#DC3912;'></span>5 Stars</li>
+  </ul>
+</div>
+</div>
+
+<style type='text/css'>
+  .my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .my-legend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
+</style>
+</body>
