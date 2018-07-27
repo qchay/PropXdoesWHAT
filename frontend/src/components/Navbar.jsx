@@ -22,9 +22,6 @@ export default class Navbar extends React.Component {
 						<li className="nav-item">
 							<a className="nav-link" href="/action_groups">Action Groups</a>
 						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="/affected_groups/page/1">Affected Groups</a>
-						</li>
 						<li className="nav-item dropdown">
 							<a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Visualizations
