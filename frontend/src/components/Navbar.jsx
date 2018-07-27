@@ -32,11 +32,11 @@ export default class Navbar extends React.Component {
 							<div className="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a className="dropdown-item" href="/visualizations/politicians">Politicians</a>
 								<a className="dropdown-item" href="/visualizations/laws">Laws</a>
-								<a className="dropdown-item" href="#">3</a>
+								<a className="dropdown-item" href="/visualizations/law_sponsors">Law Sponsors</a>
 								<div className="dropdown-divider"></div>
-								<a className="dropdown-item" href="#">4</a>
-								<a className="dropdown-item" href="#">5</a>
-								<a className="dropdown-item" href="#">6</a>
+								<a className="dropdown-item" href="/visualizations/pet_types">Pet Types</a>
+								<a className="dropdown-item" href="/visualizations/vet_ratings">Vet Ratings</a>
+								<a className="dropdown-item" href="/visualizations/shelters_map">Shelters Map</a>
 							</div>
 						</li>
 						<li className="nav-item">
