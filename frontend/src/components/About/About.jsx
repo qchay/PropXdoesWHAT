@@ -226,7 +226,7 @@ export default class About extends React.Component {
 						<div className="tab-pane fade show active" id="pills-stats" role="tabpanel" aria-labelledby="pills-stats-tab">
 							<li className="list-group-item list-group-item-primary" id="#total">{totalCommits + " Total Commits"}</li>
 							<li className="list-group-item list-group-item-primary" id="issues">{totalIssuesClosed + " of " + totalIssues + " Issues Closed"}</li>
-							<li className="list-group-item list-group-item-primary">0 unit tests</li>
+							<li className="list-group-item list-group-item-primary">23 unit tests</li>
 						</div>
 						<div className="tab-pane fade" id="pills-data" role="tabpanel" aria-labelledby="pills-data-tab">
 							<li className="list-group-item list-group-item-primary"><a href="http://docs.openstates.org/en/latest/api/">http://docs.openstates.org/en/latest/api/</a></li>

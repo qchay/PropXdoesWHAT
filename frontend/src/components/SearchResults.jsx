@@ -152,21 +152,21 @@ export default class SearchResults extends React.Component {
 				<Row>
 						<Col xs="12" lg={{ size: '4', offset: '0' }}>
 						<h3>Politicians Results</h3>
-						<div>{this.state.politician_data.map((politician_data, i) => <PoliticianSearchModel key = {i} politician_data={politician_data}/>)}
+						<div>{this.state.politician_data.map((politician_data, i) => <PoliticianSearchModel key = {i} search={search} politician_data={politician_data}/>)}
 						</div>
             <PageFooter page_data={this.state.politician_page_data} page_name={"politicians"} pageUpdateCallBack={this.updateCallBack} page_number_name={"politician_page"}/>						
 						</Col>
 
 						<Col xs="12" lg={{ size: '4', offset: '0' }}>
 						<h3>Laws Results</h3>
-						<div>{this.state.law_data.map((law_data,i) => <LawSearchModel key = {i} law_data={law_data}/>)}
+						<div>{this.state.law_data.map((law_data,i) => <LawSearchModel key = {i} search={search} law_data={law_data}/>)}
 						</div>
             <PageFooter page_data={this.state.law_page_data} page_name={"laws"} pageUpdateCallBack={this.updateCallBack} page_number_name={"law_page"}/> 
 						</Col>
 
 						<Col xs="12" lg={{ size: '4', offset: '0' }}>
 						<h3>Action Groups Results</h3>
-						<div>{this.state.action_group_data.map((action_group_data,i) => <ActionGroupSearchModel key = {i} action_group_data={action_group_data}/>)}
+						<div>{this.state.action_group_data.map((action_group_data,i) => <ActionGroupSearchModel key = {i} search={search} action_group_data={action_group_data}/>)}
 						</div>
             <PageFooter page_data={this.state.action_group_page_data} page_name={"action_groups"} pageUpdateCallBack={this.updateCallBack} page_number_name={"action_group_page"}/> 
 						</Col>

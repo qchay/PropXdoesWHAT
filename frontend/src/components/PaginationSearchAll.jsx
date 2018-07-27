@@ -73,7 +73,7 @@ export default class PageFooter extends React.Component {
 		} else {
 	  		return (		
 				<nav aria-label="pages">
-					<ul className="pagination pagination-lg justify-content-center">
+					<ul className="pagination pagination-md justify-content-center">
 						<FirstPage active={this.props.page_data.page === 1} pageUpdateCallBack={this.props.pageUpdateCallBack} page_number_name={this.props.page_number_name}/>
 						<PrevPage prev_page={this.props.page_data.prev_page} pageUpdateCallBack={this.props.pageUpdateCallBack} page_number_name={this.props.page_number_name}/>
 						{this.props.page_data.page_array.map((page, i) => 
