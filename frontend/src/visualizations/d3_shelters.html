@@ -68,12 +68,14 @@
 		.attr("width", width)
 		.attr("height", height);
 
-		var g = svg.append("g");
+		var states = svg.append("g");
+		var circles = svg.append("g");
+
 
 		d3.json('us.json', function(us) {
 			console.log("usa", us);
 
-			var map = svg.append('g').attr('class', 'boundary');
+			var map = states.attr('class', 'boundary');
 			usa = map.selectAll('path')
 			.data(topojson.feature(us, us.objects.states).features);
 
@@ -86,7 +88,8 @@
 		d3.json('shelters.json', function (locations){
 			//console.log('shelters', locations);
 
-			svg.selectAll('circle')
+			circles
+			.selectAll('circle')
 			.data(locations)
 			.enter()
 			.append('circle')
