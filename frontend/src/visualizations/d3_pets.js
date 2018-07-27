@@ -1,3 +1,28 @@
+//GETTING OUR DEVELOPER'S DATA
+// var httpRequest = new XMLHttpRequest();
+// var i;
+// var j;
+// var dict = {};
+// var temp;
+// var num = 0;
+// //73
+// for(i = 1; i <= 73; i++) {
+// 	var api = "http://www.connectpetsto.me:5000/api/shelter/page/" + i;
+// 	// "page" to access higher paginations, max val for "per_page" is 100, so that's just a temp fix
+// 	httpRequest.open("GET", api, false);
+// 	httpRequest.send();
+// 	var jsonResponse = JSON.parse(httpRequest.responseText);
+	
+// 	for(j = 0; j < jsonResponse.objects.length; j++) {
+// 		temp = num;
+// 		dict[temp] = {};
+// 		dict[temp].lat = "" + jsonResponse.objects[j].latitude;
+// 		dict[temp].long = "" + jsonResponse.objects[j].longitude;
+// 		num++;
+// 	}
+// }
+// console.log(dict);
+
 $(document).ready(function () {
 	var bubbleChart = new d3.svg.BubbleChart({
 		supportResponsive: true,
