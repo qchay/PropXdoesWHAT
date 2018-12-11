@@ -36,23 +36,23 @@ export default class About extends React.Component {
 		
 		var teamInfo = {
 			"Jae Lee" : {
-				"pic" : "https://cdn-images-1.medium.com/max/600/1*dSlgA9b88erlLC9iY6USHA.png",
+				"pic" : "",
 				"tasks" : "Server Setup, Docker, Unit Testing",
 				"bio" : "Upcoming Senior"},
 			"Chris Renard": {
 				"tasks" : "Database, Full-Text Search, API, Technical Writing, General Debugging",
-				"pic" : "http://rilne-kitsune.com/img/rune.png",
+				"pic" : "",
 				"bio" : "On the 11 year plan"},
 			"Eder Garza": {
-				"pic" : "https://cdn-images-1.medium.com/max/800/1*CH78x9KtC8Ldx1c8mZ3_VA.png",
+				"pic" : "",
 				"tasks" : "Postman API, D3 Visualizations, Filtering",
 				"bio" : "Senior CS student"},
 			"Dustin Huang": {
-				"pic" : "https://cdn-images-1.medium.com/max/1600/1*n5sA0_PmAj3zKQrwDfmW5Q.jpeg",
+				"pic" : "",
 				"tasks" : "Frontend Styling, React",
 				"bio" : "Rising senior"},
 			"Kevin Kuney": {
-				"pic" : "https://cdn-images-1.medium.com/max/800/1*r8nKFskJ8zCbEiOZFFDOBg.jpeg",
+				"pic" : "",
 				"tasks" : "React Development, Integrating search sort and filtering, Pagination",
 				"bio" : "Just a goof looking for his ball"}
 		}
